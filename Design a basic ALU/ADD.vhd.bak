@@ -29,6 +29,7 @@ end adder;
 
  -- Architecture Definition
 architecture gate_level of adder is
+
 Component full_adder is
     port (
           a : in std_logic;
@@ -41,6 +42,7 @@ end component;
 
 signal tmp : std_logic_vector ((N-1) downto 0);
 begin
+  
     VARIABLE Num <= N-2; -- range 1 to N-2 when N=Num of Bits
     stage0 : full_adder port map (A(0) => a, B(0) =>b, '0'=>Cin, SUM(0)=>sum, tmp(0)=>Cout);
       
@@ -48,7 +50,8 @@ begin
               fa_i : full_adder port map (A(i) => a, B(i) =>b, tmp(i-1)=>Cin, SUM(i)=>sum, tmp(i)=>Cout)
     end loop;
     
-    stageFinal : full_adder port map (A(N-1) => a, B(N-1) =>b, tmp(N-2)=>Cin, SUM(N-1)=>sum, CARRY=>Cout);     
+    stageFinal : full_adder port map (A(N-1) => a, B(N-1) =>b, tmp(N-2)=>Cin, SUM(N-1)=>sum, CARRY=>Cout);
+      
 end gate_level;            
 
 --EndOfFile
