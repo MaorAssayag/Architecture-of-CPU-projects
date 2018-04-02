@@ -388,3 +388,17 @@ vsim -gui work.testbench_add
 # Loading work.full_adder(gate_level)
 add wave -position insertpoint sim:/testbench_add/*
 run
+# Compile of ADD.vhd was successful.
+vsim -gui work.testbench_add
+# vsim -gui work.testbench_add 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_add(behavior)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.add(gate_level)
+# Loading work.full_adder(gate_level)
+add wave -position insertpoint sim:/testbench_add/*
+run

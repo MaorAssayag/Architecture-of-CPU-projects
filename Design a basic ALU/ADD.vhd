@@ -40,7 +40,7 @@ end component;
 signal tmp : std_logic_vector (N downto 0);
 begin
 ----------------------------------------
-    tmp(0) <= '0';
+    tmp(0) <= '0'; -- change to 0 its for test
     
     Array_Of_full_adders: for i in 0 to (N-1) generate
         stage_i : full_adder port map (A(i) , B(i) , tmp(i), SUM(i), tmp(i+1));

@@ -17,17 +17,7 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Compiling architecture behavior of Testbench_MAX_MIN
 ** Error: C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TestBench_MAX_MIN.vhd(29): near ")": expecting END
 
-} {9.0 10.0} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/ADD.vhd} {1 {vcom -work work -2008 -explicit -source -O0 {C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\ADD.vhd}
-Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity ADD
--- Compiling architecture gate_level of ADD
-
-} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TestBench_full_adder.vhd} {1 {vcom -work work -2002 -explicit {C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TestBench_full_adder.vhd}
+} {9.0 10.0} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TestBench_full_adder.vhd} {1 {vcom -work work -2002 -explicit {C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TestBench_full_adder.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -49,4 +39,12 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 
 ** Error: C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\MAX_MIN.vhd(46): VHDL Compiler exiting
 
-} {9.0 10.0 11.0 12.0 13.0 14.0} {}}
+} {9.0 10.0 11.0 12.0 13.0 14.0} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/full_adder.vhd} {1 {vcom -work work -2002 -explicit {C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\full_adder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity full_adder
+-- Compiling architecture gate_level of full_adder
+
+} {} {}}
