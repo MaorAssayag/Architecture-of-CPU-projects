@@ -23,17 +23,17 @@ architecture behavior of Testbench_ADD is
  component ADD
     generic (N: integer := 8 ); --defualt value for N is 8
     port(
-      A :     in signed((N-1) downto 0);
-      B :     in signed((N-1) downto 0);
-      SUM :   out signed((N-1) downto 0);
+      OPP :   in std_logic;
+      A :     in signed ((N-1) downto 0);
+      B :     in signed ((N-1) downto 0);
+      SUM :   out signed ((N-1) downto 0);
       CARRY : out std_logic
      );
   end component;
 
  constant N : integer := 8;
- signal C : std_logic ;
+ signal C : std_logic;
  signal x, y, result : signed((N-1) downto 0) ;
-
 
 begin
 ----------------------------------------
@@ -43,8 +43,8 @@ begin
   stim: process
   begin
     wait for 100 ns;
-    x <= "00000000", "00000001" after 50 ns, "00000101" after 100 ns;
-    y <= "00000010", "00000011" after 50 ns, "00001010" after 100 ns;
+    x <= "00000000", "00000001" after 50 ns, "00001100" after 100 ns,"00001111" after 150 ns;
+    y <= "00000010", "00000011" after 50 ns, "00000010" after 100 ns,"00010000" after 150 ns;
     wait for 50 ns;
   end process stim;
 ----------------------------------------
