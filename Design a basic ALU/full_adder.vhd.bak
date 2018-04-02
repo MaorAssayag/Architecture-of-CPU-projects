@@ -19,7 +19,7 @@ entity full_adder is
           a : in std_logic;
           b : in std_logic;
           Cin : in std_logic;
-          sum : out std_logic;
+          s : out std_logic;
           Cout : out std_logic
           );
 end full_adder;
@@ -27,7 +27,7 @@ end full_adder;
  -- Architecture Definition
 architecture gate_level of full_adder is
 begin
-     sum <= a XOR b XOR Cin ;
+     s <= a XOR b XOR Cin ;
      Cout <= (a AND b) OR (Cin AND a) OR (Cin AND b) ;
 end gate_level;
 

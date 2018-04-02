@@ -23,7 +23,7 @@ ARCHITECTURE behavior OF Testbench_full_adder IS
 
  component full_adder
  port (
-     A : IN std_logic;
+     A: IN std_logic;
      B : IN std_logic;
      Cin : IN std_logic;
      S : OUT std_logic;

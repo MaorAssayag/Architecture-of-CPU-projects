@@ -1,6 +1,6 @@
 -- ====================================================================
 --
---	File Name:		TestBench_MAX_MIN.vhd
+--	File Name:		TestBench_ADD.vhd
 --	Description: test bench for MAX_MIN opp
 --
 --
@@ -11,39 +11,42 @@
 -- ====================================================================
 
 LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
+use ieee.std_logic_1164.ALL;
 use ieee.numeric_std.all;
 
-entity Testbench_MAX_MIN is
-end Testbench_MAX_MIN;
+entity Testbench_ADD is
+end Testbench_ADD;
 
-architecture behavior of Testbench_MAX_MIN is
+architecture behavior of Testbench_ADD is
 
  -- Component Declaration
  component ADD
     generic (N: integer := 8 ); --defualt value for N is 8
     port(
-       A :     in std_logic_vector(N-1 downto 0);
-       B :     in std_logic_vector(N-1 downto 0);
-       SUM :   out std_logic_vector(N-1 downto 0);
+       A :     in std_logic_vector((N-1) downto 0);
+       B :     in std_logic_vector((N-1) downto 0);
+       SUM :   out std_logic_vector((N-1) downto 0);
        CARRY : out std_logic
      );
-    end component;
+  end component;
 
- signal CARRY : std_logic;
- signal x, y, result : std_logic_vector(7 downto 0);
+ constant N : integer := 8;
+ signal C : std_logic ;
+ signal x, y, result : std_logic_vector((N-1) downto 0) ;
+
 
 begin
 ----------------------------------------
+  uut :  ADD  generic map(N => 8)
+    port map (A => x,B => y,SUM => result,CARRY => C);
+      
   stim: process
   begin
-    x <= '00000000', '00000001' after 50 ns, '00000101' after 100 ns;
-    y <= '00000010', '00000011' after 50 ns, '00001010' after 100 ns;
-    wait;
+    wait for 100 ns;
+    x <= "00000000", "00000001" after 50 ns, "00000101" after 100 ns;
+    y <= "00000010", "00000011" after 50 ns, "00001010" after 100 ns;
+    wait for 50 ns;
   end process stim;
-
-  UUT_ADDER :  ADD  generic map(8)
-    port map (x, y, result, CARRY);
 ----------------------------------------
 end behavior;
 
