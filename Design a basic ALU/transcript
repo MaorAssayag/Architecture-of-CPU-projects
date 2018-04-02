@@ -935,3 +935,12 @@ run
 # Error: Acs sdne.
 # 
 #        Unable to replace existing ini file (C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/ALU.mpf).  File can not be renamed.
+# Compile of ADD.vhd failed with 2 errors.
+# Compile of ADD.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of ADD.vhd was successful.
+# Compile of twoscomplement.vhd failed with 2 errors.
+# Compile of twoscomplement.vhd was successful.
+# Compile of MUX_addORsub.vhd failed with 2 errors.
+# Compile of MUX_addORsub.vhd was successful.
+# Compile of ADD_SUB.vhd was successful.
