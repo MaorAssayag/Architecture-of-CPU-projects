@@ -1,0 +1,34 @@
+# Compile of full_adder.vhd was successful.
+# Compile of ADD.vhd failed with 1 errors.
+# Compile of MAX_MIN.vhd failed with 1 errors.
+# Compile of TestBench_full_adder.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_MAX_MIN.vhd failed with 1 errors.
+# 6 compiles, 5 failed with 5 errors. 
+# Compile of full_adder.vhd was successful.
+# Compile of ADD.vhd failed with 1 errors.
+# Compile of MAX_MIN.vhd failed with 1 errors.
+# Compile of TestBench_full_adder.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_MAX_MIN.vhd failed with 1 errors.
+# 6 compiles, 5 failed with 5 errors. 
+# Compile of full_adder.vhd was successful.
+# Compile of ADD.vhd failed with 1 errors.
+# Compile of MAX_MIN.vhd failed with 1 errors.
+# Compile of TestBench_full_adder.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_MAX_MIN.vhd failed with 1 errors.
+# 6 compiles, 5 failed with 5 errors. 
+# Compile of ADD.vhd failed with 1 errors.
+# Compile of full_adder.vhd was successful.
+# Compile of ADD.vhd failed with 16 errors.
+# Compile of MAX_MIN.vhd failed with 3 errors.
+# Compile of TestBench_full_adder.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 7 errors.
+# Compile of TestBench_MAX_MIN.vhd failed with 1 errors.
+# 6 compiles, 5 failed with 28 errors. 
+# Compile of ADD.vhd failed with 16 errors.
+# Compile of ADD.vhd failed with 16 errors.
+# Compile of ADD.vhd failed with 16 errors.
+# Compile of ADD.vhd failed with 14 errors.
+# Compile of ADD.vhd failed with 14 errors.

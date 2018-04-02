@@ -21,8 +21,8 @@ use ieee.std_logic_1164.all;
 
 -- entity Definition
 entity MAX_MIN is
-    Port(
-        generic    (N: INTEGER:=8); --defualt value for N is 8
+    generic (N: INTEGER := 8); --defualt value for N is 8
+    port(
         maxORmin : in  std_logic;
         A, B :     in  std_logic_vector(N-1 downto 0);
         result :   out std_logic_vector(N-1 downto 0));

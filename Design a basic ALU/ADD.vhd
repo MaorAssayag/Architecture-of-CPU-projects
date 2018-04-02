@@ -18,18 +18,18 @@ use ieee.std_logic_arith.all;
 
  -- entity Definition
 entity adder is
-     Port(
-         generic (N: INTEGER:=8); --defualt value for N is 8
-         A :     in std_logic_vector(N-1 downto 0);
-         B :     in std_logic_vector(N-1 downto 0);
-         SUM :   out std_logic_vector(N-1 downto 0);
-         CARRY : out std_logic
-         );
+    generic(N: integer := 8); --defualt value for N is 8
+    port(
+       A :     in std_logic_vector(N-1 downto 0);
+       B :     in std_logic_vector(N-1 downto 0);
+       SUM :   out std_logic_vector(N-1 downto 0);
+       CARRY : out std_logic
+       );
 end adder;
 
  -- Architecture Definition
 architecture gate_level of adder is
-Component full_adder is
+component full_adder
     port (
           a :    in std_logic;
           b :    in std_logic;
@@ -39,13 +39,12 @@ Component full_adder is
           );
 end component;
 
-signal tmp : std_logic_vector (N downto 0);
+signal tmp : std_logic_vector (N-1 downto 0);
 begin
 ----------------------------------------
-    VARIABLE Num <= N-2; -- range 1 to N-2 when N=Num of Bits
     stage_0 : full_adder port map (A(0) => a, B(0) =>b, '0'=>Cin, SUM(0)=>sum, tmp(0)=>Cout);
 
-    Array_Of_full_adders: for i in 1 to Num generate
+    Array_Of_full_adders: for i in 1 to (N-2) generate
         stage_i : full_adder port map (A(i) => a, B(i) =>b, tmp(i-1)=>Cin, SUM(i)=>sum, tmp(i)=>Cout)
     end generate;
 

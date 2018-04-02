@@ -21,8 +21,8 @@ architecture behavior of Testbench_MAX_MIN is
 
  -- Component Declaration
  component MAX_MIN
+ generic(N: integer := 8); --defualt value for N is 8
  port (
-     generic    (N: INTEGER:=8); --defualt value for N is 8
      maxORmin : in  std_logic;
      A, B :     in  std_logic_vector(N-1 downto 0);
      result :   out std_logic_vector(N-1 downto 0));

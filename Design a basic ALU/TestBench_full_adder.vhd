@@ -40,59 +40,59 @@ end component;
  signal S : std_logic;
  signal Cout : std_logic;
 
-BEGIN
+begin
+----------------------------------------
+   -- Instantiate the Unit Under Test (UUT)
+   uut: full_adder PORT MAP (
+   A => A,
+   B => B,
+   Cin => Cin,
+   S => S,
+   Cout => Cout
+   );
 
- -- Instantiate the Unit Under Test (UUT)
- uut: full_adder PORT MAP (
- A => A,
- B => B,
- Cin => Cin,
- S => S,
- Cout => Cout
- );
+   -- Stimulus process
+   stim: process
+   begin
+   -- hold reset state for 100 ns.
+   wait for 100 ns;
 
- -- Stimulus process
- stim: process
- begin
- -- hold reset state for 100 ns.
- wait for 100 ns;
+   -- insert stimulus here
+   A <= '1';
+   B <= '0';
+   Cin <= '0';
+   wait for 10 ns;
 
- -- insert stimulus here
- A <= '1';
- B <= '0';
- Cin <= '0';
- wait for 10 ns;
+   A <= '0';
+   B <= '1';
+   Cin <= '0';
+   wait for 10 ns;
 
- A <= '0';
- B <= '1';
- Cin <= '0';
- wait for 10 ns;
+   A <= '1';
+   B <= '1';
+   Cin <= '0';
+   wait for 10 ns;
 
- A <= '1';
- B <= '1';
- Cin <= '0';
- wait for 10 ns;
+   A <= '0';
+   B <= '0';
+   Cin <= '1';
+   wait for 10 ns;
 
- A <= '0';
- B <= '0';
- Cin <= '1';
- wait for 10 ns;
+   A <= '1';
+   B <= '0';
+   Cin <= '1';
+   wait for 10 ns;
 
- A <= '1';
- B <= '0';
- Cin <= '1';
- wait for 10 ns;
+   A <= '0';
+   B <= '1';
+   Cin <= '1';
+   wait for 10 ns;
 
- A <= '0';
- B <= '1';
- Cin <= '1';
- wait for 10 ns;
+   A <= '1';
+   B <= '1';
+   Cin <= '1';
+   wait for 10 ns;
 
- A <= '1';
- B <= '1';
- Cin <= '1';
- wait for 10 ns;
-
-end stim;
-
-END;
+  end process stim;
+----------------------------------------
+end Testbench_full_adder;
