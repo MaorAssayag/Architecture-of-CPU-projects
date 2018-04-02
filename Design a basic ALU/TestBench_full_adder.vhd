@@ -95,4 +95,4 @@ begin
 
   end process stim;
 ----------------------------------------
-end Testbench_full_adder;
+end behavior;

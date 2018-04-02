@@ -32,3 +32,44 @@
 # Compile of ADD.vhd failed with 16 errors.
 # Compile of ADD.vhd failed with 14 errors.
 # Compile of ADD.vhd failed with 14 errors.
+# Compile of full_adder.vhd was successful.
+# Compile of ADD.vhd failed with 15 errors.
+# Compile of ADD.vhd failed with 15 errors.
+# Compile of ADD.vhd failed with 15 errors.
+# Compile of ADD.vhd failed with 13 errors.
+# Compile of ADD.vhd was successful.
+# Compile of MAX_MIN.vhd failed with 3 errors.
+# Compile of ADD.vhd was successful.
+# Compile of MAX_MIN.vhd failed with 3 errors.
+# Compile of MAX_MIN.vhd failed with 3 errors.
+# Compile of TestBench_full_adder.vhd failed with 1 errors.
+# Compile of TestBench_full_adder.vhd was successful.
+vsim -gui work.testbench_full_adder
+# vsim -gui work.testbench_full_adder 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench_full_adder(behavior)
+# Loading work.full_adder(gate_level)
+add wave -position insertpoint sim:/testbench_full_adder/*
+add wave -position insertpoint sim:/testbench_full_adder/stim/*
+# (vish-4014) No objects found matching '/testbench_full_adder/stim/*'.
+add dataflow sim:/testbench_full_adder/stim/*
+# WARNING: No extended dataflow license exists
+run
+run
+run
+# Compile of TestBench_ADD.vhd failed with 7 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# Compile of TestBench_ADD.vhd failed with 1 errors.
+# ** Warning: (vish-7) Failed to open lock file "C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/ALU.mpf_lock" in create mode.
+# Permission denied. (errno = EACCES)
+# Compile of TestBench_ADD.vhd failed with 1 errors.

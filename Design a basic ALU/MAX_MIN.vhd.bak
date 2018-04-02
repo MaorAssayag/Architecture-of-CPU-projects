@@ -37,7 +37,7 @@ architecture gate_level of MAX_MIN is
   process (A, B, maxORmin)
   begin
     if maxORmin = '0' then
-      result <= maximum(A, B);
+      result <= MAXIMUM(A, B);
     else
       result <= MINIMUM(A, B);
     end if;
