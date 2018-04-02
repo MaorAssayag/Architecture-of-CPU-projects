@@ -11,10 +11,12 @@
 -- TODO : 1.test bench
 -- ====================================================================
 
+-- libraries decleration
 library ieee;
 use ieee.numeric_std.all;
 use ieee.std_logic_1164.all;
 
+ -- entity Definition
 entity MUX_addORsub is
     generic(N: positive := 8); --defualt value for N is 8
     Port (
@@ -25,9 +27,12 @@ entity MUX_addORsub is
     );
 end MUX_addORsub;
 
+ -- Architecture Definition
 architecture Behavioral of MUX_addORsub is
 begin
+----------------------------------------
     Y <= B2 when (SEL = '1') else B1;
+----------------------------------------
 end Behavioral;
 
 --EndOfFile

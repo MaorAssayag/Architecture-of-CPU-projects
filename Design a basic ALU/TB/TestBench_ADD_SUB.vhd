@@ -1,13 +1,12 @@
 -- ====================================================================
 --
 --	File Name:		TestBench_ADD_SUB.vhd
---	Description: test bench for ADD, SUB opp
+--	Description: test bench for ADD & SUB opp
 --
 --
 --	Date:			02/04/2018
 --	Designer:		Maor Assayag, Refael Shetrit
 --
--- TODO : 1.check in MODELSIM
 -- ====================================================================
 
 LIBRARY ieee;

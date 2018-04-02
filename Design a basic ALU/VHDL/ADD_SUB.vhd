@@ -1,13 +1,13 @@
 -- ====================================================================
 --
 --	File Name:		ADD_SUB.vhd
---	Description:	ADD command, currently support N bit's
+--	Description:	ADD & SUB command, currently support N bit's
+--                 OPP = 0 for ADD, 1 for SUB
 --
 --
 --	Date:			02/04/2018
 --	Designer:		Maor Assayag, Refael Shetrit
 --
--- TODO : 1.test bench
 -- ====================================================================
 
 -- libraries decleration

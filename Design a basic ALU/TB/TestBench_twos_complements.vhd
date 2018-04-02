@@ -1,14 +1,30 @@
-entity test_twoscomplement is
-end entity;
+-- ====================================================================
+--
+--	File Name:		test_twoscomplement.vhd
+--	Description:	test bench for twoscomplement VHDL (twos complement for binary signed number)
+--
+--
+--	Date:			02/04/2018
+--	Designer:		Maor Assayag, Refael Shetrit
+--
+-- ====================================================================
 
+-- libraries decleration
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-architecture test of test_twoscomplement is
+
+-- entity Definition
+entity TestBench_twos_complements is
+end entity;
+
+-- Architecture Definition
+architecture test of TestBench_twos_complements is
     signal A : signed (7 downto 0);
     signal Y : signed(7 downto 0);
 begin
-    dut : entity work.twoscomplement port map (A => A, Y=>Y); 
+----------------------------------------
+    stage : entity work.twoscomplement port map (A => A, Y=>Y);
 
     process
     begin
@@ -20,4 +36,6 @@ begin
        report "tests done";
        wait;
      end process;
+----------------------------------------
 end architecture;
+--EndOfFile
