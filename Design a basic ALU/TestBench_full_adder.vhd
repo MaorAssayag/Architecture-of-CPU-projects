@@ -8,15 +8,15 @@ ARCHITECTURE behavior OF Testbench_full_adder IS
 
  -- Component Declaration
 
- COMPONENT full_adder
- PORT(
- A : IN std_logic;
- B : IN std_logic;
- Cin : IN std_logic;
- S : OUT std_logic;
- Cout : OUT std_logic
+ component full_adder
+ port (
+     A : IN std_logic;
+     B : IN std_logic;
+     Cin : IN std_logic;
+     S : OUT std_logic;
+     Cout : OUT std_logic
  );
- END COMPONENT;
+end component;
 
  --Inputs
  signal A : std_logic := '0';

@@ -19,7 +19,7 @@ use ieee.std_logic_arith.all;
  -- entity Definition
 entity adder is
      Port(
-         GENERIC(N: INTEGER:=4);
+         generic (N: INTEGER:=8); --defualt value for N is 8
          A :     in std_logic_vector(N-1 downto 0);
          B :     in std_logic_vector(N-1 downto 0);
          SUM :   out std_logic_vector(N-1 downto 0);
