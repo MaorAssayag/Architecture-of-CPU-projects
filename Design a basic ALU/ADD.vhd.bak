@@ -7,7 +7,7 @@
 --	Date:			25/03/2018
 --	Designer:		Maor Assayag, Refael Shetrit
 --
--- TODO : 1. for loop for stages 2. generic n bits 3.test bench 
+-- TODO : 1.test bench 
 -- ====================================================================
 
 -- libraries decleration
