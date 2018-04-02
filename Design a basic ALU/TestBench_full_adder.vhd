@@ -1,3 +1,16 @@
+-- ====================================================================
+--
+--	File Name:		Testbench_full_adder.vhd
+--	Description:	test bench for full adder : input : 1 bit A, 1 bit B, 1 bit C_in
+-- output : S 1 bit, c_out 1 bit
+--
+--
+--	Date:			02/04/2018
+--	Designer:		Maor Assayag, Refael Shetrit
+--
+-- TODO : 1.test bench
+-- ====================================================================
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 
@@ -39,7 +52,7 @@ BEGIN
  );
 
  -- Stimulus process
- stim_proc: process
+ stim: process
  begin
  -- hold reset state for 100 ns.
  wait for 100 ns;
@@ -80,6 +93,6 @@ BEGIN
  Cin <= '1';
  wait for 10 ns;
 
- end process;
+end stim;
 
 END;

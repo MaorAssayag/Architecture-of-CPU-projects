@@ -42,7 +42,6 @@ end component;
 signal tmp : std_logic_vector (N downto 0);
 begin
 ----------------------------------------
-
     VARIABLE Num <= N-2; -- range 1 to N-2 when N=Num of Bits
     stage_0 : full_adder port map (A(0) => a, B(0) =>b, '0'=>Cin, SUM(0)=>sum, tmp(0)=>Cout);
 
