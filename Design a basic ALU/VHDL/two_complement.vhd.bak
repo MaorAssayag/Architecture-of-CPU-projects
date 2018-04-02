@@ -1,0 +1,18 @@
+library ieee;
+use ieee.numeric_std.all;
+entity twoscomplement is
+  generic
+  (
+     Nbits : positive := 8 
+  );
+  port 
+  ( 
+     A : in  signed (Nbits-1 downto 0);
+     Y : out signed   (Nbits-1 downto 0)
+  );
+end entity twoscomplement;
+
+architecture a1 of twoscomplement is
+begin
+  Y <= -signed(A);
+end architecture;

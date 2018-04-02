@@ -402,3 +402,536 @@ vsim -gui work.testbench_add
 # Loading work.full_adder(gate_level)
 add wave -position insertpoint sim:/testbench_add/*
 run
+# Compile of two_complement.vhd failed with 3 errors.
+# Compile of two_complement.vhd failed with 1 errors.
+# Compile of two_complement.vhd failed with 1 errors.
+# Compile of two_complement.vhd failed with 3 errors.
+# Compile of two_complement.vhd was successful.
+# Compile of two_complement.vhd was successful.
+# Compile of two_complement.vhd was successful.
+# Compile of TestBench_twos_complements.vhd was successful.
+vsim -gui work.test_twoscomplement
+# vsim -gui work.test_twoscomplement 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.test_twoscomplement(test)
+# Loading work.twoscomplement(gate_level)
+add wave -position insertpoint sim:/test_twoscomplement/*
+run
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 128 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 129 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 130 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 130 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 131 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 131 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 132 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 132 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 133 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 133 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 134 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 134 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 135 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 135 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 136 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 136 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 137 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 137 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 138 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 138 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 139 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 139 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 140 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 140 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 141 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 141 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 142 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 142 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 143 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 143 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 144 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 144 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 145 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 145 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 146 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 146 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 147 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 147 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 148 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 148 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 149 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 149 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 150 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 150 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 151 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 151 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 152 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 152 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 153 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 153 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 154 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 154 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 155 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 155 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 156 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 156 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 157 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 157 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 158 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 158 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 159 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 159 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 160 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 160 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 161 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 161 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 162 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 162 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 163 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 163 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 164 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 164 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 165 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 165 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 166 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 166 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 167 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 167 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 168 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 168 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 169 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 169 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 170 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 170 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 171 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 171 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 172 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 172 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 173 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 173 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 174 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 174 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 175 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 175 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 176 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 176 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 177 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 177 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 178 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 178 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 179 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 179 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 180 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 180 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 181 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 181 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 182 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 182 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 183 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 183 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 184 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 184 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 185 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 185 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 186 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 186 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 187 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 187 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 188 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 188 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 189 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 189 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 190 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 190 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 191 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 191 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 192 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 192 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 193 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 193 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 194 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 194 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 195 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 195 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 196 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 196 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 197 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 197 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 198 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 198 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 199 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 199 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 200 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 200 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 201 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 201 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 202 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 202 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 203 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 203 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 204 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 204 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 205 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 205 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 206 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 206 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 207 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 207 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 208 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 208 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 209 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 209 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 210 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 210 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 211 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 211 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 212 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 212 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 213 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 213 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 214 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 214 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 215 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 215 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 216 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 216 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 217 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 217 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 218 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 218 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 219 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 219 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 220 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 220 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 221 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 221 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 222 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 222 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 223 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 223 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 224 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 224 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 225 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 225 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 226 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 226 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 227 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 227 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 228 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 228 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 229 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 229 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 230 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 230 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 231 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 231 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 232 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 232 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 233 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 233 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 234 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 234 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 235 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 235 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 236 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 236 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 237 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 237 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 238 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 238 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 239 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 239 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 240 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 240 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 241 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 241 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 242 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 242 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 243 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 243 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 244 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 244 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 245 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 245 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 246 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 246 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 247 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 247 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 248 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 248 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 249 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 249 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 250 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 250 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 251 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 251 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 252 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 252 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 253 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 253 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 254 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 254 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 255 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+#    Time: 255 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Error: Assertion violation.
+#    Time: 256 ns  Iteration: 0  Instance: /test_twoscomplement
+# ** Note: tests done
+#    Time: 256 ns  Iteration: 0  Instance: /test_twoscomplement
+# Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/ALU.mpf).  File can not be renamed.
