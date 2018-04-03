@@ -1,7 +1,7 @@
 -- ====================================================================
 --
 --	File Name:		SHR_ONE.vhd
---	Description:	1 bit left
+--	Description:	1 bit right
 --
 --
 --	Date:			03/04/2018
@@ -26,10 +26,10 @@ end SHR_ONE;
 architecture gate_level of SHR_ONE is
 begin
   Aout <= A;
-     loopforshift: for i in 1 to N-1 generate
-       Aout(N-i) <= Aout(N-i-1);
-     end generate;
-     Aout(0) <= '0';
+     -- loopforshift: for i in 1 to N-1 generate
+     --   Aout(N-i) <= Aout(N-i-1);
+     -- end generate;
+     Aout(0) <= ;
 end gate_level;
 
 --EndOfFile
