@@ -21,8 +21,8 @@ entity MUX_addORsub is
     generic(N: positive := 8); --defualt value for N is 8
     Port (
            SEL: in  std_logic;
-           B1 : in  signed (N-1 downto 0);
-           B2 : in  signed (N-1 downto 0);
+           Y1 : in  signed (N-1 downto 0);
+           Y2 : in  signed (N-1 downto 0);
            Y  : out signed (N-1 downto 0)
     );
 end MUX_addORsub;
@@ -31,7 +31,7 @@ end MUX_addORsub;
 architecture Behavioral of MUX_addORsub is
 begin
 ----------------------------------------
-    Y <= B2 when (SEL = '1') else B1;
+    Y <= Y2 when (SEL = '1') else Y1;
 ----------------------------------------
 end Behavioral;
 

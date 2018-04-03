@@ -18,31 +18,39 @@
 -- libraries decleration
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_arith.all;
+use ieee.numeric_std.all;
 
 -- entity Definition
 entity MAX_MIN is
     generic (N: INTEGER := 8); --defualt value for N is 8
     port(
         maxORmin : in  std_logic;
-        A, B :     in  std_logic_vector(N-1 downto 0);
-        result :   out std_logic_vector(N-1 downto 0));
+        FLAG : inout std_logic_vector(7 downto 0);
+        A, B :     in  signed(N-1 downto 0);
+        result :   out signed(N-1 downto 0));
 end entity MAX_MIN;
 
 -- Architecture Definition
 architecture gate_level of MAX_MIN is
 
+  component ADD_SUB
+      generic(N: positive := 8); --defualt value for N is 8
+      port(
+         addORsub :   in std_logic;
+         FLAG : inout std_logic_vector(7 downto 0);
+         A :     in signed ((N-1) downto 0);
+         B :     in signed ((N-1) downto 0);
+         SUM :   out signed ((N-1) downto 0)
+         );
+  end component;
+  signal tempSUM : signed(N-1 downto 0);
   begin
-----------------------------------------
-  process (A, B, maxORmin)
-  begin
-    if maxORmin = '0' then
-      result <= maximum(A, B);
-    else
-      result <= MINIMUM(A, B);
-    end if;
-  end process;
-----------------------------------------
-end  gate_level;
+  ----------------------------------------
+    stage_0 :  ADD_SUB  generic map(N)
+      port map (addORsub => '1',FLAG => FLAG,A => A,B => B,SUM => tempSUM); -- A-B
+
+    result <= B when (((maxORmin = '0') AND (FLAG(5) = '1')) OR ((maxORmin = '1') and (FLAG(3) = '1'))) else A;
+  ----------------------------------------
+  end gate_level;
 
 --EndOfFile

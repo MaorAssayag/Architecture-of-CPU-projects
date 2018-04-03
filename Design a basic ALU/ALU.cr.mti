@@ -1,4 +1,23 @@
-{C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd}
+{C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_twos_complements.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_twos_complements.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TestBench_twos_complements
+-- Compiling architecture test of TestBench_twos_complements
+-- Loading entity twoscomplement
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD_SUB.vhd} {1 {vcom -work work -2002 -explicit {C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\ADD_SUB.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ADD_SUB
+-- Compiling architecture gate_level of ADD_SUB
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -6,7 +25,69 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Compiling entity full_adder
 -- Compiling architecture gate_level of full_adder
 
-} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD.vhd} {1 {vcom -work work -2002 -explicit {C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\ADD.vhd}
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MAX_MIN.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MAX_MIN.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_MAX_MIN
+-- Compiling architecture behavior of Testbench_MAX_MIN
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_ADD
+-- Compiling architecture behavior of Testbench_ADD
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MAX_MIN.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MAX_MIN.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MAX_MIN
+-- Compiling architecture gate_level of MAX_MIN
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD_SUB.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD_SUB.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_ADD_SUB
+-- Compiling architecture behavior of Testbench_ADD_SUB
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_full_adder.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_full_adder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Testbench_full_adder
+-- Compiling architecture behavior of Testbench_full_adder
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MUX_addORsub.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MUX_addORsub.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MUX_addORsub
+-- Compiling architecture Behavioral of MUX_addORsub
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/twoscomplement.vhd} {1 {vcom -work work -2002 -explicit {C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\twoscomplement.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity twoscomplement
+-- Compiling architecture gate_level of twoscomplement
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO

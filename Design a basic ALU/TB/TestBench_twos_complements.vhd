@@ -24,7 +24,7 @@ architecture test of TestBench_twos_complements is
     signal Y : signed(7 downto 0);
 begin
 ----------------------------------------
-    stage : entity work.twoscomplement port map (A => A, Y=>Y);
+    stage : entity work.twoscomplement port map (X => A, Y=>Y);
 
     process
     begin

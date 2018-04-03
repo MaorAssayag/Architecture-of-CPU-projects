@@ -40,14 +40,14 @@ begin
   begin
     for i in 1 to 2**7-1 loop
       maxORmin <= '0';
-      A <= to_signed(i,8);
-      B <= to_signed(i - 1,8); -- B=A-1
+      A <= to_signed(i,7);
+      B <= to_signed(i - 1,7); -- B=A-1
       wait for 50 ns;
     end loop;
     for i in 1 to 2**7-1 loop
       maxORmin <= '1';
-      A <= to_signed(i,8);
-      B <= to_signed(i - 1,8); -- B=A-1
+      A <= to_signed(i,7);
+      B <= to_signed(i - 1,7); -- B=A-1
       wait for 50 ns;
     end loop;
     wait;

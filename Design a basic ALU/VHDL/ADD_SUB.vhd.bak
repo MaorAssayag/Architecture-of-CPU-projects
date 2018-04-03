@@ -75,9 +75,9 @@ begin
    port map (SEL => addORsub, Y1 => tempSUM2, Y2 => tempSUM,Y =>SUM); -- SUM = (A-B) OR (A+B)
 
   FLAG(0) <= '1'; -- is A=B ?
-  eachBit : for i in 0 to (N-1) generate
+  eachBit : for i in 0 to (N-1) loop
         stage_i : FLAG(0) <= FLAG(0) AND (NOT tempSUM(i));
-    end generate;
+    end loop;
   FLAG(1) <= NOT FLAG(0); -- A!=B
   FLAG(2) <= NOT B_final(N-1);--A >= B if tempSUM(N-1)=0 then
   FLAG(3) <= FLAG(2) AND FLAG(1); -- A>B if A>=B & A!=B
