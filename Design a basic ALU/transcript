@@ -691,3 +691,52 @@ run
 #    Time: 256 ns  Iteration: 0  Instance: /testbench_twos_complements
 # ** Note: tests done
 #    Time: 256 ns  Iteration: 0  Instance: /testbench_twos_complements
+# Compile of ADD.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of MAX_MIN.vhd was successful.
+# Compile of TestBench_ADD.vhd was successful.
+# Compile of TestBench_full_adder.vhd was successful.
+# Compile of TestBench_MAX_MIN.vhd was successful.
+# Compile of TestBench_twos_complements.vhd was successful.
+# Compile of ADD_SUB.vhd was successful.
+# Compile of MUX_addORsub.vhd was successful.
+# Compile of twoscomplement.vhd was successful.
+# Compile of TestBench_ADD_SUB.vhd was successful.
+# Compile of TestBench_MUX_AddOrSub.vhd was successful.
+# 12 compiles, 0 failed with no errors. 
+vsim -gui work.testbench_max_min
+# vsim -gui work.testbench_max_min 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_max_min(behavior)
+# Loading work.max_min(gate_level)
+# Loading work.add_sub(gate_level)
+# Loading work.twoscomplement(gate_level)
+# Loading work.add(gate_level)
+# Loading work.full_adder(gate_level)
+# Loading work.mux_addorsub(behavioral)
+add wave -position insertpoint sim:/testbench_max_min/*
+run
+vsim -gui work.testbench_add
+# vsim -gui work.testbench_add 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_add(behavior)
+# Loading work.add(gate_level)
+# Loading work.full_adder(gate_level)
+add wave -position insertpoint sim:/testbench_add/*
+run
+vsim -gui work.testbench_mux_addorsub
+# vsim -gui work.testbench_mux_addorsub 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_mux_addorsub(behavior)
+# Loading work.mux_addorsub(behavioral)
+add wave -position insertpoint sim:/testbench_mux_addorsub/*
+run
