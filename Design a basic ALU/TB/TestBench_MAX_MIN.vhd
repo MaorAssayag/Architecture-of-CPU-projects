@@ -24,7 +24,7 @@ architecture behavior of Testbench_MAX_MIN is
  generic(N: integer := 8); --defualt value for N is 8
  port (
    maxORmin : in  std_logic;
-   FLAG : out std_logic_vector(7 downto 0);
+   FLAG : inout std_logic_vector(7 downto 0);
    A, B :     in  signed(N-1 downto 0);
    result :   out signed(N-1 downto 0)
  );
@@ -42,13 +42,13 @@ begin
       maxORmin <= '0';
       A <= to_signed(i,8);
       B <= to_signed(i - 1,8); -- B=A-1
-      wait for 50 ns;
+      wait for 5 ps;
     end loop;
     for i in 1 to 2**7-1 loop
       maxORmin <= '1';
       A <= to_signed(i,8);
       B <= to_signed(i - 1,8); -- B=A-1
-      wait for 50 ns;
+      wait for 5 ps;
     end loop;
     wait;
   end process stim;

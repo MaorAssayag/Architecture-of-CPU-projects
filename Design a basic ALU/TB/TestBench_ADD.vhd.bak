@@ -38,7 +38,7 @@ architecture behavior of Testbench_ADD is
 begin
 ----------------------------------------
   uut :  ADD  generic map(N)
-    port map (A => x,B => y,SUM => result,CARRY => C);
+    port map (OPP => '0', A => x,B => y,SUM => result,CARRY => C);
 
   stim: process
   begin

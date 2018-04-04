@@ -58,7 +58,7 @@ component ADD
   );
 end component;
 
-signal B_2, B_final, temp, tempSUM,tempSUM2 : signed (N-1 downto 0);
+signal B_2, tempSUM,tempSUM2 : signed (N-1 downto 0);
 signal tempCarry ,CARRY: std_logic;
 begin
 ----------------------------------------
@@ -66,23 +66,29 @@ begin
    port map (X => B, Y => B_2);
 
   stage_1 :  ADD  generic map(N)
-    port map (A => A,B => B,SUM => tempSUM2,CARRY => CARRY); -- A+B
+    port map (A => A,B => B,SUM => tempSUM,CARRY => CARRY); -- A+B
 
   stage_2 :  ADD  generic map(N)
-    port map (A => A,B => B_2,SUM => tempSUM,CARRY => tempCarry); -- A-B
+    port map (A => A,B => B_2,SUM => tempSUM2,CARRY => tempCarry); -- A-B
 
   stage_3 : MUX_addORsub generic map(N)
-   port map (SEL => addORsub, Y1 => tempSUM2, Y2 => tempSUM,Y =>SUM); -- SUM = (A-B) OR (A+B)
+   port map (SEL => addORsub, Y1 => tempSUM, Y2 => tempSUM2,Y =>SUM); -- SUM = (A-B) OR (A+B)
 
-  FLAG(0) <= '1'; -- is A=B ?
-  eachBit : for i in 0 to (N-1) generate
-        stage_i : FLAG(0) <= FLAG(0) AND (NOT tempSUM(i));
-    end generate;
-  FLAG(1) <= NOT FLAG(0); -- A!=B
-  FLAG(2) <= NOT B_final(N-1);--A >= B if tempSUM(N-1)=0 then
-  FLAG(3) <= FLAG(2) AND FLAG(1); -- A>B if A>=B & A!=B
-  FLAG(4) <= NOT FLAG(3);-- A<=B if !(A>B)
-  FLAG(5) <= FLAG(4) AND FLAG(1); -- A<B if (A<=B & A!=B)
+  flag_handle : process
+      variable FLAGS : std_logic_vector(7 downto 0) := "00000000";
+  begin
+      FLAG <= FLAGS; -- will assign at the end of process
+      FLAGS(0) := '1'; -- is A=B ?
+      wait on tempSUM2;
+      eachBit: for i in 0 to (N-1) loop
+        FLAGS(0) := (FLAGS(0) AND (NOT tempSUM2(i)));
+      end loop;
+      FLAGS(1) := NOT FLAGS(0); -- A!=B
+      FLAGS(2) := NOT tempSUM2(N-1);--A >= B if tempSUM(N-1)=0 then
+      FLAGS(3) := FLAGS(2) AND FLAGS(1); -- A>B if A>=B & A!=B
+      FLAGS(4) := NOT FLAGS(3);-- A<=B if !(A>B)
+      FLAGS(5) := FLAGS(4) AND FLAGS(1); -- A<B if (A<=B & A!=B)
+  end process flag_handle;
 ----------------------------------------
 end gate_level;
 
