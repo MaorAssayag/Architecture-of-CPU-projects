@@ -25,11 +25,10 @@ end SHR_ONE;
  -- Architecture Definition
 architecture gate_level of SHR_ONE is
 begin
-  Aout <= A;
-     -- loopforshift: for i in 1 to N-1 generate
-     --   Aout(N-i) <= Aout(N-i-1);
-     -- end generate;
-     Aout(0) <= ;
+     loopforshift: for i in 1 to N-1 generate
+       Aout(N-i-1) <= A(N-i);
+     end generate;
+     Aout(n-1) <= '0' ;
 end gate_level;
 
 --EndOfFile
