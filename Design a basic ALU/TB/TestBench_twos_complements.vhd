@@ -20,11 +20,19 @@ end entity;
 
 -- Architecture Definition
 architecture test of TestBench_twos_complements is
+  component twoscomplement
+    generic (N: positive := 8 ); --defualt value for N is 8
+    port(
+      X : in  signed (N-1 downto 0);
+     Y : out signed (N-1 downto 0)
+     );
+  end component;
+  
     signal A : signed (7 downto 0);
-    signal Y : signed(7 downto 0);
+    signal Y : signed (7 downto 0);
 begin
 ----------------------------------------
-    stage : entity work.twoscomplement port map (A => A, Y=>Y);
+    stage_0 : twoscomplement generic map(8) port map (X => A, Y=>Y);
 
     process
     begin

@@ -22,23 +22,24 @@ architecture behavior of Testbench_ADD_SUB is
  component ADD_SUB
     generic (N: integer := 8 ); --defualt value for N is 8
     port(
-      OPP :   in std_logic;
+      addORsub :   in std_logic;
+      FLAG : inout std_logic_vector(7 downto 0);
       A :     in signed ((N-1) downto 0);
       B :     in signed ((N-1) downto 0);
-      SUM :   out signed ((N-1) downto 0);
-      CARRY : out std_logic
+      SUM :   out signed ((N-1) downto 0)
      );
   end component;
 
   constant N : integer := 8;
-  signal C : std_logic;
   signal OPP : std_logic := '1';
+  signal FLAG_sim : std_logic_vector(7 downto 0) := "00000000";
   signal x, y, result : signed((N-1) downto 0) ;
+ 
 
   begin
   ----------------------------------------
    uut :  ADD_SUB  generic map(N)
-     port map (OPP => OPP, A => x,B => y,SUM => result,CARRY => C);
+     port map (addORsub => OPP, FLAG => FLAG_sim, A => x,B => y,SUM => result);
 
    stim: process
    begin

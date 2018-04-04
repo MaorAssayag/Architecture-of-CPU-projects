@@ -1,13 +1,12 @@
 -- ====================================================================
 --
 --	File Name:		TestBench_ADD.vhd
---	Description: test bench for MAX_MIN opp
+--	Description: test bench for ADD opp
 --
 --
 --	Date:			02/04/2018
 --	Designer:		Maor Assayag, Refael Shetrit
 --
--- TODO : 1.check in MODELSIM
 -- ====================================================================
 
 LIBRARY ieee;
@@ -23,7 +22,6 @@ architecture behavior of Testbench_ADD is
  component ADD
     generic (N: integer := 8 ); --defualt value for N is 8
     port(
-      OPP :   in std_logic;
       A :     in signed ((N-1) downto 0);
       B :     in signed ((N-1) downto 0);
       SUM :   out signed ((N-1) downto 0);
