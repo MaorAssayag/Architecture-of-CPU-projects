@@ -1,13 +1,12 @@
 -- ====================================================================
 --
 --	File Name:		TestBench_ADD.vhd
---	Description: test bench for MAX_MIN opp
+--	Description: test bench for ADD opp
 --
 --
 --	Date:			02/04/2018
 --	Designer:		Maor Assayag, Refael Shetrit
 --
--- TODO : 1.check in MODELSIM
 -- ====================================================================
 
 LIBRARY ieee;

@@ -7,7 +7,6 @@
 --	Date:			03/04/2018
 --	Designer:		Maor Assayag, Refael Shetrit
 --
---
 -- ====================================================================
 
 LIBRARY ieee;
