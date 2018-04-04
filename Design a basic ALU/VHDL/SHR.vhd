@@ -28,11 +28,11 @@ end SHR;
 
  -- Architecture Definition
 architecture gate_level of SHR is
---   component SHR_ONE port (
---       A :in std_logic_vector(N-1 downto 0);
---       Aout : out std_logic_vector(N-1 downto 0)
---       );
---   end component;
+  component SHR_ONE port (
+      A :in std_logic_vector(N-1 downto 0);
+      Aout : out std_logic_vector(N-1 downto 0)
+      );
+  end component;
 
 
 signal tmp : std_logic_vector (N-1 downto 0) := A;
@@ -41,12 +41,9 @@ begin
 ----------------------------------------
 -- Shift <= std_logic_vector(A srl conv_integer(B));
 loopforshift: for i in 0 to tmp2 generate
-    -- stage_i : SHR_ONE port map (tmp,tmp);
-    loopforshift: for i in 1 to N-1 generate
-      tmp(N-i-1) <= tmp(N-i);
-    end generate;
+    stage_i : SHR_ONE port map (tmp,tmp);
 end generate;
-Shift <= tmp ;
+tmp <= Shift;
 
 ----------------------------------------
 end gate_level;
