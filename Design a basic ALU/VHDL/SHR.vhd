@@ -43,7 +43,7 @@ begin
 loopforshift: for i in 0 to tmp2 generate
     stage_i : SHR_ONE port map (tmp,tmp);
 end generate;
-tmp <= Shift;
+Shift <= tmp;
 
 ----------------------------------------
 end gate_level;
