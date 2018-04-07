@@ -7,15 +7,6 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Compiling entity Testbench_MAX_MIN
 -- Compiling architecture behavior of Testbench_MAX_MIN
 
-} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD.vhd}
-Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ADD
--- Compiling architecture gate_level of ADD
-
 } {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD_SUB.vhd} {1 {vcom -work work -2002 -explicit {C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TB\TestBench_ADD_SUB.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package STANDARD
@@ -24,6 +15,15 @@ Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
 -- Loading package NUMERIC_STD
 -- Compiling entity Testbench_ADD_SUB
 -- Compiling architecture behavior of Testbench_ADD_SUB
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ADD
+-- Compiling architecture gate_level of ADD
 
 } {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_twos_complements.vhd} {1 {vcom -work work -2002 -explicit {C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TB\TestBench_twos_complements.vhd}
 Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012

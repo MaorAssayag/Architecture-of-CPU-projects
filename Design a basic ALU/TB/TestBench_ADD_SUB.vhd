@@ -31,7 +31,7 @@ architecture behavior of Testbench_ADD_SUB is
   end component;
 
   constant N : integer := 8;
-  signal OPP : std_logic := '1';
+  signal OPP : std_logic := '0';
   signal FLAG_sim : std_logic_vector(7 downto 0) := "00000000";
   signal x, y, result : signed((N-1) downto 0) ;
  
@@ -44,8 +44,9 @@ architecture behavior of Testbench_ADD_SUB is
    stim: process
    begin
      wait for 100 ns;
-     x <= "00000000", "00000001" after 50 ns, "00001100" after 100 ns,"00010000" after 150 ns,"00000000" after 200 ns;
-     y <= "00000010", "00000011" after 50 ns, "00000010" after 100 ns,"00000100" after 150 ns,"00000011" after 200 ns;
+     x <= "11111110", "10000001" after 50 ns, "00001100" after 100 ns,"11111110" after 150 ns,"00000000" after 200 ns;
+     y <= "11111101", "00000011" after 50 ns, "00000010" after 100 ns,"00000100" after 150 ns,"00000011" after 200 ns;
+     OPP <= '1' after 140 ns;
      wait for 50 ns;
    end process stim;
   ----------------------------------------
