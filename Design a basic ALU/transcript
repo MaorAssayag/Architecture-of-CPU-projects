@@ -114,3 +114,15 @@ run
 # Compile of TestBench_SHL.vhd was successful.
 # 20 compiles, 1 failed with 6 errors. 
 # Compile of ADD.vhd was successful.
+# Break key hit 
+vsim -gui work.testbench_shl
+# vsim -gui work.testbench_shl 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shl(behavior)
+# Loading work.shl(gate_level)
+# Loading work.shl_one(gate_level)
+add wave -position insertpoint sim:/testbench_shl/*
+run
