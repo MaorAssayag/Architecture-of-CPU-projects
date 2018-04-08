@@ -58,3 +58,59 @@ vsim -gui work.testbench_shl_one
 # Loading work.shl_one(gate_level)
 add wave -position insertpoint sim:/testbench_shl_one/*
 run
+# Compile of SHL.vhd was successful.
+# Compile of TestBench_SHL.vhd was successful.
+vsim -gui work.testbench_shl
+# vsim -gui work.testbench_shl 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shl(behavior)
+# Loading work.shl(gate_level)
+# Loading work.shl_one(gate_level)
+add wave -position insertpoint sim:/testbench_shl/*
+run
+# Compile of ADD.vhd failed with 6 errors.
+# Compile of full_adder.vhd was successful.
+# Compile of MAX_MIN.vhd was successful.
+# Compile of TestBench_ADD.vhd was successful.
+# Compile of TestBench_full_adder.vhd was successful.
+# Compile of TestBench_MAX_MIN.vhd was successful.
+# Compile of TestBench_twos_complements.vhd was successful.
+# Compile of ADD_SUB.vhd was successful.
+# Compile of MUX_addORsub.vhd was successful.
+# Compile of twoscomplement.vhd was successful.
+# Compile of TestBench_ADD_SUB.vhd was successful.
+# Compile of TestBench_MUX_AddOrSub.vhd was successful.
+# Compile of SHL.vhd was successful.
+# Compile of SHR.vhd was successful.
+# Compile of SHR_ONE.vhd was successful.
+# Compile of TestBench_SHR.vhd was successful.
+# Compile of Testbench_SHR_ONE.vhd was successful.
+# Compile of SHL_ONE.vhd was successful.
+# Compile of Testbench_SHL_ONE.vhd was successful.
+# Compile of TestBench_SHL.vhd was successful.
+# 20 compiles, 5 failed with 6 errors. 
+# Compile of ADD.vhd failed with 6 errors.
+# Compile of full_adder.vhd was successful.
+# Compile of MAX_MIN.vhd was successful.
+# Compile of TestBench_ADD.vhd was successful.
+# Compile of TestBench_full_adder.vhd was successful.
+# Compile of TestBench_MAX_MIN.vhd was successful.
+# Compile of TestBench_twos_complements.vhd was successful.
+# Compile of ADD_SUB.vhd was successful.
+# Compile of MUX_addORsub.vhd was successful.
+# Compile of twoscomplement.vhd was successful.
+# Compile of TestBench_ADD_SUB.vhd was successful.
+# Compile of TestBench_MUX_AddOrSub.vhd was successful.
+# Compile of SHL.vhd was successful.
+# Compile of SHR.vhd was successful.
+# Compile of SHR_ONE.vhd was successful.
+# Compile of TestBench_SHR.vhd was successful.
+# Compile of Testbench_SHR_ONE.vhd was successful.
+# Compile of SHL_ONE.vhd was successful.
+# Compile of Testbench_SHL_ONE.vhd was successful.
+# Compile of TestBench_SHL.vhd was successful.
+# 20 compiles, 1 failed with 6 errors. 
+# Compile of ADD.vhd was successful.

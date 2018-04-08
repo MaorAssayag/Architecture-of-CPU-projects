@@ -4,62 +4,60 @@ K3
 cModel Technology
 dC:\Users\MaorA\Desktop\CPU
 Eadd
-Z0 w1523136363
+Z0 w1523190592
 Z1 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z4 dC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU
-8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\ADD.vhd
-FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\ADD.vhd
+Z5 8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\ADD.vhd
+Z6 FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\ADD.vhd
 l0
 L18
 V<DWo`S79`SAO@5iZiLGi81
-Z5 OV;C;10.1b;51
-32
-Z6 o-work work -2002 -explicit -O0
-Z7 tExplicit 1
 !s100 :IL?k8BcJ11AL_@Rfda1m2
+Z7 OV;C;10.1b;51
+32
 !i10b 1
-!s108 1523189750.938000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\ADD.vhd|
-!s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\ADD.vhd|
+Z8 !s108 1523190594.746000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\ADD.vhd|
+Z10 !s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\ADD.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
 Agate_level
 R1
 R2
 R3
-DEx4 work 3 add 0 22 <DWo`S79`SAO@5iZiLGi81
+Z13 DEx4 work 3 add 0 22 <DWo`S79`SAO@5iZiLGi81
 l40
 L29
-V9`znaHh><<a=`eP9_CXTF3
-R5
-32
-R6
+Z14 V9`znaHh><<a=`eP9_CXTF3
+Z15 !s100 f[KoB=LZDMKTkLiUPWhFU2
 R7
-FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD.vhd
-8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD.vhd
-!s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD.vhd|
-!s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD.vhd|
-!s108 1522849145.263000
-!s100 f[KoB=LZDMKTkLiUPWhFU2
+32
 !i10b 1
+R8
+R9
+R10
+R11
+R12
 Eadd_sub
-Z8 w1522847401
+Z16 w1522847401
 R3
 R2
 R1
 R4
-Z9 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD_SUB.vhd
-Z10 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD_SUB.vhd
+Z17 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD_SUB.vhd
+Z18 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD_SUB.vhd
 l0
 L20
 V6S2SQa3RnaXZThEzU?V9[3
-R5
-32
-Z11 !s108 1523189751.974000
-Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD_SUB.vhd|
-Z13 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD_SUB.vhd|
-R6
 R7
+32
+Z19 !s108 1523190558.256000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD_SUB.vhd|
+Z21 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/ADD_SUB.vhd|
+R11
+R12
 !s100 06^d[SJB[CEhc^:_kfY7W2
 !i10b 1
 Agate_level
@@ -70,72 +68,72 @@ DEx4 work 7 add_sub 0 22 6S2SQa3RnaXZThEzU?V9[3
 l63
 L32
 Vni6nm1MRDBTIFlAkLF60S2
-R5
+R7
 32
+R19
+R20
+R21
 R11
 R12
-R13
-R6
-R7
 !s100 C;c2DJSL7PdM;7NfDXz`X0
 !i10b 1
 Eadder
 w1522674147
-Z14 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
-Z15 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z22 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z23 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 R2
 R1
 R4
-Z16 8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\ADD.vhd
-Z17 FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\ADD.vhd
+Z24 8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\ADD.vhd
+Z25 FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\ADD.vhd
 l0
 L19
 VlNS_B]Koe7fG@CBL@=2]z2
-R5
-33
-Z18 !s90 -reportprogress|300|-work|work|-2008|-explicit|-source|-O0|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\ADD.vhd|
-Z19 !s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\ADD.vhd|
-Z20 o-work work -2008 -explicit -source -O0
 R7
+33
+Z26 !s90 -reportprogress|300|-work|work|-2008|-explicit|-source|-O0|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\ADD.vhd|
+Z27 !s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\ADD.vhd|
+Z28 o-work work -2008 -explicit -source -O0
+R12
 !s108 1522674155.016000
 !s100 @O7cK?E0mK:F=R@gd^5RB1
 !i10b 1
 Agate_level
 w1522674564
-R14
-R15
+R22
+R23
 R2
 R1
 DEx4 work 5 adder 0 22 lNS_B]Koe7fG@CBL@=2]z2
 l41
 L30
 VD7RWW:zmnWXV1=Lc5khfO3
-R5
-33
-R18
-R19
-R20
 R7
+33
+R26
+R27
+R28
+R12
 !s108 1522674570.515000
 !s100 Tn7Gd5C;?_A[:mMf702oS0
 !i10b 1
 Efull_adder
-Z21 w1522674756
+Z29 w1522674756
 R2
 R1
 R4
-Z22 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd
-Z23 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd
+Z30 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd
+Z31 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd
 l0
 L17
 VK>1hj6[?@BPEMKRC:mPPJ0
-R5
-32
-Z24 !s108 1523189751.063000
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd|
-Z26 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd|
-R6
 R7
+32
+Z32 !s108 1523190557.386000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd|
+Z34 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/full_adder.vhd|
+R11
+R12
 !s100 GMngc[7>Unn9abhZ;QjM10
 !i10b 1
 Agate_level
@@ -145,33 +143,33 @@ DEx4 work 10 full_adder 0 22 K>1hj6[?@BPEMKRC:mPPJ0
 l29
 L28
 VC]8^:Z]@<C`ZBOInGkDVB2
-R5
-32
-R24
-R25
-R26
-R6
 R7
+32
+R32
+R33
+R34
+R11
+R12
 !s100 hAa9W[ieGbHLM[UjP6nXJ3
 !i10b 1
 Emax_min
-Z27 w1522848920
+Z35 w1522848920
 R3
 R2
 R1
 R4
-Z28 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MAX_MIN.vhd
-Z29 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MAX_MIN.vhd
+Z36 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MAX_MIN.vhd
+Z37 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MAX_MIN.vhd
 l0
 L23
 VglVoZ>WoHAh]>YXW7Ia`j1
-R5
-32
-Z30 !s108 1523189751.219000
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MAX_MIN.vhd|
-Z32 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MAX_MIN.vhd|
-R6
 R7
+32
+Z38 !s108 1523190557.527000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MAX_MIN.vhd|
+Z40 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MAX_MIN.vhd|
+R11
+R12
 !s100 TcJ1:^dC^1bc7ceHV8_]e1
 !i10b 1
 Agate_level
@@ -182,33 +180,33 @@ DEx4 work 7 max_min 0 22 glVoZ>WoHAh]>YXW7Ia`j1
 l46
 L33
 Vko9ETR]N;9QM;g7_WdHm41
-R5
-32
-R30
-R31
-R32
-R6
 R7
+32
+R38
+R39
+R40
+R11
+R12
 !s100 69kMjNYjhh8kVcB]SR7gL3
 !i10b 1
 Emux_addorsub
-Z33 w1522848850
+Z41 w1522848850
 R1
 R2
 R3
 R4
-Z34 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MUX_addORsub.vhd
-Z35 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MUX_addORsub.vhd
+Z42 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MUX_addORsub.vhd
+Z43 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MUX_addORsub.vhd
 l0
 L19
 VUj7ek9TNlVXhIUF?SQBL70
-R5
-32
-Z36 !s108 1523189752.149000
-Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MUX_addORsub.vhd|
-Z38 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MUX_addORsub.vhd|
-R6
 R7
+32
+Z44 !s108 1523190558.428000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MUX_addORsub.vhd|
+Z46 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/MUX_addORsub.vhd|
+R11
+R12
 !s100 [0V]l<go`gD_;Cm^6B2S11
 !i10b 1
 Abehavioral
@@ -219,54 +217,70 @@ DEx4 work 12 mux_addorsub 0 22 Uj7ek9TNlVXhIUF?SQBL70
 l31
 L30
 V7BKoRNS;8dZh7X]78@QK=3
-R5
-32
-R36
-R37
-R38
-R6
 R7
+32
+R44
+R45
+R46
+R11
+R12
 !s100 RKlEGSNGI]4g5[?QSLoog3
 !i10b 1
 Eshl
-w1523188278
-R14
-R15
-R2
-R1
-R4
-8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHL.vhd
-FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHL.vhd
-l0
-L19
-V=5CGU>N_BAnQWIYQYdJY41
-R5
-32
-R6
-R7
-!s100 HT7;W3I<Y^0;k3Q9G1Wff2
-!i10b 1
-!s108 1523189752.775000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHL.vhd|
-!s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHL.vhd|
-Eshl_one
-Z39 w1523189745
+Z47 w1523190149
 R1
 R2
 R3
 R4
-Z40 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHL_ONE.vhd
-Z41 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHL_ONE.vhd
+Z48 8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHL.vhd
+Z49 FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHL.vhd
+l0
+L18
+VF_;lJFH9WT[0Mk<U:iL9T1
+R7
+32
+Z50 !s108 1523190559.069000
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHL.vhd|
+Z52 !s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHL.vhd|
+R11
+R12
+!s100 3[g==:d7E^bfiih@FmSHT2
+!i10b 1
+Agate_level
+R1
+R2
+R3
+DEx4 work 3 shl 0 22 F_;lJFH9WT[0Mk<U:iL9T1
+l41
+L27
+V]0bDVhXbYB[?LEJ58;;>A0
+R7
+32
+R50
+R51
+R52
+R11
+R12
+!s100 <lTzzUP^z;W5kfmhg]8>G3
+!i10b 1
+Eshl_one
+Z53 w1523189745
+R1
+R2
+R3
+R4
+Z54 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHL_ONE.vhd
+Z55 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHL_ONE.vhd
 l0
 L20
 Vii>ZF6@<UCmH]YKahn>:K3
-R5
-32
-Z42 !s108 1523189757.551000
-Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHL_ONE.vhd|
-Z44 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHL_ONE.vhd|
-R6
 R7
+32
+Z56 !s108 1523190559.866000
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHL_ONE.vhd|
+Z58 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHL_ONE.vhd|
+R11
+R12
 !s100 bSHQ2M@c[fiS[gZIiF7Q[2
 !i10b 1
 Agate_level
@@ -277,33 +291,33 @@ DEx4 work 7 shl_one 0 22 ii>ZF6@<UCmH]YKahn>:K3
 l29
 L28
 V5V367?H5a<]AF84lFQ5Jj3
-R5
-32
-R42
-R43
-R44
-R6
 R7
+32
+R56
+R57
+R58
+R11
+R12
 !s100 mn@ZlJ0`DzmnFDm2njN5J1
 !i10b 1
 Eshr
-Z45 w1523188856
+Z59 w1523188856
 R1
 R2
 R3
 R4
-Z46 8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHR.vhd
-Z47 FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHR.vhd
+Z60 8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHR.vhd
+Z61 FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHR.vhd
 l0
 L18
 VLG=7cML4`eOkdVWizH;6A2
-R5
-32
-Z48 !s108 1523189752.901000
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHR.vhd|
-Z50 !s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHR.vhd|
-R6
 R7
+32
+Z62 !s108 1523190559.235000
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHR.vhd|
+Z64 !s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\VHDL\SHR.vhd|
+R11
+R12
 !s100 OIGmjgI>89<A4>TahaX4]1
 !i10b 1
 Agate_level
@@ -314,33 +328,33 @@ DEx4 work 3 shr 0 22 LG=7cML4`eOkdVWizH;6A2
 l39
 L27
 VbX]:J385iEQQd7[V]kizW0
-R5
-32
-R48
-R49
-R50
-R6
 R7
+32
+R62
+R63
+R64
+R11
+R12
 !s100 kkV;<=C>2@z85_ce]FeDE2
 !i10b 1
 Eshr_one
-Z51 w1523189345
+Z65 w1523189345
 R1
 R2
 R3
 R4
-Z52 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR_ONE.vhd
-Z53 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR_ONE.vhd
+Z66 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR_ONE.vhd
+Z67 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR_ONE.vhd
 l0
 L18
 Vhm]zW9=AdAMP9mPh6;=4=2
-R5
-32
-Z54 !s108 1523189753.054000
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR_ONE.vhd|
-Z56 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR_ONE.vhd|
-R6
 R7
+32
+Z68 !s108 1523190559.392000
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR_ONE.vhd|
+Z70 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR_ONE.vhd|
+R11
+R12
 !s100 cUEzS=T92>oeE>ZjZ4R8e0
 !i10b 1
 Agate_level
@@ -351,33 +365,33 @@ DEx4 work 7 shr_one 0 22 hm]zW9=AdAMP9mPh6;=4=2
 l28
 L27
 VDJ:b>?A2XHi776_hkdVMI3
-R5
-32
-R54
-R55
-R56
-R6
 R7
+32
+R68
+R69
+R70
+R11
+R12
 !s100 zl@bBDQA9Q]Ka?B;jQze<1
 !i10b 1
 Esreg
-Z57 w1523173515
+Z71 w1523173515
 R3
 R2
 R1
 R4
-Z58 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/Sreg.vhd
-Z59 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/Sreg.vhd
+Z72 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/Sreg.vhd
+Z73 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/Sreg.vhd
 l0
 L6
 V7VVd7Ydfa`UA75geBnRWj2
-R5
-32
-Z60 !s108 1523181795.051000
-Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/Sreg.vhd|
-Z62 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/Sreg.vhd|
-R6
 R7
+32
+Z74 !s108 1523181795.051000
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/Sreg.vhd|
+Z76 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/Sreg.vhd|
+R11
+R12
 !s100 eP^2Tj2dS>zB``^I0a6<l3
 !i10b 1
 Abehavioral
@@ -388,33 +402,33 @@ DEx4 work 4 sreg 0 22 7VVd7Ydfa`UA75geBnRWj2
 l26
 L21
 V1iJ3KNZFX;OG0Sk>WcCH]3
-R5
-32
-R60
-R61
-R62
-R6
 R7
+32
+R74
+R75
+R76
+R11
+R12
 !s100 69UOU?6eLAZn8:KcS8hJ=1
 !i10b 1
 Esreg_ont
-Z63 w1523179551
+Z77 w1523179551
 R1
 R2
 R3
 R4
-Z64 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/Sreg_one.vhd
-Z65 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/Sreg_one.vhd
+Z78 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/Sreg_one.vhd
+Z79 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/Sreg_one.vhd
 l0
 L17
 VfXRQCI>a`Sk^IT[iRm9GJ1
-R5
-32
-Z66 !s108 1523181795.364000
-Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/Sreg_one.vhd|
-Z68 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/Sreg_one.vhd|
-R6
 R7
+32
+Z80 !s108 1523181795.364000
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/Sreg_one.vhd|
+Z82 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/Sreg_one.vhd|
+R11
+R12
 !s100 iTb4z9d1^X6<X4KTLIcJ91
 !i10b 1
 Agate_level
@@ -425,30 +439,30 @@ DEx4 work 8 sreg_ont 0 22 fXRQCI>a`Sk^IT[iRm9GJ1
 l27
 L25
 V`AeDVfCP_;EQHkd08Off:1
-R5
-32
-R66
-R67
-R68
-R6
 R7
+32
+R80
+R81
+R82
+R11
+R12
 !s100 GB^C?^GH4dW36P[dT@DhB1
 !i10b 1
 Etest_twoscomplement
-Z69 w1522678039
+Z83 w1522678039
 R4
-Z70 8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TestBench_twos_complements.vhd
-Z71 FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TestBench_twos_complements.vhd
+Z84 8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TestBench_twos_complements.vhd
+Z85 FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TestBench_twos_complements.vhd
 l0
 L1
 VJW]JJXcH@[hD3zCZII[f62
-R5
-32
-Z72 !s108 1522678077.296000
-Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TestBench_twos_complements.vhd|
-Z74 !s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TestBench_twos_complements.vhd|
-R6
 R7
+32
+Z86 !s108 1522678077.296000
+Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TestBench_twos_complements.vhd|
+Z88 !s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\TestBench_twos_complements.vhd|
+R11
+R12
 !s100 KXE2lL[WmM1<Z5zoKeZ6>2
 !i10b 1
 Atest
@@ -460,33 +474,33 @@ R1
 l10
 L7
 ViiFAbK:[KW_nQ08?0WMF90
-R5
-32
-R72
-R73
-R74
-R6
 R7
+32
+R86
+R87
+R88
+R11
+R12
 !s100 o:eRHoNTAlGTkDe=]FkeU2
 !i10b 1
 Etestbench_add
-Z75 w1522848869
+Z89 w1522848869
 R3
 R2
 R1
 R4
-Z76 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD.vhd
-Z77 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD.vhd
+Z90 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD.vhd
+Z91 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD.vhd
 l0
 L16
 VNX@iQIOQdi_1D?ZSQOibG1
-R5
-32
-Z78 !s108 1523189751.360000
-Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD.vhd|
-Z80 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD.vhd|
-R6
 R7
+32
+Z92 !s108 1523190557.683000
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD.vhd|
+Z94 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD.vhd|
+R11
+R12
 !s100 EAOFN3oRHIj[XZ[kHMOZl2
 !i10b 1
 Abehavior
@@ -497,33 +511,33 @@ DEx4 work 13 testbench_add 0 22 NX@iQIOQdi_1D?ZSQOibG1
 l36
 L19
 V:=1B2DneB:7US62T8nTbB3
-R5
-32
-R78
-R79
-R80
-R6
 R7
+32
+R92
+R93
+R94
+R11
+R12
 !s100 ADAA6eeK2]fXSnb9Tgk5m0
 !i10b 1
 Etestbench_add_sub
-Z81 w1522931126
+Z95 w1522931126
 R3
 R2
 R1
 R4
-Z82 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD_SUB.vhd
-Z83 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD_SUB.vhd
+Z96 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD_SUB.vhd
+Z97 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD_SUB.vhd
 l0
 L16
 V=lg6^e5jN@0M:KKfYmhn_3
-R5
-32
-Z84 !s108 1523189752.465000
-Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD_SUB.vhd|
-Z86 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD_SUB.vhd|
-R6
 R7
+32
+Z98 !s108 1523190558.756000
+Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD_SUB.vhd|
+Z100 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_ADD_SUB.vhd|
+R11
+R12
 !s100 ;i;C4c5B_VM]219:d6XPV0
 !i10b 1
 Abehavior
@@ -534,32 +548,32 @@ DEx4 work 17 testbench_add_sub 0 22 =lg6^e5jN@0M:KKfYmhn_3
 l39
 L19
 V5lRWm3l8l[C?Ke6k:_fTz0
-R5
-32
-R84
-R85
-R86
-R6
 R7
+32
+R98
+R99
+R100
+R11
+R12
 !s100 FE]azPk9ei]iME9BCICA72
 !i10b 1
 Etestbench_full_adder
-Z87 w1522848882
+Z101 w1522848882
 R2
 R1
 R4
-Z88 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_full_adder.vhd
-Z89 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_full_adder.vhd
+Z102 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_full_adder.vhd
+Z103 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_full_adder.vhd
 l0
 L16
 V:MY6QJV6^0]a]h1aBK`0M0
-R5
-32
-Z90 !s108 1523189751.518000
-Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_full_adder.vhd|
-Z92 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_full_adder.vhd|
-R6
 R7
+32
+Z104 !s108 1523190557.824000
+Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_full_adder.vhd|
+Z106 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_full_adder.vhd|
+R11
+R12
 !s100 M^A`G=[j@<FzF`GfZVCmg0
 !i10b 1
 Abehavior
@@ -569,33 +583,33 @@ DEx4 work 20 testbench_full_adder 0 22 :MY6QJV6^0]a]h1aBK`0M0
 l42
 L19
 VzBL`f`n_2L^F7HJWL>l6o1
-R5
-32
-R90
-R91
-R92
-R6
 R7
+32
+R104
+R105
+R106
+R11
+R12
 !s100 NNhk=Eh^W[7@Tc9fjz1ZZ1
 !i10b 1
 Etestbench_max_min
-Z93 w1522848887
+Z107 w1522848887
 R3
 R2
 R1
 R4
-Z94 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MAX_MIN.vhd
-Z95 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MAX_MIN.vhd
+Z108 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MAX_MIN.vhd
+Z109 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MAX_MIN.vhd
 l0
 L16
 Vik>nb<2T;KLM0_n7Vd]E12
-R5
-32
-Z96 !s108 1523189751.668000
-Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MAX_MIN.vhd|
-Z98 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MAX_MIN.vhd|
-R6
 R7
+32
+Z110 !s108 1523190557.959000
+Z111 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MAX_MIN.vhd|
+Z112 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MAX_MIN.vhd|
+R11
+R12
 !s100 ANVSLh;IoFCZ2Q_S__km]3
 !i10b 1
 Abehavior
@@ -606,33 +620,33 @@ DEx4 work 17 testbench_max_min 0 22 ik>nb<2T;KLM0_n7Vd]E12
 l36
 L19
 V@hNdYO8O6<gf1IYbj;fJ<1
-R5
-32
-R96
-R97
-R98
-R6
 R7
+32
+R110
+R111
+R112
+R11
+R12
 !s100 H;zmiNam<VE[2fE]O2e6N3
 !i10b 1
 Etestbench_mux_addorsub
-Z99 w1522848845
+Z113 w1522848845
 R3
 R2
 R1
 R4
-Z100 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MUX_AddOrSub.vhd
-Z101 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MUX_AddOrSub.vhd
+Z114 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MUX_AddOrSub.vhd
+Z115 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MUX_AddOrSub.vhd
 l0
 L16
 V[cI@:ca_L;`>0NmT`<>=82
-R5
-32
-Z102 !s108 1523189752.603000
-Z103 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MUX_AddOrSub.vhd|
-Z104 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MUX_AddOrSub.vhd|
-R6
 R7
+32
+Z116 !s108 1523190558.912000
+Z117 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MUX_AddOrSub.vhd|
+Z118 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_MUX_AddOrSub.vhd|
+R11
+R12
 !s100 ]5PS:1gYC=azHNHZ=:^XC0
 !i10b 1
 Abehavior
@@ -643,142 +657,144 @@ DEx4 work 22 testbench_mux_addorsub 0 22 [cI@:ca_L;`>0NmT`<>=82
 l36
 L19
 V^0EeF19_R9k8l:S6I3mH62
-R5
-32
-R102
-R103
-R104
-R6
 R7
+32
+R116
+R117
+R118
+R11
+R12
 !s100 fTFlfV5_XXCbVhoHaXSGk1
 !i10b 1
 Etestbench_shl
-Z105 w1522866026
+Z119 w1523190516
+R3
 R2
 R1
 R4
-Z106 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL.vhd
-Z107 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL.vhd
+Z120 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHL.vhd
+Z121 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHL.vhd
 l0
-L16
-VJNFE1ofZLiFh=W41KF73^0
-R5
-32
-Z108 !s108 1523189753.189000
-Z109 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL.vhd|
-Z110 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL.vhd|
-R6
+L18
+VDlC7=X>WYgZS]7X^QZl3L1
 R7
-!s100 h;m<<YnTkog3BBdh>CIIz0
+32
+Z122 !s108 1523190560.174000
+Z123 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHL.vhd|
+Z124 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHL.vhd|
+R11
+R12
+!s100 89=bl:3UB@Plm;WQ>:9IK1
 !i10b 1
 Abehavior
+R3
 R2
 R1
-DEx4 work 13 testbench_shl 0 22 JNFE1ofZLiFh=W41KF73^0
-l41
-L19
-VEHL<bVf7FiHTnLWc<X:_01
-R5
-32
-R108
-R109
-R110
-R6
+DEx4 work 13 testbench_shl 0 22 DlC7=X>WYgZS]7X^QZl3L1
+l36
+L21
+V1S9K:W__M__>FhjOS1g4C1
+!s100 6lO3GT?9PRzlGCF8414fj0
 R7
-!s100 ]OJJj7fUT@c1D^^OhSY7^3
+32
+R122
+R123
+R124
+R11
+R12
 !i10b 1
 Etestbench_shl_one
-Z111 w1523189587
+Z125 w1523190025
 R1
 R2
 R3
 R4
-Z112 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL_ONE.vhd
-Z113 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL_ONE.vhd
+Z126 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL_ONE.vhd
+Z127 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL_ONE.vhd
 l0
 L16
 V4WHNnoKjCYSOb6EJkD7i12
-!s100 `88:7;d8FaO`i?MCB<A2?2
-R5
-32
-!i10b 1
-Z114 !s108 1523189757.687000
-Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL_ONE.vhd|
-Z116 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL_ONE.vhd|
-R6
 R7
+32
+Z128 !s108 1523190560.013000
+Z129 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL_ONE.vhd|
+Z130 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHL_ONE.vhd|
+R11
+R12
+!s100 `88:7;d8FaO`i?MCB<A2?2
+!i10b 1
 Abehavior
 R1
 R2
 R3
-Z117 DEx4 work 17 testbench_shl_one 0 22 4WHNnoKjCYSOb6EJkD7i12
-l36
+DEx4 work 17 testbench_shl_one 0 22 4WHNnoKjCYSOb6EJkD7i12
+l33
 L19
-Z118 V;O8C]JdcTGbHVE8;iL[N@2
-Z119 !s100 CddbQ4[gITOgLnT[ekB6F0
-R5
-32
-!i10b 1
-R114
-R115
-R116
-R6
+V;O8C]JdcTGbHVE8;iL[N@2
 R7
+32
+R128
+R129
+R130
+R11
+R12
+!s100 oH]=:j;YC5OEYH_:bnR^<0
+!i10b 1
 Etestbench_shr
-Z120 w1523186275
+Z131 w1523190325
 R3
 R2
 R1
 R4
-Z121 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHR.vhd
-Z122 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHR.vhd
+Z132 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHR.vhd
+Z133 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHR.vhd
 l0
-L17
+L18
 V^Rb8SRSKQDHWb5>:<163E2
-R5
-32
-Z123 !s108 1523189753.331000
-Z124 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHR.vhd|
-Z125 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHR.vhd|
-R6
 R7
-!s100 V@:;lLiTh;E<9MNh`aicH1
+32
+Z134 !s108 1523190559.548000
+Z135 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHR.vhd|
+Z136 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_SHR.vhd|
+R11
+R12
+!s100 OSJ;:LS>k;m1767E;kCDo2
 !i10b 1
 Abehavior
 R3
 R2
 R1
 DEx4 work 13 testbench_shr 0 22 ^Rb8SRSKQDHWb5>:<163E2
-l42
-L20
+l36
+L21
 V?NV44AOniO5H8OPzzmQ2j2
-R5
-32
-R123
-R124
-R125
-R6
 R7
-!s100 nZJ4kN>NV7F^9jMil`CK`3
+32
+R134
+R135
+R136
+R11
+R12
+!s100 CkgYknL2J2@g4H=FoLnD_2
 !i10b 1
 Etestbench_shr_one
-Z126 w1523132876
+Z137 w1523132876
 R1
 R2
 R3
 R4
-Z127 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHR_ONE.vhd
-Z128 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHR_ONE.vhd
+Z138 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHR_ONE.vhd
+Z139 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHR_ONE.vhd
 l0
 L16
 VGBzCUOZMX@@<E7CP7_cMj1
-R5
-32
-Z129 !s108 1523189753.482000
-Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHR_ONE.vhd|
-Z131 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHR_ONE.vhd|
-R6
 R7
+32
+Z140 !s108 1523190559.694000
+Z141 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHR_ONE.vhd|
+Z142 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_SHR_ONE.vhd|
+R11
+R12
 !s100 `Hd32<F7gP]fIMTO=cd4I2
 !i10b 1
 Abehavior
@@ -789,33 +805,33 @@ DEx4 work 17 testbench_shr_one 0 22 GBzCUOZMX@@<E7CP7_cMj1
 l37
 L19
 V:f1;GiP3W;Pk`[n6ffK<:1
-R5
-32
-R129
-R130
-R131
-R6
 R7
+32
+R140
+R141
+R142
+R11
+R12
 !s100 Rl^6kDQHIaVcdmHOVf6KW0
 !i10b 1
 Etestbench_sreg
-Z132 w1523173972
+Z143 w1523173972
 R3
 R2
 R1
 R4
-Z133 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_Sreg.vhd
-Z134 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_Sreg.vhd
+Z144 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_Sreg.vhd
+Z145 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_Sreg.vhd
 l0
 L17
 V_3oQ4O`?F^>ZT^Ekkb2j[1
-R5
-32
-Z135 !s108 1523181795.207000
-Z136 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_Sreg.vhd|
-Z137 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_Sreg.vhd|
-R6
 R7
+32
+Z146 !s108 1523181795.207000
+Z147 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_Sreg.vhd|
+Z148 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_Sreg.vhd|
+R11
+R12
 !s100 QZ^0YP4]UHV9Q@dNZ2S1W1
 !i10b 1
 Abehavior
@@ -826,33 +842,33 @@ DEx4 work 14 testbench_sreg 0 22 _3oQ4O`?F^>ZT^Ekkb2j[1
 l47
 L20
 V5mlZAbcdO@]7ogEh@?az32
-R5
-32
-R135
-R136
-R137
-R6
 R7
+32
+R146
+R147
+R148
+R11
+R12
 !s100 ]:RD;o0gDR>RjB5_<SaX>3
 !i10b 1
 Etestbench_sreg_one
-Z138 w1523179596
+Z149 w1523179596
 R1
 R2
 R3
 R4
-Z139 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_Sreg_ONE.vhd
-Z140 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_Sreg_ONE.vhd
+Z150 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_Sreg_ONE.vhd
+Z151 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_Sreg_ONE.vhd
 l0
 L16
 VT4mIJFL1:[>MnI87k4QFN2
-R5
-32
-Z141 !s108 1523181795.511000
-Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_Sreg_ONE.vhd|
-Z143 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_Sreg_ONE.vhd|
-R6
 R7
+32
+Z152 !s108 1523181795.511000
+Z153 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_Sreg_ONE.vhd|
+Z154 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/Testbench_Sreg_ONE.vhd|
+R11
+R12
 !s100 Mmi6fO:XM9[:Bgf[gmXDj1
 !i10b 1
 Abehavior
@@ -863,33 +879,33 @@ DEx4 work 18 testbench_sreg_one 0 22 T4mIJFL1:[>MnI87k4QFN2
 l33
 L19
 Vf8ERCI?]K?DnlkSEAJ5mm1
-R5
-32
-R141
-R142
-R143
-R6
 R7
+32
+R152
+R153
+R154
+R11
+R12
 !s100 8fe?O3Y6T36;Y;JV0JWVa1
 !i10b 1
 Etestbench_twos_complements
-Z144 w1522848530
+Z155 w1522848530
 R3
 R2
 R1
 R4
-Z145 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_twos_complements.vhd
-Z146 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_twos_complements.vhd
+Z156 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_twos_complements.vhd
+Z157 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_twos_complements.vhd
 l0
 L18
 VVWLC027^i^He:=D;h6Dn<0
-R5
-32
-Z147 !s108 1523189751.819000
-Z148 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_twos_complements.vhd|
-Z149 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_twos_complements.vhd|
-R6
 R7
+32
+Z158 !s108 1523190558.115000
+Z159 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_twos_complements.vhd|
+Z160 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/TB/TestBench_twos_complements.vhd|
+R11
+R12
 !s100 304=1Qb^g27>[b:OH?f=]0
 !i10b 1
 Atest
@@ -900,13 +916,13 @@ DEx4 work 26 testbench_twos_complements 0 22 VWLC027^i^He:=D;h6Dn<0
 l33
 L22
 VWB48G0`[U`37n?lLMO;HC2
-R5
-32
-R147
-R148
-R149
-R6
 R7
+32
+R158
+R159
+R160
+R11
+R12
 !s100 T??^<2ZBV7CeTIT2C7@`81
 !i10b 1
 Etwos_complement
@@ -915,38 +931,38 @@ R1
 R2
 R3
 R4
-Z150 8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\two_complement.vhd
-Z151 FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\two_complement.vhd
+Z161 8C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\two_complement.vhd
+Z162 FC:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\two_complement.vhd
 l0
 L15
 V5Em]P=X2f1bIZ[nn3S]][0
-R5
-32
-R6
 R7
-Z152 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\two_complement.vhd|
-Z153 !s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\two_complement.vhd|
+32
+R11
+R12
+Z163 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\two_complement.vhd|
+Z164 !s107 C:\Users\MaorA\Desktop\github\Architecture-of-CPU-projects\Design a basic ALU\two_complement.vhd|
 !s100 N2kdGPE3K>64J`09]8KYj1
 !i10b 1
 !s108 1522677517.240000
 Etwoscomplement
-Z154 w1522683308
+Z165 w1522683308
 R1
 R2
 R3
 R4
-Z155 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/twoscomplement.vhd
-Z156 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/twoscomplement.vhd
+Z166 8C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/twoscomplement.vhd
+Z167 FC:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/twoscomplement.vhd
 l0
 L17
 V@<4Do[4m0MC`bhZT4fSb73
-R5
-32
-Z157 !s108 1523189752.319000
-Z158 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/twoscomplement.vhd|
-Z159 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/twoscomplement.vhd|
-R6
 R7
+32
+Z168 !s108 1523190558.600000
+Z169 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/twoscomplement.vhd|
+Z170 !s107 C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/twoscomplement.vhd|
+R11
+R12
 !s100 VjCT=MT]Z@cNf4EKPI_IY2
 !i10b 1
 Agate_level
@@ -957,13 +973,13 @@ DEx4 work 14 twoscomplement 0 22 @<4Do[4m0MC`bhZT4fSb73
 l27
 L26
 V^Szg7:>C2zAJcWM[zI1Ub1
-R5
-32
-R157
-R158
-R159
-R6
 R7
+32
+R168
+R169
+R170
+R11
+R12
 !s100 g1n>F4JEIYMcamGHRbc<d1
 !i10b 1
 Aa1
@@ -974,15 +990,15 @@ DEx4 work 14 twoscomplement 0 22 0_QN?jW?GQfNQCGmHNka72
 l16
 L15
 VF[H7g;7h^2C7kB6b0m1h51
-R5
-32
-R152
-R153
-R6
 R7
+32
+R163
+R164
+R11
+R12
 w1522677911
-R151
-R150
+R162
+R161
 !s108 1522677920.565000
 !s100 4S@X^Z5gHH0zOl<Mk[A=A1
 !i10b 1

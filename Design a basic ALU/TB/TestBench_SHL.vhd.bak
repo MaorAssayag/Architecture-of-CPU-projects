@@ -42,7 +42,7 @@ begin
    stim: process
    begin
      wait for 100 ns;
-     A <= "10010011", "00010110" after 100 ns;
+     A <= "10010000", "00010000" after 100 ns;
      B <= "00000101", "00000100" after 100 ns;
      wait;
   end process stim;
