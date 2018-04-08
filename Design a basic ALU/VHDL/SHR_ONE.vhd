@@ -4,9 +4,10 @@
 --	Description:	1 bit right
 --
 --
---	Date:			03/04/2018
---	Designer:		Maor Assayag, Refael Shetrit
+--	Date:			08/04/2018
+--	Designers:		Maor Assayag, Refael Shetrit
 --
+-- TODO : 1.synthesize 2.png test bench
 -- ====================================================================
 
 -- libraries decleration
@@ -25,7 +26,7 @@ end SHR_ONE;
  -- Architecture Definition
 architecture gate_level of SHR_ONE is
 begin
-     loopforshift: for i in 1 to N-1 generate
+     loopforshiftRIGHT: for i in 1 to N-1 generate
        Aout(N-i-1) <= A(N-i);
      end generate;
      Aout(N-1) <= A(N-1) ; -- signed numbers
