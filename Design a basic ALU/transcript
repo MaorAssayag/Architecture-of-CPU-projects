@@ -1,46 +1,358 @@
-# Compile of TestBench_ADD_SUB.vhd was successful.
-vsim -gui work.testbench_add_sub
-# vsim -gui work.testbench_add_sub 
+# Compile of SHR.vhd was successful.
+# Compile of TestBench_SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.testbench_add_sub(behavior)
-# Loading work.add_sub(gate_level)
-# Loading work.twoscomplement(gate_level)
-# Loading work.add(gate_level)
-# Loading work.full_adder(gate_level)
-# Loading work.mux_addorsub(behavioral)
-add wave -position insertpoint sim:/testbench_add_sub/*
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
 run
+# ** Fatal: (vsim-3734) Index value -2147483648 is out of range 31 downto 0.
+#    Time: 0 ps  Iteration: 0  Process: /testbench_shr/shift_comp/line__51 File: C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd
+# Fatal error in Architecture gate_level at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd line 51
+# 
+# HDL call sequence:
+# Stopped at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd 51 Architecture gate_level
+# 
 run
-vsim -gui work.testbench_add_sub
-# vsim -gui work.testbench_add_sub 
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd 51 Architecture gate_level
+# 
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+# Compile of SHR.vhd failed with 1 errors.
+# Compile of SHR.vhd failed with 1 errors.
+# Compile of SHR.vhd failed with 1 errors.
+# Compile of SHR.vhd failed with 3 errors.
+# Compile of SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.testbench_add_sub(behavior)
-# Loading work.add_sub(gate_level)
-# Loading work.twoscomplement(gate_level)
-# Loading work.add(gate_level)
-# Loading work.full_adder(gate_level)
-# Loading work.mux_addorsub(behavioral)
-add wave -position insertpoint sim:/testbench_add_sub/*
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
 run
-# Compile of TestBench_ADD_SUB.vhd was successful.
-# Compile of TestBench_ADD_SUB.vhd was successful.
-vsim -gui work.testbench_add_sub
-# vsim -gui work.testbench_add_sub 
+# Compile of SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.testbench_add_sub(behavior)
-# Loading work.add_sub(gate_level)
-# Loading work.twoscomplement(gate_level)
-# Loading work.add(gate_level)
-# Loading work.full_adder(gate_level)
-# Loading work.mux_addorsub(behavioral)
-add wave -position insertpoint sim:/testbench_add_sub/*
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of SHR.vhd was successful with warnings.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of SHR.vhd was successful with warnings.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of SHR.vhd was successful with warnings.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of SHR.vhd was successful with warnings.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of TestBench_SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+run
+# Compile of SHR.vhd failed with 1 errors.
+# Compile of SHR.vhd was successful with warnings.
+# Compile of SHR.vhd was successful with warnings.
+# Compile of SHR.vhd was successful with warnings.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of SHR.vhd failed with 1 errors.
+# Compile of SHR.vhd failed with 1 errors.
+# Compile of SHR.vhd failed with 1 errors.
+# Compile of SHR.vhd failed with 2 errors.
+# Compile of SHR.vhd was successful with warnings.
+# Compile of TestBench_SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of TestBench_SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# ** Fatal: (vsim-3734) Index value 64 is out of range 31 downto 0.
+#    Time: 100 ns  Iteration: 2  Process: /testbench_shr/shift_comp/line__57 File: C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd
+# Fatal error in Architecture gate_level at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd line 57
+# 
+# HDL call sequence:
+# Stopped at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd 57 Architecture gate_level
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd 57 Architecture gate_level
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd 57 Architecture gate_level
+# 
+# Break key hit 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd 57 Architecture gate_level
+# 
+# Compile of SHR.vhd was successful with warnings.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# ** Fatal: (vsim-3734) Index value 64 is out of range 31 downto 0.
+#    Time: 100 ns  Iteration: 2  Process: /testbench_shr/shift_comp/line__57 File: C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd
+# Fatal error in Architecture gate_level at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd line 57
+# 
+# HDL call sequence:
+# Stopped at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd 57 Architecture gate_level
+# 
+# Compile of SHR.vhd was successful with warnings.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# ** Fatal: (vsim-3734) Index value 64 is out of range 31 downto 0.
+#    Time: 100 ns  Iteration: 2  Process: /testbench_shr/shift_comp/line__56 File: C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd
+# Fatal error in Architecture gate_level at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd line 56
+# 
+# HDL call sequence:
+# Stopped at C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd 56 Architecture gate_level
+# 
+# Compile of TestBench_SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Load canceled
+# Compile of TestBench_SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of TestBench_SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of TestBench_SHR.vhd was successful.
+# Compile of TestBench_SHR.vhd was successful.
+# Compile of SHR.vhd was successful with warnings.
+# Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/ALU.mpf).  File can not be renamed.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of SHR.vhd failed with 2 errors.
+# Compile of SHR.vhd failed with 3 errors.
+# Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/ALU.mpf).  File can not be renamed.
+# Compile of SHR.vhd was successful with warnings.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_shr/shift_comp File: C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_shr/shift_comp File: C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/Design a basic ALU/VHDL/SHR.vhd
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_shr/shift_comp
+# Compile of SHR.vhd was successful.
+# Compile of SHR.vhd was successful.
+# Compile of TestBench_SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of SHR.vhd was successful.
+# Compile of TestBench_SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
+run
+# Compile of TestBench_SHR.vhd was successful.
+vsim -gui work.testbench_shr
+# vsim -gui work.testbench_shr 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_shr(behavior)
+# Loading work.shr(gate_level)
+# Loading work.shr_one(gate_level)
+add wave -position insertpoint sim:/testbench_shr/*
+add wave -position insertpoint sim:/testbench_shr/shift_comp/*
 run

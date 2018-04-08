@@ -11,14 +11,14 @@
 
 -- libraries decleration
 library ieee;
-use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
  -- entity Definition
 entity SHR_ONE is
   generic(N: integer := 8); --defualt value for N is 8
       Port (
-          A :in std_logic_vector(N-1 downto 0);
-          Aout : out std_logic_vector(N-1 downto 0)
+          A :in signed(N-1 downto 0);
+          Aout : out signed(N-1 downto 0)
           );
 end SHR_ONE;
 
@@ -28,7 +28,7 @@ begin
      loopforshift: for i in 1 to N-1 generate
        Aout(N-i-1) <= A(N-i);
      end generate;
-     Aout(n-1) <= '0' ;
+     Aout(N-1) <= A(N-1) ; -- signed numbers
 end gate_level;
 
 --EndOfFile

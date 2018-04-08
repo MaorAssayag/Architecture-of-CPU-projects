@@ -41,9 +41,9 @@ begin
 ----------------------------------------
     tmp(0) <= '0'; -- change to 0 its for test
 
-    Array_Of_full_adders: for i in 0 to (N-1) generate
+    Array_Of_full_adders: for i in 0 to (N-1) loop
         stage_i : full_adder port map (A(i) , B(i) , tmp(i), SUM(i), tmp(i+1));
-    end generate;
+    end loop;
 
     CARRY <= tmp(N); -- tmp(N-1+1) in the loop
 ----------------------------------------
