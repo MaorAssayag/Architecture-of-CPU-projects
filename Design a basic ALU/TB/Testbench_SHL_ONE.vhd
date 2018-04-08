@@ -16,7 +16,7 @@ use ieee.std_logic_1164.ALL;
 entity Testbench_SHL_ONE is
 end Testbench_SHL_ONE;
 
-ARCHITECTURE behavior OF Testbench_SHL_ONE IS
+architecture behavior of Testbench_SHL_ONE is
 
  -- Component Declaration
 
@@ -28,11 +28,8 @@ ARCHITECTURE behavior OF Testbench_SHL_ONE IS
 end component;
 
  constant N : integer := 8;
- --Inputs
- signal A : signed((N-1) downto 0) ;
-
- --Outputs
- signal Aout : signed(N-1 downto 0);
+ signal A : signed((N-1) downto 0); --Inputs
+ signal Aout : signed(N-1 downto 0);  --Outputs
 begin
 ----------------------------------------
    -- Instantiate the Unit Under Test (UUT)
