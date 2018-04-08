@@ -1,52 +1,42 @@
 -- ====================================================================
 --
 --	File Name:		Testbench_SHR.vhd
---	Description:	test bench for Shift righ : input : N bits A, N bits B ,output : N bits S
+--	Description:	test bench for Shift left : input : N bits A, N bits B ,output : N bits S
 --
 --
---	Date:			02/04/2018
---	Designer:		Maor Assayag, Refael Shetrit
---
+--	Date:			08/04/2018
+--	Designers:		Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
 
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
+-- libraries decleration
+library ieee;
+use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-ENTITY Testbench_SHR IS
-END Testbench_SHR;
+ -- entity Definition
+entity Testbench_SHR is
+end Testbench_SHR;
 
 ARCHITECTURE behavior OF Testbench_SHR IS
 
  -- Component Declaration
-
  component SHR
- generic(N: integer := 8); --defualt value for N is 8
- port (
-       A :     in signed(N-1 downto 0);
-       B :     in signed(N-1 downto 0);
-       result :   out signed(N-1 downto 0)
- );
+  generic(N: integer := 8); --defualt value for N is 8
+  port (
+     A :     in signed(N-1 downto 0);
+     B :     in signed(N-1 downto 0);
+     result: out signed(N-1 downto 0));
 end component;
 
-
-
  constant N : integer := 8;
- --Inputs
- signal A : signed(N-1 downto 0);
+ signal A : signed(N-1 downto 0);  --Inputs
  signal B : signed(N-1 downto 0);
-
- --Outputs
- signal result : signed(N-1 downto 0);
+ signal result : signed(N-1 downto 0);  --Output
 begin
 ----------------------------------------
    -- Instantiate the Unit Under Test (UUT)
-   shift_comp : SHR PORT MAP (
-   A => A,
-   B => B,
-   result => result
-   );
+   shift_comp : SHR port map (A => A, B => B, result => result);
 
    -- Stimulus process
    stim: process

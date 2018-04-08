@@ -25,6 +25,8 @@ end SHL;
 
  -- Architecture Definition
 architecture gate_level of SHL is
+  
+-- Component Declaration
   component SHL_ONE
     generic(N: integer := 8); --defualt value for N is 8
     port (

@@ -9,43 +9,34 @@
 --
 -- ====================================================================
 
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
+-- libraries decleration
+library ieee;
+use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-ENTITY Testbench_SHL IS
-END Testbench_SHL;
+ -- entity Definition
+entity Testbench_SHL is
+end Testbench_SHL;
 
 ARCHITECTURE behavior OF Testbench_SHL IS
 
  -- Component Declaration
-
  component SHL
- generic(N: integer := 8); --defualt value for N is 8
- port (
-       A :     in signed(N-1 downto 0);
-       B :     in signed(N-1 downto 0);
-       result :   out signed(N-1 downto 0)
- );
+  generic(N: integer := 8); --defualt value for N is 8
+  port (
+     A :     in signed(N-1 downto 0);
+     B :     in signed(N-1 downto 0);
+     result: out signed(N-1 downto 0));
 end component;
 
-
-
  constant N : integer := 8;
- --Inputs
- signal A : signed(N-1 downto 0);
+ signal A : signed(N-1 downto 0);  --Inputs
  signal B : signed(N-1 downto 0);
-
- --Outputs
- signal result : signed(N-1 downto 0);
+ signal result : signed(N-1 downto 0);  --Output
 begin
 ----------------------------------------
    -- Instantiate the Unit Under Test (UUT)
-   shift_comp : SHL PORT MAP (
-   A => A,
-   B => B,
-   result => result
-   );
+   shift_comp : SHL port map (A => A, B => B, result => result);
 
    -- Stimulus process
    stim: process
