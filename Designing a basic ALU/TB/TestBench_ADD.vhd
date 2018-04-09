@@ -22,10 +22,11 @@ architecture behavior of Testbench_ADD is
  component ADD
     generic (N: integer := 8 ); --defualt value for N is 8
     port(
+      Cin :   in std_logic;
       A :     in signed ((N-1) downto 0);
       B :     in signed ((N-1) downto 0);
       SUM :   out signed ((N-1) downto 0);
-      CARRY : out std_logic
+      Cout : out std_logic
      );
   end component;
 
@@ -36,7 +37,7 @@ architecture behavior of Testbench_ADD is
 begin
 ----------------------------------------
   uut :  ADD  generic map(N)
-    port map (A => x,B => y,SUM => result,CARRY => C);
+    port map (Cin =>'0',A => x,B => y,SUM => result,Cout => C);
 
   stim: process
   begin

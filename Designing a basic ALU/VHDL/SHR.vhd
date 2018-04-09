@@ -14,7 +14,7 @@
 library ieee;
 use ieee.numeric_std.all;
 
- -- entity Definition
+-- entity Definition
 entity SHR is
     generic(N: integer := 8); --defualt value for N is 8
     port(
