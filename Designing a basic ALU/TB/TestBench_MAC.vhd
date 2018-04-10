@@ -22,18 +22,18 @@ architecture behavior of Testbench_MAC is
  component MAC
     generic (N: integer := 8 ); --defualt value for N is 8
     port(
-        A :     in signed((N-1) downto 0);
-        B :     in signed((N-1) downto 0);
-        MACHI :   in signed((N-1) downto 0);
-        MACLO : in signed((N-1) downto 0);
-        HI :   out signed((N-1) downto 0);
-        LO : out signed((N-1) downto 0)
+          A :     in signed((N-1) downto 0);
+          B :     in signed((N-1) downto 0);
+          MACHI :   in signed((N-1) downto 0);
+          MACLO : in signed((N-1) downto 0);
+          HI :   out signed((N-1) downto 0);
+          LO : out signed((N-1) downto 0)
      );
   end component;
 
  constant N : integer := 8;
  signal x, y,MACHI,MACLO, HI,LO : signed((N-1) downto 0) ;
-
+ 
 begin
 ----------------------------------------
   uut :  MAC  generic map(N)

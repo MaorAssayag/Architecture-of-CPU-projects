@@ -58,36 +58,22 @@ begin
   ----------------------------------------
   MULFUN :  MUL  generic map(N)
     port map (A,B,MULT (2*N-1 downto N),MULT (N-1 downto 0));
-  -- MULT (2*N-1 downto N) <= MULHI;
-  -- MULT (N-1 downto 0) <= MULLO;
-MAC_proc : process
-begin
-  wait on MACHI;
-  wait on MACLO;
+-- MAC_proc : process
+-- begin
+--   wait on MACHI;
+--   wait on MACLO;
   MAC (2*N-1 downto N) <= MACHI;
   MAC (N-1 downto 0) <= MACLO;
-end process;
+-- end process;
 
   ADDFUN :  ADD_SUB  generic map(2*N)
     port map ('0', FLAGs, MULT,MAC,SUM);
-MAC_proc2 : process(MAC,SUM)
-begin
+-- MAC_proc2 : process
+-- begin
+--   wait on SUM;
   HI <= SUM(2*N-1 downto N);
   LO <= SUM(N-1 downto 0);
-end process;
-
-  -- MAC_proc : process(A,B,MACHI,MACLO)
-  -- variable  MAC : signed (2*N - 1 downto 0);
-  -- variable  SUM : signed (2*N - 1 downto 0);
-  -- begin
-  --   MAC (2*N-1 downto N) <= MACHI;
-  --   MAC (N-1 downto 0) <= MACLO;
-  --
-  --   -- tmp := A*B;
-  --   -- HI <= tmp (2*N-1 downto N);
-  --   -- LO <= tmp (N-1 downto 0);
-  --   -- res <= tmp;
---   end process;
+-- end process;
 -- ----------------------------------------
 end gate_level;
 
