@@ -1,11 +1,10 @@
 -- ====================================================================
 --
---	File Name:		MUX_addORsub.vhd
---	Description:	MUX, if SEL='1' then in ADD B = twoscomplement else no change to B
---  B1 = B, B2 = twoscomplement(B)
+--	File Name:		MUX_Nbits.vhd
+--	Description:	2N-N MUX, if SEL='0' then Y = Y1 else Y= Y2
 --
 --
---	Date:			02/04/2018
+--	Date:			10/04/2018
 --	Designer:		Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
@@ -16,20 +15,29 @@ use ieee.numeric_std.all;
 use ieee.std_logic_1164.all;
 
  -- entity Definition
-entity MUX_addORsub is
+entity MUX_Nbits is
     generic(N: positive := 8); --defualt value for N is 8
     port (
            SEL: in  std_logic;
            Y1 : in  signed (N-1 downto 0);
            Y2 : in  signed (N-1 downto 0);
            Y  : out signed (N-1 downto 0));
-end MUX_addORsub;
+end MUX_Nbits;
 
  -- Architecture Definition
-architecture Behavioral of MUX_addORsub is
+architecture Behavioral of MUX_Nbits is
 begin
 ----------------------------------------
-    Y <= Y2 when (SEL = '1') else Y1;
+process(SEL,Y1,Y2)
+begin
+    if (SEL = '0') then
+      Y <= Y1;
+    elsif (SEL = '1') then
+      Y <= Y2;
+    else
+      Y <= (others => '0');
+    end if;
+end process;
 ----------------------------------------
 end Behavioral;
 
