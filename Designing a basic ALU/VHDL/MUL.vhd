@@ -22,8 +22,7 @@ entity MUL is
        A :     in signed((N-1) downto 0);
        B :     in signed((N-1) downto 0);
        HI :   out signed((N-1) downto 0);
-       LO : out signed((N-1) downto 0);
-       res : out signed((2*N-1) downto 0)
+       LO : out signed((N-1) downto 0)
     );
 end MUL;
 
@@ -38,7 +37,6 @@ begin
     tmp := A*B;
     HI <= tmp (2*N-1 downto N);
     LO <= tmp (N-1 downto 0);
-    res <= tmp;
   end process;
 ----------------------------------------
 end gate_level;
