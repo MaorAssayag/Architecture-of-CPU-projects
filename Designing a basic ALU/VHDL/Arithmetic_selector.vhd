@@ -30,8 +30,8 @@ entity Arithmetic_selector is
        ADD_LO : in signed ((N-1) downto 0);
        SUB_LO : in signed ((N-1) downto 0);
        HI : out signed ((N-1) downto 0);
-       LO : out signed ((N-1) downto 0)
-       );
+       LO : out signed ((N-1) downto 0);
+       FLAG_en : out std_logic); -- FLAG_en :if OPP=SUB then -> '1' else -> '0'
 end Arithmetic_selector;
 
  -- Architecture Definition
@@ -46,27 +46,33 @@ if (OP = "000") then
   wait on MUL_LO;
   HI <= MUL_HI;
   LO <= MUL_LO;
+  FLAG_en <= '0';
 elsif (OP = "001") then
   wait on MAC_HI;
   wait on MAC_LO;
   HI <= MAC_HI;
   LO <= MAC_LO;
+  FLAG_en <= '0';
 elsif (OP = "010") then
   wait MAX_LO;
   HI <=(others => '0');
   LO <= MAX_LO;
+  FLAG_en <= '0';
 elsif (OP = "011") then
   wait MIN_LO;
   HI <=(others => '0');
   LO <= MIN_LO;
+  FLAG_en <= '0';
 elsif (OP = "100") then
   wait ADD_LO;
   HI <=(others => '0');
   LO <= ADD_LO;
+  FLAG_en <= '0';
 elsif (OP = "101") then
   wait SUB_LO;
   HI <=(others => '0');
   LO <= SUB_LO;
+  FLAG_en <= '1';
 end if;
 end process;
 

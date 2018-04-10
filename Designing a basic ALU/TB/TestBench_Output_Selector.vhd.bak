@@ -36,8 +36,8 @@ architecture behavior of Testbench_Output_Selector is
  constant N : integer := 8;
  signal SEL : std_logic := '0';
  signal FLAG_en : std_logic := '0';
- signal arithmetic_LO, arithmetic_HI, shift_LO, LO, HI :signed((N-1) downto 0);
- signal arithmetic_FLAG, STATUS: signed(5 downto 0);
+ signal arithmetic_LO, arithmetic_HI, shift_LO, LO, HI, STATUS :signed((N-1) downto 0);
+ signal arithmetic_FLAG: signed(5 downto 0);
 
 begin
 ----------------------------------------

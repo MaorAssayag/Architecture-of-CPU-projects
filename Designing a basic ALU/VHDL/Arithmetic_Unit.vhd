@@ -26,9 +26,9 @@ entity Arithmetic_Unit is
         MAC_HI_IN : in signed((N-1) downto 0);
         MAC_LO_IN : in signed((N-1) downto 0);
         HI : out signed ((N-1) downto 0);
-        LO : out signed ((N-1) downto 0)
-        FLAGS : out std_logic_vector(5 downto 0)
-       );
+        LO : out signed ((N-1) downto 0);
+        FLAGS : out std_logic_vector(5 downto 0);
+        FLAG_en : out std_logic); -- FLAG_en :if OPP=SUB then -> '1' else -> '0'
 end Arithmetic_Unit;
 
  -- Architecture Definition
@@ -94,8 +94,8 @@ component ADD_SUB
         ADD_LO : in signed ((N-1) downto 0);
         SUB_LO : in signed ((N-1) downto 0);
         HI : out signed ((N-1) downto 0);
-        LO : out signed ((N-1) downto 0)
-        );
+        LO : out signed ((N-1) downto 0);
+        FLAG_en : out std_logic); -- FLAG_en :if OPP=SUB then -> '1' else -> '0'
    end component;
 
 
