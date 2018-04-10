@@ -23,7 +23,7 @@ architecture behavior of Testbench_ADD_SUB is
     generic (N: integer := 8 ); --defualt value for N is 8
     port(
       addORsub :   in std_logic;
-      FLAG : inout std_logic_vector(7 downto 0);
+      FLAG : inout std_logic_vector(5 downto 0);
       A :     in signed ((N-1) downto 0);
       B :     in signed ((N-1) downto 0);
       SUM :   out signed ((N-1) downto 0)
@@ -32,7 +32,7 @@ architecture behavior of Testbench_ADD_SUB is
 
   constant N : integer := 8;
   signal OPP : std_logic := '0';
-  signal FLAG_sim : std_logic_vector(7 downto 0) := "00000000";
+  signal FLAG_sim : std_logic_vector(5 downto 0) := "000000";
   signal x, y, result : signed((N-1) downto 0) ;
  
 

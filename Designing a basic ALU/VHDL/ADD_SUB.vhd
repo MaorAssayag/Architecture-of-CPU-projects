@@ -57,25 +57,27 @@ begin
             end generate;
 
   stage_1 :  ADD  generic map(N)
-    port map (Cin => addORsub,A => A,B => B_2,SUM => SUM,Cout => CARRY); -- A+B or A-B
+    port map (Cin => addORsub,A => A,B => B_2,SUM => tempSUM,Cout => CARRY); -- A+B or A-B
 
-  flag_handle : process
-      variable FLAGS : std_logic_vector(7 downto 0) := "00000000";
+  SUM <= tempSUM;
+  
+  flag_handle : process(tempSUM)
+      variable FLAGS : std_logic_vector(5 downto 0) := "000000";
       begin
       if (addORsub = '1') then
         FLAG <= FLAGS; -- will assign at the end of process
         FLAGS(0) := '1'; -- is A=B ?
-        wait on SUM;
         eachBit: for i in 0 to (N-1) loop
-          FLAGS(0) := (FLAGS(0) AND (NOT SUM(i)));
+          FLAGS(0) := (FLAGS(0) AND (NOT tempSUM(i)));
         end loop;
         FLAGS(1) := NOT FLAGS(0); -- A!=B
-        FLAGS(2) := NOT SUM(N-1);--A >= B if tempSUM(N-1)=0 then
+        FLAGS(2) := NOT tempSUM(N-1);--A >= B if tempSUM(N-1)=0 then
         FLAGS(3) := FLAGS(2) AND FLAGS(1); -- A>B if A>=B & A!=B
         FLAGS(4) := NOT FLAGS(3);-- A<=B if !(A>B)
         FLAGS(5) := FLAGS(4) AND FLAGS(1); -- A<B if (A<=B & A!=B)
       end if;
   end process flag_handle;
+  
 ----------------------------------------
 end gate_level;
 

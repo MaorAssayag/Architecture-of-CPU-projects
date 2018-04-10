@@ -20,7 +20,7 @@ entity xor_gate is
   port(
     a,b:in std_logic;
     c : out std_logic);
-end xor_gate;
+end xor_g;
 
  -- Architecture Definition
 architecture gate_level of xor_gate is
