@@ -1,6 +1,6 @@
 -- ====================================================================
 --
---	File Name:		Testbench_shift.vhd
+--	File Name:		Testbench_shift_unit.vhd
 --	Description:	test bench for Shift left/right : input : N bits A, N bits B ,output : N bits S
 --
 --
@@ -15,10 +15,10 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
  -- entity Definition
-entity Testbench_shift is
-end Testbench_shift;
+entity Testbench_shift_unit is
+end Testbench_shift_unit;
 
-ARCHITECTURE behavior OF Testbench_shift IS
+ARCHITECTURE behavior OF Testbench_shift_unit IS
 
  -- Component Declaration
  component shift
