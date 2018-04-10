@@ -25,23 +25,25 @@ architecture behavior of Testbench_MUL is
         A :     in signed((N-1) downto 0);
         B :     in signed((N-1) downto 0);
         HI :   out signed((N-1) downto 0);
-        LO : out signed((N-1) downto 0)
+        LO : out signed((N-1) downto 0) ;
+        res : out signed((2*N-1) downto 0)
      );
   end component;
 
  constant N : integer := 8;
  signal x, y, HI,LO : signed((N-1) downto 0) ;
+ signal res: signed((2*N-1) downto 0) ;
 
 begin
 ----------------------------------------
   uut :  MUL  generic map(N)
-    port map (A => x,B => y,HI => HI,LO => LO);
+    port map (A => x,B => y,HI => HI,LO => LO,res => res);
 
   stim: process
   begin
     wait for 100 ns;
-    x <= "00000000", "00000001" after 50 ns, "00001100" after 100 ns,"00001111" after 150 ns;
-    y <= "00000010", "00000011" after 50 ns, "00000010" after 100 ns,"00010000" after 150 ns;
+    x <= "01000000", "11100001" after 50 ns, "01001100" after 100 ns,"11001111" after 150 ns;
+    y <= "00000010", "00000011" after 50 ns, "11000010" after 100 ns,"00010001" after 150 ns;
     wait for 50 ns;
   end process stim;
 ----------------------------------------

@@ -22,21 +22,23 @@ entity MUL is
        A :     in signed((N-1) downto 0);
        B :     in signed((N-1) downto 0);
        HI :   out signed((N-1) downto 0);
-       LO : out signed((N-1) downto 0)
+       LO : out signed((N-1) downto 0);
+       res : out signed((2*N-1) downto 0)
     );
 end MUL;
 
  -- Architecture Definition
 architecture gate_level of MUL is
 
-signal tmp : signed (2*N - 1 downto 0);
 begin
   ----------------------------------------
   MUL_proc : process(A,B)
+  variable  tmp : signed (2*N - 1 downto 0);
   begin
-    tmp <= A*B;
-    HI <= tmp (2*N - 1 to N);
-    LO <= tmp (N-1 to 0);
+    tmp := A*B;
+    HI <= tmp (2*N-1 downto N);
+    LO <= tmp (N-1 downto 0);
+    res <= tmp;
   end process;
 ----------------------------------------
 end gate_level;
