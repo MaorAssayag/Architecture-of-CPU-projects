@@ -36,33 +36,26 @@ end Arithmetic_selector;
 architecture gate_level of Arithmetic_selector is
 begin
 ----------------------------------------
-process
+process (OP, MUL_HI, MUL_LO, MAC_HI,MAC_LO,MAX_MIN_LO,ADD_SUB_LO)
 begin
 wait on OP;
 if (OP = "000") then
-  wait on MUL_HI;
-  wait on MUL_LO;
   HI <= MUL_HI;
   LO <= MUL_LO;
   FLAG_en <= '0';
 elsif ((OP = "001") or (OP = "110")) then
-  wait on MAC_HI;
-  wait on MAC_LO;
   HI <= MAC_HI;
   LO <= MAC_LO;
   FLAG_en <= '0';
 elsif ((OP = "010") or (OP = "011")) then
-  wait MAX_MIN_LO;
   HI <=(others => '0');
   LO <= MAX_MIN_LO;
   FLAG_en <= '0';
 elsif (OP = "100") then
-  wait ADD_SUB_LO;
   HI <=(others => '0');
   LO <= ADD_SUB_LO;
   FLAG_en <= '0';
 elsif (OP = "101") then
-  wait ADD_SUB_LO;
   HI <=(others => '0');
   LO <= ADD_SUB_LO;
   FLAG_en <= '1';
