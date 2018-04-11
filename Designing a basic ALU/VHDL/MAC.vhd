@@ -20,13 +20,13 @@ use ieee.std_logic_1164.all;
 entity MAC is
     generic(N: integer := 8); --defualt value for N is 8
     Port(
+       mac_rst : in std_logic;
        A :     in signed((N-1) downto 0);
        B :     in signed((N-1) downto 0);
        MACHI :   in signed((N-1) downto 0);
        MACLO : in signed((N-1) downto 0);
        HI :   out signed((N-1) downto 0);
-       LO : out signed((N-1) downto 0)
-    );
+       LO : out signed((N-1) downto 0));
 end MAC;
 
  -- Architecture Definition
@@ -41,6 +41,7 @@ architecture gate_level of MAC is
        SUM :   out signed ((N-1) downto 0)
       );
    end component;
+
   component MUL
      generic (N: integer := 8 ); --defualt value for N is 8
      port(
@@ -51,9 +52,19 @@ architecture gate_level of MAC is
       );
    end component;
 
+   component MUX_Nbits
+       generic(N: positive := 8); --defualt value for N is 8
+       port (
+          SEL: in  std_logic;
+          Y1 : in  signed (N-1 downto 0);
+          Y2 : in  signed (N-1 downto 0);
+          Y  : out signed (N-1 downto 0));
+   end component;
+
     signal MULHI,MULLO : signed((N-1) downto 0) ;
     signal MULT,MAC,SUM: signed((2*N-1) downto 0) ;
     signal FLAGs: std_logic_vector (5 downto 0) := "000000";
+    signal zeroes : signed(N-1 downto 0) := (others => '0');
 begin
   ----------------------------------------
   MULFUN :  MUL  generic map(N)
@@ -71,8 +82,8 @@ begin
 -- MAC_proc2 : process
 -- begin
 --   wait on SUM;
-  HI <= SUM(2*N-1 downto N);
-  LO <= SUM(N-1 downto 0);
+MUX_LO : MUX_Nbits generic map (N) port map (mac_rst, SUM(N-1 downto 0), zeroes, LO);
+MUX_HI : MUX_Nbits generic map (N) port map (mac_rst, SUM(2*N-1 downto N), zeroes, HI);
 -- end process;
 -- ----------------------------------------
 end gate_level;

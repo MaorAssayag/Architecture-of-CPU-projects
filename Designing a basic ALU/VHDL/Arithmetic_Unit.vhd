@@ -73,6 +73,7 @@ component ADD_SUB
  component MAC
     generic (N: integer := 8 ); --defualt value for N is 8
     port(
+          mac_rst : in std_logic;
           A :     in signed((N-1) downto 0);
           B :     in signed((N-1) downto 0);
           MACHI :   in signed((N-1) downto 0);
@@ -101,18 +102,20 @@ component ADD_SUB
 
 
 
-signal  MUL_HI : out signed ((N-1) downto 0);
-signal  MUL_LO : out signed ((N-1) downto 0);
-signal  MAC_HI : out signed ((N-1) downto 0);
-signal  MAC_LO : out signed ((N-1) downto 0);
-signal  MAX_LO : out signed ((N-1) downto 0);
-signal  MIN_LO : out signed ((N-1) downto 0);
-signal  ADD_LO : out signed ((N-1) downto 0);
-signal  SUB_LO : out signed ((N-1) downto 0);
+signal  MUL_HI :  signed ((N-1) downto 0);
+signal  MUL_LO :  signed ((N-1) downto 0);
+signal  MAC_HI :  signed ((N-1) downto 0);
+signal  MAC_LO :  signed ((N-1) downto 0);
+signal  MAX_LO :  signed ((N-1) downto 0);
+signal  MIN_LO :  signed ((N-1) downto 0);
+signal  ADD_LO :  signed ((N-1) downto 0);
+signal  SUB_LO :  signed ((N-1) downto 0);
+signal mac_rst : std_logic;
 begin
 ----------------------------------------
+mac_rst <= (OP(2) and OP(1)) and (NOT OP(0)); -- MAC = 0 if OPP= RST
 MACFUN :  MAC  generic map(N)
-  port map (A ,B ,MAC_HI_IN,MAC_LO_IN,MAC_HI,MAC_LO);
+  port map (mac_rst, A ,B ,MAC_HI_IN,MAC_LO_IN,MAC_HI,MAC_LO);
 ADDFUN :  ADD_SUB  generic map(N)
   port map ('0', FLAGS, A ,B ,ADD_LO);
 SUBFUN :  ADD_SUB  generic map(N)
