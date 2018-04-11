@@ -106,10 +106,8 @@ signal  MUL_HI :  signed ((N-1) downto 0);
 signal  MUL_LO :  signed ((N-1) downto 0);
 signal  MAC_HI :  signed ((N-1) downto 0);
 signal  MAC_LO :  signed ((N-1) downto 0);
-signal  MAX_LO :  signed ((N-1) downto 0);
-signal  MIN_LO :  signed ((N-1) downto 0);
-signal  ADD_LO :  signed ((N-1) downto 0);
-signal  SUB_LO :  signed ((N-1) downto 0);
+signal  MAX_MIN_LO :  signed ((N-1) downto 0); -- OPP MAX : 010 OPP MIN: 011 then max or min by OP(0)
+signal  ADD_SUB_LO :  signed ((N-1) downto 0);
 signal mac_rst : std_logic;
 begin
 ----------------------------------------
@@ -117,9 +115,7 @@ mac_rst <= (OP(2) and OP(1)) and (NOT OP(0)); -- MAC = 0 if OPP= RST
 MACFUN :  MAC  generic map(N)
   port map (mac_rst, A ,B ,MAC_HI_IN,MAC_LO_IN,MAC_HI,MAC_LO);
 ADDFUN :  ADD_SUB  generic map(N)
-  port map ('0', FLAGS, A ,B ,ADD_LO);
-SUBFUN :  ADD_SUB  generic map(N)
-  port map ('1', FLAGS, A ,B ,SUB_LO);
+  port map (OP(0), FLAGS, A ,B ,ADD_SUB_LO); -- OPP : SUB = 101, ADD= 100, then add or sub by OP(0)
 
 
 ----------------------------------------
