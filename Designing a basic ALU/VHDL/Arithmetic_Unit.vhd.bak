@@ -27,7 +27,7 @@ entity Arithmetic_Unit is
         MAC_LO_IN : in signed((N-1) downto 0);
         HI : out signed ((N-1) downto 0);
         LO : out signed ((N-1) downto 0);
-        FLAGS : inout std_logic_vector(5 downto 0);
+        FLAGS : inout signed(5 downto 0);
         FLAG_en : out std_logic); -- FLAG_en :if OPP=SUB then -> '1' else -> '0'
 end Arithmetic_Unit;
 

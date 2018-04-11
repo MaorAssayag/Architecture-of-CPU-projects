@@ -22,7 +22,7 @@ entity ADD_SUB is
     generic(N: positive := 8); --defualt value for N is 8
     port(
        addORsub :   in std_logic;
-       FLAG : inout std_logic_vector(5 downto 0);
+       FLAG : inout signed(5 downto 0);
        A :     in signed ((N-1) downto 0);
        B :     in signed ((N-1) downto 0);
        SUM :   out signed ((N-1) downto 0)
@@ -62,7 +62,7 @@ begin
   SUM <= tempSUM;
   
   flag_handle : process(tempSUM)
-      variable FLAGS : std_logic_vector(5 downto 0) := "000000";
+      variable FLAGS : signed(5 downto 0) := "000000";
       begin
       if (addORsub = '1') then
         FLAG <= FLAGS; -- will assign at the end of process

@@ -38,7 +38,7 @@ component ADD_SUB
    generic (N: integer := 8 ); --defualt value for N is 8
    port(
      addORsub :   in std_logic;
-     FLAG : inout std_logic_vector(5 downto 0);
+     FLAG : inout signed(5 downto 0);
      A :     in signed ((N-1) downto 0);
      B :     in signed ((N-1) downto 0);
      SUM :   out signed ((N-1) downto 0)

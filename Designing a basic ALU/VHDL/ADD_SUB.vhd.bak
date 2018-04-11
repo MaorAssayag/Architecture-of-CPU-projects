@@ -59,7 +59,7 @@ begin
   stage_1 :  ADD  generic map(N)
     port map (Cin => addORsub,A => A,B => B_2,SUM => tempSUM,Cout => CARRY); -- A+B or A-B
 
-  SUM <= (others => '0');
+  SUM <= tempSUM;
   
   flag_handle : process(tempSUM)
       variable FLAGS : std_logic_vector(5 downto 0) := "000000";
