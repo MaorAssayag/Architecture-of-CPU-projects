@@ -78,18 +78,16 @@ component ADD_SUB
   component Arithmetic_selector
      generic(N: positive := 8); --defualt value for N is 8
      port(
-        OP :   in std_logic_vector (2 downto 0);
-        MUL_HI : in signed ((N-1) downto 0);
-        MUL_LO : in signed ((N-1) downto 0);
-        MAC_HI : in signed ((N-1) downto 0);
-        MAC_LO : in signed ((N-1) downto 0);
-        MAX_LO : in signed ((N-1) downto 0);
-        MIN_LO : in signed ((N-1) downto 0);
-        ADD_LO : in signed ((N-1) downto 0);
-        SUB_LO : in signed ((N-1) downto 0);
-        HI : out signed ((N-1) downto 0);
-        LO : out signed ((N-1) downto 0);
-        FLAG_en : out std_logic); -- FLAG_en :if OPP=SUB then -> '1' else -> '0'
+         OP :   in std_logic_vector (2 downto 0);
+         MUL_HI : in signed ((N-1) downto 0);
+         MUL_LO : in signed ((N-1) downto 0);
+         MAC_HI : in signed ((N-1) downto 0);
+         MAC_LO : in signed ((N-1) downto 0);
+         MAX_MIN_LO : in signed ((N-1) downto 0);
+         ADD_SUB_LO : in signed ((N-1) downto 0);
+         HI : out signed ((N-1) downto 0);
+         LO : out signed ((N-1) downto 0);
+         FLAG_en : out std_logic); -- FLAG_en :if OPP=SUB then -> '1' else -> '0'
    end component;
 
 
@@ -101,7 +99,7 @@ signal  MAC_HI :  signed ((N-1) downto 0);
 signal  MAC_LO :  signed ((N-1) downto 0);
 signal  MAX_MIN_LO :  signed ((N-1) downto 0); -- OPP MAX : 010 OPP MIN: 011 then max or min by OP(0)
 signal  ADD_SUB_LO :  signed ((N-1) downto 0);
-signal mac_rst : std_logic;
+signal  mac_rst : std_logic;
 begin
 ----------------------------------------
 mac_rst <= (OP(2) and OP(1)) and (NOT OP(0)); -- MAC = 0 if OPP= RST
@@ -109,6 +107,10 @@ MACFUN :  MAC  generic map(N)
   port map (mac_rst, A ,B ,MAC_HI_IN,MAC_LO_IN,MAC_HI,MAC_LO);
 ADDFUN :  ADD_SUB  generic map(N)
   port map (OP(0), FLAGS, A ,B ,ADD_SUB_LO); -- OPP : SUB = 101, ADD= 100, then add or sub by OP(0)
+MULFUN :  MUL  generic map(N)
+  port map (A,B,MUL_HI,MUL_LO);
+Arithmetic_selectorFUN :  Arithmetic_selector  generic map(N)
+  port map (OP,MUL_HI,MUL_LO,MAC_HI,MAC_LO,MAX_MIN_LO,ADD_SUB_LO,HI,LO,FLAG_en);
 
 
 ----------------------------------------
