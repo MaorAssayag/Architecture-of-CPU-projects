@@ -48,7 +48,7 @@ begin
 ----------------------------------------
 MUX_LO : MUX_Nbits generic map (N) port map (SEL, arithmetic_LO, shift_LO, LO);
 MUX_HI : MUX_Nbits generic map (N) port map (SEL, arithmetic_HI, zeroes, HI);
-MUX_HI : MUX_Nbits generic map (6) port map (FLAG_en, zeroes(5 downto 0), arithmetic_FLAG, STATUS);
+MUX_FLAG : MUX_Nbits generic map (6) port map (FLAG_en, zeroes(5 downto 0), arithmetic_FLAG, STATUS);
 ----------------------------------------
 end structural;
 
