@@ -52,17 +52,17 @@ elsif ((OP = "001") or (OP = "110")) then
   LO <= MAC_LO;
   FLAG_en <= '0';
 elsif ((OP = "010") or (OP = "011")) then
-  wait on MAX_MIN_LO;
+  wait MAX_MIN_LO;
   HI <=(others => '0');
   LO <= MAX_MIN_LO;
   FLAG_en <= '0';
 elsif (OP = "100") then
-  wait on ADD_SUB_LO;
+  wait ADD_SUB_LO;
   HI <=(others => '0');
   LO <= ADD_SUB_LO;
   FLAG_en <= '0';
 elsif (OP = "101") then
-  wait on ADD_SUB_LO;
+  wait ADD_SUB_LO;
   HI <=(others => '0');
   LO <= ADD_SUB_LO;
   FLAG_en <= '1';

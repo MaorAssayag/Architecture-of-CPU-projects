@@ -78,8 +78,6 @@ end component;
 -- global signals
 signal MAC_LO :  signed(N-1 downto 0) := (others => '0');
 signal MAC_HI :  signed(N-1 downto 0) := (others => '0');
-signal tmpMAC_LO :  signed(N-1 downto 0) := (others => '0');
-signal tmpMAC_HI :  signed(N-1 downto 0) := (others => '0');
 signal FLAGS :   signed(5 downto 0) := (others => '0');
 signal FLAG_en : std_logic := '0';
 signal mac_update : std_logic := '0';
