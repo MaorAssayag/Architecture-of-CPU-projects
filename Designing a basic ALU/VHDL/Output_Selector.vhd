@@ -28,7 +28,7 @@ entity Output_Selector is
        shift_LO :       in  signed (N-1 downto 0);
        LO :             out signed (N-1 downto 0);
        HI :             out signed (N-1 downto 0);
-       STATUS :         out std_logic_vector (5 downto 0));
+       STATUS :         out signed (5 downto 0));
 end Output_Selector;
 
  -- Architecture Definition

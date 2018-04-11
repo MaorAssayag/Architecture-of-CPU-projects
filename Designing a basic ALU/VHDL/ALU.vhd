@@ -40,7 +40,7 @@ component Output_Selector
        shift_LO :       in  signed (N-1 downto 0);
        LO :             out signed (N-1 downto 0);
        HI :             out signed (N-1 downto 0);
-       STATUS :         out std_logic_vector (5 downto 0));
+       STATUS :         out signed (5 downto 0));
 end component;
 
 component Arithmetic_Unit
@@ -53,7 +53,7 @@ component Arithmetic_Unit
         MAC_LO_IN : in signed((N-1) downto 0);
         HI : out signed ((N-1) downto 0);
         LO : out signed ((N-1) downto 0);
-        FLAGS : inout std_logic_vector(5 downto 0);
+        FLAGS : inout signed(5 downto 0);
         FLAG_en : out std_logic); -- FLAG_en :if OPP=SUB then -> '1' else -> '0'
 end component;
 
@@ -78,7 +78,7 @@ end component;
 -- global signals
 signal MAC_LO :  signed(N-1 downto 0) := (others => '0');
 signal MAC_HI :  signed(N-1 downto 0) := (others => '0');
-signal FLAGS :   std_logic_vector(5 downto 0) := (others => '0');
+signal FLAGS :   signed(5 downto 0) := (others => '0');
 signal FLAG_en : std_logic := '0';
 signal mac_update : std_logic := '0';
 
