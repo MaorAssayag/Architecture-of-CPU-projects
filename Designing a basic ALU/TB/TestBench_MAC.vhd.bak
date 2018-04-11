@@ -48,7 +48,6 @@ begin
     MACHI <="01000000", "11101001" after 50 ns, "01001100" after 100 ns,"11011111" after 150 ns;
     MACLO <= "01001000", "11100001" after 50 ns, "11001100" after 100 ns,"11001111" after 150 ns;
     y <= "00000010", "00000011" after 50 ns, "11000010" after 100 ns,"00010001" after 150 ns;
-   mac_rst <= '1' after 100 ns;
     wait;
   end process stim;
 ----------------------------------------
