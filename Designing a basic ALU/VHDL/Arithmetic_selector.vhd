@@ -25,10 +25,8 @@ entity Arithmetic_selector is
        MUL_LO : in signed ((N-1) downto 0);
        MAC_HI : in signed ((N-1) downto 0);
        MAC_LO : in signed ((N-1) downto 0);
-       MAX_LO : in signed ((N-1) downto 0);
-       MIN_LO : in signed ((N-1) downto 0);
-       ADD_LO : in signed ((N-1) downto 0);
-       SUB_LO : in signed ((N-1) downto 0);
+       MAX_MIN_LO : in signed ((N-1) downto 0);
+       ADD_SUB_LO : in signed ((N-1) downto 0);
        HI : out signed ((N-1) downto 0);
        LO : out signed ((N-1) downto 0);
        FLAG_en : out std_logic); -- FLAG_en :if OPP=SUB then -> '1' else -> '0'
@@ -53,25 +51,20 @@ elsif (OP = "001") then
   HI <= MAC_HI;
   LO <= MAC_LO;
   FLAG_en <= '0';
-elsif (OP = "010") then
-  wait MAX_LO;
+elsif ((OP = "010") or (OP = "011")) then
+  wait MAX_MIN_LO;
   HI <=(others => '0');
-  LO <= MAX_LO;
-  FLAG_en <= '0';
-elsif (OP = "011") then
-  wait MIN_LO;
-  HI <=(others => '0');
-  LO <= MIN_LO;
+  LO <= MAX_MIN_LO;
   FLAG_en <= '0';
 elsif (OP = "100") then
-  wait ADD_LO;
+  wait ADD_SUB_LO;
   HI <=(others => '0');
-  LO <= ADD_LO;
+  LO <= ADD_SUB_LO;
   FLAG_en <= '0';
 elsif (OP = "101") then
-  wait SUB_LO;
+  wait ADD_SUB_LO;
   HI <=(others => '0');
-  LO <= SUB_LO;
+  LO <= ADD_SUB_LO;
   FLAG_en <= '1';
 end if;
 end process;
