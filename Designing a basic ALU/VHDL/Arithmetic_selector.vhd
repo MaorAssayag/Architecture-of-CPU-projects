@@ -45,7 +45,7 @@ if (OP = "000") then
   HI <= MUL_HI;
   LO <= MUL_LO;
   FLAG_en <= '0';
-elsif (OP = "001") then
+elsif ((OP = "001") or (OP = "110")) then
   wait on MAC_HI;
   wait on MAC_LO;
   HI <= MAC_HI;
