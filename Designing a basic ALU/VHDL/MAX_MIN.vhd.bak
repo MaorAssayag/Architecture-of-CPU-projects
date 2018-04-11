@@ -12,7 +12,6 @@
 --	Date:			02/04/2018
 --	Designer:		Maor Assayag, Refael Shetrit
 --
--- TODO : 1.complete cheking in MODELSIM
 -- ====================================================================
 
 -- libraries decleration
@@ -25,7 +24,7 @@ entity MAX_MIN is
     generic (N: INTEGER := 8); --defualt value for N is 8
     port(
         maxORmin : in  std_logic;
-        FLAG : inout std_logic_vector(7 downto 0);
+        FLAG : inout signed(7 downto 0);
         A, B :     in  signed(N-1 downto 0);
         result :   out signed(N-1 downto 0));
 end entity MAX_MIN;
@@ -37,7 +36,7 @@ architecture gate_level of MAX_MIN is
       generic(N: positive := 8); --defualt value for N is 8
       port(
          addORsub :   in std_logic;
-         FLAG : inout std_logic_vector(7 downto 0);
+         FLAG : inout signed(7 downto 0);
          A :     in signed ((N-1) downto 0);
          B :     in signed ((N-1) downto 0);
          SUM :   out signed ((N-1) downto 0)
@@ -49,13 +48,7 @@ architecture gate_level of MAX_MIN is
     stage_0 :  ADD_SUB  generic map(N)
       port map (addORsub => '1',FLAG => FLAG,A => A,B => B,SUM => tempSUM); -- A-B
 
-    result <= A;
-   -- if (maxORmin = '0') and (FLAG(5) = '1') then
-     -- result <= B;
-    --elsif (maxORmin = '1') and (FLAG(3) = '1') then
-     -- result <= B;
-    --end if;
-    result <= B when (((maxORmin = '0') AND (FLAG(5) = '1')) OR ((maxORmin = '1') and (FLAG(3) = '1')));
+    result <= B when (((maxORmin = '0') AND (FLAG(5) = '1')) OR ((maxORmin = '1') and (FLAG(3) = '1'))) else A;
   ----------------------------------------
   end gate_level;
 

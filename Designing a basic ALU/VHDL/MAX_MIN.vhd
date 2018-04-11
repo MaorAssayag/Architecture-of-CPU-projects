@@ -24,7 +24,7 @@ entity MAX_MIN is
     generic (N: INTEGER := 8); --defualt value for N is 8
     port(
         maxORmin : in  std_logic;
-        FLAG : inout std_logic_vector(7 downto 0);
+        FLAG : inout signed(5 downto 0);
         A, B :     in  signed(N-1 downto 0);
         result :   out signed(N-1 downto 0));
 end entity MAX_MIN;
@@ -36,7 +36,7 @@ architecture gate_level of MAX_MIN is
       generic(N: positive := 8); --defualt value for N is 8
       port(
          addORsub :   in std_logic;
-         FLAG : inout std_logic_vector(7 downto 0);
+         FLAG : inout signed(5 downto 0);
          A :     in signed ((N-1) downto 0);
          B :     in signed ((N-1) downto 0);
          SUM :   out signed ((N-1) downto 0)
