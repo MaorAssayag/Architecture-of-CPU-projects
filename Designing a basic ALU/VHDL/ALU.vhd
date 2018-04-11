@@ -66,11 +66,23 @@ component shift_unit
        result : out signed(N-1 downto 0));
 end component;
 
+component MUX_Nbits
+    generic(N: positive := 8); --defualt value for N is 8
+    port (
+       SEL: in  std_logic;
+       Y1 : in  signed (N-1 downto 0);
+       Y2 : in  signed (N-1 downto 0);
+       Y  : out signed (N-1 downto 0));
+end component;
+
 -- global signals
 signal MAC_LO :  signed(N-1 downto 0) := (others => '0');
 signal MAC_HI :  signed(N-1 downto 0) := (others => '0');
+signal tmpMAC_LO :  signed(N-1 downto 0) := (others => '0');
+signal tmpMAC_HI :  signed(N-1 downto 0) := (others => '0');
 signal FLAGS :   signed(5 downto 0) := (others => '0');
 signal FLAG_en : std_logic := '0';
+signal mac_update : std_logic := '0';
 
 -- temp results from the units
 signal arithmetic_LO : signed(N-1 downto 0);
@@ -81,6 +93,16 @@ begin
 ArithmeticUnit : Arithmetic_Unit generic map (N) port map (A, B, OPP(2 downto 0), MAC_HI, MAC_LO, arithmetic_HI, arithmetic_LO, FLAGS, FLAG_en);
 ShiftUnit :      shift_unit      generic map (N) port map (OPP(0), A, B(5 downto 0), shift_LO);
 OutputSelector : Output_Selector generic map (N) port map (OPP(3), FLAG_en, arithmetic_LO, arithmetic_HI, FLAGS, shift_LO, LO, HI, STATUS);
+
+process
+begin
+  wait on LO;
+  wait on HI;
+  if OPP = "001" then
+  MAC_LO <= LO;
+  MAC_HI <= HI;
+  end if;
+end process
 ----------------------------------------
 end structural;
 

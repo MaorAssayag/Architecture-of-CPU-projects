@@ -62,14 +62,7 @@ component ADD_SUB
     result :   out signed(N-1 downto 0)
   );
   end component;
-  component shift_Nbits
-  generic(N: integer := 8); --defualt value for N is 8
-  port (
-    dir :    in std_logic;
-    enable : in std_logic;
-    A :      in signed(N-1 downto 0);
-    Aout :   out signed(N-1 downto 0));
- end component;
+
  component MAC
     generic (N: integer := 8 ); --defualt value for N is 8
     port(
