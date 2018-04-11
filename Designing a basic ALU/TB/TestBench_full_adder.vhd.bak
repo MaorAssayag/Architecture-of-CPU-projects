@@ -8,7 +8,6 @@
 --	Date:			02/04/2018
 --	Designer:		Maor Assayag, Refael Shetrit
 --
--- TODO : 1.test bench
 -- ====================================================================
 
 LIBRARY ieee;
@@ -23,7 +22,7 @@ ARCHITECTURE behavior OF Testbench_full_adder IS
 
  component full_adder
  port (
-     AA: IN std_logic;
+     A: IN std_logic;
      B : IN std_logic;
      Cin : IN std_logic;
      S : OUT std_logic;
@@ -44,7 +43,7 @@ begin
 ----------------------------------------
    -- Instantiate the Unit Under Test (UUT)
    uut: full_adder PORT MAP (
-   AA => A,
+   A => A,
    B => B,
    Cin => Cin,
    S => S,

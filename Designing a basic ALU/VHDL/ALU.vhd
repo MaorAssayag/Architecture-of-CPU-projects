@@ -91,16 +91,6 @@ begin
 ArithmeticUnit : Arithmetic_Unit generic map (N) port map (A, B, OPP(2 downto 0), MAC_HI, MAC_LO, arithmetic_HI, arithmetic_LO, FLAGS, FLAG_en);
 ShiftUnit :      shift_unit      generic map (N) port map (OPP(0), A, B(5 downto 0), shift_LO);
 OutputSelector : Output_Selector generic map (N) port map (OPP(3), FLAG_en, arithmetic_LO, arithmetic_HI, FLAGS, shift_LO, LO, HI, STATUS);
-
-process
-begin
-  wait on LO;
-  wait on HI;
-  if OPP = "001" then
-  MAC_LO <= LO;
-  MAC_HI <= HI;
-  end if;
-end process
 ----------------------------------------
 end structural;
 

@@ -25,7 +25,7 @@ ARCHITECTURE behavior OF Testbench_full_adder IS
      A: IN std_logic;
      B : IN std_logic;
      Cin : IN std_logic;
-     S : OUT std_logic;
+     sum : OUT std_logic;
      Cout : OUT std_logic
  );
 end component;
@@ -46,7 +46,7 @@ begin
    A => A,
    B => B,
    Cin => Cin,
-   S => S,
+   sum => S,
    Cout => Cout
    );
 
