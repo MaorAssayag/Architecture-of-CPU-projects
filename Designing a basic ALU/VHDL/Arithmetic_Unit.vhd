@@ -86,8 +86,8 @@ component ADD_SUB
        MUL_result : in signed (2*N-1 downto 0);
        MAX_MIN_LO : in signed ((N-1) downto 0);
        ADD_SUB_result : in signed (2*N-1 downto 0);
-       HI : out signed ((N-1) downto 0);
        LO : out signed ((N-1) downto 0);
+       HI : out signed ((N-1) downto 0);
        FLAG_en : out std_logic); -- FLAG_en :if OPP=SUB then -> '1' else -> '0'
    end component;
 

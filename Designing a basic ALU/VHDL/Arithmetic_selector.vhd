@@ -23,8 +23,8 @@ entity Arithmetic_selector is
       MUL_result : in signed (2*N-1 downto 0);
       MAX_MIN_LO : in signed ((N-1) downto 0);
       ADD_SUB_result : in signed (2*N-1 downto 0);
-      HI : out signed ((N-1) downto 0);
       LO : out signed ((N-1) downto 0);
+      HI : out signed ((N-1) downto 0);
       FLAG_en : out std_logic); -- FLAG_en :if OPP=SUB then -> '1' else -> '0'
 end Arithmetic_selector;
 
@@ -32,7 +32,7 @@ end Arithmetic_selector;
 architecture gate_level of Arithmetic_selector is
 begin
 ----------------------------------------
-process (clk, OPP, MUL_result, MAX_MIN_LO, ADD_SUB_result)
+process (all)
 begin
   if rising_edge(clk) then
   case OPP is
@@ -46,15 +46,25 @@ begin
         LO <= MUL_result(N-1 downto 0);
         FLAG_en <= '0';
 
-       when "010" | "011" =>
-        HI <= (others => '0'); -- MAX/MIN OPP
+       when "010" =>
+        HI <= (others => '0'); -- MAX OPP
         LO <= MAX_MIN_LO;
         FLAG_en <= '0';
 
-        when "100" | "101"=>
-        HI <= (others => '0'); -- ADD\SUB OPP
+        when "011" =>
+         HI <= (others => '0'); -- MIN OPP
+         LO <= MAX_MIN_LO;
+         FLAG_en <= '0';
+
+        when "100"=>
+        HI <= (others => '0'); -- ADD OPP
         LO <= ADD_SUB_result(N-1 downto 0);
-        FLAG_en <= OPP(0); -- if SUB then update SYSTEM FLAGS
+        FLAG_en <= '0'; -- if SUB then update SYSTEM FLAGS
+
+        when "101"=>
+        HI <= (others => '0'); -- SUB OPP
+        LO <= ADD_SUB_result(N-1 downto 0);
+        FLAG_en <= '1'; -- if SUB then update SYSTEM FLAGS
 
        when others =>
         HI <=(others => '0');
