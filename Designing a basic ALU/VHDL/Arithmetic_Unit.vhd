@@ -1,7 +1,7 @@
 -- ====================================================================
 --
 --	File Name:		Arithmetic_Unit.vhd
---	Description:	Arithmetic_Unit
+--	Description:	Arithmetic_Unit, MAC need one call (with the OPP "000") to initialize
 --
 --
 --	Date:			10/04/2018

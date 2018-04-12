@@ -22,10 +22,9 @@ entity MAC is
        mac_rst : in std_logic;
        clk :     in std_logic;
        enable :  in std_logic;
-       LO_bits :       in signed((N-1) downto 0);
-       HI_bits :       in signed((N-1) downto 0);
-       MAC_HI :   out signed((N-1) downto 0);
-       MAC_LO :   out signed((N-1) downto 0));
+       LO_bits : in signed(N-1 downto 0);
+       HI_bits : in signed(N-1 downto 0);
+       MAC_result :  out signed(2*N-1 downto 0));
 end MAC;
 
  -- Architecture Definition
@@ -39,20 +38,24 @@ component N_dff
         Q : out signed(N-1 downto 0));
 end component;
 
-signal clk_dff : std_logic;
+signal clk_dff : std_logic := '1';
+signal MAC_LO, MAC_HI : signed(N-1 downto 0) := (others => '0');
 begin
 ----------------------------------------
+clk_dff <= '0';
 LO_dff : N_dff generic map(N) port map(clk_dff, mac_rst, LO_bits, MAC_LO);
 HI_dff : N_dff generic map(N) port map(clk_dff, mac_rst, HI_bits, MAC_HI);
+
+MAC_result(N-1 downto 0) <= MAC_LO;
+MAC_result(2*N-1 downto N) <= MAC_HI;
 
 process (clk)
 begin
   if (enable = '1') then
 			if rising_edge(clk) then
-				clk_dff <= '0';
-				end case;
-			elsif falling_edge(clk) then
 				clk_dff <= '1';
+			elsif falling_edge(clk) then
+				clk_dff <= '0';
 			end if;
 end if;
 end process;

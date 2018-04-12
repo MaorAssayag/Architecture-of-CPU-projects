@@ -135,7 +135,6 @@ max_min_component : MAX_MIN generic map(N)
 arithmetic_selector_component :  Arithmetic_selector  generic map(N)
   port map (clk, OPP, MUL_result, MAX_MIN_LO, ADD_SUB_result, LO, HI, FLAG_en);
     
-    
   flag_handle : process(ADD_SUB_result)
       variable FLAG : signed(5 downto 0) := "000000";
       begin

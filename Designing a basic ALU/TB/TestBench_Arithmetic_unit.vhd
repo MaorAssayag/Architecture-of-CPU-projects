@@ -58,6 +58,9 @@ end process;
 
   stim: process
   begin
+    wait for 10 ns;
+    OPP <= "000"; -- initial MAC
+    
     wait for 10 ns;  
       OPP <= "100"; -- ADD
       wait for 50 ns;

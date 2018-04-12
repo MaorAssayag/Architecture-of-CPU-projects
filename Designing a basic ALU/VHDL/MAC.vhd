@@ -38,8 +38,8 @@ component N_dff
         Q : out signed(N-1 downto 0));
 end component;
 
-signal clk_dff : std_logic;
-signal MAC_LO, MAC_HI : signed(N-1 downto 0);
+signal clk_dff : std_logic := '0';
+signal MAC_LO, MAC_HI : signed(N-1 downto 0) := (others => '0');
 begin
 ----------------------------------------
 LO_dff : N_dff generic map(N) port map(clk_dff, mac_rst, LO_bits, MAC_LO);
@@ -52,9 +52,9 @@ process (clk)
 begin
   if (enable = '1') then
 			if rising_edge(clk) then
-				clk_dff <= '0';
-			elsif falling_edge(clk) then
 				clk_dff <= '1';
+			elsif falling_edge(clk) then
+				clk_dff <= '0';
 			end if;
 end if;
 end process;
