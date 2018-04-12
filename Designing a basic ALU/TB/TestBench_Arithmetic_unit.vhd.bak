@@ -36,7 +36,7 @@ constant N : integer := 8;
 signal clk : std_logic := '0';
 signal OPP : std_logic_vector (2 downto 0) := "100";
 signal LO, HI : signed(N-1 downto 0) := "00000000";
-signal A  : signed(N-1 downto 0) := "00000100";
+signal A  : signed(N-1 downto 0) := "00000101";
 signal B  : signed(N-1 downto 0) := "00000010";
 signal FLAGS : signed(5 downto 0);
 signal FLAG_en :  std_logic; -- FLAG_en :if OPP=SUB then -> '1' else -> '0'

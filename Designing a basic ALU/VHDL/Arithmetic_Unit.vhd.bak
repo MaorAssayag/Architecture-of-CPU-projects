@@ -38,8 +38,7 @@ component ADD_SUB
      addORsub :   in std_logic;
      A :     in signed ((N-1) downto 0);
      B :     in signed ((N-1) downto 0);
-     SUM :   out signed ((N-1) downto 0);
-     FLAG : out signed(5 downto 0));
+     SUM :   out signed ((N-1) downto 0));
  end component;
 
  component MUL
@@ -86,8 +85,8 @@ component ADD_SUB
        MUL_result : in signed (2*N-1 downto 0);
        MAX_MIN_LO : in signed ((N-1) downto 0);
        ADD_SUB_result : in signed (2*N-1 downto 0);
-       HI : out signed ((N-1) downto 0);
        LO : out signed ((N-1) downto 0);
+       HI : out signed ((N-1) downto 0);
        FLAG_en : out std_logic); -- FLAG_en :if OPP=SUB then -> '1' else -> '0'
    end component;
 
@@ -122,7 +121,7 @@ mux_bits_B : MUX_Nbits generic map(2*N) port map (mac_enable, extendedB, MUL_res
 
 -- add/sub component, ADD_SUB_result = selected_A +/- selected_B & flags if it was sub
 add_sub_component : ADD_SUB generic map(2*N)
-                     port map (OPP(0), selected_A, selected_B, ADD_SUB_result, FLAGS); -- OPP : SUB = 101, ADD= 100, then add or sub by OP(0) (& mac OPP = 000)
+                     port map (OPP(0), selected_A, selected_B, ADD_SUB_result); -- OPP : SUB = 101, ADD= 100, then add or sub by OP(0) (& mac OPP = 000)
 
 -- mac component, save the add_sub result (accumlate) if the OPP = MAC
 mac_component : MAC generic map(N)
@@ -135,6 +134,22 @@ max_min_component : MAX_MIN generic map(N)
 -- will output the right HI&LO bits according to the OPP code
 arithmetic_selector_component :  Arithmetic_selector  generic map(N)
   port map (clk, OPP, MUL_result, MAX_MIN_LO, ADD_SUB_result, LO, HI, FLAG_en);
+    
+    
+  flag_handle : process(ADD_SUB_result)
+      variable FLAG : signed(5 downto 0) := "000000";
+      begin
+        FLAGS <= FLAG; -- will assign at the end of process
+        FLAG(0) := '1'; -- is A=B ?
+        eachBit: for i in 0 to (N-1) loop
+          FLAG(0) := (FLAG(0) AND (NOT ADD_SUB_result(i)));
+        end loop;
+        FLAG(1) := NOT FLAG(0); -- A!=B
+        FLAG(2) := NOT ADD_SUB_result(N-1);--A >= B if tempSUM(N-1)=0 then
+        FLAG(3) := FLAG(2) AND FLAG(1); -- A>B if A>=B & A!=B
+        FLAG(4) := NOT FLAG(3);-- A<=B if !(A>B)
+        FLAG(5) := FLAG(4) AND FLAG(1); -- A<B if (A<=B & A!=B)
+  end process flag_handle;
 ----------------------------------------
 end gate_level;
 

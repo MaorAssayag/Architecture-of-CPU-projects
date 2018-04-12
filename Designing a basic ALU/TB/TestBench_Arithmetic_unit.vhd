@@ -45,59 +45,39 @@ begin
   uut :  Arithmetic_Unit  generic map(N)
     port map (clk,A,B,OPP,LO,HI,FLAGS,FLAG_en);
 
+clock: process
+begin
+	clk <= '0';
+while (0 = 0) loop
+  wait for 5 ns;
+	clk <= '1';
+	wait for 5 ns;
+	clk <= '0';
+end loop;
+end process;
+
   stim: process
   begin
     wait for 10 ns;  
-      clk <= '1';
       OPP <= "100"; -- ADD
       wait for 50 ns;
-
-    wait for 10 ns;
-    clk <= '0';
-    OPP <= "010";
     
     wait for 10 ns;
-    clk <= '1';
     OPP <= "010"; -- MAX
-
-    wait for 10 ns;
-    clk <= '0';
-    OPP <= "101";
     
     wait for 10 ns;
-    clk <= '1';
     OPP <= "101"; -- SUB, check also FLAGS
 
     wait for 10 ns;
-    clk <= '0';
-    OPP <= "011";
-
-    wait for 10 ns;
-    clk <= '1';
     OPP <= "011"; -- MIN
 
     wait for 10 ns;
-    clk <= '0';
-    OPP <= "001";
-
-    wait for 10 ns;
-    clk <= '1';
     OPP <= "001"; -- MUL
 
-     wait for 10 ns;
-    clk <= '0';
-    OPP <= "110";
-    
     wait for 10 ns;
-    clk <= '1';
     OPP <= "110"; --RST
 
     wait for 10 ns;
-    clk <= '0';
-    OPP <= "000"; 
-
-    wait for 10 ns;
-    clk <= '1';
     OPP <= "000"; -- MAC
 
   end process stim;
