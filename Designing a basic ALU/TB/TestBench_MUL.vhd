@@ -24,18 +24,17 @@ architecture behavior of Testbench_MUL is
     port(
         A :     in signed((N-1) downto 0);
         B :     in signed((N-1) downto 0);
-        HI :   out signed((N-1) downto 0);
-        LO : out signed((N-1) downto 0) 
-     );
+        result: out signed(2*N-1 downto 0));
   end component;
 
  constant N : integer := 8;
- signal x, y, HI,LO : signed((N-1) downto 0) ;
+ signal x, y: signed((N-1) downto 0) ;
+ signal result: signed((2*N-1) downto 0) ;
 
 begin
 ----------------------------------------
   uut :  MUL  generic map(N)
-    port map (A => x,B => y,HI => HI,LO => LO);
+    port map (x, y, result);
 
   stim: process
   begin

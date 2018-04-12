@@ -19,11 +19,9 @@ use ieee.std_logic_1164.all;
 entity MUL is
     generic(N: integer := 8); --defualt value for N is 8
     Port(
-       A :     in signed((N-1) downto 0);
-       B :     in signed((N-1) downto 0);
-       HI :   out signed((N-1) downto 0);
-       LO : out signed((N-1) downto 0)
-    );
+       A :     in signed(N-1 downto 0);
+       B :     in signed(N-1) downto 0);
+       result: out signed(2*N-1 downto 0));
 end MUL;
 
  -- Architecture Definition
@@ -35,8 +33,7 @@ begin
   variable  tmp : signed (2*N - 1 downto 0);
   begin
     tmp := A*B;
-    HI <= tmp (2*N-1 downto N);
-    LO <= tmp (N-1 downto 0);
+    result <= tmp;
   end process;
 ----------------------------------------
 end gate_level;

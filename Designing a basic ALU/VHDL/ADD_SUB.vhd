@@ -22,11 +22,10 @@ entity ADD_SUB is
     generic(N: positive := 8); --defualt value for N is 8
     port(
        addORsub :   in std_logic;
-       FLAG : inout signed(5 downto 0);
        A :     in signed ((N-1) downto 0);
        B :     in signed ((N-1) downto 0);
-       SUM :   out signed ((N-1) downto 0)
-       );
+       SUM :   out signed ((N-1) downto 0);
+       FLAG : out signed(5 downto 0));
 end ADD_SUB;
 
  -- Architecture Definition
@@ -60,7 +59,7 @@ begin
     port map (Cin => addORsub,A => A,B => B_2,SUM => tempSUM,Cout => CARRY); -- A+B or A-B
 
   SUM <= tempSUM;
-  
+
   flag_handle : process(tempSUM)
       variable FLAGS : signed(5 downto 0) := "000000";
       begin
@@ -77,7 +76,7 @@ begin
         FLAGS(5) := FLAGS(4) AND FLAGS(1); -- A<B if (A<=B & A!=B)
       end if;
   end process flag_handle;
-  
+
 ----------------------------------------
 end gate_level;
 

@@ -23,15 +23,12 @@ architecture behavior of Testbench_MAX_MIN is
  generic(N: integer := 8); --defualt value for N is 8
  port (
    maxORmin : in  std_logic;
-   FLAG : inout signed(5 downto 0);
    A, B :     in  signed(N-1 downto 0);
-   result :   out signed(N-1 downto 0)
- );
+   result :   out signed(N-1 downto 0));
  end component;
 
  signal maxORmin : std_logic;
  signal A, B, result : signed(7 downto 0);
- signal FLAG : signed(5 downto 0);
 
 begin
 ----------------------------------------
@@ -53,7 +50,7 @@ begin
   end process stim;
 
   UUT_MIN_MAX :  MAX_MIN  generic map(8)
-    port map (maxORmin,FLAG, A, B, result);
+    port map (maxORmin, A, B, result);
 ----------------------------------------
 end;
 

@@ -4,10 +4,9 @@
 --	Description:	MAC command
 --
 --
---	Date:			10/04/2018
---	Designer:		Maor Assayag, Refael Shetrit
+--	Date:			12/04/2018
+--	Designers:		Maor Assayag, Refael Shetrit
 --
--- TODO : check test bench
 -- ====================================================================
 
 -- libraries decleration
@@ -19,73 +18,47 @@ use ieee.std_logic_1164.all;
  -- entity Definition
 entity MAC is
     generic(N: integer := 8); --defualt value for N is 8
-    Port(
+    port(
        mac_rst : in std_logic;
-       A :     in signed((N-1) downto 0);
-       B :     in signed((N-1) downto 0);
-       MACHI :   in signed((N-1) downto 0);
-       MACLO : in signed((N-1) downto 0);
-       HI :   out signed((N-1) downto 0);
-       LO : out signed((N-1) downto 0));
+       clk :     in std_logic;
+       enable :  in std_logic;
+       LO_bits : in signed(N-1 downto 0);
+       HI_bits : in signed(N-1 downto 0);
+       MAC_result :  out signed(2*N-1 downto 0));
 end MAC;
 
  -- Architecture Definition
-architecture gate_level of MAC is
-  component ADD_SUB
-     generic (N: integer := 8 ); --defualt value for N is 8
-     port(
-       addORsub :   in std_logic;
-       FLAG : inout signed(5 downto 0);
-       A :     in signed ((N-1) downto 0);
-       B :     in signed ((N-1) downto 0);
-       SUM :   out signed ((N-1) downto 0)
-      );
-   end component;
+architecture behavioral of MAC is
+component N_dff
+    generic(N: integer := 8); --defualt value for N is 8
+    port (
+        clk : in std_logic;
+        rst : in std_logic;
+        D : in signed(N-1 downto 0);
+        Q : out signed(N-1 downto 0));
+end component;
 
-  component MUL
-     generic (N: integer := 8 ); --defualt value for N is 8
-     port(
-         A :     in signed((N-1) downto 0);
-         B :     in signed((N-1) downto 0);
-         HI :   out signed((N-1) downto 0);
-         LO : out signed((N-1) downto 0)
-      );
-   end component;
-
-   component MUX_Nbits
-       generic(N: positive := 8); --defualt value for N is 8
-       port (
-          SEL: in  std_logic;
-          Y1 : in  signed (N-1 downto 0);
-          Y2 : in  signed (N-1 downto 0);
-          Y  : out signed (N-1 downto 0));
-   end component;
-
-    signal MULHI,MULLO : signed((N-1) downto 0) ;
-    signal MULT,MAC,SUM: signed((2*N-1) downto 0) ;
-    signal FLAGs: signed (5 downto 0) := "000000";
-    signal zeroes : signed(N-1 downto 0) := (others => '0');
+signal clk_dff : std_logic;
+signal MAC_LO, MAC_HI : signed(N-1 downto 0);
 begin
-  ----------------------------------------
-  MULFUN :  MUL  generic map(N)
-    port map (A,B,MULT (2*N-1 downto N),MULT (N-1 downto 0));
--- MAC_proc : process
--- begin
---   wait on MACHI;
---   wait on MACLO;
-  MAC (2*N-1 downto N) <= MACHI;
-  MAC (N-1 downto 0) <= MACLO;
--- end process;
+----------------------------------------
+LO_dff : N_dff generic map(N) port map(clk_dff, mac_rst, LO_bits, MAC_LO);
+HI_dff : N_dff generic map(N) port map(clk_dff, mac_rst, HI_bits, MAC_HI);
 
-  ADDFUN :  ADD_SUB  generic map(2*N)
-    port map ('0', FLAGs, MULT,MAC,SUM);
--- MAC_proc2 : process
--- begin
---   wait on SUM;
-MUX_LO : MUX_Nbits generic map (N) port map (mac_rst, SUM(N-1 downto 0), zeroes, LO);
-MUX_HI : MUX_Nbits generic map (N) port map (mac_rst, SUM(2*N-1 downto N), zeroes, HI);
--- end process;
--- ----------------------------------------
-end gate_level;
+MAC_result(N-1 downto 0) <= MAC_LO;
+MAC_result(2*N-1 downto N) <= MAC_HI;
+
+process (clk)
+begin
+  if (enable = '1') then
+			if rising_edge(clk) then
+				clk_dff <= '0';
+			elsif falling_edge(clk) then
+				clk_dff <= '1';
+			end if;
+end if;
+end process;
+----------------------------------------
+end behavioral;
 
 --EndOfFile

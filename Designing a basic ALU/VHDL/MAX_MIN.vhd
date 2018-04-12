@@ -24,7 +24,6 @@ entity MAX_MIN is
     generic (N: INTEGER := 8); --defualt value for N is 8
     port(
         maxORmin : in  std_logic;
-        FLAG : inout signed(5 downto 0);
         A, B :     in  signed(N-1 downto 0);
         result :   out signed(N-1 downto 0));
 end entity MAX_MIN;
@@ -35,14 +34,14 @@ architecture gate_level of MAX_MIN is
   component ADD_SUB
       generic(N: positive := 8); --defualt value for N is 8
       port(
-         addORsub :   in std_logic;
-         FLAG : inout signed(5 downto 0);
-         A :     in signed ((N-1) downto 0);
-         B :     in signed ((N-1) downto 0);
-         SUM :   out signed ((N-1) downto 0)
-         );
+        addORsub :   in std_logic;
+        A :     in signed ((N-1) downto 0);
+        B :     in signed ((N-1) downto 0);
+        SUM :   out signed ((N-1) downto 0);
+        FLAG : out signed(5 downto 0));
   end component;
   signal tempSUM : signed(N-1 downto 0);
+  signal FLAG : signed(5 downto 0);
   begin
   ----------------------------------------
     stage_0 :  ADD_SUB  generic map(N)
