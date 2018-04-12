@@ -20,7 +20,7 @@ entity MUL is
     generic(N: integer := 8); --defualt value for N is 8
     Port(
        A :     in signed(N-1 downto 0);
-       B :     in signed(N-1 downto 0);
+       B :     in signed(N-1) downto 0);
        result: out signed(2*N-1 downto 0));
 end MUL;
 

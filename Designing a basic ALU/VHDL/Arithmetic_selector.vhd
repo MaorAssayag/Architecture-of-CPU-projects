@@ -32,7 +32,7 @@ end Arithmetic_selector;
 architecture gate_level of Arithmetic_selector is
 begin
 ----------------------------------------
-process (clk,OPP, MUL_HI, MUL_LO, MAC_HI,MAC_LO,MAX_MIN_LO,ADD_SUB_LO)
+process (clk, OPP, MUL_result, MAX_MIN_LO, ADD_SUB_result)
 begin
   if rising_edge(clk) then
   case OPP is
@@ -41,7 +41,7 @@ begin
         LO <= ADD_SUB_result(N-1 downto 0);
         FLAG_en <= '0';
 
-        when "001" | 110 =>
+        when "001" | "110" =>
         HI <= MUL_result(2*N-1 downto N); -- MUL OPP
         LO <= MUL_result(N-1 downto 0);
         FLAG_en <= '0';
