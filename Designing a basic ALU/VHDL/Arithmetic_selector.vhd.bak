@@ -41,7 +41,7 @@ begin
         LO <= ADD_SUB_result(N-1 downto 0);
         FLAG_en <= '0';
 
-        when "001" | 110 =>
+        when "001" | "110" =>
         HI <= MUL_result(2*N-1 downto N); -- MUL OPP
         LO <= MUL_result(N-1 downto 0);
         FLAG_en <= '0';
