@@ -4,8 +4,8 @@
 --	Description: test bench for MAC opp
 --
 --
---	Date:			10/04/2018
---	Designer:		Maor Assayag, Refael Shetrit
+--	Date:			12/04/2018
+--	Designers:		Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
 
@@ -23,33 +23,66 @@ architecture behavior of Testbench_MAC is
     generic (N: integer := 8 ); --defualt value for N is 8
     port(
            mac_rst : in std_logic;
-          A :     in signed((N-1) downto 0);
-          B :     in signed((N-1) downto 0);
-          MACHI :   in signed((N-1) downto 0);
-          MACLO : in signed((N-1) downto 0);
-          HI :   out signed((N-1) downto 0);
-          LO : out signed((N-1) downto 0)
-     );
+       clk :     in std_logic;
+       enable :  in std_logic;
+       LO_bits : in signed(N-1 downto 0);
+       HI_bits : in signed(N-1 downto 0);
+       MAC_result :  out signed(2*N-1 downto 0));
   end component;
 
  constant N : integer := 8;
- signal x, y,MACHI,MACLO, HI,LO : signed((N-1) downto 0) ;
- signal mac_rst : std_logic := '0';
- 
+ signal LO_bits,HI_bits: signed((N-1) downto 0) := "00000000" ;
+ signal MAC_result : signed((2*N-1) downto 0) ;
+ signal rst,clk : std_logic := '0';
+ signal enable : std_logic := '1';
 begin
 ----------------------------------------
   uut :  MAC  generic map(N)
-    port map (mac_rst,A => x,B => y,MACHI => MACHI,MACLO =>MACLO,HI => HI,LO => LO);
+    port map (rst,clk,enable,LO_bits,HI_bits,MAC_result);
+      
+  -- Stimulus process
+   stim: process
+   begin
+   -- hold reset state for 10 ns.
+   wait for 10 ns;
 
-  stim: process
-  begin
-    wait for 100 ns;
-    x <= "01000000", "11100001" after 50 ns, "01001100" after 100 ns,"11001111" after 150 ns;
-    MACHI <="01000000", "11101001" after 50 ns, "01001100" after 100 ns,"11011111" after 150 ns;
-    MACLO <= "01001000", "11100001" after 50 ns, "11001100" after 100 ns,"11001111" after 150 ns;
-    y <= "00000010", "00000011" after 50 ns, "11000010" after 100 ns,"00010001" after 150 ns;
-   mac_rst <= '1' after 100 ns;
-    wait;
+   clk <= '1';
+   rst <= '0';
+   LO_bits <= "00000000";
+   wait for 10 ns;
+
+   clk <= '0';
+   rst <= '0';
+   LO_bits  <= "00000011";
+   HI_bits  <= "00000011";
+   wait for 10 ns;
+
+   clk <= '1';
+   rst <= '0';
+   LO_bits  <= "00000011";
+   wait for 10 ns;
+
+   clk <= '0';
+   rst <= '0';
+   LO_bits  <= "00001100";
+   wait for 10 ns;
+
+   clk <= '1';
+   rst <= '0';
+   LO_bits <= "00110000";
+   wait for 10 ns;
+
+   clk <= '0';
+   rst <= '0';
+   LO_bits <= "00110000";
+   wait for 10 ns;
+
+   clk <= '1';
+   rst <= '1';
+   LO_bits  <= "00110000";
+   HI_bits  <= "00011000";
+   wait for 10 ns;
+
   end process stim;
 ----------------------------------------
 end behavior;
