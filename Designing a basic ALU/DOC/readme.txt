@@ -10,7 +10,7 @@ IMPORTANT : before compile please make sure that the files syntax is 2008-VHDL
 7.	shift_Nbits.VHD
 8.	shift_unit.VHD
 9.	dff_1bit.VHD
-10. N_dff.VHD
+10. 	N_dff.VHD
 11.	MUL.VHD
 12.	MAC.VHD
 13.	Arithmetic_selector.VHD
