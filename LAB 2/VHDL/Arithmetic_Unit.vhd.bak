@@ -39,7 +39,7 @@ component ADD_SUB
       A :     in signed ((N-1) downto 0);
       B :     in signed ((N-1) downto 0);
       SUM :   out signed ((N-1) downto 0);
-      Cout  : out std_logic);
+      Cout    out std_logic);
  end component;
 
  component MUL

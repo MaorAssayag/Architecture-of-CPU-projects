@@ -24,7 +24,7 @@ entity ADD_SUB is
        A :     in signed ((N-1) downto 0);
        B :     in signed ((N-1) downto 0);
        SUM :   out signed ((N-1) downto 0);
-       Cout  :  out std_logic);
+       Cout    out std_logic);
 end ADD_SUB;
 
  -- Architecture Definition

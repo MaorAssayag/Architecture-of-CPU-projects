@@ -22,7 +22,7 @@ entity Swap is
        SEL: in  std_logic;
        Y1 : in  signed (N-1 downto 0);
        Y2 : in  signed (N-1 downto 0);
-       Out1  : out signed (N-1 downto 0);
+       Out1  : out signed (N-1 downto 0)
        Out2 :  out signed (N-1 downto 0));
 end Swap;
 

@@ -46,7 +46,7 @@ architecture gate_level of MAX_MIN is
   begin
   ----------------------------------------
     stage_0 :  ADD_SUB  generic map(N)
-      port map (addORsub => '1',A => A,B => B,SUM => tempSUM,Cout => carry); -- A-B
+      port map (addORsub => '1',A => A,B => B,SUM => tempSUM,carry); -- A-B
 
 max_min : process(tempSUM, maxORmin)
       variable FLAGS : signed(5 downto 0) := "000000";
