@@ -24,8 +24,7 @@ entity ADD_SUB_FPU is
        OPP : in std_logic;
        A :     in signed((N-1) downto 0);
        B :     in signed((N-1) downto 0);
-       SUM :   out signed((N-1) downto 0);
-       Cout :  out std_logic);
+       SUM :   out signed((N-1) downto 0));
 end ADD_SUB_FPU;
 
  -- Architecture Definition
@@ -61,7 +60,22 @@ component shift_unit
        result : out signed(N-1 downto 0));
 end component;
 
+component LeadingZeroes_counter
+    port (
+       Cin: in  std_logic;
+       X :  in  signed (21 downto 0);
+       dir: out std_logic;
+       Y  : out signed (5 downto 0));
+end component;
 
+component MUX_Nbits
+    generic(N: positive := 8); --defualt value for N is 8
+    port (
+           SEL: in  std_logic;
+           Y1 : in  signed (N-1 downto 0);
+           Y2 : in  signed (N-1 downto 0);
+           Y  : out signed (N-1 downto 0));
+end component;
 
 --floating point components extraction signals
 signal signA: std_logic;
@@ -79,6 +93,11 @@ signal temp_fraction2: signed(22 downto 0); -- Second number fraction before ali
 signal SUBorADD: std_logic;
 signal carryFractions: std_logic;
 signal tempFraction_result : signed(22 downto 0);
+signal LeadingZeroes_num : signed(5 downto 0); -- how much leading zeroes in the result
+signal shift_direction : std_logic; -- shift the result right\left
+signal maxExponent : signed(7 downto 0);
+signal zeroes : signed(7 downto 0);
+signal resultExponent : signed(7 downto 0);
 
 begin
 ----------------------------------------
@@ -89,6 +108,7 @@ begin
     fractionA <= A(22 downto 0);
     fractionB <= B(22 downto 0);
     SUBorADD <= OPP xor A(31) xor B(31);
+    zeroes <= (others =>'0');
 
     -- Find the difference between the Exponent of A and B : expA - expB, default N=8 bits
     stage_0 : ADD_SUB
@@ -97,7 +117,7 @@ begin
     -- Exponent alligenment preparation : Prepare the fraction of the Number with the min exponent to be shifted
     -- if expDiff(7)=0 -> exponentA-exponentB > 0, shift right fraction B.
     stage_1 : Swap generic map (23)
-              port map (expDiff(7), fractionA, fractionB, fraction1, temp_fraction2);
+              port map (expDiff(7),fractionA, fractionB, fraction1, temp_fraction2);
 
     -- Exponent alligenment : shift right the fraction of the Number with the min exp
     stage_2 : shift_unit generic map(23)
@@ -109,7 +129,22 @@ begin
 
     -- Remove leading zeroes from the current fraction result, e.g : result = 001110, then result should be 111000
     -- find out how much leading zeros are there
-    stage_4 :
+    stage_4 : LeadingZeroes_counter
+              port map(carryFractions, tempFraction_result, shift_direction, LeadingZeroes_num);
+
+    -- Shift the temp fraction result according to the previous step
+    stage_5 : shift_unit generic map(23)
+              port map (shift_direction, tempFraction_result, LeadingZeroes_num, SUM(22 downto 0));
+
+    -- Find the max exponent, for the exponent component of the result
+    stage_6 : MUX_Nbits generic map(8)
+              port map (expDiff(7), expA, expB, maxExponent);
+
+    resultExponent <= maxExponent - LeadingZeroes_num;
+
+    -- if the current exponent < then output 0 - bug detector
+    stage_7 : MUX_Nbits generic map(8)
+              port map (resultExponent(7), resultExponent, zeroes, SUM(30 downto 23));
 ----------------------------------------
 end gate_level;
 
