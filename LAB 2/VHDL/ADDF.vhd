@@ -31,18 +31,18 @@ end ADD_SUB_FPU;
  -- Architecture Definition
 architecture gate_level of ADD_SUB_FPU is
 
-component full_adder port (
-          a :    in std_logic;
-          b :    in std_logic;
-          Cin :  in std_logic;
-          sum :  out std_logic;
-          Cout : out std_logic
-          );
+-- Components
+component ADD_SUB is
+    generic(N: positive := 8); --defualt value for N is 8
+    port(
+       addORsub :   in std_logic;
+       A :     in signed ((N-1) downto 0);
+       B :     in signed ((N-1) downto 0);
+       SUM :   out signed ((N-1) downto 0));
 end component;
 
 
--- signals
---floating point components extraction
+--floating point components extraction signals
 signal signA: std_logic;
 signal signB: std_logic;
 signal expA: std_logic_vector(7 downto 0);
@@ -50,6 +50,8 @@ signal expB: std_logic_vector(7 downto 0);
 signal fractionA: std_logic_vector(22 downto 0);
 signal fractionB: std_logic_vector(22 downto 0);
 
+--temp connection signals
+signal expDiff: std_logic_vector(7 downto 0);
 
 
 begin
@@ -61,9 +63,12 @@ begin
     fractionA <= A(22 downto 0);
     fractionB <= B(22 downto 0);
 
-    Array_Of_full_adders: for i in 0 to (N-1) generate
-        stage_i : full_adder port map (A(i) , B(i) , tmp(i), SUM(i), tmp(i+1));
-    end generate;
+    -- Find the difference between the Exponent of A and B : expA - expB, default N=8 bits
+    stage_0 : ADD_SUB
+              port map ('1', expA, expB, expDiff);
+
+    -- Exponent alligenment preparation : Prepare the fraction of the Number with the min exponent to be shifted
+
 ----------------------------------------
 end gate_level;
 
