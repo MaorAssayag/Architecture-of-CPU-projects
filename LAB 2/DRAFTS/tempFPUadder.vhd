@@ -7,7 +7,7 @@
 --               OPP=1 -> SUB, OPP=0 -> ADD
 --
 --	Date:			29/04/2018
---	Designer's:		Maor Assayag, Refael Shetrit
+--	Designer:		Maor Assayag, Refael Shetrit
 --
 -- TODO : test bench
 -- ====================================================================
@@ -60,6 +60,14 @@ component shift_unit
       result : out signed(N-1 downto 0));
 end component;
 
+--component LeadingZeroes_counter
+--    port (
+--       Cin: in  std_logic;
+--       X :  in  signed (21 downto 0);
+--       dir: out std_logic;
+--       Y  : out signed (5 downto 0));
+--end component;
+
 component MUX_Nbits
     generic(N: positive := 8); --defualt value for N is 8
     port (
@@ -93,7 +101,11 @@ signal temp_fraction2: signed(22 downto 0); -- Second number fraction before ali
 signal SUBorADD: std_logic;
 signal carryFractions: std_logic;
 signal tempFraction_result : signed(24 downto 0); -- after 1 shift to the right if needed
+--signal LeadingZeroes_num : signed(5 downto 0); -- how much leading zeroes in the result
+--signal shift_direction : std_logic; -- shift the result right\left
 signal maxExponent : signed(7 downto 0);
+--signal zeroes : signed(7 downto 0);
+--signal shiftNumber : signed(7 downto 0); -- Normlize the fraction shiftNumber times
 signal temp2 : std_logic;
 signal temp : std_logic;
 signal tempFraction_result2 : signed(24 downto 0); -- after Correction
@@ -106,6 +118,7 @@ begin
     fractionA <= A(22 downto 0);
     fractionB <= B(22 downto 0);
     SUBorADD <= OPP xor A(31) xor B(31);
+    --zeroes <= (others =>'0');
 
     -- Find the difference between the Exponent of A and B : expA - expB, default N=8 bits
     stage_0 : ADD_SUB
@@ -128,20 +141,32 @@ begin
     stage_4 : ADD_SUB generic map(8)
                   port map ('0', maxExponent, (7 downto 1 => '0') & tempFraction_result(24), SUM(30 downto 23), temp);
 
-    -- if the sum of the 1.fractionA + (1.fractionB >> diff) >1 -> shift right once the fraction result
+    -- if the sum of the 1.fractionA + (1.fractionB >> diff) >1 -> shift right once
     stage_5 : shift_unit generic map(25)
               port map ('1', tempFraction_result, (5 downto 1 => '0') & tempFraction_result(24), tempFraction_result2);
 
-    -- Correction to the fraction result, gain more accuracy (usualy more 0.00002 accuracy)
+    -- Correction
     stage_6 :  ADD_SUB generic map(25)
                   port map ('0', tempFraction_result2, (24 downto 1 => '0') & '1'', tempFraction_result3, temp2);
+
+    -- Remove leading zeroes from the current fraction result, e.g : result = 001110, then result should be 111000
+    -- find out how much leading zeros are there
+--    stage_4 : LeadingZeroes_counter
+    --          port map(carryFractions, tempFraction_result(21 downto 0), shift_direction, LeadingZeroes_num);
+
+    -- We can normlize the fraction maximum maxExponent times before overflow in the exponent component
+--    stage_4_1 : MAX_MIN generic map(8)
+    --            port map ('0',maxExponent,(7 downto 6 =>'0') & LeadingZeroes_num,shiftNumber);
+
+    -- Shift the temp fraction result according to the previous step
+  --  stage_5 : shift_unit generic map(23)
+        --      port map (shift_direction, tempFraction_result, shiftNumber(5 downto 0), SUM(22 downto 0));
 
     -- Find the max exponent, for the exponent component of the result
     stage_7 : MUX_Nbits generic map(8)
               port map (expDiff(7), expA, expB, maxExponent);
 
     SUM(22 downto 0) <= tempFraction_result3(22 downto 0);
-
     SUM(31) <=   ((tempFraction_result2(23) OR expDiff(7)) and (((not OPP) and signB) OR ((not signB) and OPP)))
                   OR ((not expDiff(7)) and (not tempFraction_result2(23)) and signA);
 ----------------------------------------
