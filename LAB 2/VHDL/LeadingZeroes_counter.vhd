@@ -27,7 +27,7 @@ end LeadingZeroes_counter;
 architecture Behavioral of LeadingZeroes_counter is
 begin
 ----------------------------------------
-dir <= not Cin; -- if Cin=0 then dir=1->left
+dir <= Cin; -- if Cin=0 then dir=0->left
 process(Cin,X)
 variable count : integer;
 begin
