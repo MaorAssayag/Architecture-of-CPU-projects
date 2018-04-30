@@ -26,15 +26,18 @@ end LeadingZeroes_counter;
 architecture Behavioral of LeadingZeroes_counter is
 begin
 ----------------------------------------
-process(Cin,X)
+process(X)
 variable count : integer :=0;
 begin
   count := 0;
   for i in N-1 downto 0 loop
     if X(i)='1' then
       exit;
+    elsif X(i)='0' then
+      count := count + 1;
+    else
+      exit;
     end if;
-    count := count + 1;
   end loop;
    Y <= to_signed(count,7)(5 downto 0);
 end process;

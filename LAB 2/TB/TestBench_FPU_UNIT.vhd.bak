@@ -35,7 +35,7 @@ architecture behavior of TestBench_FPU_UNIT is
  signal expected : signed(31 downto 0);
 begin
 ----------------------------------------
-  uut :  FPU_Unit
+  uut :  MUL_FPU
     port map (OPP,A,B,result);
 
   stim: process

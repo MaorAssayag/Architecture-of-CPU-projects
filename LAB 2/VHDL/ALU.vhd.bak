@@ -34,14 +34,12 @@ component Output_Selector
     generic(N: positive := 8); --defualt value for N is 8
     port (
        SEL:             in  std_logic;
-       FPU_SEL :        in  std_logic; -- SHIFT UNIT or FPU UNIT
-       FPU_SW :         in  std_logic; -- FPU MSB bits or LSB bits
+       FPU_SW   :        in  std_logic;
        FLAG_en :        in  std_logic;
        arithmetic_LO:   in  signed (N-1 downto 0);
        arithmetic_HI:   in  signed (N-1 downto 0);
        arithmetic_FLAG: in  signed (5 downto 0);
        shift_LO :       in  signed (N-1 downto 0);
-       FPU_result :     in  signed (31 downto 0);
        LO :             out signed (N-1 downto 0);
        HI :             out signed (N-1 downto 0);
        STATUS :         out signed (5 downto 0));

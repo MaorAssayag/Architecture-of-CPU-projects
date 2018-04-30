@@ -1,0 +1,55 @@
+-- ====================================================================
+--
+--	File Name:		Testbench_LeadingZeroes_counter.vhd
+--	Description: test bench for LeadingZeroes_counter
+--
+--
+--	Date:			29/04/2018
+--	Designer's:		Maor Assayag, Refael Shetrit
+--
+-- ====================================================================
+
+LIBRARY ieee;
+use ieee.std_logic_1164.ALL;
+use ieee.numeric_std.all;
+
+entity Testbench_LeadingZeroes_counter is
+end Testbench_LeadingZeroes_counter;
+
+architecture behavior of Testbench_LeadingZeroes_counter is
+
+ -- Component Declaration
+ component LeadingZeroes_counter
+   generic(N: positive := 8); --defualt value for N is 8
+   port (
+      X :  in  signed (N-1 downto 0);
+      Y  : out signed (5 downto 0));
+ end component;
+
+signal X :   signed (21 downto 0);
+signal Y  :  signed (5 downto 0);
+
+begin
+----------------------------------------
+  uut :  LeadingZeroes_counter generic map (22)
+    port map (X,Y);
+
+  stim: process
+  begin
+    wait for 50 ns;
+    X <= "0000001111101010101010" ;
+    wait for 20 ns;
+
+    X <= "0001010101010101010111" ;
+    wait for 20 ns;
+
+    X <= "0000000000000101010111" ;
+    wait for 20 ns;
+
+    X <= "0000001111101010101010" ;
+    wait for 50 ns;
+  end process stim;
+----------------------------------------
+end behavior;
+
+--EndOfFile
