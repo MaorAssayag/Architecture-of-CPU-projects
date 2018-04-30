@@ -66,7 +66,7 @@ add_component :  ADD_SUB_FPU port map(OPP(0), A, B, ADD_SUB_result);
 
 -- will output the right HI&LO bits according to the OPP code
 selector :  FPU_selector  generic map(N)
-  port map (OPP, ADD_SUB_result, MUL_result, result);
+  port map (OPP, MUL_result, ADD_SUB_result, result);
 ----------------------------------------
 end gate_level;
 
