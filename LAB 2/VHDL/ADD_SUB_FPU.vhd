@@ -87,16 +87,17 @@ signal fractionB: signed(22 downto 0); -- original value
 
 --temp connection signals
 signal expDiff: signed(7 downto 0); -- exponentA - exponentB
+signal maxExponent : signed(7 downto 0);
 signal fraction1: signed(22 downto 0); -- First number fraction
 signal fraction2: signed(24 downto 0); -- Second number fraction after alignment
 signal temp_fraction2: signed(22 downto 0); -- Second number fraction before alignment
+signal tempFraction_result : signed(24 downto 0); -- after 1 shift to the right if needed
+signal tempFraction_result2 : signed(24 downto 0); -- after shift Correction
+signal tempFraction_result3 : signed(24 downto 0); -- after add Correction
 signal SUBorADD: std_logic;
 signal carryFractions: std_logic;
-signal tempFraction_result : signed(24 downto 0); -- after 1 shift to the right if needed
-signal maxExponent : signed(7 downto 0);
 signal temp2 : std_logic;
 signal temp : std_logic;
-signal tempFraction_result2 : signed(24 downto 0); -- after Correction
 begin
 ----------------------------------------
     signA <= A(31);
@@ -134,7 +135,7 @@ begin
 
     -- Correction to the fraction result, gain more accuracy (usualy more 0.00002 accuracy)
     stage_6 :  ADD_SUB generic map(25)
-                  port map ('0', tempFraction_result2, (24 downto 1 => '0') & '1'', tempFraction_result3, temp2);
+                  port map ('0', tempFraction_result2, (24 downto 1 => '0') & tempFraction_result(0), tempFraction_result3, temp2);
 
     -- Find the max exponent, for the exponent component of the result
     stage_7 : MUX_Nbits generic map(8)
