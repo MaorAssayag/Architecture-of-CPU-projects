@@ -52,7 +52,7 @@ architecture gate_level of FloatinPointNormlizer is
 signal zeroesCount1 : signed (5 downto 0) := (5 downto 0 => '0');
 signal zeroesCount2 : signed (5 downto 0) := (5 downto 0 => '0');
 signal tempdir : std_logic;
-signal bias : signed(7 downto 0) := "01111111"; -- bias = 127
+signal bias : signed(7 downto 0) := "10000011"; -- (=131),  bias = 127, bias + (6 - leading zeroes - 2) = 131 - leading zeros
 signal exponent1 : signed (7 downto 0);
 signal exponent2 : signed (7 downto 0);
 
@@ -76,9 +76,9 @@ Out2(22 downto 0) <= B((5-to_integer(zeroesCount2)) downto 2) & B(1 downto 0) & 
 
 -- 3. find the exponent
 stage_3 : ADD_SUB generic map(8)
-              port map('0', Bias, exponent1, Out1(30 downto 23));
+              port map('1', Bias, exponent1, Out1(30 downto 23));
 stage_4 : ADD_SUB generic map(8)
-              port map('0', Bias, exponent2, Out2(30 downto 23));
+              port map('1', Bias, exponent2, Out2(30 downto 23));
 ----------------------------------------
 end gate_level;
 
