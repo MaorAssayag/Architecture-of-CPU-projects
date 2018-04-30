@@ -24,7 +24,7 @@ Hey refahel !
 ## 
 * [ ] new test bench for Output_selector
 * [ ] new test bench for ALU
-* [ ] connect bit FPU_SW in ALU input to a swithc
+* [ ] connect the FPU_SW 1-bit in ALU input to a switch on the FPGA (from there the output will be selected correctly)
 * [ ] create a 16-bit convertor to the 7 segament display on the FPGA ( the output already been handled)
 * [ ] board switches to registers to input for the ALU
 * [ ] all the reports from quartus as required
