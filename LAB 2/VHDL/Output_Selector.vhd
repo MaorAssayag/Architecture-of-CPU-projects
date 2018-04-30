@@ -52,8 +52,8 @@ end component;
 signal zeroes : signed(N-1 downto 0) := (others => '0');
 signal LO_temp : signed(N-1 downto 0) := (others => '0');
 signal HI_temp : signed(N-1 downto 0) := (others => '0');
-signal FPU_LO : signed(N-1 downto 0) := (others => '0');
-signal FPU_HI : signed(N-1 downto 0) := (others => '0');
+signal FPU_LO : signed(N-1 downto 0) := (others => '0'); -- size N bits(its 8 bits) - avoid fatal errors
+signal FPU_HI : signed(N-1 downto 0) := (others => '0'); -- size N bits(its 8 bits) - avoid fatal errors
 begin
 ----------------------------------------
 MUX_FPU_LO_prepare : MUX_Nbits  port map (FPU_SW, FPU_result(7 downto 0), FPU_result(23 downto 16), FPU_LO(7 downto 0));
