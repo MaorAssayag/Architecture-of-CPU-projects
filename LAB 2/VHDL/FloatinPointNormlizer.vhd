@@ -1,12 +1,14 @@
 -- ====================================================================
 --
 --	File Name:		FloatinPointNormlizer.vhd
---	Description: Floatin Point Normlizer 8 bit number to 32 ieee 754
+--	Description: Floatin Point convertor :  8 bit binary number
+--                                        ( MSB sign, 6to2 integer, 1 to 0 fraction) to 32 ieee 754 
 --
 --
 --	Date:			30/04/2018
 --	Designer's:		Maor Assayag, Refael Shetrit
 --
+-- TODO : TB
 -- ====================================================================
 
 -- libraries decleration
@@ -29,15 +31,6 @@ end FloatinPointNormlizer;
 architecture gate_level of FloatinPointNormlizer is
 
   -- components decleration
-  component shift_unit
-      generic(N: integer := 8); --defualt value for N is 8
-      port(
-        dir :    in std_logic;
-        A :      in signed(N-1 downto 0);
-        B :      in signed(5 downto 0);
-        result : out signed(N-1 downto 0));
-  end component;
-
   component LeadingZeroes_counter
       generic(N: positive := 8); --defualt value for N is 8
       port (
@@ -55,9 +48,11 @@ architecture gate_level of FloatinPointNormlizer is
          Cout  :  out std_logic);
   end component;
 
+-- temp signal's
 signal zeroesCount1 : signed (5 downto 0) := 0;
 signal zeroesCount2 : signed (5 downto 0) := 0;
 signal tempdir : std_logic;
+signal bias : signed(7 downto 0) := "01111111"; -- bias = 127
 
 begin
 ----------------------------------------
@@ -76,11 +71,10 @@ Out1(22 downto 0) <= A(6-to_integer(zeroesCount1) downto 2) & A(1 downto 0) & (1
 Out2(22 downto 0) <= B(6-to_integer(zeroesCount2) downto 2) & B(1 downto 0) & (16 + to_integer(zeroesCount2) downto 0 =>'0');
 
 -- 3. find the exponent
-stage_3 : LeadingZeroes_counter generic map(5)
-              port map(B(6 downto 2), zeroesCount2);
-
-
-
+stage_3 : ADD_SUB generic map(8)
+              port map('0', Bias, (1 downto 0 => '0') & zeroesCount1, Out1(31 downto 23));
+stage_4 : ADD_SUB generic map(8)
+              port map('0', Bias, (1 downto 0 => '0') & zeroesCount2, Out2(31 downto 23));
 ----------------------------------------
 end gate_level;
 

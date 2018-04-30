@@ -1,7 +1,7 @@
 -- ====================================================================
 --
 --	File Name:		FPU_Unit.vhd
---	Description:	FPU_Unit
+--	Description:	FPU_Unit, N must BE 32
 --
 --
 --	Date:			30/04/2018

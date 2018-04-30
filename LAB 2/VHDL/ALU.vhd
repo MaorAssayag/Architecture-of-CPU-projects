@@ -76,7 +76,6 @@ component FPU_Unit
         result : out signed (N-1 downto 0));
 end component;
 
-
 component MUX_Nbits
     generic(N: positive := 8); --defualt value for N is 8
     port (
@@ -84,6 +83,15 @@ component MUX_Nbits
        Y1 : in  signed (N-1 downto 0);
        Y2 : in  signed (N-1 downto 0);
        Y  : out signed (N-1 downto 0));
+end component;
+
+component FloatinPointNormlizer
+    generic(N: positive := 8); --defualt value for N is 8
+    port (
+       A : in  signed (N-1 downto 0);
+       B : in  signed (N-1 downto 0);
+       Out1  : out signed (31 downto 0);
+       Out2 :  out signed (31 downto 0));
 end component;
 
 -- global signals
@@ -96,12 +104,15 @@ signal arithmetic_HI : signed(N-1 downto 0);
 signal shift_LO : signed(N-1 downto 0);
 signal FPU_result : signed(31 downto 0);
 signal FPU_SEL : std_logic;
+signal A_FPU : signed(31 downto 0);
+signal B_FPU : signed(31 downto 0);
 
 begin
 ----------------------------------------
 FPU_SEL <= OPP(2) or OPP(1); --select between SHIFT unit & FPU unit. SHIFT OPP : 1000,1001, FPU MUL : 1100, FPU ADD: 1010.
 ArithmeticUnit : Arithmetic_Unit generic map (N) port map (clk, A, B, OPP(2 downto 0), arithmetic_LO, arithmetic_HI, FLAGS, FLAG_en);
-FPU_unit :       FPU_Unit port map (OPP(2 downto 0), A, B, FPU_result);
+FloatinPointConvert : FloatinPointNormlizer port map (A(7 downto 0), B(7 downto 0), A_FPU, B_FPU);
+FPU_unit :       FPU_Unit port map (OPP(2 downto 0), A_FPU, B_FPU, FPU_result);
 ShiftUnit :      shift_unit      generic map (N) port map (OPP(0), A, B(5 downto 0), shift_LO);
 OutputSelector : Output_Selector generic map (N) port map (OPP(3), FPU_SEL, FPU_SW, FLAG_en, arithmetic_LO, arithmetic_HI, FLAGS, shift_LO, FPU_result, LO, HI, STATUS);
 ----------------------------------------

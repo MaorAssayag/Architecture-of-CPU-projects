@@ -56,8 +56,8 @@ signal FPU_LO : signed(N-1 downto 0) := (others => '0');
 signal FPU_HI : signed(N-1 downto 0) := (others => '0');
 begin
 ----------------------------------------
-MUX_FPU_LO_prepare : MUX_Nbits generic map (N) port map (FPU_SW, FPU_result(7 downto 0), FPU_result(23 downto 16), FPU_LO);
-MUX_FPU_HI_prepare : MUX_Nbits generic map (N) port map (FPU_SW, FPU_result(15 downto 8), FPU_result(31 downto 24), FPU_HI);
+MUX_FPU_LO_prepare : MUX_Nbits  port map (FPU_SW, FPU_result(7 downto 0), FPU_result(23 downto 16), FPU_LO(7 downto 0));
+MUX_FPU_HI_prepare : MUX_Nbits  port map (FPU_SW, FPU_result(15 downto 8), FPU_result(31 downto 24), FPU_HI(7 downto 0));
 
 MUX_LO_prepare : MUX_Nbits generic map (N) port map (FPU_SEL, shift_LO, FPU_LO, LO_temp);
 MUX_HI_prepare : MUX_Nbits generic map (N) port map (FPU_SEL, zeroes, FPU_HI, HI_temp);
