@@ -88,21 +88,21 @@ begin
     SUM(31) <= signA xor signB;
 
     -- 2. Multiplying the significand(1.M1*1.M2 )
-    stage_0 : MUL generic map (25)
+    stage_2 : MUL generic map (25)
               port map (fractionA, fractionB, tempFraction_result);
 
     -- 3. Normlize the fraction result
-    stage_1 : LeadingZeroes_counter
+    stage_3 : LeadingZeroes_counter
               port map('0', tempFraction_result(49 downto 28), tempdir,zeroesCount);
 
     SUM(22 downto 0) <= tempFraction_result((48-to_integer(zeroesCount)) downto (26-to_integer(zeroesCount)));
 
     -- 4. Adding the exponents; i.e. (E1 + E2 – Bias) + Normlize from the fraction
-    stage_2 : ADD_SUB generic map (9)
+    stage_0 : ADD_SUB generic map (9)
               port map ('0', expA, expB, expTemp); -- E1+E2
-    stage_3 : ADD_SUB generic map (9)
+    stage_1 : ADD_SUB generic map (9)
               port map ('1', expTemp, bias, expResult); -- E1+E2 -bias
-    stage_4 : ADD_SUB generic map (9)
+    stage_3 : ADD_SUB generic map (9)
               port map ('0', expResult, Norm, expResultNorm);--result + fraction normlize
 
     SUM (30 downto 23) <= expResultNorm(7 downto 0);
