@@ -1,7 +1,7 @@
 -- ====================================================================
 --
 --	File Name:		MUL_FPU.vhd
---	Description:	MUL_FPU command, currently support N bit's IEEE Standard 754 Floating Point Numbers
+--	Description:	MUL_FPU command (OPP=1100), currently support N bit's IEEE Standard 754 Floating Point Numbers
 --  Floating Point Components       Sign   	Exponent  	Fraction
 --               Single Precision 	1 [31] 	8 [30–23] 	23 [22–00]
 --
@@ -48,10 +48,9 @@ component MUL
 end component;
 
 component LeadingZeroes_counter
+    generic(N: positive := 8); --defualt value for N is 8
     port (
-       Cin: in  std_logic;
-       X :  in  signed (21 downto 0);
-       dir: out std_logic;
+       X :  in  signed (N-1 downto 0);
        Y  : out signed (5 downto 0));
 end component;
 
@@ -71,7 +70,6 @@ signal expResult : signed(8 downto 0); -- expTemp - bias
 signal expResultNorm : signed(8 downto 0); -- expTemp - bias + Normlize
 signal tempFraction_result : signed(49 downto 0); -- after 1 shift to the right if needed
 signal Norm : signed(8 downto 0);
-signal tempdir : std_logic;
 signal zeroesCount : signed (5 downto 0);
 begin
 ----------------------------------------
@@ -92,8 +90,8 @@ begin
               port map (fractionA, fractionB, tempFraction_result);
 
     -- 3. Normlize the fraction result
-    stage_1 : LeadingZeroes_counter
-              port map('0', tempFraction_result(49 downto 28), tempdir,zeroesCount);
+    stage_1 : LeadingZeroes_counter generic map (22)
+              port map(tempFraction_result(49 downto 28),zeroesCount);
 
     SUM(22 downto 0) <= tempFraction_result((48-to_integer(zeroesCount)) downto (26-to_integer(zeroesCount)));
 

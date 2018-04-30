@@ -16,10 +16,9 @@ use ieee.std_logic_1164.all;
 
  -- entity Definition
 entity LeadingZeroes_counter is
+    generic(N: positive := 8); --defualt value for N is 8
     port (
-       Cin: in  std_logic;
-       X :  in  signed (21 downto 0);
-       dir: out std_logic;
+       X :  in  signed (N-1 downto 0);
        Y  : out signed (5 downto 0));
 end LeadingZeroes_counter;
 
@@ -27,24 +26,18 @@ end LeadingZeroes_counter;
 architecture Behavioral of LeadingZeroes_counter is
 begin
 ----------------------------------------
-dir <= Cin; -- if Cin=0 then dir=0->left
 process(Cin,X)
-variable count : integer;
+variable count : integer :=0;
 begin
-  if Cin='1' then
-    Y <= "000001";
-  else
-    count := 0;
-  for i in 21 downto 0 loop
+  count := 0;
+  for i in N-1 downto 0 loop
     if X(i)='1' then
       exit;
     end if;
     count := count + 1;
   end loop;
    Y <= to_signed(count,7)(5 downto 0);
-  end if;
 end process;
 ----------------------------------------
 end Behavioral;
-
 --EndOfFile

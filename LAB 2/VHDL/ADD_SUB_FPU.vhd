@@ -1,10 +1,12 @@
 -- ====================================================================
 --
 --	File Name:		ADD_SUB_FPU.vhd
---	Description:	ADD\SUB command, currently support N bit's IEEE Standard 754 Floating Point Numbers
+--	Description:	ADD\SUB FPU command (OPP=1010), currently support N bit's IEEE Standard 754 Floating Point Numbers
 --  Floating Point Components       Sign   	Exponent  	Fraction
 --               Single Precision 	1 [31] 	8 [30–23] 	23 [22–00]
 --               OPP=1 -> SUB, OPP=0 -> ADD
+
+--
 --
 --	Date:			29/04/2018
 --	Designer's:		Maor Assayag, Refael Shetrit

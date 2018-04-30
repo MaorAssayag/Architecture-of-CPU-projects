@@ -18,6 +18,7 @@ entity ALU is
     generic(N: positive := 8); --defualt value for N is 8
     port (
        clk:     in  std_logic;
+       FPU_SW   in  std_logic; -- switch 16-bit MSB\LSB of FPU_UNIT output
        OPP:     in  std_logic_vector (3 downto 0);
        A:       in  signed (N-1 downto 0);
        B :      in  signed (N-1 downto 0);
@@ -33,6 +34,7 @@ component Output_Selector
     generic(N: positive := 8); --defualt value for N is 8
     port (
        SEL:             in  std_logic;
+       FPU_SW           in  std_logic;
        FLAG_en :        in  std_logic;
        arithmetic_LO:   in  signed (N-1 downto 0);
        arithmetic_HI:   in  signed (N-1 downto 0);
@@ -65,6 +67,16 @@ component shift_unit
        result : out signed(N-1 downto 0));
 end component;
 
+component FPU_Unit
+    generic(N: positive := 32); --defualt value for N is 8
+    port(
+        OPP : in std_logic_vector (2 downto 0);
+        A  : in signed(N-1 downto 0);
+        B  : in signed(N-1 downto 0);
+        result : out signed (N-1 downto 0));
+end component;
+
+
 component MUX_Nbits
     generic(N: positive := 8); --defualt value for N is 8
     port (
@@ -82,11 +94,16 @@ signal FLAG_en : std_logic := '0';
 signal arithmetic_LO : signed(N-1 downto 0);
 signal arithmetic_HI : signed(N-1 downto 0);
 signal shift_LO : signed(N-1 downto 0);
+signal FPU_result : signed(31 downto 0);
+signal FPU_SEL : std_logic;
+
 begin
 ----------------------------------------
+FPU_SEL <= OPP(2) or OPP(1); --select between SHIFT unit & FPU unit. SHIFT OPP : 1000,1001, FPU MUL : 1100, FPU ADD: 1010.
 ArithmeticUnit : Arithmetic_Unit generic map (N) port map (clk, A, B, OPP(2 downto 0), arithmetic_LO, arithmetic_HI, FLAGS, FLAG_en);
+FPU_unit :       FPU_Unit port map (OPP(2 downto 0), A, B, FPU_result);
 ShiftUnit :      shift_unit      generic map (N) port map (OPP(0), A, B(5 downto 0), shift_LO);
-OutputSelector : Output_Selector generic map (N) port map (OPP(3), FLAG_en, arithmetic_LO, arithmetic_HI, FLAGS, shift_LO, LO, HI, STATUS);
+OutputSelector : Output_Selector generic map (N) port map (OPP(3), FPU_SEL, FPU_SW, FLAG_en, arithmetic_LO, arithmetic_HI, FLAGS, shift_LO, FPU_result, LO, HI, STATUS);
 ----------------------------------------
 end structural;
 
