@@ -16,7 +16,7 @@ use ieee.numeric_std.all;
 
  -- entity Definition
 entity FPU_Unit is
-    generic(N: positive := 32); --defualt value for N is 8
+    generic(N: positive := 32); --defualt value for N is 32
     port(
         OPP : in std_logic_vector (2 downto 0);
         A  : in signed(N-1 downto 0);

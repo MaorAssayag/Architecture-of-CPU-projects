@@ -1,10 +1,10 @@
 -- ====================================================================
 --
 --	File Name:		LeadingZeroes_counter.vhd
---	Description: return the number X after removing the leading zeroes from it.
+--	Description: return the number of leading zeroes, i.e: for "0011" return 2. for "0111" return 1.
 --
 --
---	Date:			10/04/2018
+--	Date:			30/04/2018
 --	Designer's:		Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
