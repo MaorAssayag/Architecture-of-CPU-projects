@@ -28,4 +28,6 @@ Hey refahel !
 * [ ] create a 16-bit convertor to the 7 segament display on the FPGA ( the output already been handled)
 * [ ] board switches to registers to input for the ALU
 * [ ] all the reports from quartus as required
+* [ ] update compiliation order txt file
+
 
