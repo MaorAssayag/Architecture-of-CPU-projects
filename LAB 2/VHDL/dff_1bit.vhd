@@ -27,13 +27,13 @@ end dff_1bit;
 architecture behavioral of dff_1bit is
 begin
 ----------------------------------------
-process(clk,en)
+process(clk)
 begin
   if rising_edge(clk) then
-    if en = '1' then
-      if (rst = '1') then
+    if (rst = '1') then
         q <= '0';
-      elsif (d = '0') OR (d = '1') then
+    elsif en = '1' then
+      if (d = '0') OR (d = '1') then
         q <= d;
       else
         q <= '0';
