@@ -17,6 +17,7 @@ use ieee.std_logic_1164.all;
 entity dff_1bit is
     port (
         clk : in std_logic;
+        en : in std_logic;
         rst : in std_logic;
         d : in std_logic;
         q : out std_logic);
@@ -29,12 +30,14 @@ begin
 process(clk)
 begin
   if rising_edge(clk) then
-    if (rst = '1') then
-      q <= '0';
-    elsif (d = '0') OR (d = '1') then
-      q <= d;
-    else
-      q <= '0';
+    if en = '1' then
+      if (rst = '1') then
+        q <= '0';
+      elsif (d = '0') OR (d = '1') then
+        q <= d;
+      else
+        q <= '0';
+      end if;
     end if;
   end if;
 end process;
