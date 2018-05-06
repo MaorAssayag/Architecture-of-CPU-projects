@@ -60,8 +60,12 @@ max_min : process(tempSUM, maxORmin)
         FLAGS(3) := FLAGS(2) AND FLAGS(1); -- A>B if A>=B & A!=B
         FLAGS(4) := NOT FLAGS(3);-- A<=B if !(A>B)
         FLAGS(5) := FLAGS(4) AND FLAGS(1); -- A<B if (A<=B & A!=B)
-        result <= B when (((maxORmin = '0') AND (FLAGS(5) = '1')) OR ((maxORmin = '1') and (FLAGS(3) = '1'))) else A;
-  end process max_min;
+        if (((maxORmin = '0') AND (FLAGS(5) = '1')) OR ((maxORmin = '1') and (FLAGS(3) = '1'))) then
+          result <= B;
+        else
+          result <= A;
+        end if;
+		  end process max_min;
      ----------------------------------------
   end gate_level;
 
