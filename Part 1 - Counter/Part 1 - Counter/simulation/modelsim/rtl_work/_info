@@ -1,0 +1,106 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\8) Altera\CPU CE MARCH 2013\LABs\LAB2 - FPGA,Quartus\LAB2 Exercise\Part 1 - Counter\simulation\modelsim
+Ecounter
+Z1 w1398167001
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dD:\8) Altera\CPU CE MARCH 2013\LABs\LAB2 - FPGA,Quartus\LAB2 Exercise\Part 1 - Counter\simulation\modelsim
+Z7 8D:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - Quartus/counter.vhd
+Z8 FD:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - Quartus/counter.vhd
+l0
+L5
+V=^bmFTY6m7GPi1[ALdd1C0
+Z9 OV;C;10.1b;51
+31
+Z10 !s108 1398689063.731000
+Z11 !s90 -reportprogress|300|-93|-work|work|D:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - Quartus/counter.vhd|
+Z12 !s107 D:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - Quartus/counter.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 a^m3@MW8_a<lOO3@hM2Li1
+!i10b 1
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 7 counter 0 22 =^bmFTY6m7GPi1[ALdd1C0
+l12
+L10
+VYe[g4=Ig[eoe@DUa;X=?=1
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 PzTza4ESMKUFDQ5CZ:L]:1
+!i10b 1
+Psample_package
+R3
+R2
+R4
+R5
+w1362664521
+R6
+8D:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - ModelSim/sample_package.vhd
+FD:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - ModelSim/sample_package.vhd
+l0
+L6
+V9:FiON4YQJDg8MIEDlPDC3
+R9
+31
+R13
+R14
+!s100 z4fZ9dR:<omoLd^Md:]aR0
+!i10b 1
+!s108 1398689064.315000
+!s90 -reportprogress|300|-93|-work|work|D:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - ModelSim/sample_package.vhd|
+!s107 D:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - ModelSim/sample_package.vhd|
+Etest_counter
+Z15 w1362664287
+Z16 DPx4 work 14 sample_package 0 22 9:FiON4YQJDg8MIEDlPDC3
+R3
+R2
+R4
+R5
+R6
+Z17 8D:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - ModelSim/test_counter.vhd
+Z18 FD:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - ModelSim/test_counter.vhd
+l0
+L8
+V:JXnUn6Ai<OURAc9Knmg43
+!s100 ]zS2hTTFS4<z1<MLi_eSN1
+R9
+31
+!i10b 1
+Z19 !s108 1398689064.533000
+Z20 !s90 -reportprogress|300|-93|-work|work|D:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - ModelSim/test_counter.vhd|
+Z21 !s107 D:/8) Altera/CPU CE MARCH 2013/LABs/LAB2 - FPGA,Quartus/LAB2 Exercise/Part 1 - Counter/Code - ModelSim/test_counter.vhd|
+R13
+R14
+Artl
+R16
+R3
+R2
+R4
+R5
+DEx4 work 12 test_counter 0 22 :JXnUn6Ai<OURAc9Knmg43
+l14
+L11
+VQbBd^XCCFYBgi201RCI3@3
+!s100 L:LLliRboZ=`XndMTlfaF1
+R9
+31
+!i10b 1
+R19
+R20
+R21
+R13
+R14

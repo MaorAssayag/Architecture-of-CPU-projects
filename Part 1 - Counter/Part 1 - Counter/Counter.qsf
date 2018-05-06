@@ -1,0 +1,94 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2012 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 12.1 Build 177 11/07/2012 SJ Web Edition
+# Date created = 14:41:09  April 22, 2014
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Counter_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C20F484C7
+set_global_assignment -name TOP_LEVEL_ENTITY Counter
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:41:09  APRIL 22, 2014"
+set_global_assignment -name LAST_QUARTUS_VERSION 12.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_L1 -to clk
+set_location_assignment PIN_L22 -to enable
+set_location_assignment PIN_Y21 -to q[7]
+set_location_assignment PIN_Y22 -to q[6]
+set_location_assignment PIN_W21 -to q[5]
+set_location_assignment PIN_W22 -to q[4]
+set_location_assignment PIN_V21 -to q[3]
+set_location_assignment PIN_V22 -to q[2]
+set_location_assignment PIN_U21 -to q[1]
+set_location_assignment PIN_U22 -to q[0]
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH test_counter -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME test_counter -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id test_counter
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME test_counter -section_id test_counter
+set_global_assignment -name EDA_TEST_BENCH_FILE "Code - ModelSim/sample_package.vhd" -section_id test_counter
+set_global_assignment -name EDA_TEST_BENCH_FILE "Code - ModelSim/test_counter.vhd" -section_id test_counter
+set_location_assignment PIN_J2 -to HEX0[0]
+set_location_assignment PIN_J1 -to HEX0[1]
+set_location_assignment PIN_H2 -to HEX0[2]
+set_location_assignment PIN_H1 -to HEX0[3]
+set_location_assignment PIN_F2 -to HEX0[4]
+set_location_assignment PIN_F1 -to HEX0[5]
+set_location_assignment PIN_E2 -to HEX0[6]
+set_location_assignment PIN_E1 -to HEX1[0]
+set_location_assignment PIN_H6 -to HEX1[1]
+set_location_assignment PIN_H5 -to HEX1[2]
+set_location_assignment PIN_H4 -to HEX1[3]
+set_location_assignment PIN_G3 -to HEX1[4]
+set_location_assignment PIN_D2 -to HEX1[5]
+set_location_assignment PIN_D1 -to HEX1[6]
+set_global_assignment -name VHDL_FILE "Code - Quartus/7-Segment_8_bit.vhd"
+set_global_assignment -name VHDL_FILE "Code - Quartus/counter.vhd"
+set_global_assignment -name SDC_FILE SDC1.sdc
+set_global_assignment -name CDF_FILE output_files/Chain3.cdf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
