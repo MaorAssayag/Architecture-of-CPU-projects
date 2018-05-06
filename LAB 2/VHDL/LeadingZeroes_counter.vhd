@@ -29,7 +29,7 @@ begin
 process(X)
 variable count : integer :=0;
 begin
-  count := 0;
+  count := 0; 
   for i in N-1 downto 0 loop
     if X(i)='1' then
       exit;
