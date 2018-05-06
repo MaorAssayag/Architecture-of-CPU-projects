@@ -33,7 +33,7 @@ architecture gate_level of Arithmetic_selector is
 begin
 ----------------------------------------
 process (all)
-variable mac_temp : std_logic := '0';
+variable mac_tmp : std_logic := '0';
 begin
   if rising_edge(clk) then
   case OPP is

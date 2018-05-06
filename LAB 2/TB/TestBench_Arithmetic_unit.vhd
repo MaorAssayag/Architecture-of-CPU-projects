@@ -79,7 +79,18 @@ end process;
 
     wait for 10 ns;
     OPP <= "000"; -- MAC
-
+    wait for 25 ns;
+    
+    OPP <= "100"; -- ADD
+      wait for 10 ns;
+    
+    A <= "00000010";
+    OPP <= "000"; -- MAC
+    wait for 25 ns;
+    
+    OPP <= "000"; -- MAC
+    wait for 70 ns;
+    
   end process stim;
 ----------------------------------------
 end behavior;

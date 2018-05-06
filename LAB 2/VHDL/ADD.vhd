@@ -5,7 +5,7 @@
 --
 --
 --	Date:			02/04/2018
---	Designer:		Maor Assayag, Refael Shetrit
+--	Designer's:		Maor Assayag, Refael Shetrit
 --
 -- TODO : check test bench
 -- ====================================================================

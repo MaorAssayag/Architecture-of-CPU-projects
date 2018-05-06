@@ -103,12 +103,11 @@ signal  selected_B : signed (2*N-1 downto 0);
 
 signal extendedA, extendedB : signed (2*N -1 downto 0);
 
-signal  mac_rst, mac_enable : std_logic;
+signal  mac_rst, mac_enable, mac_save, mac_tmp : std_logic := '0';
 signal carry : std_logic;
 begin
 ----------------------------------------
 mac_rst <= (OPP(2) and OPP(1)) and (NOT OPP(0)); -- MAC = 0 if OPP= RST
-mac_enable <= ((NOT OPP(0)) and (NOT OPP(1))) and (NOT OPP(2));
 extendedA(2*N-1 downto N) <= (others => A(N-1)); -- pad A to be 2N bits
 extendedA(N-1 downto 0) <= A;
 extendedB(2*N-1 downto N) <= (others => B(N-1)); -- pad B to be 2N bits
@@ -127,7 +126,7 @@ add_sub_component : ADD_SUB generic map(2*N)
 
 -- mac component, save the add_sub result (accumlate) if the OPP = MAC
 mac_component : MAC generic map(N)
-               port map (mac_rst, clk, mac_enable, ADD_SUB_result(N-1 downto 0), ADD_SUB_result(2*N-1 downto N), MAC_result);
+               port map (mac_rst, clk, mac_save, ADD_SUB_result(N-1 downto 0), ADD_SUB_result(2*N-1 downto N), MAC_result);
 
 -- max/min component, MAX_MIN_LO = max/min(A,B). (MAX OPP code : 100, MIN : 101)
 max_min_component : MAX_MIN generic map(N)
@@ -137,20 +136,40 @@ max_min_component : MAX_MIN generic map(N)
 arithmetic_selector_component :  Arithmetic_selector  generic map(N)
   port map (clk, OPP, MUL_result, MAX_MIN_LO, ADD_SUB_result, LO, HI, FLAG_en);
 
-  flag_handle : process(ADD_SUB_result)
-      variable FLAG : signed(5 downto 0) := "000000";
-      begin
-        FLAGS <= FLAG; -- will assign at the end of process
-        FLAG(0) := '1'; -- is A=B ?
-        eachBit: for i in 0 to (N-1) loop
-          FLAG(0) := (FLAG(0) AND (NOT ADD_SUB_result(i)));
-        end loop;
-        FLAG(1) := NOT FLAG(0); -- A!=B
-        FLAG(2) := NOT ADD_SUB_result(N-1);--A >= B if tempSUM(N-1)=0 then
-        FLAG(3) := FLAG(2) AND FLAG(1); -- A>B if A>=B & A!=B
-        FLAG(4) := NOT FLAG(3);-- A<=B if !(A>B)
-        FLAG(5) := FLAG(4) AND FLAG(1); -- A<B if (A<=B & A!=B)
-  end process flag_handle;
+MAC_handle : process(clk, OPP, mac_save)
+  begin
+      if (((NOT OPP(0)) and (NOT OPP(1))) and (NOT OPP(2))) then
+        if (NOT mac_tmp) then
+          mac_enable <= '1';
+          mac_tmp <= '1';
+        else
+          if rising_edge(clk) then
+            if mac_save then
+              mac_save <= '0';
+              mac_enable <= '0';
+            else
+              mac_tmp <= '0';
+              mac_save <= '1';
+          end if;
+          end if;
+        end if;
+    end if;
+end process MAC_handle;
+
+flag_handle : process(ADD_SUB_result)
+    variable FLAG : signed(5 downto 0) := "000000";
+    begin
+      FLAGS <= FLAG; -- will assign at the end of process
+      FLAG(0) := '1'; -- is A=B ?
+      eachBit: for i in 0 to (N-1) loop
+        FLAG(0) := (FLAG(0) AND (NOT ADD_SUB_result(i)));
+      end loop;
+      FLAG(1) := NOT FLAG(0); -- A!=B
+      FLAG(2) := NOT ADD_SUB_result(N-1);--A >= B if tempSUM(N-1)=0 then
+      FLAG(3) := FLAG(2) AND FLAG(1); -- A>B if A>=B & A!=B
+      FLAG(4) := NOT FLAG(3);-- A<=B if !(A>B)
+      FLAG(5) := FLAG(4) AND FLAG(1); -- A<B if (A<=B & A!=B)
+end process flag_handle;
 ----------------------------------------
 end gate_level;
 

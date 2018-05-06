@@ -61,7 +61,7 @@ architecture gate_level of FloatinPointNormlizer is
 signal zeroesCount1 : signed (5 downto 0) := (5 downto 0 => '0');
 signal zeroesCount2 : signed (5 downto 0) := (5 downto 0 => '0');
 signal tempdir : std_logic;
-signal bias : signed(7 downto 0) := "10000011"; -- (=131),  bias = 127, bias + (6 - leading zeroes - 2) = 131 - leading zeros
+signal bias : signed(7 downto 0);
 signal exponent1 : signed (7 downto 0);
 signal exponent2 : signed (7 downto 0);
 signal fraction1_extractMSB : signed ( 4 downto 0);
@@ -77,6 +77,7 @@ Out1(31) <= A(7);
 Out2(31) <= B(7);
 exponent1 <= (1 downto 0 => '0') & zeroesCount1;
 exponent2 <= (1 downto 0 => '0') & zeroesCount2;
+bias <= "10000011"; -- (=131),  bias = 127, bias + (6 - leading zeroes - 2) = 131 - leading zeros
 
 -- 1. find out number of leading zeroes
 stage_1 :  LeadingZeroes_counter generic map(5)
