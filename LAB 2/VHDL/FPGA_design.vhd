@@ -19,6 +19,7 @@ entity FPGA_design is
     port (
        clk:     in  std_logic;
        numin:   in  signed (N-1 downto 0);
+       FPU_SW_8  : in  std_logic; -- switch 16-bit MSB\LSB of FPU_UNIT output
        KEY0:    in  std_logic;
        KEY1:    in  std_logic;
        KEY2:    in  std_logic;
@@ -46,6 +47,7 @@ architecture structural of FPGA_design is
 component ALU
 port (
    clk:     in  std_logic;
+   FPU_SW  : in  std_logic; -- switch 16-bit MSB\LSB of FPU_UNIT output
    OPP:     in  std_logic_vector (3 downto 0);
    A:       in  signed (N-1 downto 0);
    B :      in  signed (N-1 downto 0);
@@ -77,7 +79,7 @@ OP_number: reg_8bit port map (clk, KEY1,KEY3, numin, q_OPnumber);
 B_number: reg_8bit port map (clk, KEY2,KEY3, numin, q_Bnumber);
 
 ---------------ALU
-ALU_op: ALU port map (clk, std_logic_vector(q_OPnumber(3 downto 0)),q_Anumber, q_Bnumber, LO,HI,STATUS_from_ALU);
+ALU_op: ALU port map (clk,FPU_SW_8 ,std_logic_vector(q_OPnumber(3 downto 0)),q_Anumber, q_Bnumber, LO,HI,STATUS_from_ALU);
 
 
 ------------convert to 7 segment
