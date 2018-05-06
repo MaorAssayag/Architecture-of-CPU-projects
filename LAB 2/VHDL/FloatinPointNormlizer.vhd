@@ -76,10 +76,14 @@ stage_4 : ADD_SUB generic map(8)
               port map('1', Bias, exponent2, Out2(30 downto 23));
                 
 process (zeroesCount1)
+  variable count1 : integer := 0;
+  variable count2 : integer := 0;
   begin
+   count1 := to_integer(zeroesCount1);
+   count2 := to_integer(zeroesCount2);
      -- 2. find the mantisa
-   Out1(22 downto 0) <=  A((5-to_integer(zeroesCount1)) downto 2) & A(1 downto 0) & ((16 + to_integer(zeroesCount1)) downto 0 =>'0');
-   Out2(22 downto 0) <= B((5-to_integer(zeroesCount2)) downto 2) & B(1 downto 0) & ((16 + to_integer(zeroesCount2)) downto 0 =>'0'); 
+   Out1(22 downto 0) <=  A((5-count1) downto 2) & A(1 downto 0) & ((16 + count1) downto 0 =>'0');
+   Out2(22 downto 0) <= B((5-count2) downto 2) & B(1 downto 0) & ((16 + count2) downto 0 =>'0'); 
  end process;
 ----------------------------------------
 end gate_level;
