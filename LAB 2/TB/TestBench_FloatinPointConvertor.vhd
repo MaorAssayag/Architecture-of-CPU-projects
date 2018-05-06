@@ -1,7 +1,7 @@
 -- ====================================================================
 --
---	File Name:		TestBench_FloatinPointConvertor.vhd
---	Description: test bench for FloatinPointConvertor
+--	File Name:		TestBench_FloatingPointConvertor.vhd
+--	Description: test bench for FloatingPointConvertor
 --
 --
 --	Date:			30/04/2018
@@ -13,13 +13,13 @@ LIBRARY ieee;
 use ieee.std_logic_1164.ALL;
 use ieee.numeric_std.all;
 
-entity TestBench_FloatinPointConvertor is
-end TestBench_FloatinPointConvertor;
+entity TestBench_FloatingPointConvertor is
+end TestBench_FloatingPointConvertor;
 
-architecture behavior of TestBench_FloatinPointConvertor is
+architecture behavior of TestBench_FloatingPointConvertor is
 
  -- Component Declaration
- component FloatinPointConvertor
+ component FloatingPointConvertor
      generic(N: positive := 8); --defualt value for N is 8
      port (
         A : in  signed (N-1 downto 0);
