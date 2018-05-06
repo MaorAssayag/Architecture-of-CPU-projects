@@ -23,6 +23,7 @@ architecture behavior of TestBench_ALU is
    generic(N: positive := 8); --defualt value for N is 8
      port(
        clk:     in  std_logic;
+       FPU_SW  :  in  std_logic; -- switch 16-bit MSB\LSB of FPU_UNIT output
        OPP:     in  std_logic_vector (3 downto 0);
        A:       in  signed (N-1 downto 0);
        B :      in  signed (N-1 downto 0);
