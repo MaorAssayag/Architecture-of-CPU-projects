@@ -4,10 +4,9 @@
 --	Description:	Arithmetic_Unit, MAC need one call (with the OPP "000") to initialize
 --
 --
---	Date:			10/04/2018
---	Designer:		Maor Assayag, Refael Shetrit
+--	Date:			06/05/2018
+--	Designers:		Maor Assayag, Refael Shetrit
 --
--- TODO : 1. we need to out the carry?
 -- ====================================================================
 
 -- libraries decleration
@@ -136,19 +135,20 @@ max_min_component : MAX_MIN generic map(N)
 arithmetic_selector_component :  Arithmetic_selector  generic map(N)
   port map (clk, OPP, MUL_result, MAX_MIN_LO, ADD_SUB_result, LO, HI, FLAG_en);
 
+-- MAC handling, read\write policy
 MAC_handle : process(clk, OPP, mac_save)
   begin
       if (((NOT OPP(0)) and (NOT OPP(1))) and (NOT OPP(2))) then
         if (NOT mac_tmp) then
-          mac_enable <= '1';
+          mac_enable <= '1'; -- first clock - prepare the data for the register (READ)
           mac_tmp <= '1';
         else
           if rising_edge(clk) then
             if mac_save then
-              mac_save <= '0';
+              mac_save <= '0'; -- after second clock
               mac_enable <= '0';
             else
-              mac_tmp <= '0';
+              mac_tmp <= '0'; -- save the result in the register ( WRITE)
               mac_save <= '1';
           end if;
           end if;

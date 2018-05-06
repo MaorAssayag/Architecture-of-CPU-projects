@@ -43,7 +43,6 @@ begin
 ----------------------------------------
 LO_dff : N_dff generic map(N) port map(clk, enable, mac_rst, LO_bits, MAC_result(N-1 downto 0));
 HI_dff : N_dff generic map(N) port map(clk, enable, mac_rst, HI_bits, MAC_result(2*N-1 downto N));
-
 ----------------------------------------
 end behavioral;
 

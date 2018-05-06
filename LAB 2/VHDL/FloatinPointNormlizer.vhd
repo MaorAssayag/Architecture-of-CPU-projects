@@ -5,10 +5,9 @@
 --                                        ( MSB sign, 6to2 integer, 1 to 0 fraction) to 32 ieee 754
 --
 --
---	Date:			30/04/2018
---	Designer's:		Maor Assayag, Refael Shetrit
+--	Date:			06/05/2018
+--	Designers:		Maor Assayag, Refael Shetrit
 --
--- TODO : TB
 -- ====================================================================
 
 -- libraries decleration
