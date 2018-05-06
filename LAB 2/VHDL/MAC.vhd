@@ -39,14 +39,11 @@ component N_dff
         Q : out signed(N-1 downto 0));
 end component;
 
-signal MAC_LO, MAC_HI : signed(N-1 downto 0) := (others => '0');
 begin
 ----------------------------------------
-LO_dff : N_dff generic map(N) port map(not clk, enable, mac_rst, LO_bits, MAC_LO);
-HI_dff : N_dff generic map(N) port map(not clk, enable, mac_rst, HI_bits, MAC_HI);
+LO_dff : N_dff generic map(N) port map(not clk, enable, mac_rst, LO_bits, MAC_result(N-1 downto 0));
+HI_dff : N_dff generic map(N) port map(not clk, enable, mac_rst, HI_bits, MAC_result(2*N-1 downto N));
 
-MAC_result(N-1 downto 0) <= MAC_LO;
-MAC_result(2*N-1 downto N) <= MAC_HI;
 ----------------------------------------
 end behavioral;
 
