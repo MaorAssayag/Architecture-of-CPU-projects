@@ -5,10 +5,9 @@
 --  Floating Point Components       Sign   	Exponent  	Fraction
 --               Single Precision 	1 [31] 	8 [30–23] 	23 [22–00]
 --
---	Date:			30/04/2018
---	Designer's:		Maor Assayag, Refael Shetrit
+--	Date:			06/05/2018
+--	Designers:		Maor Assayag, Refael Shetrit
 --
--- TODO : test bench
 -- ====================================================================
 
 -- libraries decleration

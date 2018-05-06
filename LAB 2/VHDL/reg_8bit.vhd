@@ -4,7 +4,7 @@
 --	Description:	8 bit register
 --
 --
---	Date:			12/04/2018
+--	Date:			06/05/2018
 --	Designers:		Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
@@ -45,7 +45,6 @@ begin
     uut6: dff_1bit port map (clk,en, rst, d(5), q(5));
     uut7: dff_1bit port map (clk,en, rst, d(6), q(6));
     uut8: dff_1bit port map (clk,en, rst, d(7), q(7));
-
 ----------------------------------------
 end behavioral;
 

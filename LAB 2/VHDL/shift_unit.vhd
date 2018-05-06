@@ -10,7 +10,6 @@
 --	Date:			08/04/2018
 --	Designers:		Maor Assayag, Refael Shetrit
 --
--- TODO : 1.synthesize 2.png test bench
 -- ====================================================================
 
 -- libraries decleration

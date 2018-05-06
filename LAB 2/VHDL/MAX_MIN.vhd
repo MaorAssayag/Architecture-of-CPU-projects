@@ -10,7 +10,7 @@
 --
 --
 --	Date:			02/04/2018
---	Designer:		Maor Assayag, Refael Shetrit
+--	Designers:		Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
 
@@ -65,8 +65,8 @@ max_min : process(tempSUM, maxORmin)
         else
           result <= A;
         end if;
-		  end process max_min;
-     ----------------------------------------
-  end gate_level;
+end process max_min;
+----------------------------------------
+end gate_level;
 
 --EndOfFile
