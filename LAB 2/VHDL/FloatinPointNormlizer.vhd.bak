@@ -55,7 +55,8 @@ signal tempdir : std_logic;
 signal bias : signed(7 downto 0) := "10000011"; -- (=131),  bias = 127, bias + (6 - leading zeroes - 2) = 131 - leading zeros
 signal exponent1 : signed (7 downto 0);
 signal exponent2 : signed (7 downto 0);
-
+signal fraction1 : signed (22 downto 0);
+signal fraction2 : signed (22 downto 0);
 begin
 ----------------------------------------
 -- 0. sign bit
@@ -71,8 +72,10 @@ stage_2 :  LeadingZeroes_counter generic map(5)
               port map(B(6 downto 2), zeroesCount2);
 
 -- 2. find the mantisa
-Out1(22 downto 0) <= A((5-to_integer(zeroesCount1)) downto 2) & A(1 downto 0) & ((16 + to_integer(zeroesCount1)) downto 0 =>'0');
-Out2(22 downto 0) <= B((5-to_integer(zeroesCount2)) downto 2) & B(1 downto 0) & ((16 + to_integer(zeroesCount2)) downto 0 =>'0');
+fraction1 <= A((5-to_integer(zeroesCount1)) downto 2) & A(1 downto 0) & ((16 + to_integer(zeroesCount1)) downto 0 =>'0');
+fraction2 <= B((5-to_integer(zeroesCount2)) downto 2) & B(1 downto 0) & ((16 + to_integer(zeroesCount2)) downto 0 =>'0');
+Out1(22 downto 0) <= fraction1;
+Out2(22 downto 0) <= fraction2;
 
 -- 3. find the exponent
 stage_3 : ADD_SUB generic map(8)
