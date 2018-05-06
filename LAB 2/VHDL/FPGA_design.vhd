@@ -37,8 +37,8 @@ architecture structural of FPGA_design is
   component reg_8bit
   port (
       clk : in std_logic;
-      en : in std_logic;
       rst : in std_logic;
+      en : in std_logic;
       d : in signed(7 DOWNTO 0);
       q : out signed(7 DOWNTO 0));
  end component;
@@ -74,9 +74,9 @@ end component;
 begin
 ----------------------------------------
 ----------registers
-A_number: reg_8bit port map (clk, KEY0,KEY3, numin, q_Anumber);
-OP_number: reg_8bit port map (clk, KEY1,KEY3, numin, q_OPnumber);
-B_number: reg_8bit port map (clk, KEY2,KEY3, numin, q_Bnumber);
+A_number: reg_8bit port map (clk, not KEY3,not KEY0, numin, q_Anumber);
+OP_number: reg_8bit port map (clk,not KEY3,not KEY1, numin, q_OPnumber);
+B_number: reg_8bit port map (clk, not KEY3,not KEY2, numin, q_Bnumber);
 
 ---------------ALU
 ALU_op: ALU port map (clk,FPU_SW_8 ,std_logic_vector(q_OPnumber(3 downto 0)),q_Anumber, q_Bnumber, LO,HI,STATUS_from_ALU);
