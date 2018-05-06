@@ -4,7 +4,7 @@
 --	Description: FPGA_design
 --
 --	Date:			06/05/2018
---	Designer's:  Maor Assayag, Refael Shetrit
+--	Designers:  Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
 

@@ -1,6 +1,6 @@
 -- ====================================================================
 --
---	File Name:		FloatinPointNormlizer.vhd
+--	File Name:		FloatinPointConvertor.vhd
 --	Description: Floatin Point convertor :  8 bit binary number
 --                                        ( MSB sign, 6to2 integer, 1 to 0 fraction) to 32 ieee 754
 --
@@ -16,18 +16,18 @@ use ieee.numeric_std.all;
 use ieee.std_logic_1164.all;
 
  -- entity Definition
-entity FloatinPointNormlizer is
+entity FloatinPointConvertor is
     generic(N: positive := 8); --defualt value for N is 8
     port (
        A : in  signed (N-1 downto 0);
        B : in  signed (N-1 downto 0);
        Out1  : out signed (31 downto 0);
        Out2 :  out signed (31 downto 0));
-end FloatinPointNormlizer;
+end FloatinPointConvertor;
 
 
  -- Architecture Definition
-architecture gate_level of FloatinPointNormlizer is
+architecture gate_level of FloatinPointConvertor is
 
   -- components decleration
   component LeadingZeroes_counter

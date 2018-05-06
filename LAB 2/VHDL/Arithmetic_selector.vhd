@@ -4,7 +4,7 @@
 --	Description:	Arithmetic_selector
 --
 --
---	Date:			12/04/2018
+--	Date:			06/05/2018
 --	Designers:		Maor Assayag, Refael Shetrit
 --
 -- ====================================================================

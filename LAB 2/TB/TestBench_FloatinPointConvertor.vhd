@@ -1,7 +1,7 @@
 -- ====================================================================
 --
---	File Name:		TestBench_FloatinPointNormlizer.vhd
---	Description: test bench for FloatinPointNormlizer
+--	File Name:		TestBench_FloatinPointConvertor.vhd
+--	Description: test bench for FloatinPointConvertor
 --
 --
 --	Date:			30/04/2018
@@ -13,13 +13,13 @@ LIBRARY ieee;
 use ieee.std_logic_1164.ALL;
 use ieee.numeric_std.all;
 
-entity TestBench_FloatinPointNormlizer is
-end TestBench_FloatinPointNormlizer;
+entity TestBench_FloatinPointConvertor is
+end TestBench_FloatinPointConvertor;
 
-architecture behavior of TestBench_FloatinPointNormlizer is
+architecture behavior of TestBench_FloatinPointConvertor is
 
  -- Component Declaration
- component FloatinPointNormlizer
+ component FloatinPointConvertor
      generic(N: positive := 8); --defualt value for N is 8
      port (
         A : in  signed (N-1 downto 0);
@@ -36,7 +36,7 @@ architecture behavior of TestBench_FloatinPointNormlizer is
  signal expected2 : signed(31 downto 0);
 begin
 ----------------------------------------
-  uut :  FloatinPointNormlizer
+  uut :  FloatinPointConvertor
     port map (A,B,Out1, Out2);
 
   stim: process

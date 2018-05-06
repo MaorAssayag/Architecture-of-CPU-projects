@@ -3,7 +3,7 @@
 --	File Name:		FPGA_test.vhd
 --	Description: FPGA_test
 --
---	Date:			11/04/2018
+--	Date:			06/05/2018
 --	Designers:  Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
@@ -54,9 +54,6 @@ port (
    STATUS : out signed (5 downto 0));
 end component;
 
-
-
-
  signal in1 : signed(N-1 downto 0);
  signal in2 : signed(N-1 downto 0);
  signal in3 : signed(N-1 downto 0);
@@ -75,9 +72,6 @@ reg3: N_dff port map (clk, rst,'1', out1 & out2, in3);
 
 ---------------ALU
 ALU_op: ALU port map (clk,FPU_SW_8 ,OPP,in1, in4, out1,out2,STATUS_from_ALU);
-
-
-
 
 ----------------------------------------
 end structural;
