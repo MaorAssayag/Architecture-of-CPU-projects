@@ -55,7 +55,6 @@ begin
 				clk_dff <= '1';
 			elsif falling_edge(clk) then
 				clk_dff <= '0';
-			
 			end if;
 end if;
 end process;
