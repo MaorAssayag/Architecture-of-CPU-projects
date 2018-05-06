@@ -92,8 +92,8 @@ component ADD_SUB
    end component;
 
 -- aid signals
-signal  MUL_result :  signed (2*N-1 downto 0);
-signal  MAC_result :  signed (2*N-1 downto 0);
+signal  MUL_result :  signed (2*N-1 downto 0) := (others => '0');
+signal  MAC_result :  signed (2*N-1 downto 0) := (others => '0');
 signal  ADD_SUB_result :  signed (2*N-1 downto 0);
 
 signal  MAX_MIN_LO :  signed ((N-1) downto 0); -- OPP MAX : 010 OPP MIN: 011 then max or min by OP(0)
