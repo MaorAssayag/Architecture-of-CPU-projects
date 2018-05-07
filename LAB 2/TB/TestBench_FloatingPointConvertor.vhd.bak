@@ -36,7 +36,7 @@ architecture behavior of TestBench_FloatingPointConvertor is
  signal expected2 : signed(31 downto 0);
 begin
 ----------------------------------------
-  uut :  FloatingPointConvertor
+  uut :  FloatinPointConvertor
     port map (A,B,Out1, Out2);
 
   stim: process
