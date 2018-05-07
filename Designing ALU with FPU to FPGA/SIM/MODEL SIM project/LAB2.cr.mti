@@ -1,0 +1,421 @@
+{C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_FPGA_test.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_FPGA_test.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TestBench_FPGA_test
+-- Compiling architecture behavior of TestBench_FPGA_test
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/ADD_SUB_FPU.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/ADD_SUB_FPU.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ADD_SUB_FPU
+-- Compiling architecture gate_level of ADD_SUB_FPU
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_LeadingZeros_counter.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_LeadingZeros_counter.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_LeadingZeros_counter
+-- Compiling architecture behavior of Testbench_LeadingZeros_counter
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/N_dff.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/N_dff.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity N_dff
+-- Compiling architecture strutural of N_dff
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/shift_Nbits.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/shift_Nbits.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity shift_Nbits
+-- Compiling architecture behavioral of shift_Nbits
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/LeadingZeros_counter.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/LeadingZeros_counter.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity LeadingZeros_counter
+-- Compiling architecture Behavioral of LeadingZeros_counter
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/MUL.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/MUL.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MUL
+-- Compiling architecture gate_level of MUL
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/MUL_FPU.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/MUL_FPU.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MUL_FPU
+-- Compiling architecture gate_level of MUL_FPU
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_Output_Selector.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_Output_Selector.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_Output_Selector
+-- Compiling architecture behavior of Testbench_Output_Selector
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_MAX_MIN.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_MAX_MIN.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_MAX_MIN
+-- Compiling architecture behavior of Testbench_MAX_MIN
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_ALU.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_ALU.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TestBench_ALU
+-- Compiling architecture behavior of TestBench_ALU
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/ADD.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/ADD.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ADD
+-- Compiling architecture gate_level of ADD
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/MUX_Nbits.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/MUX_Nbits.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MUX_Nbits
+-- Compiling architecture Behavioral of MUX_Nbits
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/Arithmetic_Unit.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/Arithmetic_Unit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Arithmetic_Unit
+-- Compiling architecture gate_level of Arithmetic_Unit
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_Arithmetic_selector.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_Arithmetic_selector.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_Arithmetic_selector
+-- Compiling architecture behavior of Testbench_Arithmetic_selector
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/MAC.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/MAC.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MAC
+-- Compiling architecture behavioral of MAC
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_ADD_SUB.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_ADD_SUB.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_ADD_SUB
+-- Compiling architecture behavior of Testbench_ADD_SUB
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/FPU_selector.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/FPU_selector.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity FPU_selector
+-- Compiling architecture gate_level of FPU_selector
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/Swap.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/Swap.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Swap
+-- Compiling architecture Behavioral of Swap
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_ADD_SUB_FPU.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_ADD_SUB_FPU.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_ADD_SUB_FPU
+-- Compiling architecture behavior of Testbench_ADD_SUB_FPU
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/7-Segment_8_bit.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/7-Segment_8_bit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity display_7_segment
+-- Compiling architecture rtl of display_7_segment
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_N_dff.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_N_dff.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TestBench_N_dff
+-- Compiling architecture behavior of TestBench_N_dff
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/Testbench_shift_Nbits.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/Testbench_shift_Nbits.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_shift_Nbits
+-- Compiling architecture behavior of Testbench_shift_Nbits
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_shift_unit.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_shift_unit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_shift_unit
+-- Compiling architecture behavior of Testbench_shift_unit
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/FPGA_test.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/FPGA_test.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity FPGA_test
+-- Compiling architecture structural of FPGA_test
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/shift_unit.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/shift_unit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity shift_unit
+-- Compiling architecture structural of shift_unit
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_MUL.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_MUL.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_MUL
+-- Compiling architecture behavior of Testbench_MUL
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_dff_1bit.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_dff_1bit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity TestBench_dff_1bit
+-- Compiling architecture behavior of TestBench_dff_1bit
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_FloatingPointConvertor.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_FloatingPointConvertor.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TestBench_FloatingPointConvertor
+-- Compiling architecture behavior of TestBench_FloatingPointConvertor
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/FPGA_design.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/FPGA_design.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity FPGA_design
+-- Compiling architecture structural of FPGA_design
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/dff_1bit.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/dff_1bit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dff_1bit
+-- Compiling architecture behavioral of dff_1bit
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_MUL_FPU.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_MUL_FPU.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_MUL_FPU
+-- Compiling architecture behavior of Testbench_MUL_FPU
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/FloatingPointConvertor.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/FloatingPointConvertor.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity FloatingPointConvertor
+-- Compiling architecture gate_level of FloatingPointConvertor
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_Arithmetic_unit.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_Arithmetic_unit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TestBench_Arithmetic_unit
+-- Compiling architecture behavior of TestBench_Arithmetic_unit
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_ADD.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_ADD.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_ADD
+-- Compiling architecture behavior of Testbench_ADD
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_MAC.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_MAC.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_MAC
+-- Compiling architecture behavior of Testbench_MAC
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/Testbench_MUX_Nbits.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/Testbench_MUX_Nbits.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Testbench_MUX_Nbits
+-- Compiling architecture Behavioral of Testbench_MUX_Nbits
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/MAX_MIN.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/MAX_MIN.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MAX_MIN
+-- Compiling architecture gate_level of MAX_MIN
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/Output_Selector.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/Output_Selector.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Output_Selector
+-- Compiling architecture structural of Output_Selector
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/xor.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/xor.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity xor_gate
+-- Compiling architecture gate_level of xor_gate
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_full_adder.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_full_adder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Testbench_full_adder
+-- Compiling architecture behavior of Testbench_full_adder
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_FPU_UNIT.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_FPU_UNIT.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity TestBench_FPU_UNIT
+-- Compiling architecture behavior of TestBench_FPU_UNIT
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/ALU.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/ALU.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALU
+-- Compiling architecture structural of ALU
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/Arithmetic_selector.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/Arithmetic_selector.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Arithmetic_selector
+-- Compiling architecture gate_level of Arithmetic_selector
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/FPU_Unit.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/FPU_Unit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity FPU_Unit
+-- Compiling architecture gate_level of FPU_Unit
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/full_adder.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/full_adder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity full_adder
+-- Compiling architecture gate_level of full_adder
+
+} {} {}} {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/ADD_SUB.vhd} {1 {vcom -work work -2008 -explicit {C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/VHDL/ADD_SUB.vhd}
+Model Technology ModelSim ALTERA vcom 10.1b Compiler 2012.04 Apr 27 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ADD_SUB
+-- Compiling architecture gate_level of ADD_SUB
+
+} {} {}}

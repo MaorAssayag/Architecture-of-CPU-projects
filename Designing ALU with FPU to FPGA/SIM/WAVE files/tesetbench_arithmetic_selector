@@ -1,0 +1,28 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /testbench_arithmetic_selector/clk
+add wave -noupdate /testbench_arithmetic_selector/OPP
+add wave -noupdate /testbench_arithmetic_selector/MUL_result
+add wave -noupdate /testbench_arithmetic_selector/MAX_MIN_LO
+add wave -noupdate /testbench_arithmetic_selector/ADD_SUB_result
+add wave -noupdate /testbench_arithmetic_selector/HI
+add wave -noupdate /testbench_arithmetic_selector/LO
+add wave -noupdate /testbench_arithmetic_selector/FLAG_en
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {111446 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 284
+configure wave -valuecolwidth 121
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ps
+update
+WaveRestoreZoom {89285 ps} {134341 ps}
