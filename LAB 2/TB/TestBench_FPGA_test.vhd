@@ -24,12 +24,12 @@ architecture behavior of TestBench_FPGA_test is
  port (
     clk:     in  std_logic;
     rst : in std_logic;
-    numin1:   in  signed (N-1 downto 0);
-    numin2:   in  signed (N-1 downto 0);
+    numin1:   in  signed (15 downto 0);
+    numin2:   in  signed (15 downto 0);
     FPU_SW_8  : in  std_logic; -- switch 16-bit MSB\LSB of FPU_UNIT output
     OPP:     in  std_logic_vector (3 downto 0);
-    HI   :  out signed(N-1 downto 0);
-    LO   :  out signed(N-1 downto 0);
+    HI   :  out signed(15 downto 0);
+    LO   :  out signed(15 downto 0);
     STATUS : out std_logic_vector (5 downto 0));
  end component;
 
@@ -43,7 +43,7 @@ signal B  : signed(15 downto 0) := "0000000000000010";
 signal STATUS : std_logic_vector(5 downto 0);
 begin
 ----------------------------------------
-  uut :  FPGA_test  generic map(N)
+  uut :  FPGA_test  generic map(16)
     port map (clk, '0',A,B,FPU_SW,OPP,HI,LO,STATUS);
     STATUS <= STATUS;
   clock: process
