@@ -1,18 +1,30 @@
+-- ====================================================================
+--
+--	File Name:		display_7_segment.vhd
+--	Description:	Hex to 7 segment display
+--
+--	Date:			06/05/2018
+--	Designers:		Maor Assayag, Refael Shetrit
+--
+-- ====================================================================
+
+-- libraries decleration
 library ieee;
 use ieee.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all;
 
-entity display_7_segment is port (
-  	q        : in std_logic_vector (7 downto 0);
-  	segment1 : out std_logic_vector (6 downto 0);
-    segment2 : out std_logic_vector (6 downto 0)
-    );
+ -- entity Definition
+entity display_7_segment is
+    port (
+    	q        : in std_logic_vector (7 downto 0);
+    	segment1 : out std_logic_vector (6 downto 0);
+      segment2 : out std_logic_vector (6 downto 0));
 end display_7_segment;
 
+ -- Architecture Definition
 architecture rtl of display_7_segment is
-    -- signal segment1_int : std_logic_vector (3 downto 0):=q(7 downto 4);
-    -- signal segment2_int : std_logic_vector (3 downto 0):=q(3 downto 0);
 begin
+----------------------------------------
   process (q(7 downto 4))
   begin
     case (q(7 downto 4)) is
@@ -58,4 +70,7 @@ begin
       when others => segment1 <= "0000000";
       end case;
   end process;
+----------------------------------------
 end rtl;
+
+--EndOfFile

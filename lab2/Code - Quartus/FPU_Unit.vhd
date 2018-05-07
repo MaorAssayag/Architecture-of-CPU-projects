@@ -5,7 +5,7 @@
 --
 --
 --	Date:			30/04/2018
---	Designer's:		Maor Assayag, Refael Shetrit
+--	Designers:		Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
 

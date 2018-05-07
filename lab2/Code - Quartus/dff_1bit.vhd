@@ -27,7 +27,6 @@ end dff_1bit;
 architecture behavioral of dff_1bit is
 begin
 ----------------------------------------
-
 process(clk)
 begin
   if rising_edge(clk) then

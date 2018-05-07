@@ -5,9 +5,8 @@
 --
 --
 --	Date:			02/04/2018
---	Designer:		Maor Assayag, Refael Shetrit
+--	Designers:		Maor Assayag, Refael Shetrit
 --
--- TODO : check test bench
 -- ====================================================================
 
 -- libraries decleration

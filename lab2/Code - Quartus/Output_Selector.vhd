@@ -8,9 +8,8 @@
 --
 --                N=8 duo to FPGA
 --
---
---	Date:			30/04/2018
---	Designer's:  Maor Assayag, Refael Shetrit
+--	Date:			06/05/2018
+--	Designers:  Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
 

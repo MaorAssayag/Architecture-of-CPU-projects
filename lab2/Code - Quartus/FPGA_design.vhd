@@ -3,7 +3,7 @@
 --	File Name:		FPGA_design.vhd
 --	Description: FPGA_design
 --
---	Date:			11/04/2018
+--	Date:			06/05/2018
 --	Designers:  Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
@@ -34,13 +34,14 @@ end FPGA_design;
  -- Architecture Definition
 architecture structural of FPGA_design is
 -------- register for part 1
-  component reg_8bit
-  port (
-      clk : in std_logic;
-      rst : in std_logic;
-      en : in std_logic;
-      d : in signed(7 DOWNTO 0);
-      q : out signed(7 DOWNTO 0));
+ component N_dff
+     generic(N: integer := 8); --defualt value for N is 8
+     port (
+         clk : in std_logic;
+         enable : in std_logic;
+         rst : in std_logic;
+         D : in signed(N-1 downto 0);
+         Q : out signed(N-1 downto 0));
  end component;
 
 ------- ALU for part 2
@@ -64,6 +65,12 @@ port (
         segment2 : out std_logic_vector (6 downto 0));
 end component;
 
+-- aid component for testing the mac hardware on the FPGA display, just replace tha ALU clk with HEX1(4)
+--component counter
+--prot (
+  --clk,enable : in std_logic;
+  --HEX1 : out std_logic_vector (6 downto 0));
+--end component;
 
  signal q_Anumber : signed(N-1 downto 0);
  signal q_Bnumber : signed(N-1 downto 0);
@@ -71,22 +78,22 @@ end component;
  signal LO : signed(N-1 downto 0);
  signal HI : signed(N-1 downto 0);
  signal STATUS_from_ALU : signed (5 downto 0);
+ --signal LSB_counter : std_logic_vector (6 downto 0) := (others => '0'); -- for testing mac only
 begin
 ----------------------------------------
-----------registers
-A_number: reg_8bit port map (clk, not KEY3,not KEY0, numin, q_Anumber);
-OP_number: reg_8bit port map (clk,not KEY3,not KEY1, numin, q_OPnumber);
-B_number: reg_8bit port map (clk, not KEY3,not KEY2, numin, q_Bnumber);
+--testing_mac_with_counter : counter port map(clk, '1',LSB_counter);-- testing mac. change clk in ALU to this counter bit
 
----------------ALU
-ALU_op: ALU port map (clk,FPU_SW_8 ,std_logic_vector(q_OPnumber(3 downto 0)),q_Anumber, q_Bnumber, LO,HI,STATUS_from_ALU);
+-- 1. registers
+A_number: N_dff port map (clk, not KEY0,not KEY3, numin, q_Anumber);
+OP_number: N_dff port map (clk,not KEY1,not KEY3, numin, q_OPnumber);
+B_number: N_dff port map (clk, not KEY2,not KEY3, numin, q_Bnumber);
 
+-- 2. ALU
+ALU_op: ALU port map (clk, FPU_SW_8, std_logic_vector(q_OPnumber(3 downto 0)), q_Anumber, q_Bnumber, LO, HI,STATUS_from_ALU);
 
-------------convert to 7 segment
+-- 3. convert to 7 segment
 convert_7_segment_1: display_7_segment port map (std_logic_vector(LO),LO_1, LO_2);
 convert_7_segment_2: display_7_segment port map (std_logic_vector(HI),HI_1,HI_2);
-
-
 ----------------------------------------
 end structural;
 

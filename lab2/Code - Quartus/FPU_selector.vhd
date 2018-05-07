@@ -5,7 +5,7 @@
 --
 --
 --	Date:			30/04/2018
---	Designer's:		Maor Assayag, Refael Shetrit
+--	Designers:		Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
 
@@ -32,10 +32,10 @@ process (all)
 begin
   case OPP is
        when "010" =>
-        result <= ADD_SUB_result;
+        result <= ADD_SUB_result; -- ADD FPU OPP "1010"
 
        when "100"=>
-        result <= MUL_result;
+        result <= MUL_result; -- MUL FPU OPP "1100"
 
        when others =>
         result <=(others => '0');

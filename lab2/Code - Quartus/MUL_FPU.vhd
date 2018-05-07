@@ -5,10 +5,9 @@
 --  Floating Point Components       Sign   	Exponent  	Fraction
 --               Single Precision 	1 [31] 	8 [30–23] 	23 [22–00]
 --
---	Date:			30/04/2018
---	Designer's:		Maor Assayag, Refael Shetrit
+--	Date:			06/05/2018
+--	Designers:		Maor Assayag, Refael Shetrit
 --
--- TODO : test bench
 -- ====================================================================
 
 -- libraries decleration
@@ -47,7 +46,7 @@ component MUL
        result: out signed(2*N-1 downto 0));
 end component;
 
-component LeadingZeroes_counter
+component LeadingZeros_counter
     generic(N: positive := 8); --defualt value for N is 8
     port (
        X :  in  signed (N-1 downto 0);
@@ -90,7 +89,7 @@ begin
               port map (fractionA, fractionB, tempFraction_result);
 
     -- 3. Normlize the fraction result
-    stage_1 : LeadingZeroes_counter generic map (22)
+    stage_1 : LeadingZeros_counter generic map (22)
               port map(tempFraction_result(49 downto 28),zeroesCount);
 
     SUM(22 downto 0) <= tempFraction_result((48-to_integer(zeroesCount)) downto (26-to_integer(zeroesCount)));

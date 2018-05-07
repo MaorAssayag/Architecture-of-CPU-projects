@@ -1,7 +1,7 @@
 -- ====================================================================
 --
---	File Name:		Testbench_LeadingZeroes_counter.vhd
---	Description: test bench for LeadingZeroes_counter
+--	File Name:		Testbench_LeadingZeros_counter.vhd
+--	Description: test bench for LeadingZeros_counter
 --
 --
 --	Date:			29/04/2018
@@ -13,13 +13,13 @@ LIBRARY ieee;
 use ieee.std_logic_1164.ALL;
 use ieee.numeric_std.all;
 
-entity Testbench_LeadingZeroes_counter is
-end Testbench_LeadingZeroes_counter;
+entity Testbench_LeadingZeros_counter is
+end Testbench_LeadingZeros_counter;
 
-architecture behavior of Testbench_LeadingZeroes_counter is
+architecture behavior of Testbench_LeadingZeros_counter is
 
  -- Component Declaration
- component LeadingZeroes_counter
+ component LeadingZeros_counter
    generic(N: positive := 8); --defualt value for N is 8
    port (
       X :  in  signed (N-1 downto 0);
@@ -31,7 +31,7 @@ signal Y  :  signed (5 downto 0);
 
 begin
 ----------------------------------------
-  uut :  LeadingZeroes_counter generic map (22)
+  uut :  LeadingZeros_counter generic map (22)
     port map (X,Y);
 
   stim: process

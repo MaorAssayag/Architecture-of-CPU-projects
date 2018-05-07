@@ -1,11 +1,11 @@
 -- ====================================================================
 --
---	File Name:		LeadingZeroes_counter.vhd
---	Description: return the number X after removing the leading zeroes from it.
+--	File Name:		LeadingZeros_counter.vhd
+--	Description: return the number of leading zeros, i.e: for "0011" return 2. for "0111" return 1.
 --
 --
---	Date:			10/04/2018
---	Designer's:		Maor Assayag, Refael Shetrit
+--	Date:			30/04/2018
+--	Designers:		Maor Assayag, Refael Shetrit
 --
 -- ====================================================================
 
@@ -15,15 +15,15 @@ use ieee.numeric_std.all;
 use ieee.std_logic_1164.all;
 
  -- entity Definition
-entity LeadingZeroes_counter is
+entity LeadingZeros_counter is
     generic(N: positive := 8); --defualt value for N is 8
     port (
        X :  in  signed (N-1 downto 0);
        Y  : out signed (5 downto 0));
-end LeadingZeroes_counter;
+end LeadingZeros_counter;
 
  -- Architecture Definition
-architecture Behavioral of LeadingZeroes_counter is
+architecture Behavioral of LeadingZeros_counter is
 begin
 ----------------------------------------
 process(X)
@@ -33,8 +33,11 @@ begin
   for i in N-1 downto 0 loop
     if X(i)='1' then
       exit;
+    elsif X(i)='0' then
+      count := count + 1;
+    else
+      exit;
     end if;
-    count := count + 1;
   end loop;
    Y <= to_signed(count,7)(5 downto 0);
 end process;
