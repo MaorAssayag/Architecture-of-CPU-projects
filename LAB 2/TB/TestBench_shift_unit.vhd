@@ -21,7 +21,7 @@ end Testbench_shift_unit;
 ARCHITECTURE behavior OF Testbench_shift_unit IS
 
  -- Component Declaration
- component shift
+ component shift_unit
     generic(N: integer := 8); --defualt value for N is 8
     port(
       dir :    in std_logic;
@@ -38,7 +38,7 @@ end component;
 begin
 ----------------------------------------
    -- Instantiate the Unit Under Test (UUT)
-   shift_comp : shift generic map (N) port map (dir,A, B,result);
+   shift_comp : shift_unit generic map (N) port map (dir,A, B,result);
 
    -- Stimulus process
    stim: process
