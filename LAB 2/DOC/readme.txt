@@ -10,12 +10,21 @@ IMPORTANT : before compile please make sure that the files syntax is 2008-VHDL
 7.	shift_Nbits.VHD
 8.	shift_unit.VHD
 9.	dff_1bit.VHD
-10. 	N_dff.VHD
+10. N_dff.VHD
 11.	MUL.VHD
 12.	MAC.VHD
-13.	Arithmetic_selector.VHD
-14.	Arithmetic_Unit.VHD
-15.	Output_Selector.VHD
-16.	ALU.VHD
+13. 7-Segment_8_bit.VHD
+14. Swap.VHD
+15.	ADD_SUB_FPU.VHD
+16. LeadingZeros_counter.VHD
+17. FloatingPointConvertor.VHD
+18. MUL_FPU.VHD
+19. FPU_selector.VHD
+20. FPU_Unit.VHD
+21. Arithmetic_selector.VHD
+22. Arithmetic_Unit.VHD
+23. Output_Selector.VHD
+24. ALU.VHD
+25. FPGA_design.VHD
 
-17. ALL the test bench (order doesnt matter)
+26. ALL the test bench (order doesnt matter)
