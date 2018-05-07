@@ -34,6 +34,7 @@ architecture behavior of TestBench_ALU is
 
 constant N : integer := 8;
 signal clk : std_logic := '0';
+signal FPU_SW : std_logic := '0';
 signal OPP : std_logic_vector (3 downto 0) := "0000";
 signal LO, HI : signed(N-1 downto 0) := "00000000";
 signal A  : signed(N-1 downto 0) := "00000101";
@@ -42,7 +43,7 @@ signal STATUS : signed(5 downto 0);
 begin
 ----------------------------------------
   uut :  ALU  generic map(N)
-    port map (clk, OPP, A, B, LO, HI, STATUS);
+    port map (clk, FPU_SW, OPP, A, B, LO, HI, STATUS);
 
   clock: process
   begin
@@ -116,7 +117,7 @@ begin
     wait for 10 ns;
     OPP <= "1001"; --SHR
 
-    -- stage_1 ---------------
+    -- stage_2 ---------------
     A  <= "00000010";
     B  <= "11111110";
 
