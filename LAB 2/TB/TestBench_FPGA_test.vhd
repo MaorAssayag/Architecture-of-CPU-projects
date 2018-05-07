@@ -45,7 +45,6 @@ begin
 ----------------------------------------
   uut :  FPGA_test  generic map(16)
     port map (clk, '0',A,B,FPU_SW,OPP,HI,LO,STATUS);
-    STATUS <= STATUS;
   clock: process
   begin
     clk <= '0';
