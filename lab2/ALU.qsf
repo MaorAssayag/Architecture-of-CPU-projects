@@ -48,9 +48,6 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_L22 -to numin[0]
 set_location_assignment PIN_L21 -to numin[1]
@@ -100,31 +97,37 @@ set_location_assignment PIN_H4 -to LO_2[3]
 set_location_assignment PIN_G3 -to LO_2[4]
 set_location_assignment PIN_D2 -to LO_2[5]
 set_location_assignment PIN_D1 -to LO_2[6]
-set_global_assignment -name VHDL_FILE "Code - Quartus/xor.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/Swap.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/shift_unit.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/shift_Nbits.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/reg_8bit.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/Output_Selector.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/N_dff.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/MUX_Nbits.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/MUL_FPU.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/MUL.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/MAX_MIN.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/MAC.vhd" -hdl_version VHDL_2008
-set_global_assignment -name VHDL_FILE "Code - Quartus/LeadingZeroes_counter.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/full_adder.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/FPU_Unit.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/FPU_selector.vhd" -hdl_version VHDL_2008
-set_global_assignment -name VHDL_FILE "Code - Quartus/FPGA_design.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/FloatinPointNormlizer.vhd" -hdl_version VHDL_2008
-set_global_assignment -name VHDL_FILE "Code - Quartus/dff_1bit.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/Arithmetic_Unit.vhd" -hdl_version VHDL_2008
-set_global_assignment -name VHDL_FILE "Code - Quartus/Arithmetic_selector.vhd" -hdl_version VHDL_2008
-set_global_assignment -name VHDL_FILE "Code - Quartus/ALU.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/ADD_SUB_FPU.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/ADD_SUB.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/ADD.vhd"
-set_global_assignment -name VHDL_FILE "Code - Quartus/7-Segment_8_bit.vhd"
-set_global_assignment -name SDC_FILE SDC1.sdc
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/LeadingZeros_counter.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/MUL_FPU.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/FloatingPointConvertor.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/7-Segment_8_bit.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/FPGA_design.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/ALU.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/ADD_SUB_FPU.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/ADD.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/Arithmetic_selector.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/FPU_selector.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/FPU_Unit.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/full_adder.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/MAX_MIN.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/MUL.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/MUX_Nbits.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/N_dff.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/Output_Selector.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/shift_Nbits.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/shift_unit.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/Swap.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/xor.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/Arithmetic_Unit.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/MAC.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/dff_1bit.vhd"
+set_global_assignment -name VHDL_FILE "../LAB 2/VHDL/ADD_SUB.vhd"
+set_global_assignment -name RTLV_GROUP_COMB_LOGIC_IN_CLOUD ON
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

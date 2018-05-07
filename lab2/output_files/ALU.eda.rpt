@@ -1,6 +1,6 @@
 EDA Netlist Writer report for ALU
-Sun May 06 18:43:50 2018
-Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+Mon May 07 13:38:44 2018
+Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
 ---------------------
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun May 06 18:43:50 2018 ;
+; EDA Netlist Writer Status ; Successful - Mon May 07 13:38:44 2018 ;
 ; Revision Name             ; ALU                                   ;
 ; Top-level Entity Name     ; FPGA_design                           ;
 ; Family                    ; Cyclone II                            ;
@@ -66,31 +66,31 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+----------------------------------------------------------+
-; Simulation Generated Files                               ;
-+----------------------------------------------------------+
-; Generated Files                                          ;
-+----------------------------------------------------------+
-; D:/altera/12.1/lab2/simulation/modelsim/ALU.vho          ;
-; D:/altera/12.1/lab2/simulation/modelsim/ALU_fast.vho     ;
-; D:/altera/12.1/lab2/simulation/modelsim/ALU_vhd.sdo      ;
-; D:/altera/12.1/lab2/simulation/modelsim/ALU_vhd_fast.sdo ;
-+----------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                           ;
++------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                      ;
++------------------------------------------------------------------------------------------------------+
+; C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/lab2/simulation/modelsim/ALU.vho          ;
+; C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/lab2/simulation/modelsim/ALU_fast.vho     ;
+; C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/lab2/simulation/modelsim/ALU_vhd.sdo      ;
+; C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/lab2/simulation/modelsim/ALU_vhd_fast.sdo ;
++------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit EDA Netlist Writer
+Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Sun May 06 18:43:48 2018
+    Info: Processing started: Mon May 07 13:38:43 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off ALU -c ALU
-Info (204026): Generated files "ALU.vho", "ALU_fast.vho", "ALU_vhd.sdo" and "ALU_vhd_fast.sdo" in directory "D:/altera/12.1/lab2/simulation/modelsim/" for EDA simulation tool
-Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 461 megabytes
-    Info: Processing ended: Sun May 06 18:43:50 2018
-    Info: Elapsed time: 00:00:02
+Info (204026): Generated files "ALU.vho", "ALU_fast.vho", "ALU_vhd.sdo" and "ALU_vhd_fast.sdo" in directory "C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/lab2/simulation/modelsim/" for EDA simulation tool
+Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 376 megabytes
+    Info: Processing ended: Mon May 07 13:38:44 2018
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
