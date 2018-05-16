@@ -1,0 +1,98 @@
+-- ====================================================================
+--
+--	File Name:		Testbench_ADD_SUB_FPU.vhd
+--	Description: test bench for ADD_SUB_FPU
+--
+--
+--	Date:			29/04/2018
+--	Designer's:		Maor Assayag, Refael Shetrit
+--
+-- ====================================================================
+
+LIBRARY ieee;
+use ieee.std_logic_1164.ALL;
+use ieee.numeric_std.all;
+
+entity Testbench_ADD_SUB_FPU is
+end Testbench_ADD_SUB_FPU;
+
+architecture behavior of Testbench_ADD_SUB_FPU is
+
+ -- Component Declaration
+ component ADD_SUB_FPU
+     generic(N: integer := 32); --defualt value for N is 32
+     Port(
+        OPP : in std_logic;
+        A :     in signed((N-1) downto 0);
+        B :     in signed((N-1) downto 0);
+        SUM :   out signed((N-1) downto 0));
+ end component;
+
+ signal OPP :  std_logic := '0';
+ signal A :    signed(31 downto 0);
+ signal B :    signed(31 downto 0);
+ signal SUM :  signed(31 downto 0);
+ signal expected : signed(31 downto 0);
+
+begin
+----------------------------------------
+  uut :  ADD_SUB_FPU_tmp
+    port map (OPP,A,B,SUM);
+
+  stim: process
+  begin
+    wait for 50 ns;
+    A <= "01000011100000000000000000000000" ;
+    B <= "01000011000000000000000000000011" ;
+    expected <= "01000011110000000000000000000010";
+    wait for 20 ns;
+
+    A <= "01000011010000000000000000000011" ;
+    B <= "01000011000000000000000000000110" ;
+    expected <= "01000011101000000000000000000101";
+    wait for 20 ns;
+
+    A <= "01000111010000000000000000000011" ;
+    B <= "01000011100000000000000000000110" ;
+    expected <= "01000111010000010000000000000011";
+    wait for 20 ns;
+
+    A <= "01000011000000000000000000001011" ;
+    B <= "01000011000000000000000000000110" ;
+    expected <= "01000011100000000000000000001001";
+    wait for 20 ns;
+
+    A <= "11000011100000000000000000000000" ; -- (-256)
+    B <= "11000011000000000000000000000011" ; -- (-128.00005)
+    expected <= "11000010111111111111111111111001";
+    wait for 50 ns;
+
+    -- SUB
+    OPP <= '1';
+    wait for 50 ns;
+    A <= "01000011100000000000000000000000" ; -- 256
+    B <= "01000011000000000000000000000011" ; -- 128.00005
+    expected <= "01000010111111111111111111111001";
+    wait for 20 ns;
+
+    A <= "01000011010000000000000000000011" ; -- 192.00005
+    B <= "01000011000000000000000000000110" ; -- 128.00009
+    expected <= "01000010011111111111111111110110";
+    wait for 20 ns;
+
+    A <= "01000011100000000000000000000000" ; -- 256
+    B <= "11000011000000000000000000000011" ; -- (-128.00005)
+    expected <= "01000011110000000000000000000010";
+    wait for 20 ns;
+
+    A <= "11000011100000000000000000000000" ; -- (-256)
+    B <= "01000011000000000000000000000011" ; -- (-128.00005)
+    expected <= "11000011110000000000000000000010";
+
+    wait for 50 ns;
+  end process stim;
+
+----------------------------------------
+end behavior;
+
+--EndOfFile

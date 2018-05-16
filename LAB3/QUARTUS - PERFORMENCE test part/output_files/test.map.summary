@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon May 07 18:06:16 2018
+Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
+Revision Name : test
+Top-level Entity Name : FPGA_test
+Family : Cyclone II
+Total logic elements : 1,344
+    Total combinational functions : 1,344
+    Dedicated logic registers : 132
+Total registers : 132
+Total pins : 77
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 9
+Total PLLs : 0

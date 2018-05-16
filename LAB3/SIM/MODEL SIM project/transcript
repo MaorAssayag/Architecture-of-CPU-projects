@@ -1,0 +1,106 @@
+# Compile of TestBench_FPJA_test.vhd was successful.
+vsim -gui work.testbench_fpga_test
+# vsim -gui work.testbench_fpga_test 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_fpga_test(behavior)
+# ** Warning: (vsim-3473) Component instance "uut : FPGA_test" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_fpga_test File: C:/Users/MaorA/Desktop/github/Architecture-of-CPU-projects/LAB 2/TB/TestBench_FPJA_test.vhd
+add wave -position insertpoint sim:/testbench_fpga_test/*
+run
+# Compile of FPGA_test.vhd was successful.
+# Compile of TestBench_FPGA_test.vhd was successful.
+# Compile of FPGA_test.vhd was successful.
+vsim -gui work.testbench_fpga_test
+# vsim -gui work.testbench_fpga_test 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_fpga_test(behavior)
+# Loading work.fpga_test(structural)
+# Loading work.n_dff(strutural)
+# Loading work.dff_1bit(behavioral)
+# Loading work.alu(structural)
+# Loading work.arithmetic_unit(gate_level)
+# Loading work.mul(gate_level)
+# Loading work.mux_nbits(behavioral)
+# Loading work.add_sub(gate_level)
+# Loading ieee.std_logic_arith(body)
+# Loading work.xor_gate(gate_level)
+# Loading work.add(gate_level)
+# Loading work.full_adder(gate_level)
+# Loading work.mac(behavioral)
+# Loading work.max_min(gate_level)
+# Loading work.arithmetic_selector(gate_level)
+# Loading work.floatingpointconvertor(gate_level)
+# Loading work.leadingzeros_counter(behavioral)
+# Loading work.shift_unit(structural)
+# Loading work.shift_nbits(behavioral)
+# Loading work.fpu_unit(gate_level)
+# Loading work.mul_fpu(gate_level)
+# Loading work.add_sub_fpu(gate_level)
+# Loading work.swap(behavioral)
+# Loading work.fpu_selector(gate_level)
+# Loading work.output_selector(structural)
+# ** Warning: Design size of 1064 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench_fpga_test/uut/STATUS(5 downto 0) has no driver.
+# 
+# This port will contribute value (UUUUUU) to the signal network.
+# 
+add wave -position insertpoint sim:/testbench_fpga_test/*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_fpga_test/uut/ALU_op/FPUUnit/mul_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_fpga_test/uut/ALU_op/FPUUnit/mul_component
+# Compile of TestBench_FPGA_test.vhd was successful.
+vsim -gui work.testbench_fpga_test
+# vsim -gui work.testbench_fpga_test 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_fpga_test(behavior)
+# Loading work.fpga_test(structural)
+# Loading work.n_dff(strutural)
+# Loading work.dff_1bit(behavioral)
+# Loading work.alu(structural)
+# Loading work.arithmetic_unit(gate_level)
+# Loading work.mul(gate_level)
+# Loading work.mux_nbits(behavioral)
+# Loading work.add_sub(gate_level)
+# Loading ieee.std_logic_arith(body)
+# Loading work.xor_gate(gate_level)
+# Loading work.add(gate_level)
+# Loading work.full_adder(gate_level)
+# Loading work.mac(behavioral)
+# Loading work.max_min(gate_level)
+# Loading work.arithmetic_selector(gate_level)
+# Loading work.floatingpointconvertor(gate_level)
+# Loading work.leadingzeros_counter(behavioral)
+# Loading work.shift_unit(structural)
+# Loading work.shift_nbits(behavioral)
+# Loading work.fpu_unit(gate_level)
+# Loading work.mul_fpu(gate_level)
+# Loading work.add_sub_fpu(gate_level)
+# Loading work.swap(behavioral)
+# Loading work.fpu_selector(gate_level)
+# Loading work.output_selector(structural)
+# ** Warning: Design size of 1064 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Warning: (vsim-8683) Uninitialized out port /testbench_fpga_test/uut/STATUS(5 downto 0) has no driver.
+# 
+# This port will contribute value (UUUUUU) to the signal network.
+# 
+add wave -position insertpoint sim:/testbench_fpga_test/*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_fpga_test/uut/ALU_op/FPUUnit/mul_component
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_fpga_test/uut/ALU_op/FPUUnit/mul_component

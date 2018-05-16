@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ALU">
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA_design|ALU:ALU_op|Arithmetic_Unit:ArithmeticUnit|MUL:mul_component|lpm_mult:Mult0" CBX_FILE_NAME="mult_lus.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FPGA_design|ALU:ALU_op|FPU_Unit:FPUUnit|MUL_FPU:mul_component|MUL:stage_0|lpm_mult:Mult0" CBX_FILE_NAME="mult_h1t.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
