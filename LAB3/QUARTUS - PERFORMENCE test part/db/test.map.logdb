@@ -1,6 +1,0 @@
-v1
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,ALU:ALU_op|FPU_Unit:FPUUnit|MUL_FPU:mul_component|MUL:stage_0|lpm_mult:Mult0|mult_h1t:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,ALU:ALU_op|Arithmetic_Unit:ArithmeticUnit|MUL:mul_component|lpm_mult:Mult0|mult_i1t:auto_generated|mac_out2,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,ALU:ALU_op|FPU_Unit:FPUUnit|MUL_FPU:mul_component|MUL:stage_0|lpm_mult:Mult0|mult_h1t:auto_generated|mac_out4,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,ALU:ALU_op|FPU_Unit:FPUUnit|MUL_FPU:mul_component|MUL:stage_0|lpm_mult:Mult0|mult_h1t:auto_generated|mac_out8,
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,ALU:ALU_op|FPU_Unit:FPUUnit|MUL_FPU:mul_component|MUL:stage_0|lpm_mult:Mult0|mult_h1t:auto_generated|mac_out6,
