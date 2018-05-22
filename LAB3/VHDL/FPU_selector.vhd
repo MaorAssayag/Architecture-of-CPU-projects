@@ -31,10 +31,18 @@ begin
 process (all)
 begin
   case OPP is
-       when "010" =>
+
+    -- ALU performs FPU ADD, Function_opcode = 50 = 110010, ALU_ctl(OPP in this file) = 011
+       when "011" =>
+        result <= ADD_SUB_result;
+
+    -- ALU performs FPU SUB, Function_opcode = 45 = 101101, ALU_ctl(OPP in this file) = 100
+    -- ALU performs FPU slt, Function_opcode = 61 = 111101, ALU_ctl(OPP in this file) = 100
+      when "100" =>
         result <= ADD_SUB_result; -- ADD FPU OPP "1010"
 
-       when "100"=>
+    -- ALU performs FPU MUL, Function_opcode = 47 = 101111, ALU_ctl(OPP in this file) = 101
+       when "101"=>
         result <= MUL_result; -- MUL FPU OPP "1100"
 
        when others =>
