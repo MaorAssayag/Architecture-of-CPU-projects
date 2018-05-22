@@ -5,26 +5,37 @@ USE IEEE.STD_LOGIC_ARITH.ALL;
 
 ENTITY MIPS IS
 
-	PORT( reset, clock					: IN 	STD_LOGIC; 
+	PORT( reset, clock					: IN 	STD_LOGIC;
 		-- Output important signals to pins for easy display in Simulator
 		PC								: OUT  STD_LOGIC_VECTOR( 9 DOWNTO 0 );
-		ALU_result_out, read_data_1_out, read_data_2_out, write_data_out,	
+		ALU_result_out, read_data_1_out, read_data_2_out, write_data_out,
      	Instruction_out					: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-		Branch_out, Zero_out, Memwrite_out, 
+		Branch_out, Zero_out, Memwrite_out,
 		Regwrite_out					: OUT 	STD_LOGIC );
 END 	MIPS;
 
 ARCHITECTURE structure OF MIPS IS
 
+		-- regs
+		component N_dff
+		generic(N: integer := 8); --defualt value for N is 8
+		port (
+				clk : in std_logic;
+				enable : in std_logic;
+				rst : in std_logic;
+				D : in STD_LOGIC_VECTOR(N-1 downto 0);
+				Q : out STD_LOGIC_VECTOR(N-1 downto 0));
+		end component;
+
 	COMPONENT Ifetch
    	     PORT(	Instruction			: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-        		PC_plus_4_out 		: OUT  	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
-        		Add_result 			: IN 	STD_LOGIC_VECTOR( 7 DOWNTO 0 );
-        		Branch 				: IN 	STD_LOGIC;
-        		Zero 				: IN 	STD_LOGIC;
-        		PC_out 				: OUT 	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
-        		clock,reset 		: IN 	STD_LOGIC );
-	END COMPONENT; 
+        		PC_plus_4_out 			: OUT  	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
+        		Add_result 					: IN 	STD_LOGIC_VECTOR( 7 DOWNTO 0 );
+        		Branch 							: IN 	STD_LOGIC;
+        		Zero 								: IN 	STD_LOGIC;
+        		PC_out 							: OUT 	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
+        		clock,reset 				: IN 	STD_LOGIC );
+	END COMPONENT;
 
 	COMPONENT Idecode
  	     PORT(	read_data_1 		: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
@@ -75,95 +86,151 @@ ARCHITECTURE structure OF MIPS IS
 	END COMPONENT;
 
 					-- declare signals used to connect VHDL components
-	SIGNAL PC_plus_4 		: STD_LOGIC_VECTOR( 9 DOWNTO 0 );
-	SIGNAL read_data_1 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-	SIGNAL read_data_2 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL PC_plus_4_1 		: STD_LOGIC_VECTOR( 9 DOWNTO 0 );
+	SIGNAL PC_plus_4_2 		: STD_LOGIC_VECTOR( 9 DOWNTO 0 );
+	SIGNAL PC_plus_4_3 		: STD_LOGIC_VECTOR( 9 DOWNTO 0 );
+
+
+	SIGNAL read_data_1_2 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL read_data_1_3 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+
+	SIGNAL read_data_2_2 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL read_data_2_3 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+
 	SIGNAL Sign_Extend 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-	SIGNAL Add_result 		: STD_LOGIC_VECTOR( 7 DOWNTO 0 );
-	SIGNAL ALU_result 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-	SIGNAL read_data 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+
+	SIGNAL Add_result_1 		: STD_LOGIC_VECTOR( 7 DOWNTO 0 );
+	SIGNAL Add_result_3 		: STD_LOGIC_VECTOR( 7 DOWNTO 0 );
+
+	SIGNAL ALU_result_2		  : STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL ALU_result_3 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL ALU_result_4 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+
+
+	SIGNAL read_data_2 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL read_data_4 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+
 	SIGNAL ALUSrc 			: STD_LOGIC;
-	SIGNAL Branch 			: STD_LOGIC;
+
+	SIGNAL Branch_1 			: STD_LOGIC;
+	SIGNAL Branch_2 			: STD_LOGIC;
+
 	SIGNAL RegDst 			: STD_LOGIC;
 	SIGNAL Regwrite 		: STD_LOGIC;
-	SIGNAL Zero 			: STD_LOGIC;
+
+	SIGNAL Zero_1 			  : STD_LOGIC;
+	SIGNAL Zero_3 			  : STD_LOGIC;
+
 	SIGNAL MemWrite 		: STD_LOGIC;
 	SIGNAL MemtoReg 		: STD_LOGIC;
 	SIGNAL MemRead 			: STD_LOGIC;
 	SIGNAL ALUop 			: STD_LOGIC_VECTOR(  1 DOWNTO 0 );
-	SIGNAL Instruction		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL Instruction_1		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL Instruction_2		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL Instruction_3		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+
 
 BEGIN
-					-- copy important signals to output pins for easy 
+					-- copy important signals to output pins for easy
 					-- display in Simulator
-   Instruction_out 	<= Instruction;
-   ALU_result_out 	<= ALU_result;
-   read_data_1_out 	<= read_data_1;
-   read_data_2_out 	<= read_data_2;
+   Instruction_out 	<= Instruction_1;
+   ALU_result_out 	<= ALU_result_2;
+   read_data_1_out 	<= read_data_1_2;
+   read_data_2_out 	<= read_data_2_2;
    write_data_out  	<= read_data WHEN MemtoReg = '1' ELSE ALU_result;
-   Branch_out 		<= Branch;
-   Zero_out 		<= Zero;
+   Branch_out 		<= Branch_1;
+   Zero_out 		<= Zero_1;
    RegWrite_out 	<= RegWrite;
-   MemWrite_out 	<= MemWrite;	
-					-- connect the 5 MIPS components   
-  IFE : Ifetch
-	PORT MAP (	Instruction 	=> Instruction,
-    	    	PC_plus_4_out 	=> PC_plus_4,
-				Add_result 		=> Add_result,
-				Branch 			=> Branch,
-				Zero 			=> Zero,
-				PC_out 			=> PC,        		
-				clock 			=> clock,  
-				reset 			=> reset );
+   MemWrite_out 	<= MemWrite;
+					-- connect the 5 MIPS components
 
+					------------------------------- 1
+  IFE : Ifetch
+	PORT MAP (	Instruction 	=> Instruction_1,
+    	    	PC_plus_4_out 	=> PC_plus_4_1,
+						Add_result 			=> Add_result_1,
+						Branch 					=> Branch_1,
+						Zero 						=> Zero,
+						PC_out 					=> PC,
+						clock 					=> clock,
+						reset 					=> reset );
+
+--          Ife/dec
+	 Instruction_A: N_dff generic map(32) port map (clock, '1', reset, Instruction_1, Instruction_2);
+	 PC_plus_4_A: N_dff generic map(10) port map (clock, '1', reset, PC_plus_4_1, PC_plus_4_2);
+
+ ---------------------------------     2
    ID : Idecode
-   	PORT MAP (	read_data_1 	=> read_data_1,
-        		read_data_2 	=> read_data_2,
-        		Instruction 	=> Instruction,
-        		read_data 		=> read_data,
-				ALU_result 		=> ALU_result,
-				RegWrite 		=> RegWrite,
-				MemtoReg 		=> MemtoReg,
-				RegDst 			=> RegDst,
-				Sign_extend 	=> Sign_extend,
-        		clock 			=> clock,  
-				reset 			=> reset );
+   	PORT MAP (	read_data_1 	=> read_data_1_2,
+        		read_data_2 	=> read_data_2_2,
+        		Instruction 	=> Instruction_2,
+        		read_data 		=> read_data_2,
+						ALU_result 		=> ALU_result_2,
+						RegWrite 		=> RegWrite,
+						MemtoReg 		=> MemtoReg,
+						RegDst 			=> RegDst,
+						Sign_extend 	=> Sign_extend,
+        		clock 			=> clock,
+						reset 			=> reset );
 
 
    CTL:   control
-	PORT MAP ( 	Opcode 			=> Instruction( 31 DOWNTO 26 ),
+	PORT MAP ( 	Opcode 			=> Instruction_2( 31 DOWNTO 26 ),
 				RegDst 			=> RegDst,
 				ALUSrc 			=> ALUSrc,
 				MemtoReg 		=> MemtoReg,
 				RegWrite 		=> RegWrite,
 				MemRead 		=> MemRead,
 				MemWrite 		=> MemWrite,
-				Branch 			=> Branch,
+				Branch 			=> Branch_2,
 				ALUop 			=> ALUop,
                 clock 			=> clock,
 				reset 			=> reset );
 
+		--          dec/EX
+	 Instruction_B: N_dff generic map(32) port map (clock, '1', reset, Instruction_2, Instruction_3);
+	 PC_plus_4_B: N_dff generic map(10) port map (clock, '1', reset, PC_plus_4_2, PC_plus_4_3);
+	 read_data_1_B: N_dff generic map(32) port map (clock, '1', reset, read_data_1_2, read_data_1_3);
+	 read_data_2_B: N_dff generic map(32) port map (clock, '1', reset, read_data_2_2, read_data_2_3);
+	 Branch_B: N_dff generic map(1) port map (clock, '1', reset, Branch_2, Branch_1);
+
+
+
+----------------------------------- 3
+
    EXE:  Execute
-   	PORT MAP (	Read_data_1 	=> read_data_1,
-             	Read_data_2 	=> read_data_2,
-				Sign_extend 	=> Sign_extend,
-                Function_opcode	=> Instruction( 5 DOWNTO 0 ),
-				ALUOp 			=> ALUop,
-				ALUSrc 			=> ALUSrc,
-				Zero 			=> Zero,
-                ALU_Result		=> ALU_Result,
-				Add_Result 		=> Add_Result,
-				PC_plus_4		=> PC_plus_4,
+   	PORT MAP (	Read_data_1 	=> read_data_1_3,
+             		Read_data_2 	=> read_data_2_3,
+								Sign_extend 	=> Sign_extend,
+                Function_opcode	=> Instruction_3( 5 DOWNTO 0 ),
+								ALUOp 			=> ALUop,
+								ALUSrc 			=> ALUSrc,
+								Zero 			=> Zero_3,
+                ALU_Result		=> ALU_result_3,
+								Add_Result 		=> Add_result_3,
+								PC_plus_4		=> PC_plus_4_3,
                 Clock			=> clock,
-				Reset			=> reset );
+								Reset			=> reset );
 
+
+		Add_result_C: N_dff generic map(8) port map (clock, '1', reset, Add_result_3, Add_result_1);
+		Zero_C: N_dff generic map(1) port map (clock, '1', reset, Zero_3, Zero_1);
+		ALU_result_C: N_dff generic map(32) port map (clock, '1', reset, ALU_result_3, ALU_result_4);
+
+
+-------------------------------- 4
    MEM:  dmemory
-	PORT MAP (	read_data 		=> read_data,
-				address 		=> ALU_Result (9 DOWNTO 2),--jump memory address by 4
-				write_data 		=> read_data_2,
-				MemRead 		=> MemRead, 
-				Memwrite 		=> MemWrite, 
-                clock 			=> clock,  
-				reset 			=> reset );
-END structure;
+	PORT MAP (	read_data 		=> read_data_4,
+							address 		=> ALU_result_4 (9 DOWNTO 2),--jump memory address by 4
+							write_data 		=> read_data_2,
+							MemRead 		=> MemRead,
+							Memwrite 		=> MemWrite,
+              clock 			=> clock,
+							reset 			=> reset );
 
+
+
+  	read_data_D: N_dff generic map(32) port map (clock, '1', reset, read_data_4, read_data_2);
+		ALU_result_D: N_dff generic map(32) port map (clock, '1', reset, ALU_result_4, ALU_result_2);
+
+END structure;

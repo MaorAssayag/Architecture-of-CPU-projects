@@ -5,16 +5,27 @@ USE IEEE.STD_LOGIC_ARITH.ALL;
 
 ENTITY MIPS IS
 
-	PORT( reset, clock					: IN 	STD_LOGIC; 
+	PORT( reset, clock					: IN 	STD_LOGIC;
 		-- Output important signals to pins for easy display in Simulator
 		PC								: OUT  STD_LOGIC_VECTOR( 9 DOWNTO 0 );
-		ALU_result_out, read_data_1_out, read_data_2_out, write_data_out,	
+		ALU_result_out, read_data_1_out, read_data_2_out, write_data_out,
      	Instruction_out					: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-		Branch_out, Zero_out, Memwrite_out, 
+		Branch_out, Zero_out, Memwrite_out,
 		Regwrite_out					: OUT 	STD_LOGIC );
 END 	MIPS;
 
 ARCHITECTURE structure OF MIPS IS
+
+		-- regs
+		component N_dff
+		generic(N: integer := 8); --defualt value for N is 8
+		port (
+				clk : in std_logic;
+				enable : in std_logic;
+				rst : in std_logic;
+				D : in STD_LOGIC_VECTOR(N-1 downto 0);
+				Q : out STD_LOGIC_VECTOR(N-1 downto 0));
+		end component;
 
 	COMPONENT Ifetch
    	     PORT(	Instruction			: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
@@ -24,7 +35,7 @@ ARCHITECTURE structure OF MIPS IS
         		Zero 				: IN 	STD_LOGIC;
         		PC_out 				: OUT 	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
         		clock,reset 		: IN 	STD_LOGIC );
-	END COMPONENT; 
+	END COMPONENT;
 
 	COMPONENT Idecode
  	     PORT(	read_data_1 		: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
@@ -91,12 +102,13 @@ ARCHITECTURE structure OF MIPS IS
 	SIGNAL MemtoReg 		: STD_LOGIC;
 	SIGNAL MemRead 			: STD_LOGIC;
 	SIGNAL ALUop 			: STD_LOGIC_VECTOR(  1 DOWNTO 0 );
-	SIGNAL Instruction		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL Instruction_1		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL Instruction_2		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 
 BEGIN
-					-- copy important signals to output pins for easy 
+					-- copy important signals to output pins for easy
 					-- display in Simulator
-   Instruction_out 	<= Instruction;
+   Instruction_out 	<= Instruction_1;
    ALU_result_out 	<= ALU_result;
    read_data_1_out 	<= read_data_1;
    read_data_2_out 	<= read_data_2;
@@ -104,29 +116,33 @@ BEGIN
    Branch_out 		<= Branch;
    Zero_out 		<= Zero;
    RegWrite_out 	<= RegWrite;
-   MemWrite_out 	<= MemWrite;	
-					-- connect the 5 MIPS components   
+   MemWrite_out 	<= MemWrite;
+					-- connect the 5 MIPS components
   IFE : Ifetch
-	PORT MAP (	Instruction 	=> Instruction,
+	PORT MAP (	Instruction 	=> Instruction_1,
     	    	PC_plus_4_out 	=> PC_plus_4,
 				Add_result 		=> Add_result,
 				Branch 			=> Branch,
 				Zero 			=> Zero,
-				PC_out 			=> PC,        		
-				clock 			=> clock,  
+				PC_out 			=> PC,
+				clock 			=> clock,
 				reset 			=> reset );
+
+--          Ife/dec
+	 Instruction: N_dff generic map(32) port map (clock, '1', reset, Instruction_2, Instruction_1);
+
 
    ID : Idecode
    	PORT MAP (	read_data_1 	=> read_data_1,
         		read_data_2 	=> read_data_2,
-        		Instruction 	=> Instruction,
+        		Instruction 	=> Instruction_2,
         		read_data 		=> read_data,
 				ALU_result 		=> ALU_result,
 				RegWrite 		=> RegWrite,
 				MemtoReg 		=> MemtoReg,
 				RegDst 			=> RegDst,
 				Sign_extend 	=> Sign_extend,
-        		clock 			=> clock,  
+        		clock 			=> clock,
 				reset 			=> reset );
 
 
@@ -161,9 +177,8 @@ BEGIN
 	PORT MAP (	read_data 		=> read_data,
 				address 		=> ALU_Result (9 DOWNTO 2),--jump memory address by 4
 				write_data 		=> read_data_2,
-				MemRead 		=> MemRead, 
-				Memwrite 		=> MemWrite, 
-                clock 			=> clock,  
+				MemRead 		=> MemRead,
+				Memwrite 		=> MemWrite,
+                clock 			=> clock,
 				reset 			=> reset );
 END structure;
-

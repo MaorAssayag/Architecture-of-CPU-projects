@@ -1,4 +1,4 @@
--- Ifetch module (provides the PC and instruction 
+-- Ifetch module (provides the PC and instruction
 --memory for the MIPS computer)
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
@@ -20,10 +20,23 @@ END Ifetch;
 ARCHITECTURE behavior OF Ifetch IS
 	SIGNAL PC, PC_plus_4 	 : STD_LOGIC_VECTOR( 9 DOWNTO 0 );
 	SIGNAL next_PC, Mem_Addr : STD_LOGIC_VECTOR( 7 DOWNTO 0 );
+	-- reg for PC
+component N_dff
+generic(N: integer := 8); --defualt value for N is 8
+port (
+clk : in std_logic;
+enable : in std_logic;
+rst : in std_logic;
+D : in STD_LOGIC_VECTOR(N-1 downto 0);
+Q : out STD_LOGIC_VECTOR(N-1 downto 0));
+end component;
+
 BEGIN
+
+
 						--ROM for Instruction Memory
 inst_memory: altsyncram
-	
+
 	GENERIC MAP (
 		operation_mode => "ROM",
 		width_a => 32,
@@ -35,7 +48,7 @@ inst_memory: altsyncram
 	)
 	PORT MAP (
 		clock0     => clock,
-		address_a 	=> Mem_Addr, 
+		address_a 	=> Mem_Addr,
 		q_a 			=> Instruction );
 					-- Instructions always start on word address - not byte
 		PC(1 DOWNTO 0) <= "00";
@@ -43,23 +56,18 @@ inst_memory: altsyncram
 		PC_out 			<= PC;
 		PC_plus_4_out 	<= PC_plus_4;
 						-- send address to inst. memory address register
+
 		Mem_Addr <= Next_PC;
-						-- Adder to increment PC by 4        
+						-- Adder to increment PC by 4
       	PC_plus_4( 9 DOWNTO 2 )  <= PC( 9 DOWNTO 2 ) + 1;
        	PC_plus_4( 1 DOWNTO 0 )  <= "00";
-						-- Mux to select Branch Address or PC + 4        
+						-- Mux to select Branch Address or PC + 4
+
 		Next_PC  <= X"00" WHEN Reset = '1' ELSE
-			Add_result  WHEN ( ( Branch = '1' ) AND ( Zero = '1' ) ) 
+			Add_result  WHEN ( ( Branch = '1' ) AND ( Zero = '1' ) )
 			ELSE   PC_plus_4( 9 DOWNTO 2 );
-	PROCESS
-		BEGIN
-			WAIT UNTIL ( clock'EVENT ) AND ( clock = '1' );
-			IF reset = '1' THEN
-				   PC( 9 DOWNTO 2) <= "00000000" ; 
-			ELSE 
-				   PC( 9 DOWNTO 2 ) <= next_PC;
-			END IF;
-	END PROCESS;
+
+
+			----------------  check
+			reg: N_dff port map (clock, '1', reset, PC( 9 DOWNTO 2 ), Next_PC);
 END behavior;
-
-
