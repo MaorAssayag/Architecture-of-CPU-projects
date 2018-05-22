@@ -1,5 +1,5 @@
 Flow report for test
-Mon May 07 18:06:44 2018
+Thu May 17 11:15:20 2018
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -38,15 +38,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +------------------------------------+------------------------------------------+
-; Flow Status                        ; Successful - Mon May 07 18:06:44 2018    ;
+; Flow Status                        ; Successful - Thu May 17 11:15:20 2018    ;
 ; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; test                                     ;
 ; Top-level Entity Name              ; FPGA_test                                ;
 ; Family                             ; Cyclone II                               ;
 ; Device                             ; EP2C20F484C6                             ;
 ; Timing Models                      ; Final                                    ;
-; Total logic elements               ; 1,348 / 18,752 ( 7 % )                   ;
-;     Total combinational functions  ; 1,344 / 18,752 ( 7 % )                   ;
+; Total logic elements               ; 1,419 / 18,752 ( 8 % )                   ;
+;     Total combinational functions  ; 1,407 / 18,752 ( 8 % )                   ;
 ;     Dedicated logic registers      ; 132 / 18,752 ( < 1 % )                   ;
 ; Total registers                    ; 132                                      ;
 ; Total pins                         ; 77 / 315 ( 24 % )                        ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/07/2018 18:05:56 ;
+; Start date & time ; 05/17/2018 11:14:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; test                ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 88491855731421.152570555624852        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 88491855731421.152654487311028        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
@@ -84,6 +84,9 @@ applicable agreement for further details.
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
+; RTLV_GROUP_RELATED_NODES            ; Off                                   ; On            ; --          ; --             ;
+; RTLV_REMOVE_FANOUT_FREE_REGISTERS   ; Off                                   ; On            ; --          ; --             ;
+; RTLV_SIMPLIFIED_LOGIC               ; Off                                   ; On            ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                    ; FPGA_test                             ; test          ; --          ; --             ;
 ; VHDL_INPUT_VERSION                  ; VHDL_2008                             ; VHDL_1993     ; --          ; --             ;
 ; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                   ; --            ; --          ; --             ;
@@ -95,12 +98,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 465 MB              ; 00:00:19                           ;
-; Fitter                    ; 00:00:15     ; 1.0                     ; 508 MB              ; 00:00:15                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 421 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 376 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 371 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:41     ; --                      ; --                  ; 00:00:40                           ;
+; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 470 MB              ; 00:00:20                           ;
+; Fitter                    ; 00:00:14     ; 1.4                     ; 551 MB              ; 00:00:17                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 436 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 409 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 392 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:41     ; --                      ; --                  ; 00:00:42                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
