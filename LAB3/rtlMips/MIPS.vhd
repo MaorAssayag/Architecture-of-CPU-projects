@@ -183,7 +183,7 @@ BEGIN
 						ALU_result 		=> ALU_result_2,
 						RegWrite 		=> Regwrite_2,
 						MemtoReg 		=> MemtoReg_2,
-						RegDst 			=> RegDst,
+						RegDst 			=> RegDst_2,
 						Sign_extend 	=> Sign_extend,
         		clock 			=> clock,
 						reset 			=> reset );
@@ -191,7 +191,7 @@ BEGIN
 
    CTL:   control
 	PORT MAP ( 	Opcode 			=> Instruction_2( 31 DOWNTO 26 ),
-				RegDst 			=> RegDst,
+				RegDst 			=> RegDst_control,
 				ALUSrc 			=> ALUSrc,
 				MemtoReg 		=> MemtoReg_control,
 				RegWrite 		=> Regwrite_control,
@@ -210,6 +210,7 @@ BEGIN
 	 Branch_B: N_dff generic map(1) port map (clock, '1', reset, Branch_2, Branch_1);
 	 Regwrite_control_B: N_dff generic map(1) port map (clock, '1', reset, Regwrite_control, Regwrite_3);
 	 MemtoReg_control_B: N_dff generic map(1) port map (clock, '1', reset, MemtoReg_control, MemtoReg_3);
+	 RegDst_control_B: N_dff generic map(1) port map (clock, '1', reset, RegDst_control, RegDst_3;
 
 
 
@@ -236,6 +237,7 @@ BEGIN
 		ALU_result_C: N_dff generic map(32) port map (clock, '1', reset, ALU_result_3, ALU_result_4);
 		Regwrite_control_C: N_dff generic map(1) port map (clock, '1', reset, Regwrite_3, Regwrite_4);
 		MemtoReg_control_C: N_dff generic map(1) port map (clock, '1', reset, MemtoReg_3, MemtoReg_4);
+		RegDst_control_C: N_dff generic map(1) port map (clock, '1', reset, RegDst_3, RegDst_4;
 
 
 
@@ -255,6 +257,7 @@ BEGIN
 		ALU_result_D: N_dff generic map(32) port map (clock, '1', reset, ALU_result_4, ALU_result_2);
 		Regwrite_control_D: N_dff generic map(1) port map (clock, '1', reset, Regwrite_3, Regwrite_2);
 		MemtoReg_control_D: N_dff generic map(1) port map (clock, '1', reset, MemtoReg_4, MemtoReg_2);
+		RegDst_control_C: N_dff generic map(1) port map (clock, '1', reset, RegDst_4, RegDst_2;
 
 
 END structure;
