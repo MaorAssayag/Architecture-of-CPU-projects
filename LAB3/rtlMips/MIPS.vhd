@@ -115,7 +115,11 @@ ARCHITECTURE structure OF MIPS IS
 	SIGNAL Branch_1 			: STD_LOGIC;
 	SIGNAL Branch_2 			: STD_LOGIC;
 
-	SIGNAL RegDst 			: STD_LOGIC;
+	SIGNAL RegDst_2 			: STD_LOGIC;
+	SIGNAL RegDst_3 			: STD_LOGIC;
+	SIGNAL RegDst_4 			: STD_LOGIC;
+	SIGNAL RegDst_control 			: STD_LOGIC;
+
 
 	SIGNAL Regwrite_2 		: STD_LOGIC;
 	SIGNAL Regwrite_3 		: STD_LOGIC;
