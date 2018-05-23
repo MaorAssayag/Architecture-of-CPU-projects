@@ -32,7 +32,6 @@ component FPU_Unit
 end component;
 signal FPU_result : signed(31 downto 0);
 signal slt_FPU_flag : STD_LOGIC;
-signal temp : std_logic_vector(31 downto 0);
 ------------
 
 SIGNAL Ainput, Binput 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
