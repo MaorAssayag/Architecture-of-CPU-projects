@@ -119,7 +119,9 @@ ARCHITECTURE structure OF MIPS IS
 	SIGNAL read_data_2 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL read_data_4 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 
-	SIGNAL ALUSrc 			: STD_LOGIC;
+	SIGNAL ALUSrc_control 			: STD_LOGIC;
+	SIGNAL ALUSrc_3 		      	: STD_LOGIC;
+
 
 	SIGNAL Branch_1 			: STD_LOGIC;
 	SIGNAL Branch_2 			: STD_LOGIC;
@@ -141,7 +143,10 @@ ARCHITECTURE structure OF MIPS IS
 	SIGNAL Zero_4 			  : STD_LOGIC;
 
 
-	SIGNAL MemWrite 		: STD_LOGIC;
+	SIGNAL MemWrite_control 		: STD_LOGIC;
+	SIGNAL MemWrite_3 		: STD_LOGIC;
+	SIGNAL MemWrite_4 		: STD_LOGIC;
+
 
 	SIGNAL MemtoReg_2 		: STD_LOGIC;
 	SIGNAL MemtoReg_3		: STD_LOGIC;
@@ -150,7 +155,10 @@ ARCHITECTURE structure OF MIPS IS
 
 
 	SIGNAL MemRead 			: STD_LOGIC;
-	SIGNAL ALUop 			: STD_LOGIC_VECTOR(  1 DOWNTO 0 );
+
+	SIGNAL ALUop_control 			: STD_LOGIC_VECTOR(  1 DOWNTO 0 );
+	SIGNAL ALUop_3 			      : STD_LOGIC_VECTOR(  1 DOWNTO 0 );
+
 	SIGNAL Instruction_1		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL Instruction_2		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL Instruction_3		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
@@ -167,7 +175,7 @@ BEGIN
    Branch_out 		<= Branch_1;
    Zero_out 		<= Zero_1;
    RegWrite_out 	<= Regwrite_2;
-   MemWrite_out 	<= MemWrite;
+   MemWrite_out 	<= MemWrite_4;
 					-- connect the 5 MIPS components
 
 					------------------------------- 1
@@ -203,13 +211,13 @@ BEGIN
    CTL:   control
 	PORT MAP ( 	Opcode 			=> Instruction_2( 31 DOWNTO 26 ),
 				RegDst 			=> RegDst_control,
-				ALUSrc 			=> ALUSrc,
+				ALUSrc 			=> ALUSrc_control,
 				MemtoReg 		=> MemtoReg_control,
 				RegWrite 		=> Regwrite_control,
 				MemRead 		=> MemRead,
-				MemWrite 		=> MemWrite,
+				MemWrite 		=> MemWrite_control,
 				Branch 			=> Branch_2,
-				ALUop 			=> ALUop,
+				ALUop 			=> ALUop_control,
         clock 			=> clock,
 				reset 			=> reset );
 
@@ -218,10 +226,14 @@ BEGIN
 	 PC_plus_4_B: N_dff generic map(10) port map (clock, '1', reset, PC_plus_4_2, PC_plus_4_3);
 	 read_data_1_B: N_dff generic map(32) port map (clock, '1', reset, read_data_1_2, read_data_1_3);
 	 read_data_2_B: N_dff generic map(32) port map (clock, '1', reset, read_data_2_2, read_data_2_3);
+	 ALUop_control_B: N_dff generic map(2) port map (clock, '1', reset, ALUop_control, ALUop_3);
 	 Branch_B: dff_1bit port map (clock, '1', reset, Branch_2, Branch_1);
 	 Regwrite_control_B: dff_1bit port map (clock, '1', reset, Regwrite_control, Regwrite_3);
 	 MemtoReg_control_B: dff_1bit port map (clock, '1', reset, MemtoReg_control, MemtoReg_3);
 	 RegDst_control_B: dff_1bit port map (clock, '1', reset, RegDst_control, RegDst_3);
+	 MemWrite_control_B: dff_1bit port map (clock, '1', reset, MemWrite_control, MemWrite_3);
+	 ALUSrc_control_B: dff_1bit port map (clock, '1', reset, ALUSrc_control, ALUSrc_3);
+
 
 
 
@@ -233,8 +245,8 @@ BEGIN
              		Read_data_2 	=> read_data_2_3,
 								Sign_extend 	=> Sign_extend,
                 Function_opcode	=> Instruction_3( 5 DOWNTO 0 ),
-								ALUOp 			=> ALUop,
-								ALUSrc 			=> ALUSrc,
+								ALUOp 			=> ALUop_3,
+								ALUSrc 			=> ALUSrc_3,
 								Zero 			=> Zero_3,
                 ALU_Result		=> ALU_result_3,
 								Add_Result 		=> Add_result_3,
@@ -249,6 +261,7 @@ BEGIN
 		Regwrite_control_C: dff_1bit port map (clock, '1', reset, Regwrite_3, Regwrite_4);
 		MemtoReg_control_C: dff_1bit port map (clock, '1', reset, MemtoReg_3, MemtoReg_4);
 		RegDst_control_C: dff_1bit port map (clock, '1', reset, RegDst_3, RegDst_4);
+		MemWrite_C: dff_1bit port map (clock, '1', reset, MemWrite_3, MemWrite_4);
 
 
 
@@ -258,7 +271,7 @@ BEGIN
 							address 		=> ALU_result_4 (9 DOWNTO 2),--jump memory address by 4
 							write_data 		=> read_data_2,
 							MemRead 		=> MemRead,
-							Memwrite 		=> MemWrite,
+							Memwrite 		=> MemWrite_4,
               clock 			=> clock,
 							reset 			=> reset );
 
