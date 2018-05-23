@@ -85,6 +85,15 @@ ARCHITECTURE structure OF MIPS IS
         		Clock,reset			: IN 	STD_LOGIC );
 	END COMPONENT;
 
+			component dff_1bit
+					  port (
+								clk : in std_logic;
+								en : in std_logic;
+								rst : in std_logic;
+								d : in std_logic;
+								q : out std_logic);
+		 end component;
+
 					-- declare signals used to connect VHDL components
 	SIGNAL PC_plus_4_1 		: STD_LOGIC_VECTOR( 9 DOWNTO 0 );
 	SIGNAL PC_plus_4_2 		: STD_LOGIC_VECTOR( 9 DOWNTO 0 );
@@ -129,6 +138,8 @@ ARCHITECTURE structure OF MIPS IS
 
 	SIGNAL Zero_1 			  : STD_LOGIC;
 	SIGNAL Zero_3 			  : STD_LOGIC;
+	SIGNAL Zero_4 			  : STD_LOGIC;
+
 
 	SIGNAL MemWrite 		: STD_LOGIC;
 
@@ -152,7 +163,7 @@ BEGIN
    ALU_result_out 	<= ALU_result_2;
    read_data_1_out 	<= read_data_1_2;
    read_data_2_out 	<= read_data_2_2;
-   write_data_out  	<= read_data WHEN MemtoReg_2 = '1' ELSE ALU_result;
+   write_data_out  	<= read_data_2 WHEN MemtoReg_2 = '1' ELSE ALU_result_4;
    Branch_out 		<= Branch_1;
    Zero_out 		<= Zero_1;
    RegWrite_out 	<= Regwrite_2;
@@ -165,7 +176,7 @@ BEGIN
     	    	PC_plus_4_out 	=> PC_plus_4_1,
 						Add_result 			=> Add_result_1,
 						Branch 					=> Branch_1,
-						Zero 						=> Zero,
+						Zero 						=> Zero_1,
 						PC_out 					=> PC,
 						clock 					=> clock,
 						reset 					=> reset );
@@ -207,10 +218,10 @@ BEGIN
 	 PC_plus_4_B: N_dff generic map(10) port map (clock, '1', reset, PC_plus_4_2, PC_plus_4_3);
 	 read_data_1_B: N_dff generic map(32) port map (clock, '1', reset, read_data_1_2, read_data_1_3);
 	 read_data_2_B: N_dff generic map(32) port map (clock, '1', reset, read_data_2_2, read_data_2_3);
-	 Branch_B: N_dff generic map(1) port map (clock, '1', reset, Branch_2, Branch_1);
-	 Regwrite_control_B: N_dff generic map(1) port map (clock, '1', reset, Regwrite_control, Regwrite_3);
-	 MemtoReg_control_B: N_dff generic map(1) port map (clock, '1', reset, MemtoReg_control, MemtoReg_3);
-	 RegDst_control_B: N_dff generic map(1) port map (clock, '1', reset, RegDst_control, RegDst_3;
+	 Branch_B: dff_1bit port map (clock, '1', reset, Branch_2, Branch_1);
+	 Regwrite_control_B: dff_1bit port map (clock, '1', reset, Regwrite_control, Regwrite_3);
+	 MemtoReg_control_B: dff_1bit port map (clock, '1', reset, MemtoReg_control, MemtoReg_3);
+	 RegDst_control_B: dff_1bit port map (clock, '1', reset, RegDst_control, RegDst_3);
 
 
 
@@ -233,11 +244,11 @@ BEGIN
 
 
 		Add_result_C: N_dff generic map(8) port map (clock, '1', reset, Add_result_3, Add_result_1);
-		Zero_C: N_dff generic map(1) port map (clock, '1', reset, Zero_3, Zero_1);
+		Zero_C: dff_1bit port map (clock, '1', reset, Zero_3, Zero_4);
 		ALU_result_C: N_dff generic map(32) port map (clock, '1', reset, ALU_result_3, ALU_result_4);
-		Regwrite_control_C: N_dff generic map(1) port map (clock, '1', reset, Regwrite_3, Regwrite_4);
-		MemtoReg_control_C: N_dff generic map(1) port map (clock, '1', reset, MemtoReg_3, MemtoReg_4);
-		RegDst_control_C: N_dff generic map(1) port map (clock, '1', reset, RegDst_3, RegDst_4;
+		Regwrite_control_C: dff_1bit port map (clock, '1', reset, Regwrite_3, Regwrite_4);
+		MemtoReg_control_C: dff_1bit port map (clock, '1', reset, MemtoReg_3, MemtoReg_4);
+		RegDst_control_C: dff_1bit port map (clock, '1', reset, RegDst_3, RegDst_4);
 
 
 
@@ -255,9 +266,11 @@ BEGIN
 
   	read_data_D: N_dff generic map(32) port map (clock, '1', reset, read_data_4, read_data_2);
 		ALU_result_D: N_dff generic map(32) port map (clock, '1', reset, ALU_result_4, ALU_result_2);
-		Regwrite_control_D: N_dff generic map(1) port map (clock, '1', reset, Regwrite_3, Regwrite_2);
-		MemtoReg_control_D: N_dff generic map(1) port map (clock, '1', reset, MemtoReg_4, MemtoReg_2);
-		RegDst_control_C: N_dff generic map(1) port map (clock, '1', reset, RegDst_4, RegDst_2;
+		Regwrite_control_D: dff_1bit port map (clock, '1', reset, Regwrite_3, Regwrite_2);
+		MemtoReg_control_D: dff_1bit port map (clock, '1', reset, MemtoReg_4, MemtoReg_2);
+		RegDst_control_D: dff_1bit port map (clock, '1', reset, RegDst_4, RegDst_2);
+		Zero_D: dff_1bit port map (clock, '1', reset, Zero_4, Zero_1);
+
 
 
 END structure;
