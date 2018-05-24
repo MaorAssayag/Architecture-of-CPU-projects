@@ -8,7 +8,8 @@ ENTITY HAZARD IS
    PORT(
 	      Instruction 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	      data_hazard_en 		 : OUT 	STD_LOGIC;
-      	clock, reset	   : IN 	STD_LOGIC );
+      	clock, reset	   : IN 	STD_LOGIC
+         );
 END HAZARD;
 
 
@@ -46,7 +47,7 @@ dataH4_reg: N_dff port map (clock,'1', reset, regdes, dataH44);
 dataH3_reg: N_dff port map (clock,'1', reset, dataH44, dataH33);
 dataH2_reg: N_dff port map (clock,'1', reset, dataH33, dataH22);
 dataH1_reg: N_dff port map (clock,'1', reset, dataH22, dataH11);
-data_hazard_en <='0' when (   regS = dataH33 or regT = dataH33 or regT = dataH22  or regS = dataH22 )  else  '1'   ;
+data_hazard_en <='0' when (regS = dataH44 OR regT = dataH44 OR  regS = dataH33 or regT = dataH33 or regT = dataH22  or regS = dataH22 )  else  '1'   ;
 
 
 END behavior;

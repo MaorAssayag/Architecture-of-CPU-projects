@@ -53,7 +53,7 @@ begin
   INS: process
   begin
     wait for 10 ns;
-    Instruction <= "10001100000010010001100001000000";
+    Instruction <= "10110110100010010001100001000000";
     wait for 20 ns;
     Instruction <= "10001000010001111111000000000001";
     wait for 20 ns;
@@ -61,9 +61,9 @@ begin
     wait for 20 ns;
     Instruction <= "10001000010001110111000000000001";
     wait for 20 ns;
-    Instruction <= "10001001000111110111000000000001";
+    Instruction <= "10111100100011111011100000000001";
     wait for 20 ns;
-    Instruction <= "10001000010001111011000000000001";
+    Instruction <= "10001000010001110111000000000001";
     wait for 20 ns;
     Instruction <= "10001000010001110011000000000001";
   end process;
