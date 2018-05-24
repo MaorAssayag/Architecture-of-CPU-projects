@@ -21,8 +21,8 @@ entity N_dff is
         clk : in std_logic;
         enable : in std_logic;
         rst : in std_logic;
-        D : in signed(N-1 downto 0);
-        Q : out signed(N-1 downto 0));
+        D : in STD_LOGIC_VECTOR(N-1 downto 0);
+        Q : out STD_LOGIC_VECTOR(N-1 downto 0));
 end N_dff;
 
  -- Architecture Definition
