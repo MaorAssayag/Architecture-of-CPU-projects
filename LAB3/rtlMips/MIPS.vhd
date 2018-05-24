@@ -34,7 +34,7 @@ ARCHITECTURE structure OF MIPS IS
         		Branch 							: IN 	STD_LOGIC;
         		Zero 								: IN 	STD_LOGIC;
         		PC_out 							: OUT 	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
-        		clock,reset 				: IN 	STD_LOGIC );
+        		clock,reset ,data_hazard_en_fetch				: IN 	STD_LOGIC );
 	END COMPONENT;
 
 	COMPONENT Idecode
@@ -94,6 +94,14 @@ ARCHITECTURE structure OF MIPS IS
 								d : in std_logic;
 								q : out std_logic);
 		 end component;
+
+		 component HAZARD
+	   port (
+	         Instruction 		: IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	         data_hazard_en 		 : OUT 	STD_LOGIC;
+	         clock, reset	: IN 	STD_LOGIC
+	   );
+	  end component;
 
 					-- declare signals used to connect VHDL components
 	SIGNAL PC_plus_4_1 		: STD_LOGIC_VECTOR( 9 DOWNTO 0 );
@@ -171,6 +179,7 @@ ARCHITECTURE structure OF MIPS IS
 	SIGNAL Instruction_4		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL Instruction_old		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 
+	SIGNAL data_hazard_en 		: STD_LOGIC;
 
 
 
@@ -186,7 +195,21 @@ BEGIN
    Zero_out 		<= Zero_1;
    RegWrite_out 	<= Regwrite_2;
    MemWrite_out 	<= MemWrite_4;
+
+
+----------------------- HAZARD
+
+	HAZ :  HAZARD
+		port map (
+						Instruction => Instruction_1,
+						data_hazard_en => data_hazard_en,
+						clock => clock,
+						reset => reset
+	);
+
+
 					-- connect the 5 MIPS components
+
 
 					------------------------------- 1
   IFE : Ifetch
@@ -197,11 +220,12 @@ BEGIN
 						Zero 						=> Zero_1,
 						PC_out 					=> PC,
 						clock 					=> clock,
-						reset 					=> reset );
+						reset 					=> reset,
+						data_hazard_en_fetch => data_hazard_en );
 
 --          Ife/dec
-	 Instruction_A: N_dff generic map(32) port map (clock, '1', reset, Instruction_1, Instruction_2);
-	 PC_plus_4_A: N_dff generic map(10) port map (clock, '1', reset, PC_plus_4_1, PC_plus_4_2);
+	 Instruction_A: N_dff generic map(32) port map (clock, data_hazard_en, reset, Instruction_1, Instruction_2);
+	 PC_plus_4_A: N_dff generic map(10) port map (clock, data_hazard_en, reset, PC_plus_4_1, PC_plus_4_2);
 
  ---------------------------------     2
    ID : Idecode

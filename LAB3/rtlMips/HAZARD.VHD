@@ -6,16 +6,16 @@ USE IEEE.STD_LOGIC_SIGNED.ALL;
 
 ENTITY HAZARD IS
    PORT(
-	      Instruction 		: IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-	      data_hazard 		 : OUT 	STD_LOGIC;
-      	clock, reset	: IN 	STD_LOGIC );
-        dataH1,dataH2,dataH3	: OUT STD_LOGIC_VECTOR( 4 DOWNTO 0 );
-
-
+	      Instruction 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	      data_hazard_en 		 : OUT 	STD_LOGIC;
+      	clock, reset	   : IN 	STD_LOGIC );
 END HAZARD;
 
+
+
+ARCHITECTURE behavior OF HAZARD IS
 component N_dff
-    generic(N: integer := 8); --defualt value for N is 8
+    generic(N: integer := 5); --defualt value for N is 8
     port (
         clk : in std_logic;
         enable : in std_logic;
@@ -24,16 +24,29 @@ component N_dff
         Q : out STD_LOGIC_VECTOR(N-1 downto 0));
 end component;
 
-ARCHITECTURE behavior OF HAZARD IS
 
-	SIGNAL  dataH1,dataH2,dataH3	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+
+
+SIGNAL  dataH11,dataH22,dataH33,dataH44	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+SIGNAL  regdes	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+SIGNAL  regdesbef	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+SIGNAL  regS	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+SIGNAL  regT	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+
+
 
 BEGIN
 
-dataH3_reg: N_dff port map (clock,'1', reset, Instruction( 15 DOWNTO 11 ), dataH3);
-dataH2_reg: N_dff port map (clock,'1', reset, dataH3, dataH2);
-dataH1_reg: N_dff port map (clock,'1', reset, dataH2, dataH1);
-data_hazard => '1';
+
+regdesbef <= Instruction( 15 DOWNTO 11 );
+regS 	<= Instruction( 25 DOWNTO 21 );
+regT	<= Instruction( 20 DOWNTO 16 );
+regdes <= regdesbef when (regS /= dataH44 OR regT /= dataH44 OR regS /= dataH33 OR regT /= dataH33 OR regT /= dataH22  OR regS /= dataH22 ) else "00000";
+dataH4_reg: N_dff port map (clock,'1', reset, regdes, dataH44);
+dataH3_reg: N_dff port map (clock,'1', reset, dataH44, dataH33);
+dataH2_reg: N_dff port map (clock,'1', reset, dataH33, dataH22);
+dataH1_reg: N_dff port map (clock,'1', reset, dataH22, dataH11);
+data_hazard_en <='0' when (   regS = dataH33 or regT = dataH33 or regT = dataH22  or regS = dataH22 )  else  '1'   ;
 
 
 END behavior;

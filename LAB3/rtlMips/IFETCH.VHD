@@ -14,7 +14,8 @@ ENTITY Ifetch IS
         	SIGNAL Branch 			: IN 	STD_LOGIC;
         	SIGNAL Zero 			: IN 	STD_LOGIC;
       		SIGNAL PC_out 			: OUT	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
-        	SIGNAL clock, reset 	: IN 	STD_LOGIC);
+        	SIGNAL clock, reset,data_hazard_en_fetch 	: IN 	STD_LOGIC
+					);
 END Ifetch;
 
 ARCHITECTURE behavior OF Ifetch IS
@@ -30,10 +31,11 @@ port (
 		D : in STD_LOGIC_VECTOR(N-1 downto 0);
 		Q : out STD_LOGIC_VECTOR(N-1 downto 0));
 end component;
+SIGNAL tempclock :STD_LOGIC;
 
 BEGIN
 
-
+ tempclock <= clock and data_hazard_en_fetch;
 						--ROM for Instruction Memory
 inst_memory: altsyncram
 
@@ -47,7 +49,7 @@ inst_memory: altsyncram
 		intended_device_family => "Cyclone"
 	)
 	PORT MAP (
-		clock0     => clock,
+		clock0     => tempclock ,
 		address_a 	=> Mem_Addr,
 		q_a 			=> Instruction );
 					-- Instructions always start on word address - not byte
