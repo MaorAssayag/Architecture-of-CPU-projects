@@ -7,6 +7,7 @@ USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 ENTITY Idecode IS
 	  PORT(	read_data_1	: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 			read_data_2	: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+			old_Instruction : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 			Instruction : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 			read_data 	: IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 			ALU_result	: IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
@@ -33,14 +34,18 @@ TYPE register_file IS ARRAY ( 0 TO 31 ) OF STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 BEGIN
 	read_register_1_address 	<= Instruction( 25 DOWNTO 21 );
    	read_register_2_address 	<= Instruction( 20 DOWNTO 16 );
-   	write_register_address_1	<= Instruction( 15 DOWNTO 11 );
-   	write_register_address_0 	<= Instruction( 20 DOWNTO 16 );
+   	write_register_address_1	<= old_Instruction( 15 DOWNTO 11 );
+   	write_register_address_0 	<= old_Instruction( 20 DOWNTO 16 );
    	Instruction_immediate_value <= Instruction( 15 DOWNTO 0 );
 					-- Read Register 1 Operation
-	read_data_1 <= register_array(
+	read_data_1 <= write_data
+	WHEN write_register_address = read_register_1_address
+	ELSE register_array(
 			      CONV_INTEGER( read_register_1_address ) );
 					-- Read Register 2 Operation
-	read_data_2 <= register_array(
+	read_data_2 <= write_data
+	WHEN write_register_address = read_register_2_address
+	ELSE register_array(
 			      CONV_INTEGER( read_register_2_address ) );
 					-- Mux for Register Write Address
     	write_register_address <= write_register_address_1

@@ -24,11 +24,11 @@ ARCHITECTURE behavior OF Ifetch IS
 component N_dff
 generic(N: integer := 8); --defualt value for N is 8
 port (
-clk : in std_logic;
-enable : in std_logic;
-rst : in std_logic;
-D : in STD_LOGIC_VECTOR(N-1 downto 0);
-Q : out STD_LOGIC_VECTOR(N-1 downto 0));
+		clk : in std_logic;
+		enable : in std_logic;
+		rst : in std_logic;
+		D : in STD_LOGIC_VECTOR(N-1 downto 0);
+		Q : out STD_LOGIC_VECTOR(N-1 downto 0));
 end component;
 
 BEGIN
@@ -69,5 +69,5 @@ inst_memory: altsyncram
 
 
 			----------------  check
-			reg: N_dff port map (clock, '1', reset, PC( 9 DOWNTO 2 ), Next_PC);
+			reg: N_dff port map (clock, '1', reset, Next_PC,PC( 9 DOWNTO 2 ));
 END behavior;

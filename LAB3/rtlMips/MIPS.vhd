@@ -40,6 +40,7 @@ ARCHITECTURE structure OF MIPS IS
 	COMPONENT Idecode
  	     PORT(	read_data_1 		: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
         		read_data_2 		: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+						old_Instruction : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
         		Instruction 		: IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
         		read_data 			: IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
         		ALU_result 			: IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
@@ -126,6 +127,7 @@ ARCHITECTURE structure OF MIPS IS
 
 
 	SIGNAL Branch_1 			      : STD_LOGIC;
+	SIGNAL Branch_3 			      : STD_LOGIC;
 	SIGNAL Branch_control 			: STD_LOGIC;
 
 	SIGNAL RegDst_2 			: STD_LOGIC;
@@ -142,7 +144,6 @@ ARCHITECTURE structure OF MIPS IS
 
 	SIGNAL Zero_1 			  : STD_LOGIC;
 	SIGNAL Zero_3 			  : STD_LOGIC;
-	SIGNAL Zero_4 			  : STD_LOGIC;
 
 
 	SIGNAL MemWrite_control 		: STD_LOGIC;
@@ -167,6 +168,10 @@ ARCHITECTURE structure OF MIPS IS
 	SIGNAL Instruction_1		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL Instruction_2		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL Instruction_3		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL Instruction_4		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL Instruction_old		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+
+
 
 
 BEGIN
@@ -202,6 +207,7 @@ BEGIN
    ID : Idecode
    	PORT MAP (	read_data_1 	=> read_data_1_2,
         		read_data_2 	=> read_data_2_2,
+						old_Instruction =>Instruction_old,
         		Instruction 	=> Instruction_2,
         		read_data 		=> read_data_2,
 						ALU_result 		=> ALU_result_2,
@@ -233,7 +239,7 @@ BEGIN
 	 read_data_2_B: N_dff generic map(32) port map (clock, '1', reset, read_data_2_2, read_data_2_3);
 	 Sign_Extend_2_B: N_dff generic map(32) port map (clock, '1', reset, Sign_Extend_2, Sign_Extend_3);
 	 ALUop_control_B: N_dff generic map(2) port map (clock, '1', reset, ALUop_control, ALUop_3);
-	 Branch_control_B: dff_1bit port map (clock, '1', reset, Branch_control, Branch_1);
+	 Branch_control_B: dff_1bit port map (clock, '1', reset, Branch_control, Branch_3);
 	 Regwrite_control_B: dff_1bit port map (clock, '1', reset, Regwrite_control, Regwrite_3);
 	 MemtoReg_control_B: dff_1bit port map (clock, '1', reset, MemtoReg_control, MemtoReg_3);
 	 RegDst_control_B: dff_1bit port map (clock, '1', reset, RegDst_control, RegDst_3);
@@ -261,15 +267,16 @@ BEGIN
                 Clock			=> clock,
 								Reset			=> reset );
 
-
+		Instruction_C: N_dff generic map(32) port map (clock, '1', reset, Instruction_3, Instruction_4);
 		Add_result_C: N_dff generic map(8) port map (clock, '1', reset, Add_result_3, Add_result_1);
-		Zero_C: dff_1bit port map (clock, '1', reset, Zero_3, Zero_4);
+		Zero_C: dff_1bit port map (clock, '1', reset, Zero_3, Zero_1);
 		ALU_result_C: N_dff generic map(32) port map (clock, '1', reset, ALU_result_3, ALU_result_4);
 		Regwrite_control_C: dff_1bit port map (clock, '1', reset, Regwrite_3, Regwrite_4);
 		MemtoReg_control_C: dff_1bit port map (clock, '1', reset, MemtoReg_3, MemtoReg_4);
 		RegDst_control_C: dff_1bit port map (clock, '1', reset, RegDst_3, RegDst_4);
 		MemWrite_C: dff_1bit port map (clock, '1', reset, MemWrite_3, MemWrite_4);
 		MemRead_control_C: dff_1bit port map (clock, '1', reset, MemRead_3, MemRead_4);
+		Branch_control_C: dff_1bit port map (clock, '1', reset, Branch_3, Branch_1);
 
 
 
@@ -284,13 +291,12 @@ BEGIN
 							reset 			=> reset );
 
 
-
+		Instruction_D: N_dff generic map(32) port map (clock, '1', reset, Instruction_4, Instruction_old);
   	read_data_D: N_dff generic map(32) port map (clock, '1', reset, read_data_4, read_data_2);
 		ALU_result_D: N_dff generic map(32) port map (clock, '1', reset, ALU_result_4, ALU_result_2);
-		Regwrite_control_D: dff_1bit port map (clock, '1', reset, Regwrite_3, Regwrite_2);
+		Regwrite_control_D: dff_1bit port map (clock, '1', reset, Regwrite_4, Regwrite_2);
 		MemtoReg_control_D: dff_1bit port map (clock, '1', reset, MemtoReg_4, MemtoReg_2);
 		RegDst_control_D: dff_1bit port map (clock, '1', reset, RegDst_4, RegDst_2);
-		Zero_D: dff_1bit port map (clock, '1', reset, Zero_4, Zero_1);
 
 
 
