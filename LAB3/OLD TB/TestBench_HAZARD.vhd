@@ -29,7 +29,7 @@ constant N : integer := 8;
 signal clk : std_logic := '0';
 signal Instruction :STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 signal data_hazard_en : std_logic;
-SIGNAL  dataH1,dataH2,dataH3	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+--SIGNAL  dataH1,dataH2,dataH3	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
 begin
 ----------------------------------------
   clock1: process
@@ -57,9 +57,9 @@ begin
     wait for 20 ns;
     Instruction <= "10001000010001111111000000000001";
     wait for 20 ns;
-    Instruction <= "10001000101001011100000000000001";
+    Instruction <= "10001000101001011010000000000001";
     wait for 20 ns;
-    Instruction <= "10001000010001110111000000000001";
+    Instruction <= "10110110100010010001100001000000";
     wait for 20 ns;
     Instruction <= "10111100100011111011100000000001";
     wait for 20 ns;
