@@ -24,11 +24,7 @@ SIGNAL Ainput, Binput 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 SIGNAL ALU_output_mux		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 SIGNAL Branch_Add 			: STD_LOGIC_VECTOR( 7 DOWNTO 0 );
 BEGIN
-Ainput_signed <= signed(Ainput);
-Binput_signed <= signed(Binput);
--- ADD
--- Floating point UNIT
---------------
+
 
 	Ainput <= Read_data_1_branch;
 	-- ALU input mux

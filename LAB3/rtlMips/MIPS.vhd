@@ -10,7 +10,7 @@ ENTITY MIPS IS
 		PC								: OUT  STD_LOGIC_VECTOR( 9 DOWNTO 0 );
 		ALU_result_out, read_data_1_out, read_data_2_out, write_data_out,
      	Instruction_out					: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-		Branch_out, Zero_out, Memwrite_out,
+		Branch_out_Beq,Branch_out_Bne, Zero_out, Memwrite_out,
 		Regwrite_out					: OUT 	STD_LOGIC );
 END 	MIPS;
 
@@ -209,7 +209,8 @@ BEGIN
    read_data_1_out 	<= read_data_1_2;
    read_data_2_out 	<= read_data_2_2;
    write_data_out  	<= read_data_2 WHEN MemtoReg_2 = '1' ELSE ALU_result_4;
-   Branch_out 		<= Branch_1;
+   Branch_out_Beq 		<= Branch_control_Beq;
+	 Branch_out_Bne <= Branch_control_Bne;
    Zero_out 		<= Zero_1;
    RegWrite_out 	<= Regwrite_2;
    MemWrite_out 	<= MemWrite_4;
@@ -283,18 +284,18 @@ BEGIN
 
 
 
-			 CTL: Execute_branch
-					PORT MAP(	Read_data_1_branch =>	read_data_1_2,
-								Read_data_2_branch => read_data_2_2,
-								Sign_extend_branch 		=> Sign_Extend_2,
-								ALUOp_branch 		=> ALUop_control,
-								ALUSrc_branch 		=> ALUSrc_control,
-								Zero_branch 		     	=> Zero_1,
-								Add_Result_branch 	=> Add_result_1,
-								PC_plus_4_branch 		=> PC_plus_4_2,
-								clock	=> clock,
-								 reset		=> reset
-								  );
+		 EXE_brn: Execute_branch
+				PORT MAP(	Read_data_1_branch =>	read_data_1_2,
+						Read_data_2_branch => read_data_2_2,
+							Sign_extend_branch 		=> Sign_Extend_2,
+							ALUOp_branch 		=> ALUop_control,
+							ALUSrc_branch 		=> ALUSrc_control,
+							Zero_branch 		     	=> Zero_1,
+							Add_Result_branch 	=> Add_result_1,
+							PC_plus_4_branch 		=> PC_plus_4_2,
+							clock	=> clock,
+							 reset		=> reset
+							  );
 
 		--          dec/EX
 	 Instruction_B: N_dff generic map(32) port map (clock, '1', reset, Instruction_2, Instruction_3);

@@ -58,7 +58,8 @@ BEGIN
 
 
 ---------------------------------  branch HAZARD
-Branch_en <=  ( (( Branch_Beq_f = '1' ) AND ( Zero = '1' )) or (( Branch_Bne_f = '1' ) AND ( Zero = '0' )) );
+Branch_en <= '1' when ( (( Branch_beq_hazard = '1' ) AND ( branch_zero = '1' )) OR (( Branch_bne_hazard = '1' ) AND ( branch_zero = '0' )) )
+else '0';
 -----------------------------------------
 
 END behavior;
