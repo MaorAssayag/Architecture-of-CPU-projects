@@ -8,6 +8,10 @@ ENTITY HAZARD IS
    PORT(
 	      Instruction 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	      data_hazard_en 		 : OUT 	STD_LOGIC;
+        Branch_en 		       : OUT 	STD_LOGIC;
+        Branch_beq_hazard  : IN 	STD_LOGIC;
+        Branch_bne_hazard  : IN 	STD_LOGIC;
+        branch_zero        : IN 	STD_LOGIC;
       	clock, reset	   : IN 	STD_LOGIC
          );
 END HAZARD;
@@ -54,7 +58,7 @@ BEGIN
 
 
 ---------------------------------  branch HAZARD
-
+Branch_en <=  ( (( Branch_Beq_f = '1' ) AND ( Zero = '1' )) or (( Branch_Bne_f = '1' ) AND ( Zero = '0' )) );
 -----------------------------------------
 
 END behavior;
