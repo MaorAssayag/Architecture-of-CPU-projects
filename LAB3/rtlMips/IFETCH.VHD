@@ -8,13 +8,14 @@ LIBRARY altera_mf;
 USE altera_mf.altera_mf_components.all;
 
 ENTITY Ifetch IS
-	PORT(	SIGNAL Instruction 		: OUT	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-        	SIGNAL PC_plus_4_out 	: OUT	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
-        	SIGNAL Add_result 		: IN 	STD_LOGIC_VECTOR( 7 DOWNTO 0 );
-        	SIGNAL Branch 			: IN 	STD_LOGIC;
-        	SIGNAL Zero 			: IN 	STD_LOGIC;
-      		SIGNAL PC_out 			: OUT	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
-        	SIGNAL clock, reset,data_hazard_en_fetch 	: IN 	STD_LOGIC
+	PORT(	 Instruction 		: OUT	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+        	 PC_plus_4_out 	: OUT	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
+        	 Add_result 		: IN 	STD_LOGIC_VECTOR( 7 DOWNTO 0 );
+        	 Branch_Beq_f 			: IN 	STD_LOGIC;
+					 Branch_Bne_f 			: IN 	STD_LOGIC;
+        	 Zero 			: IN 	STD_LOGIC;
+      		 PC_out 			: OUT	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
+        	 clock, reset,data_hazard_en_fetch 	: IN 	STD_LOGIC
 					);
 END Ifetch;
 
@@ -66,7 +67,7 @@ inst_memory: altsyncram
 						-- Mux to select Branch Address or PC + 4
 
 		Next_PC  <= X"00" WHEN Reset = '1' ELSE
-			Add_result  WHEN ( ( Branch = '1' ) AND ( Zero = '1' ) )
+			Add_result  WHEN ( (( Branch_Beq_f = '1' ) AND ( Zero = '1' )) or (( Branch_Bne_f = '1' ) AND ( Zero = '0' )) )
 			ELSE   PC_plus_4( 9 DOWNTO 2 );
 
 

@@ -12,10 +12,7 @@ ENTITY  Execute IS
 			Function_opcode : IN 	STD_LOGIC_VECTOR( 5 DOWNTO 0 );
 			ALUOp 			: IN 	STD_LOGIC_VECTOR( 1 DOWNTO 0 );
 			ALUSrc 			: IN 	STD_LOGIC;
-			Zero 			: OUT	STD_LOGIC;
 			ALU_Result 		: OUT	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-			Add_Result 		: OUT	STD_LOGIC_VECTOR( 7 DOWNTO 0 );
-			PC_plus_4 		: IN 	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
 			clock, reset	: IN 	STD_LOGIC );
 END Execute;
 
@@ -62,19 +59,29 @@ FPU :  FPU_Unit port map(ALU_ctl, Ainput_signed, Binput_signed, FPU_result);
 	-- sltFPU = 111101 = 61
   slt_FPU_flag <= Function_opcode(4); -- another layer of selection is in the case-when section
 	-------------
-	-- Generate Zero Flag
-	Zero <= '1'
-		WHEN ( ALU_output_mux( 31 DOWNTO 0 ) = X"00000000"  )
-		ELSE '0';
+
+
+
+
+	-- -- Generate Zero Flag
+	-- Zero <= '1'
+	-- 	WHEN ( ALU_output_mux( 31 DOWNTO 0 ) = X"00000000"  )
+	-- 	ELSE '0';
+	--
+	--
+	-- 	-- Adder to compute Branch Address
+	-- 	Branch_Add	<= PC_plus_4( 9 DOWNTO 2 ) + Sign_extend( 7 DOWNTO 0 );
+	-- 	Add_result 	<= Branch_Add( 7 DOWNTO 0 );
+
+
+
 
 	-- Select ALU output
 	ALU_result <= X"0000000" & B"000"  & ALU_output_mux( 31 )
 		WHEN  ALU_ctl = "111"
 		ELSE  	ALU_output_mux( 31 DOWNTO 0 );
 
-	-- Adder to compute Branch Address
-	Branch_Add	<= PC_plus_4( 9 DOWNTO 2 ) + Sign_extend( 7 DOWNTO 0 );
-	Add_result 	<= Branch_Add( 7 DOWNTO 0 );
+
 
 PROCESS ( ALU_ctl, Ainput, Binput )
 	BEGIN

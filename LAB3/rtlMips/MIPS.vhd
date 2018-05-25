@@ -31,8 +31,9 @@ ARCHITECTURE structure OF MIPS IS
    	     PORT(	Instruction			: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
         		PC_plus_4_out 			: OUT  	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
         		Add_result 					: IN 	STD_LOGIC_VECTOR( 7 DOWNTO 0 );
-        		Branch 							: IN 	STD_LOGIC;
-        		Zero 								: IN 	STD_LOGIC;
+						Branch_Beq_f 			: IN 	STD_LOGIC;
+ 					  Branch_Bne_f 			: IN 	STD_LOGIC;
+						Zero 								: IN 	STD_LOGIC;
         		PC_out 							: OUT 	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
         		clock,reset ,data_hazard_en_fetch				: IN 	STD_LOGIC );
 	END COMPONENT;
@@ -58,7 +59,8 @@ ARCHITECTURE structure OF MIPS IS
              	RegWrite 			: OUT 	STD_LOGIC;
              	MemRead 			: OUT 	STD_LOGIC;
              	MemWrite 			: OUT 	STD_LOGIC;
-             	Branch 				: OUT 	STD_LOGIC;
+							Branch_Beq 		: OUT 	STD_LOGIC;
+						  Branch_Bne 		: OUT 	STD_LOGIC;
              	ALUop 				: OUT 	STD_LOGIC_VECTOR( 1 DOWNTO 0 );
              	clock, reset		: IN 	STD_LOGIC );
 	END COMPONENT;
@@ -70,10 +72,7 @@ ARCHITECTURE structure OF MIPS IS
                	Function_opcode		: IN 	STD_LOGIC_VECTOR( 5 DOWNTO 0 );
                	ALUOp 				: IN 	STD_LOGIC_VECTOR( 1 DOWNTO 0 );
                	ALUSrc 				: IN 	STD_LOGIC;
-               	Zero 				: OUT	STD_LOGIC;
                	ALU_Result 			: OUT	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-               	Add_Result 			: OUT	STD_LOGIC_VECTOR( 7 DOWNTO 0 );
-               	PC_plus_4 			: IN 	STD_LOGIC_VECTOR( 9 DOWNTO 0 );
                	clock, reset		: IN 	STD_LOGIC );
 	END COMPONENT;
 
@@ -134,9 +133,8 @@ ARCHITECTURE structure OF MIPS IS
 	SIGNAL ALUSrc_3 		      	: STD_LOGIC;
 
 
-	SIGNAL Branch_1 			      : STD_LOGIC;
-	SIGNAL Branch_3 			      : STD_LOGIC;
-	SIGNAL Branch_control 			: STD_LOGIC;
+	SIGNAL Branch_control_Beq 			      : STD_LOGIC;
+	SIGNAL Branch_control_Bne 			      : STD_LOGIC;
 
 	SIGNAL RegDst_2 			: STD_LOGIC;
 	SIGNAL RegDst_3 			: STD_LOGIC;
@@ -216,7 +214,8 @@ BEGIN
 	PORT MAP (	Instruction 	=> Instruction_1,
     	    	PC_plus_4_out 	=> PC_plus_4_1,
 						Add_result 			=> Add_result_1,
-						Branch 					=> Branch_1,
+						Branch_Beq_f 					=> Branch_control_Beq,
+						Branch_Bne_f 					=> Branch_control_Bne,
 						Zero 						=> Zero_1,
 						PC_out 					=> PC,
 						clock 					=> clock,
@@ -251,19 +250,20 @@ BEGIN
 				RegWrite 		=> Regwrite_control,
 				MemRead 		=> MemRead_control,
 				MemWrite 		=> MemWrite_control,
-				Branch 			=> Branch_control,
+				Branch_Beq 			=> Branch_control_Beq,
+				Branch_Bne 			=> Branch_control_Bne,
 				ALUop 			=> ALUop_control,
         clock 			=> clock,
 				reset 			=> reset );
 
 		--          dec/EX
 	 Instruction_B: N_dff generic map(32) port map (clock, '1', reset, Instruction_2, Instruction_3);
-	 PC_plus_4_B: N_dff generic map(10) port map (clock, '1', reset, PC_plus_4_2, PC_plus_4_3);
+	 -- PC_plus_4_B: N_dff generic map(10) port map (clock, '1', reset, PC_plus_4_2, PC_plus_4_3);
 	 read_data_1_B: N_dff generic map(32) port map (clock, '1', reset, read_data_1_2, read_data_1_3);
 	 read_data_2_B: N_dff generic map(32) port map (clock, '1', reset, read_data_2_2, read_data_2_3);
 	 Sign_Extend_2_B: N_dff generic map(32) port map (clock, '1', reset, Sign_Extend_2, Sign_Extend_3);
 	 ALUop_control_B: N_dff generic map(2) port map (clock, '1', reset, ALUop_control, ALUop_3);
-	 Branch_control_B: dff_1bit port map (clock, '1', reset, Branch_control, Branch_3);
+	 -- Branch_control_B: dff_1bit port map (clock, '1', reset, Branch_control, Branch_3);
 	 Regwrite_control_B: dff_1bit port map (clock, '1', reset, Regwrite_control, Regwrite_3);
 	 MemtoReg_control_B: dff_1bit port map (clock, '1', reset, MemtoReg_control, MemtoReg_3);
 	 RegDst_control_B: dff_1bit port map (clock, '1', reset, RegDst_control, RegDst_3);
@@ -284,23 +284,20 @@ BEGIN
                 Function_opcode	=> Instruction_3( 5 DOWNTO 0 ),
 								ALUOp 			=> ALUop_3,
 								ALUSrc 			=> ALUSrc_3,
-								Zero 			=> Zero_3,
                 ALU_Result		=> ALU_result_3,
-								Add_Result 		=> Add_result_3,
-								PC_plus_4		=> PC_plus_4_3,
                 Clock			=> clock,
 								Reset			=> reset );
 
 		Instruction_C: N_dff generic map(32) port map (clock, '1', reset, Instruction_3, Instruction_4);
 		Add_result_C: N_dff generic map(8) port map (clock, '1', reset, Add_result_3, Add_result_1);
-		Zero_C: dff_1bit port map (clock, '1', reset, Zero_3, Zero_1);
+		-- Zero_C: dff_1bit port map (clock, '1', reset, Zero_3, Zero_1);
 		ALU_result_C: N_dff generic map(32) port map (clock, '1', reset, ALU_result_3, ALU_result_4);
 		Regwrite_control_C: dff_1bit port map (clock, '1', reset, Regwrite_3, Regwrite_4);
 		MemtoReg_control_C: dff_1bit port map (clock, '1', reset, MemtoReg_3, MemtoReg_4);
 		RegDst_control_C: dff_1bit port map (clock, '1', reset, RegDst_3, RegDst_4);
 		MemWrite_C: dff_1bit port map (clock, '1', reset, MemWrite_3, MemWrite_4);
 		MemRead_control_C: dff_1bit port map (clock, '1', reset, MemRead_3, MemRead_4);
-		Branch_control_C: dff_1bit port map (clock, '1', reset, Branch_3, Branch_1);
+		-- Branch_control_C: dff_1bit port map (clock, '1', reset, Branch_3, Branch_1);
 
 
 
