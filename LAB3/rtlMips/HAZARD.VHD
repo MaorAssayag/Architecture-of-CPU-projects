@@ -38,17 +38,23 @@ SIGNAL  Opcode	: STD_LOGIC_VECTOR( 5 DOWNTO 0 );
 
 
 BEGIN
+------------------------------------      data hazard
+      Opcode <= Instruction( 31 DOWNTO 26 );
+      regdesbef <= Instruction( 15 DOWNTO 11 );
+      regS 	<= Instruction( 25 DOWNTO 21 );
+      regT	<= Instruction( 20 DOWNTO 16 );
+      regdes <= regdesbef when ((regS /= dataH44 OR regT /= dataH44 OR regS /= dataH33 OR regT /= dataH33 OR regT /= dataH22  OR regS /= dataH22) and  Opcode = "000000") else "00000";
+      dataH4_reg: N_dff generic map (5) port map (clock,'1', reset, regdes, dataH44);
+      dataH3_reg: N_dff generic map (5) port map (clock,'1', reset, dataH44, dataH33);
+      dataH2_reg: N_dff generic map (5) port map (clock,'1', reset, dataH33, dataH22);
+      dataH1_reg: N_dff generic map (5) port map (clock,'1', reset, dataH22, dataH11);
+      data_hazard_en <='0' when (regS = dataH44 OR regT = dataH44 OR  regS = dataH33 or regT = dataH33 or regT = dataH22  or regS = dataH22 )  else  '1'   ;
+--------------------------------------
 
-Opcode <= Instruction( 31 DOWNTO 26 );
-regdesbef <= Instruction( 15 DOWNTO 11 );
-regS 	<= Instruction( 25 DOWNTO 21 );
-regT	<= Instruction( 20 DOWNTO 16 );
-regdes <= regdesbef when ((regS /= dataH44 OR regT /= dataH44 OR regS /= dataH33 OR regT /= dataH33 OR regT /= dataH22  OR regS /= dataH22) and  Opcode = "000000") else "00000";
-dataH4_reg: N_dff generic map (5) port map (clock,'1', reset, regdes, dataH44);
-dataH3_reg: N_dff generic map (5) port map (clock,'1', reset, dataH44, dataH33);
-dataH2_reg: N_dff generic map (5) port map (clock,'1', reset, dataH33, dataH22);
-dataH1_reg: N_dff generic map (5) port map (clock,'1', reset, dataH22, dataH11);
-data_hazard_en <='0' when (regS = dataH44 OR regT = dataH44 OR  regS = dataH33 or regT = dataH33 or regT = dataH22  or regS = dataH22 )  else  '1'   ;
 
+
+---------------------------------  branch HAZARD
+
+-----------------------------------------
 
 END behavior;
