@@ -39,12 +39,12 @@ BEGIN
    	Instruction_immediate_value <= Instruction( 15 DOWNTO 0 );
 					-- Read Register 1 Operation
 	read_data_1 <= write_data
-	WHEN write_register_address = read_register_1_address
+	WHEN (write_register_address = read_register_1_address) and RegWrite = '1'
 	ELSE register_array(
 			      CONV_INTEGER( read_register_1_address ) );
 					-- Read Register 2 Operation
 	read_data_2 <= write_data
-	WHEN write_register_address = read_register_2_address
+	WHEN write_register_address = read_register_2_address  and RegWrite = '1'
 	ELSE register_array(
 			      CONV_INTEGER( read_register_2_address ) );
 					-- Mux for Register Write Address
