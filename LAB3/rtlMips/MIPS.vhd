@@ -5,14 +5,14 @@ USE IEEE.STD_LOGIC_ARITH.ALL;
 
 ENTITY MIPS IS
 
-	PORT( reset, clock					: IN 	STD_LOGIC;
-		-- Output important signals to pins for easy display in Simulator
-		PC								: OUT  STD_LOGIC_VECTOR( 9 DOWNTO 0 );
-		ALU_result_out, read_data_1_out, read_data_2_out, write_data_out,
-     	Instruction_out					: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-		Branch_out_Beq,Branch_out_Bne, Zero_out, Memwrite_out,
-		Regwrite_out					: OUT 	STD_LOGIC );
-END 	MIPS;
+		PORT( reset, clock					: IN 	STD_LOGIC;
+					-- Output important signals to pins for easy display in Simulator
+					PC								: OUT  STD_LOGIC_VECTOR( 9 DOWNTO 0 );
+					ALU_result_out, read_data_1_out, read_data_2_out, write_data_out,
+						Instruction_out					: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+					Branch_out, Zero_out, Memwrite_out,
+					Regwrite_out					: OUT 	STD_LOGIC );
+		END 	MIPS;
 
 ARCHITECTURE structure OF MIPS IS
 
@@ -138,7 +138,6 @@ ARCHITECTURE structure OF MIPS IS
 
 
 	SIGNAL Add_result_1 		: STD_LOGIC_VECTOR( 7 DOWNTO 0 );
-	SIGNAL Add_result_3 		: STD_LOGIC_VECTOR( 7 DOWNTO 0 );
 
 	SIGNAL ALU_result_2		  : STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL ALU_result_3 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
@@ -209,8 +208,7 @@ BEGIN
    read_data_1_out 	<= read_data_1_2;
    read_data_2_out 	<= read_data_2_2;
    write_data_out  	<= read_data_2 WHEN MemtoReg_2 = '1' ELSE ALU_result_4;
-   Branch_out_Beq 		<= Branch_control_Beq;
-	 Branch_out_Bne <= Branch_control_Bne;
+   Branch_out 		<= Branch_control_Beq Or Branch_control_Bne ;
    Zero_out 		<= Zero_1;
    RegWrite_out 	<= Regwrite_2;
    MemWrite_out 	<= MemWrite_4;
@@ -328,7 +326,6 @@ BEGIN
 								Reset			=> reset );
 
 		Instruction_C: N_dff generic map(32) port map (clock, '1', reset, Instruction_3, Instruction_4);
-		Add_result_C: N_dff generic map(8) port map (clock, '1', reset, Add_result_3, Add_result_1);
 		ALU_result_C: N_dff generic map(32) port map (clock, '1', reset, ALU_result_3, ALU_result_4);
 		Regwrite_control_C: dff_1bit port map (clock, '1', reset, Regwrite_3, Regwrite_4);
 		MemtoReg_control_C: dff_1bit port map (clock, '1', reset, MemtoReg_3, MemtoReg_4);
