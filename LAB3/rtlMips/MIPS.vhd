@@ -132,6 +132,8 @@ ARCHITECTURE structure OF MIPS IS
 
 	SIGNAL read_data_2_2 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL read_data_2_3 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL read_data_2_4 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+
 
 	SIGNAL Sign_Extend_2 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL Sign_Extend_3 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
@@ -284,7 +286,7 @@ BEGIN
 
 		 EXE_brn: Execute_branch
 				PORT MAP(	Read_data_1_branch =>	read_data_1_2,
-						Read_data_2_branch => read_data_2_2,
+							Read_data_2_branch => read_data_2_2,
 							Sign_extend_branch 		=> Sign_Extend_2,
 							ALUOp_branch 		=> ALUop_control,
 							ALUSrc_branch 		=> ALUSrc_control,
@@ -327,6 +329,7 @@ BEGIN
 
 		Instruction_C: N_dff generic map(32) port map (clock, '1', reset, Instruction_3, Instruction_4);
 		ALU_result_C: N_dff generic map(32) port map (clock, '1', reset, ALU_result_3, ALU_result_4);
+		read_data_2_C: N_dff generic map(32) port map (clock, '1', reset, read_data_2_3, read_data_2_4);
 		Regwrite_control_C: dff_1bit port map (clock, '1', reset, Regwrite_3, Regwrite_4);
 		MemtoReg_control_C: dff_1bit port map (clock, '1', reset, MemtoReg_3, MemtoReg_4);
 		RegDst_control_C: dff_1bit port map (clock, '1', reset, RegDst_3, RegDst_4);
@@ -339,7 +342,7 @@ BEGIN
    MEM:  dmemory
 	PORT MAP (	read_data 		=> read_data_4,
 							address 		=> ALU_result_4 (9 DOWNTO 2),--jump memory address by 4
-							write_data 		=> read_data_2,
+							write_data 		=> read_data_2_4,
 							MemRead 		=> MemRead_4,
 							Memwrite 		=> MemWrite_4,
               clock 			=> clock,

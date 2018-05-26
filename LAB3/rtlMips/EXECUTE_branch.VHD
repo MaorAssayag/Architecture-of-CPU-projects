@@ -49,7 +49,7 @@ BEGIN
 
 
 
-PROCESS ( ALUOp_branch, Ainput, Binput )
+PROCESS ( Ainput, Binput )
 	BEGIN
 		ALU_output_mux 	<= Ainput - Binput ;
   END PROCESS;
