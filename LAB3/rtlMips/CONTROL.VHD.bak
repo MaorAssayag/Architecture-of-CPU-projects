@@ -16,7 +16,7 @@ ENTITY control IS
         	Branch_Beq 		: OUT 	STD_LOGIC;
           Branch_Bne 		: OUT 	STD_LOGIC;
         	ALUop 		: OUT 	STD_LOGIC_VECTOR( 1 DOWNTO 0 );
-          data_hazard 		 : in 	STD_LOGIC;
+          data_hazard 		 : OUT 	STD_LOGIC;
         	clock, reset	: IN 	STD_LOGIC );
 
 END control;

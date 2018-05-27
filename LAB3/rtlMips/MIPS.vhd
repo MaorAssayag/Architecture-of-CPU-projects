@@ -77,7 +77,7 @@ ARCHITECTURE structure OF MIPS IS
 							Branch_Beq 		: OUT 	STD_LOGIC;
 						  Branch_Bne 		: OUT 	STD_LOGIC;
              	ALUop 				: OUT 	STD_LOGIC_VECTOR( 1 DOWNTO 0 );
-							data_hazard 		 : OUT 	STD_LOGIC;
+							data_hazard 		 : in 	STD_LOGIC;
              	clock, reset		: IN 	STD_LOGIC );
 	END COMPONENT;
 
@@ -228,8 +228,8 @@ BEGIN
 						Instruction_ID 	    => Instruction_2,
 					  Instruction_EXE 		=> Instruction_3,
 				 	  Instruction_MEM 		=> Instruction_4,
-						MEM_read_EXE   =>   MemRead_3;
-					  MEM_read_mem    =>   MemRead_4;
+						MEM_read_EXE   =>   MemRead_3,
+					  MEM_read_mem    =>   MemRead_4,
 						data_hazard_en => data_hazard_en,
 						Branch_en => Branch_en,
 						Branch_beq_hazard => Branch_control_Beq,
@@ -287,7 +287,7 @@ BEGIN
 				Branch_Beq 			=> Branch_control_Beq,
 				Branch_Bne 			=> Branch_control_Bne,
 				ALUop 			=> ALUop_control,
-				data_hazard => data_hazard_en;
+				data_hazard => data_hazard_en,
         clock 			=> clock,
 				reset 			=> reset );
 

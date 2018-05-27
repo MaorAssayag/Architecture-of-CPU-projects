@@ -56,15 +56,15 @@ BEGIN
       regS 	<= Instruction_ID( 25 DOWNTO 21 );
       regT	<= Instruction_ID( 20 DOWNTO 16 );
 
-      regS_mem_check     <= (regdesbef_mem xor regS) when (regS /= 0) else "0001";
-      regS_exe_check       <= (regdesbef_exe xor regS) when (regS /= 0) else "0001";
-      regT_mem_check    <= (regdesbef_mem xor regT) when (regT /= 0) else "0001";
-      regT_exe_check    <= (regdesbef_exe xor regT) when (regT /= 0) else "0001";
+      regS_mem_check     <= (regdesbef_mem xor regS) when (regS /= 0) else "00001";
+      regS_exe_check       <= (regdesbef_exe xor regS) when (regS /= 0) else "00001";
+      regT_mem_check    <= (regdesbef_mem xor regT) when (regT /= 0) else "00001";
+      regT_exe_check    <= (regdesbef_exe xor regT) when (regT /= 0) else "00001";
 
 
     find_hazard:PROCESS (regS_mem_check,regS_exe_check,regT_mem_check,regT_mem_check,regT_exe_check,MEM_read_mem,MEM_read_EXE )
                     	BEGIN
-                    		IF ((MEM_read_mem = '1'  and (regS_mem_check = "0000"  or regT_mem_check = "0000")) or (MEM_read_EXE ='1' ) and (regS_exe_check = "0000"  or regT_exe_check = "0000")) THEN
+                    		IF ((MEM_read_mem = '1'  and (regS_mem_check = "00000"  or regT_mem_check = "00000")) or ((MEM_read_EXE ='1' ) and (regS_exe_check = "00000"  or regT_exe_check = "00000"))) THEN
                     			data_hazard_en <= '0';
                     		ELSE
                     			data_hazard_en <= '1';
