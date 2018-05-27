@@ -112,11 +112,13 @@ ARCHITECTURE structure OF MIPS IS
 
 		 component HAZARD
 	   port (
+						 Instruction_IF 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 						 Instruction_ID 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 					 	Instruction_EXE 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 					 	Instruction_MEM 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 					 	MEM_read_EXE  : IN 	STD_LOGIC;
 					 	MEM_read_mem  : IN 	STD_LOGIC;
+						MEM_read_ID  : IN 	STD_LOGIC;
 					 	data_hazard_en 		 : OUT 	STD_LOGIC;
 					 	Branch_en 		       : OUT 	STD_LOGIC;
 					 	Branch_beq_hazard  : IN 	STD_LOGIC;
@@ -225,11 +227,13 @@ BEGIN
 
 	HAZ :  HAZARD
 		port map (
+						Instruction_IF 	    => Instruction_1,
 						Instruction_ID 	    => Instruction_2,
-					  Instruction_EXE 		=> Instruction_3,
-				 	  Instruction_MEM 		=> Instruction_4,
+					   Instruction_EXE 		=> Instruction_3,
+				 	   Instruction_MEM 		=> Instruction_4,
 						MEM_read_EXE   =>   MemRead_3,
-					  MEM_read_mem    =>   MemRead_4,
+					   MEM_read_mem    =>   MemRead_4,
+					  	MEM_read_ID => MemRead_control,
 						data_hazard_en => data_hazard_en,
 						Branch_en => Branch_en,
 						Branch_beq_hazard => Branch_control_Beq,
@@ -257,8 +261,8 @@ BEGIN
 						data_hazard_en_fetch => data_hazard_en );
 
 --          Ife/dec
-	 Instruction_A: N_dff generic map(32) port map (clock, data_hazard_en, Branch_en, Instruction_1, Instruction_2);
-	 PC_plus_4_A: N_dff generic map(10) port map (clock, data_hazard_en, Branch_en, PC_plus_4_1, PC_plus_4_2);
+	 Instruction_A: N_dff generic map(32) port map (clock, data_hazard_en, Branch_en or (NOT data_hazard_en), Instruction_1, Instruction_2);
+	 PC_plus_4_A: N_dff generic map(10) port map (clock, data_hazard_en, Branch_en or (NOT data_hazard_en), PC_plus_4_1, PC_plus_4_2);
 
  ---------------------------------     2
    ID : Idecode
@@ -361,7 +365,7 @@ BEGIN
 
 		Instruction_D: N_dff generic map(32) port map (clock, '1', reset, Instruction_4, Instruction_old);
   	read_data_D: N_dff generic map(32) port map (clock, '1', reset, read_data_4, read_data_2);
-		ALU_result_D: N_dff generic map(32) port map (not clock, '1', reset, ALU_result_4, ALU_result_2);
+		ALU_result_D: N_dff generic map(32) port map (clock, '1', reset, ALU_result_4, ALU_result_2);
 		Regwrite_control_D: dff_1bit port map (clock, '1', reset, Regwrite_4, Regwrite_2);
 		MemtoReg_control_D: dff_1bit port map (clock, '1', reset, MemtoReg_4, MemtoReg_2);
 		RegDst_control_D: dff_1bit port map (clock, '1', reset, RegDst_4, RegDst_2);

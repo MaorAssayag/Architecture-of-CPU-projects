@@ -58,8 +58,10 @@ BEGIN
 		WHEN Instruction_immediate_value(15) = '0'
 		ELSE	X"FFFF" & Instruction_immediate_value;
 
-PROCESS 
+PROCESS
+	variable write_register_address_var :STD_LOGIC_VECTOR( 4 DOWNTO 0 ) ;
 	BEGIN
+		write_register_address_var := write_register_address;
 		WAIT UNTIL clock'EVENT AND clock = '1';
 		IF reset = '1' THEN
 					-- Initial register values on reset are register = reg#
@@ -69,8 +71,8 @@ PROCESS
 				register_array(i) <= CONV_STD_LOGIC_VECTOR( i, 32 );
  			END LOOP;
 					-- Write back to register - don't write to register 0
-  		ELSIF RegWrite = '1' AND write_register_address /= 0 THEN
-		      register_array( CONV_INTEGER( write_register_address)) <= write_data;
+  		ELSIF RegWrite = '1' AND write_register_address_var /= 0 THEN
+		      register_array( CONV_INTEGER( write_register_address_var)) <= write_data;
 		END IF;
 	END PROCESS;
 END behavior;

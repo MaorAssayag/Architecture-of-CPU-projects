@@ -35,7 +35,7 @@ BEGIN
   	RegDst    	<=  R_format;
  	ALUSrc  	<=  Lw OR Sw;
 	MemtoReg 	<=  Lw when data_hazard = '1' else '0';
-  	RegWrite 	<=  R_format OR Lw   when data_hazard = '1' else '0';
+  	RegWrite 	<=  R_format OR Lw;
   	MemRead 	<=  Lw when data_hazard = '1' else '0';
    	MemWrite 	<=  Sw when data_hazard = '1' else '0';
  	Branch_Beq      <=  Beq when data_hazard = '1' else '0';
