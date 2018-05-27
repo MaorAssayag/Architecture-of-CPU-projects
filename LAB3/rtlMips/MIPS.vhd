@@ -77,6 +77,7 @@ ARCHITECTURE structure OF MIPS IS
 							Branch_Beq 		: OUT 	STD_LOGIC;
 						  Branch_Bne 		: OUT 	STD_LOGIC;
              	ALUop 				: OUT 	STD_LOGIC_VECTOR( 1 DOWNTO 0 );
+							data_hazard 		 : OUT 	STD_LOGIC;
              	clock, reset		: IN 	STD_LOGIC );
 	END COMPONENT;
 
@@ -256,8 +257,8 @@ BEGIN
 						data_hazard_en_fetch => data_hazard_en );
 
 --          Ife/dec
-	 Instruction_A: N_dff generic map(32) port map (clock, '1', Branch_en, Instruction_1, Instruction_2);
-	 PC_plus_4_A: N_dff generic map(10) port map (clock, '1', Branch_en, PC_plus_4_1, PC_plus_4_2);
+	 Instruction_A: N_dff generic map(32) port map (clock, data_hazard_en, Branch_en, Instruction_1, Instruction_2);
+	 PC_plus_4_A: N_dff generic map(10) port map (clock, data_hazard_en, Branch_en, PC_plus_4_1, PC_plus_4_2);
 
  ---------------------------------     2
    ID : Idecode
@@ -286,6 +287,7 @@ BEGIN
 				Branch_Beq 			=> Branch_control_Beq,
 				Branch_Bne 			=> Branch_control_Bne,
 				ALUop 			=> ALUop_control,
+				data_hazard => data_hazard_en;
         clock 			=> clock,
 				reset 			=> reset );
 

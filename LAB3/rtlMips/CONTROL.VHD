@@ -6,17 +6,18 @@ USE IEEE.STD_LOGIC_SIGNED.ALL;
 
 ENTITY control IS
    PORT(
-	Opcode 		: IN 	STD_LOGIC_VECTOR( 5 DOWNTO 0 );
-	RegDst 		: OUT 	STD_LOGIC;
-	ALUSrc 		: OUT 	STD_LOGIC;
-	MemtoReg 	: OUT 	STD_LOGIC;
-	RegWrite 	: OUT 	STD_LOGIC;
-	MemRead 		: OUT 	STD_LOGIC;
-	MemWrite 	: OUT 	STD_LOGIC;
-	Branch_Beq 		: OUT 	STD_LOGIC;
-  Branch_Bne 		: OUT 	STD_LOGIC;
-	ALUop 		: OUT 	STD_LOGIC_VECTOR( 1 DOWNTO 0 );
-	clock, reset	: IN 	STD_LOGIC );
+        	Opcode 		: IN 	STD_LOGIC_VECTOR( 5 DOWNTO 0 );
+        	RegDst 		: OUT 	STD_LOGIC;
+        	ALUSrc 		: OUT 	STD_LOGIC;
+        	MemtoReg 	: OUT 	STD_LOGIC;
+        	RegWrite 	: OUT 	STD_LOGIC;
+        	MemRead 		: OUT 	STD_LOGIC;
+        	MemWrite 	: OUT 	STD_LOGIC;
+        	Branch_Beq 		: OUT 	STD_LOGIC;
+          Branch_Bne 		: OUT 	STD_LOGIC;
+        	ALUop 		: OUT 	STD_LOGIC_VECTOR( 1 DOWNTO 0 );
+          data_hazard 		 : OUT 	STD_LOGIC;
+        	clock, reset	: IN 	STD_LOGIC );
 
 END control;
 
@@ -33,13 +34,13 @@ BEGIN
     Bne         <=  '1'  WHEN  Opcode = "000101"  ELSE '0';
   	RegDst    	<=  R_format;
  	ALUSrc  	<=  Lw OR Sw;
-	MemtoReg 	<=  Lw;
-  	RegWrite 	<=  R_format OR Lw;
-  	MemRead 	<=  Lw;
-   	MemWrite 	<=  Sw;
- 	Branch_Beq      <=  Beq;
-  Branch_Bne      <=  Bne;
-	ALUOp( 1 ) 	<=  R_format;
-	ALUOp( 0 ) 	<=  Beq or Bne;
+	MemtoReg 	<=  Lw when data_hazard = '1' else '0';
+  	RegWrite 	<=  R_format OR Lw   when data_hazard = '1' else '0';
+  	MemRead 	<=  Lw when data_hazard = '1' else '0';
+   	MemWrite 	<=  Sw when data_hazard = '1' else '0';
+ 	Branch_Beq      <=  Beq when data_hazard = '1' else '0';
+  Branch_Bne      <=  Bne when data_hazard = '1' else '0';
+	ALUOp( 1 ) 	<=  R_format when data_hazard = '1' else '0';
+	ALUOp( 0 ) 	<=  Beq or Bne    when data_hazard = '1' else '0';
 
    END behavior;
