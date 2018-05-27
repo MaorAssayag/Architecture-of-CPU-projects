@@ -58,19 +58,21 @@ BEGIN
 		WHEN Instruction_immediate_value(15) = '0'
 		ELSE	X"FFFF" & Instruction_immediate_value;
 
-PROCESS 
+PROCESS
 	BEGIN
-		WAIT UNTIL clock'EVENT AND clock = '1';
+	if rising_edge(clock) then
 		IF reset = '1' THEN
 					-- Initial register values on reset are register = reg#
-					-- use loop to automatically generate reset logic 
+					-- use loop to automatically generate reset logic
 					-- for all registers
 			FOR i IN 0 TO 31 LOOP
 				register_array(i) <= CONV_STD_LOGIC_VECTOR( i, 32 );
- 			END LOOP;
+			END LOOP;
 					-- Write back to register - don't write to register 0
-  		ELSIF RegWrite = '1' AND write_register_address /= 0 THEN
-		      register_array( CONV_INTEGER( write_register_address)) <= write_data;
+			ELSIF RegWrite = '1' AND write_register_address /= 0 THEN
+					register_array( CONV_INTEGER( write_register_address)) <= write_data;
 		END IF;
+	end if;
+
 	END PROCESS;
 END behavior;

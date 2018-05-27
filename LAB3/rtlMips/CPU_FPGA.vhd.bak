@@ -47,7 +47,7 @@ SIGNAL Memwrite_out    :     STD_LOGIC;
 SIGNAL PC              :     STD_LOGIC_VECTOR ( 9 DOWNTO 0 );
 SIGNAL Regwrite_out    :     STD_LOGIC;
 SIGNAL Zero_out        :     STD_LOGIC;
-SIGNAL clock_mips        :     STD_LOGIC;
+SIGNAL clock|_mips        :     STD_LOGIC;
 SIGNAL read_data_1_out :     STD_LOGIC_VECTOR ( 31 DOWNTO 0 );
 SIGNAL read_data_2_out :     STD_LOGIC_VECTOR ( 31 DOWNTO 0 );
 SIGNAL write_data_out  :     STD_LOGIC_VECTOR ( 31 DOWNTO 0 )
@@ -116,10 +116,6 @@ counter_unit : counter
 					enable => en_7_seg,
 					q => q
 			);
-
-
-
-
 
 
 

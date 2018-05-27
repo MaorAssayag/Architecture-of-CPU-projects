@@ -1,5 +1,5 @@
 	.data 
-Array:      .word    0x42fee979 , 6,7,5,4,3,2,1 # vector size is 8 numbers, should be replaced with floatingpoint represntion
+Array:      .word     8,10,9 , 6,7,5,4,3,2,1 # vector size is 8 numbers, should be replaced with floatingpoint represntion
 
 	.text
 main:
@@ -20,3 +20,15 @@ continue:
     addi $a0, $a0, 4            # advance the array to start at the next location from last time
     bne  $a0, $t0, innerLoop    # If $a0 != the end of Array, jump back to innerLoop
     bne  $t1, $0, outterLoop    # $t1 = 1, another pass is needed, jump back to outterLoop
+ end :
+     la  $a0, Array      # Copy the base address of your array into $a0	
+    lw $t1, 0($a0)
+    lw $t2, 4($a0)
+    lw $t3, 8($a0)
+    lw $t4, 12($a0)
+    lw $t5, 16($a0)
+    lw $t6, 20($a0)
+    lw $t7, 24($a0)
+    lw $s0, 28($a0)
+    lw $s1, 32($a0)
+    lw $s2, 36($a0)
