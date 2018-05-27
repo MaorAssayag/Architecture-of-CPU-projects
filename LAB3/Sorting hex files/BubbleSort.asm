@@ -1,6 +1,5 @@
 	.data 
-Array:      .word     10,20,40,30 # vector size is 8 numbers, should be replaced with floatingpoint represntion
-
+Array:      .word     130,140,110,120 # vector size is 8 numbers, should be replaced with floatingpoint represntion
 	.text
 main:
     add $t0, $0, $0            # Copy the base address of your array into $t0

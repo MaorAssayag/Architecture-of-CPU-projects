@@ -50,7 +50,7 @@ inst_memory: altsyncram
 		intended_device_family => "Cyclone"
 	)
 	PORT MAP (
-		clock0     => tempclock ,
+		clock0     =>  tempclock ,
 		address_a 	=> Mem_Addr,
 		q_a 			=> Instruction );
 					-- Instructions always start on word address - not byte

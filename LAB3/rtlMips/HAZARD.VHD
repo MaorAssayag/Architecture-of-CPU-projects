@@ -47,15 +47,21 @@ BEGIN
       regdesbef <= Instruction( 15 DOWNTO 11 );
       regS 	<= Instruction( 25 DOWNTO 21 );
       regT	<= Instruction( 20 DOWNTO 16 );
-      regdes <= regdesbef when ((regS /= dataH44 AND regT /= dataH44 AND regS /= dataH33 AND regT /= dataH33 AND regT /= dataH22  AND regS /= dataH22 ) and  Opcode = "000000") else "00000";
+      regdes <= regdesbef when ((regS /= dataH44 AND regT /= dataH44 AND regS /= dataH33 AND regT /= dataH33 AND regT /= dataH22  AND regS /= dataH22 ) and  Opcode = "000000" ) else "00000";
       dataH4_reg: N_dff generic map (5) port map (clock,'1', reset, regdes, dataH44);
       dataH3_reg: N_dff generic map (5) port map (clock,'1', reset, dataH44, dataH33);
       dataH2_reg: N_dff generic map (5) port map (clock,'1', reset, dataH33, dataH22);
       dataH1_reg: N_dff generic map (5) port map (clock,'1', reset, dataH22, dataH11);
-      data_hazard_en <='0' when (((regS = dataH22 OR  regS = dataH33 OR regS = dataH44) AND regS /= "00000")   or((regT = dataH33 or regT = dataH22  or  regT = dataH44) AND regT /= "00000") )  else  '1'   ;
+      --data_hazard_en <='0' when (((regS = dataH22 OR  regS = dataH33 OR regS = dataH44) AND regS /= "00000")   or((regT = dataH33 or regT = dataH22  or  regT = dataH44) AND regT /= "00000") )  else  '1'   ;
 --------------------------------------
-
-
+process (dataH22, dataH33, dataH44,regT, regS)
+begin
+	if (((regS = dataH22 OR  (regS = dataH33 OR regS = dataH44)) AND regS /= "00000")   or((regT = dataH33 or (regT = dataH22  or  regT = dataH44)) AND regT /= "00000") ) then
+      data_hazard_en <='0';
+	else
+      data_hazard_en <=	'1';
+	end if;
+end process;
 
 ---------------------------------  branch HAZARD
 Branch_en <= '1' when ( (( Branch_beq_hazard = '1' ) AND ( branch_zero = '1' )) OR (( Branch_bne_hazard = '1' ) AND ( branch_zero = '0' )) )

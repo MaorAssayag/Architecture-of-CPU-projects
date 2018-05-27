@@ -31,12 +31,8 @@ begin
 clock_tmp <= clk AND en;
 process(clock_tmp)
 begin
-  if rising_edge(clock_tmp) then
-    if (rst = '1') then
-        q <= '0';
-	 else
-        q <= d;
-    end if;
+  if rising_edge(clock_tmp) then  
+     q <= d and (NOT rst);
   end if;
 end process;
 ----------------------------------------
