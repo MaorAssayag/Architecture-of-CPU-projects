@@ -54,9 +54,9 @@ BEGIN
       dataH1_reg: N_dff generic map (5) port map (clock,'1', reset, dataH22, dataH11);
       --data_hazard_en <='0' when (((regS = dataH22 OR  regS = dataH33 OR regS = dataH44) AND regS /= "00000")   or((regT = dataH33 or regT = dataH22  or  regT = dataH44) AND regT /= "00000") )  else  '1'   ;
 --------------------------------------
-process (dataH22, dataH33, dataH44,regT, regS)
+process (dataH22, dataH33, dataH44, regT, regS)
 begin
-	if (((regS = dataH22 OR  (regS = dataH33 OR regS = dataH44)) AND regS /= "00000")   or((regT = dataH33 or (regT = dataH22  or  regT = dataH44)) AND regT /= "00000") ) then
+	if ((regS /= "00000" AND (regS = dataH22 OR  (regS = dataH33 OR regS = dataH44)))   or(regT /= "00000" AND (regT = dataH33 or (regT = dataH22  or  regT = dataH44)))) then
       data_hazard_en <='0';
 	else
       data_hazard_en <=	'1';

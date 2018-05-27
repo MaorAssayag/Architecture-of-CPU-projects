@@ -21,6 +21,10 @@ continue:
     bne  $t1, $0, outterLoop    # $t1 = 1, another pass is needed, jump back to outterLoop
  end :
     add $t9, $0, $0      # Copy the base address of your array into $t9
+        add $t9, $0, $0      # Copy the base address of your array into $t9
+            add $t9, $0, $0      # Copy the base address of your array into $t9
+                add $t9, $0, $0      # Copy the base address of your array into $t9
+                    add $t9, $0, $0      # Copy the base address of your array into $t9
     lw $t1, 0($t9)
     lw $t2, 4($t9)
     lw $t3, 8($t9)
