@@ -6,7 +6,11 @@ USE IEEE.STD_LOGIC_SIGNED.ALL;
 
 ENTITY HAZARD IS
    PORT(
-	      Instruction 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	      Instruction_ID 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+        Instruction_EXE 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+        Instruction_MEM 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+        MEM_read_EXE  : IN 	STD_LOGIC;
+        MEM_read_mem  : IN 	STD_LOGIC;
 	      data_hazard_en 		 : OUT 	STD_LOGIC;
         Branch_en 		       : OUT 	STD_LOGIC;
         Branch_beq_hazard  : IN 	STD_LOGIC;
@@ -32,36 +36,44 @@ end component;
 
 
 
-SIGNAL  dataH11,dataH22,dataH33,dataH44	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
-SIGNAL  regdes	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
-SIGNAL  regdesbef	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+SIGNAL  regdesbef_exe	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+SIGNAL  regdesbef_mem	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
 SIGNAL  regS	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
 SIGNAL  regT	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
-SIGNAL  Opcode	: STD_LOGIC_VECTOR( 5 DOWNTO 0 );
+
+
+SIGNAL  regS_mem_check	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+SIGNAL  regS_exe_check	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+SIGNAL  regT_mem_check	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
+SIGNAL  regT_exe_check	: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
 
 
 
 BEGIN
 ------------------------------------      data hazard
-      Opcode <= Instruction( 31 DOWNTO 26 );
-      regdesbef <= Instruction( 15 DOWNTO 11 );
-      regS 	<= Instruction( 25 DOWNTO 21 );
-      regT	<= Instruction( 20 DOWNTO 16 );
-      regdes <= regdesbef when ((regS /= dataH44 AND regT /= dataH44 AND regS /= dataH33 AND regT /= dataH33 AND regT /= dataH22  AND regS /= dataH22 ) and  Opcode = "000000" ) else "00000";
-      dataH4_reg: N_dff generic map (5) port map (clock,'1', reset, regdes, dataH44);
-      dataH3_reg: N_dff generic map (5) port map (clock,'1', reset, dataH44, dataH33);
-      dataH2_reg: N_dff generic map (5) port map (clock,'1', reset, dataH33, dataH22);
-      dataH1_reg: N_dff generic map (5) port map (clock,'1', reset, dataH22, dataH11);
-      --data_hazard_en <='0' when (((regS = dataH22 OR  regS = dataH33 OR regS = dataH44) AND regS /= "00000")   or((regT = dataH33 or regT = dataH22  or  regT = dataH44) AND regT /= "00000") )  else  '1'   ;
+      regdesbef_exe <= Instruction_EXE( 20 DOWNTO 16  );
+      regdesbef_mem <= Instruction_MEM( 20 DOWNTO 16  );
+      regS 	<= Instruction_ID( 25 DOWNTO 21 );
+      regT	<= Instruction_ID( 20 DOWNTO 16 );
+
+      regS_mem_check     <= (regdesbef_mem xor regS) when (regS /= 0) else "0001";
+      regS_exe_check       <= (regdesbef_exe xor regS) when (regS /= 0) else "0001";
+      regT_mem_check    <= (regdesbef_mem xor regT) when (regT /= 0) else "0001";
+      regT_exe_check    <= (regdesbef_exe xor regT) when (regT /= 0) else "0001";
+
+
+    find_hazard:PROCESS (regS_mem_check,regS_exe_check,regT_mem_check,regT_mem_check,regT_exe_check,MEM_read_mem,MEM_read_EXE )
+                    	BEGIN
+                    		IF ((MEM_read_mem = '1'  and (regS_mem_check = "0000"  or regT_mem_check = "0000")) or (MEM_read_EXE ='1' ) and (regS_exe_check = "0000"  or regT_exe_check = "0000")) THEN
+                    			data_hazard_en <= '0';
+                    		ELSE
+                    			data_hazard_en <= '1';
+                    		END IF;
+	               END PROCESS;
+
+
 --------------------------------------
-process (dataH22, dataH33, dataH44, regT, regS)
-begin
-	if ((regS /= "00000" AND (regS = dataH22 OR  (regS = dataH33 OR regS = dataH44)))   or(regT /= "00000" AND (regT = dataH33 or (regT = dataH22  or  regT = dataH44)))) then
-      data_hazard_en <='0';
-	else
-      data_hazard_en <=	'1';
-	end if;
-end process;
+
 
 ---------------------------------  branch HAZARD
 Branch_en <= '1' when ( (( Branch_beq_hazard = '1' ) AND ( branch_zero = '1' )) OR (( Branch_bne_hazard = '1' ) AND ( branch_zero = '0' )) )

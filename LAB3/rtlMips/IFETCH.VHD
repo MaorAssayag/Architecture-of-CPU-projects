@@ -57,7 +57,7 @@ inst_memory: altsyncram
 						-- Mux to select Branch Address or PC + 4
 
 		Next_PC  <= X"00" WHEN Reset = '1' ELSE
-			 PC (9 DOWNTO 2) when data_hazard_en_fetch ='1' else
+			 PC (9 DOWNTO 2) when data_hazard_en_fetch ='0' else
 			Add_result  WHEN ( (( Branch_Beq_f = '1' ) AND ( Zero = '1' )) or (( Branch_Bne_f = '1' ) AND ( Zero = '0' )) )
 			ELSE   PC_plus_4( 9 DOWNTO 2 );
 

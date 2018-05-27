@@ -111,13 +111,17 @@ ARCHITECTURE structure OF MIPS IS
 
 		 component HAZARD
 	   port (
-	         Instruction 		: IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-	         data_hazard_en 		 : OUT 	STD_LOGIC;
-					 Branch_en 		       : OUT 	STD_LOGIC;
-					 Branch_beq_hazard  : IN 	STD_LOGIC;
-					 Branch_bne_hazard  : IN 	STD_LOGIC;
-					 branch_zero        : IN 	STD_LOGIC;
-	         clock, reset	: IN 	STD_LOGIC
+						 Instruction_ID 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+					 	Instruction_EXE 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+					 	Instruction_MEM 		 : IN 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+					 	MEM_read_EXE  : IN 	STD_LOGIC;
+					 	MEM_read_mem  : IN 	STD_LOGIC;
+					 	data_hazard_en 		 : OUT 	STD_LOGIC;
+					 	Branch_en 		       : OUT 	STD_LOGIC;
+					 	Branch_beq_hazard  : IN 	STD_LOGIC;
+					 	Branch_bne_hazard  : IN 	STD_LOGIC;
+					 	branch_zero        : IN 	STD_LOGIC;
+					 	clock, reset	   : IN 	STD_LOGIC
 	   );
 	  end component;
 
@@ -220,7 +224,11 @@ BEGIN
 
 	HAZ :  HAZARD
 		port map (
-						Instruction => Instruction_1,
+						Instruction_ID 	    => Instruction_2,
+					  Instruction_EXE 		=> Instruction_3,
+				 	  Instruction_MEM 		=> Instruction_4,
+						MEM_read_EXE   =>   MemRead_3;
+					  MEM_read_mem    =>   MemRead_4;
 						data_hazard_en => data_hazard_en,
 						Branch_en => Branch_en,
 						Branch_beq_hazard => Branch_control_Beq,
