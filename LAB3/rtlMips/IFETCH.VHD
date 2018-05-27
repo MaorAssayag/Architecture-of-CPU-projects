@@ -22,22 +22,12 @@ END Ifetch;
 ARCHITECTURE behavior OF Ifetch IS
 	SIGNAL PC, PC_plus_4 	 : STD_LOGIC_VECTOR( 9 DOWNTO 0 );
 	SIGNAL next_PC, Mem_Addr : STD_LOGIC_VECTOR( 7 DOWNTO 0 );
-	-- reg for PC
-component N_dff
-generic(N: integer := 8); --defualt value for N is 8
-port (
-		clk : in std_logic;
-		enable : in std_logic;
-		rst : in std_logic;
-		D : in STD_LOGIC_VECTOR(N-1 downto 0);
-		Q : out STD_LOGIC_VECTOR(N-1 downto 0));
-end component;
+
 SIGNAL tempclock :STD_LOGIC;
 
 BEGIN
 
- tempclock <= clock and data_hazard_en_fetch;
-						--ROM for Instruction Memory
+ 						--ROM for Instruction Memory
 inst_memory: altsyncram
 
 	GENERIC MAP (
@@ -50,7 +40,7 @@ inst_memory: altsyncram
 		intended_device_family => "Cyclone"
 	)
 	PORT MAP (
-		clock0     =>  tempclock ,
+		clock0     =>  clock ,
 		address_a 	=> Mem_Addr,
 		q_a 			=> Instruction );
 					-- Instructions always start on word address - not byte
@@ -67,10 +57,18 @@ inst_memory: altsyncram
 						-- Mux to select Branch Address or PC + 4
 
 		Next_PC  <= X"00" WHEN Reset = '1' ELSE
+			 PC (9 DOWNTO 2) when data_hazard_en_fetch ='1' else
 			Add_result  WHEN ( (( Branch_Beq_f = '1' ) AND ( Zero = '1' )) or (( Branch_Bne_f = '1' ) AND ( Zero = '0' )) )
 			ELSE   PC_plus_4( 9 DOWNTO 2 );
 
 
 			----------------  check
-			reg: N_dff port map (tempclock, '1', reset, Next_PC,PC( 9 DOWNTO 2 ));
-END behavior;
+			PROCESS
+				BEGIN
+					WAIT UNTIL ( clock'EVENT ) AND ( clock = '1' );
+					IF reset = '1' THEN
+						   PC( 9 DOWNTO 2) <= "00000000" ;
+					ELSE
+						   PC( 9 DOWNTO 2 ) <= next_PC ;
+					END IF;
+			END PROCESS;END behavior;
