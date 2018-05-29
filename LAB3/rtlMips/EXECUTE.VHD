@@ -29,7 +29,7 @@ component FPU_Unit
 end component;
 signal FPU_result : signed(31 downto 0);
 signal slt_FPU_flag : STD_LOGIC;
-signal temp : std_logic_vector(31 downto 0);
+signal temp : std_logic_vector(31 downto 0); -- for fpu
 signal Ainput_signed : signed(31 downto 0);
 signal Binput_signed : signed(31 downto 0);
 ------------
@@ -52,9 +52,9 @@ FPU :  FPU_Unit port map(ALU_ctl, Ainput_signed, Binput_signed, FPU_result);
 		WHEN ( ALUSrc = '0' )
   		ELSE  Sign_extend( 31 DOWNTO 0 );
 	-- Generate ALU control bits
-	ALU_ctl( 0 ) <= ( Function_opcode( 0 ) OR Function_opcode( 3 ) ) AND ALUOp(1 );
-	ALU_ctl( 1 ) <= ( NOT Function_opcode( 2 ) ) OR (NOT ALUOp( 1 ) );
-	ALU_ctl( 2 ) <= ( Function_opcode( 1 ) AND ALUOp( 1 )) OR ALUOp( 0 );
+	ALU_ctl( 0 ) <= (( Function_opcode( 0 ) OR Function_opcode( 3 ) ) AND ALUOp(1 )) AND (NOT (ALUOp(1) AND ALUOp(0)));
+	ALU_ctl( 1 ) <= ( NOT Function_opcode( 2 ) ) OR (NOT ALUOp( 1 ) ) OR (ALUOp(1) AND ALUOp(0));
+	ALU_ctl( 2 ) <= (( Function_opcode( 1 ) AND ALUOp( 1 )) OR ALUOp( 0 )) AND (NOT (ALUOp(1) AND ALUOp(0)));
 	--ADD
 	-- sltFPU = 111101 = 61
   slt_FPU_flag <= Function_opcode(4); -- another layer of selection is in the case-when section

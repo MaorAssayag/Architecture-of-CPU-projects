@@ -2,8 +2,7 @@
 Array:      .word     130,140,110,120 # vector size is 8 numbers, should be replaced with floatingpoint represntion
 	.text
 main:
-    add $t0, $0, $0            # Copy the base address of your array into $t0
-    add $t0, $t0, 16      # 4 bytes per int * 10 ints = 40 bytes                              
+    add $t0, $0, 16       # 4 bytes per int * 10 ints = 40 bytes                              
 outterLoop:             # Used to determine when we are done iterating over the Array
     add $t1, $0, $0      # $t1 holds a flag to determine when the list is sorted
     add $t9, $0, $0    # Set $t9 to the base address of the Array
@@ -17,16 +16,12 @@ innerLoop:                  # The inner loop will iterate over the Array checkin
     sw  $t3, 0($t9)         # store the lesser numbers contents in the lower position in array (swap)
 continue:
     addi $t9, $t9, 4            # advance the array to start at the next location from last time
-    bne  $t9, $t0, innerLoop    # If $a0 != the end of Array, jump back to innerLoop
+    bne  $t9, $t0, innerLoop    # If $t9 != the end of Array, jump back to innerLoop
     bne  $t1, $0, outterLoop    # $t1 = 1, another pass is needed, jump back to outterLoop
  end :
-    add $t9, $0, $0      # Copy the base address of your array into $t9
-        add $t9, $0, $0      # Copy the base address of your array into $t9
-            add $t9, $0, $0      # Copy the base address of your array into $t9
-                add $t9, $0, $0      # Copy the base address of your array into $t9
-                    add $t9, $0, $0      # Copy the base address of your array into $t9
-    lw $t1, 0($t9)
-    lw $t2, 4($t9)
-    lw $t3, 8($t9)
-    lw $t4, 12($t9)
+    add $t8, $0, $0      # just fot checking
+    lw $t6, 0($t8)
+    lw $t7, 4($t8)
+    lw $t8, 8($t8)
+    lw $t9, 12($t8)
 

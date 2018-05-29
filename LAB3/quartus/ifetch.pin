@@ -1,0 +1,176 @@
+-- Copyright (C) 1988-2001 Altera Corporation
+-- Any megafunction design, and related net list (encrypted or decrypted),
+-- support information, device programming or simulation file, and any other
+-- associated documentation or information provided by Altera or a partner
+-- under Altera's Megafunction Partnership Program may be used only to
+-- program PLD devices (but not masked PLD devices) from Altera.  Any other
+-- use of such megafunction design, net list, support information, device
+-- programming or simulation file, or any other related documentation or
+-- information is prohibited for any other purpose, including, but not
+-- limited to modification, reverse engineering, de-compiling, or use with
+-- any other silicon devices, unless such use is explicitly licensed under
+-- a separate agreement with Altera or a megafunction partner.  Title to
+-- the intellectual property, including patents, copyrights, trademarks,
+-- trade secrets, or maskworks, embodied in any such megafunction design,
+-- net list, support information, device programming or simulation file, or
+-- any other related documentation or information provided by Altera or a
+-- megafunction partner, remains with Altera, the megafunction partner, or
+-- their respective licensors.  No other licenses, including any licenses
+-- needed under any third party's intellectual property, are provided herein.
+
+
+
+N.C. = No Connect. This pin has no internal connection to the device.
+VCCINT = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+VCCIO = Dedicated power pin, which MUST be connected to VCC (5.0 volts).
+GNDINT = Dedicated ground pin or unused dedicated input, which MUST be connected to GND.
+GNDIO = Dedicated ground pin, which MUST be connected to GND.
+RESERVED = Unused I/O pin, which MUST be left unconnected.
+
+----------------------------------------------------------------------------
+
+CHIP "ifetch" ASSIGNED TO AN EPF10K20TC144-3
+TCK                              : 1
+CONF_DONE                        : 2
+nCEO                             : 3
+TDO                              : 4
+VCCIO                            : 5
+VCCINT                           : 6
+Add_result5                      : 7
+Add_result2                      : 8
+Instruction23                    : 9
+Instruction3                     : 10
+RESERVED                         : 11
+Instruction24                    : 12
+Instruction12                    : 13
+Instruction8                     : 14
+GNDIO                            : 15
+GNDINT                           : 16
+RESERVED                         : 17
+Instruction20                    : 18
+Instruction17                    : 19
+Instruction19                    : 20
+Instruction18                    : 21
+Instruction22                    : 22
+Instruction21                    : 23
+VCCIO                            : 24
+VCCINT                           : 25
+RESERVED                         : 26
+RESERVED                         : 27
+RESERVED                         : 28
+RESERVED                         : 29
+Instruction28                    : 30
+Instruction27                    : 31
+Instruction25                    : 32
+Instruction30                    : 33
+TMS                              : 34
+nSTATUS                          : 35
+RESERVED                         : 36
+RESERVED                         : 37
+PC_plus_4_out1                   : 38
+RESERVED                         : 39
+GNDIO                            : 40
+RESERVED                         : 41
+RESERVED                         : 42
+RESERVED                         : 43
+RESERVED                         : 44
+VCCIO                            : 45
+RESERVED                         : 46
+RESERVED                         : 47
+RESERVED                         : 48
+RESERVED                         : 49
+GNDIO                            : 50
+RESERVED                         : 51
+VCCINT                           : 52
+VCCINT                           : 53
+reset                            : 54
+clock                            : 55
+Zero                             : 56
+GNDINT                           : 57
+GNDINT                           : 58
+PC_plus_4_out0                   : 59
+RESERVED                         : 60
+VCCIO                            : 61
+RESERVED                         : 62
+Add_result1                      : 63
+RESERVED                         : 64
+RESERVED                         : 65
+GNDIO                            : 66
+PC_plus_4_out2                   : 67
+PC_out4                          : 68
+RESERVED                         : 69
+PC_plus_4_out3                   : 70
+VCCIO                            : 71
+PC_out6                          : 72
+RESERVED                         : 73
+nCONFIG                          : 74
+VCCINT                           : 75
+MSEL1                            : 76
+MSEL0                            : 77
+Instruction0                     : 78
+Instruction29                    : 79
+Instruction26                    : 80
+RESERVED                         : 81
+PC_plus_4_out5                   : 82
+Instruction5                     : 83
+GNDINT                           : 84
+GNDIO                            : 85
+RESERVED                         : 86
+PC_out2                          : 87
+Instruction15                    : 88
+Instruction10                    : 89
+Instruction11                    : 90
+Instruction9                     : 91
+Instruction13                    : 92
+VCCINT                           : 93
+VCCIO                            : 94
+Instruction7                     : 95
+Instruction4                     : 96
+Instruction1                     : 97
+Instruction14                    : 98
+RESERVED                         : 99
+PC_out1                          : 100
+Instruction16                    : 101
+PC_plus_4_out4                   : 102
+GNDINT                           : 103
+GNDIO                            : 104
+TDI                              : 105
+nCE                              : 106
+DCLK                             : 107
+DATA0                            : 108
+PC_out0                          : 109
+RESERVED                         : 110
+PC_out7                          : 111
+RESERVED                         : 112
+PC_plus_4_out7                   : 113
+PC_plus_4_out6                   : 114
+VCCIO                            : 115
+RESERVED                         : 116
+RESERVED                         : 117
+Add_result3                      : 118
+PC_out5                          : 119
+PC_out3                          : 120
+Add_result4                      : 121
+RESERVED                         : 122
+VCCINT                           : 123
+Branch                           : 124
+Add_result6                      : 125
+Add_result7                      : 126
+GNDINT                           : 127
+Instruction6                     : 128
+GNDIO                            : 129
+RESERVED                         : 130
+RESERVED                         : 131
+Instruction2                     : 132
+RESERVED                         : 133
+VCCIO                            : 134
+RESERVED                         : 135
+RESERVED                         : 136
+RESERVED                         : 137
+RESERVED                         : 138
+GNDIO                            : 139
+RESERVED                         : 140
+RESERVED                         : 141
+RESERVED                         : 142
+Add_result0                      : 143
+Instruction31                    : 144

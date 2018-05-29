@@ -1,0 +1,14 @@
+--  MIPS Data Memory Initialization File
+depth=256;
+width=32;
+Address_radix = HEX;
+Data_radix = HEX;
+Content
+Begin
+-- default value for memory
+ [00..FF] : 00000001;
+-- initial values for test program
+ 00 : 55555555;
+ 01 : AAAAAAAA;
+End;
+

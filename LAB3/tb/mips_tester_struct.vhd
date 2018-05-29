@@ -65,12 +65,12 @@ BEGIN
    u_0clk_proc: PROCESS
    BEGIN
       WHILE NOT mw_U_0disable_clk LOOP
-         mw_U_0clk <= '0', '1' AFTER 50 ns;
-         WAIT FOR 100 ns;
+         mw_U_0clk <= '0', '1' AFTER 100 ns;
+         WAIT FOR 200 ns;
       END LOOP;
       WAIT;
    END PROCESS u_0clk_proc;
-   mw_U_0disable_clk <= TRUE AFTER 30000 ns;
+   mw_U_0disable_clk <= TRUE AFTER 60000 ns;
    clock <= mw_U_0clk;
 
    -- ModuleWare code(v1.9) for instance 'U_1' of 'pulse'
@@ -79,8 +79,8 @@ BEGIN
    BEGIN
       mw_U_1pulse <=
          '0',
-         '1' AFTER 20 ns,
-         '0' AFTER 120 ns;
+         '1' AFTER 100 ns,
+         '0' AFTER 205 ns;
       WAIT;
     END PROCESS u_1pulse_proc;
 

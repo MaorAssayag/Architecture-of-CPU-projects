@@ -1,0 +1,23 @@
+Depth = 60;
+Width = 6;
+Address_radix = bin;
+Data_radix = oct;
+% Character Format ROM Data %
+% See Table 9.1 in textbook %
+Content
+  Begin
+[000000..111011] : 40; % space %
+000100  : 15 11 20 23; %  MIPS    %
+001000  : 20 03 40 40; %  PC      %
+001100  : 11 16 23 24; %  INST    %
+010000  : 22 05 07 61; %  REG1    %
+010100  : 22 05 07 62; %  REG2    %
+011000  : 01 14 25 40; %  ALU     %
+011100  : 22 56 04 56; %  R.D.    %
+100000  : 02 22 01 16; %  BRAN    %
+100100  : 32 05 22 17; %  ZERO    %
+101000  : 15 05 15 22; %  MEMR    %
+101100  : 15 05 15 27; %  MEMW    %
+110000  : 03 14 13 40; %  CLK     %
+110100  : 22 23 24 40; %  RST     %
+End

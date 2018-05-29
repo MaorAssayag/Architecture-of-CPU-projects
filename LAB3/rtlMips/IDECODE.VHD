@@ -24,7 +24,7 @@ TYPE register_file IS ARRAY ( 0 TO 31 ) OF STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 
 	SIGNAL register_array				: register_file;
 	SIGNAL write_register_address 		: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
-	SIGNAL write_data					: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL write_data					      : STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL read_register_1_address		: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
 	SIGNAL read_register_2_address		: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
 	SIGNAL write_register_address_1		: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
@@ -32,7 +32,7 @@ TYPE register_file IS ARRAY ( 0 TO 31 ) OF STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL Instruction_immediate_value	: STD_LOGIC_VECTOR( 15 DOWNTO 0 );
 
 BEGIN
-	read_register_1_address 	<= Instruction( 25 DOWNTO 21 );
+		read_register_1_address 	<= Instruction( 25 DOWNTO 21 );
    	read_register_2_address 	<= Instruction( 20 DOWNTO 16 );
    	write_register_address_1	<= old_Instruction( 15 DOWNTO 11 );
    	write_register_address_0 	<= old_Instruction( 20 DOWNTO 16 );
@@ -58,21 +58,21 @@ BEGIN
 		WHEN Instruction_immediate_value(15) = '0'
 		ELSE	X"FFFF" & Instruction_immediate_value;
 
-PROCESS
-	variable write_register_address_var :STD_LOGIC_VECTOR( 4 DOWNTO 0 ) ;
+PROCESS (clock, write_register_address, RegWrite, write_data)
+	variable zero : STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
 	BEGIN
-		write_register_address_var := write_register_address;
-		WAIT UNTIL clock'EVENT AND clock = '1';
+		IF rising_edge(clock) THEN
 		IF reset = '1' THEN
 					-- Initial register values on reset are register = reg#
 					-- use loop to automatically generate reset logic 
 					-- for all registers
 			FOR i IN 0 TO 31 LOOP
-				register_array(i) <= CONV_STD_LOGIC_VECTOR( i, 32 );
+				register_array(i) <= zero;
  			END LOOP;
 					-- Write back to register - don't write to register 0
-  		ELSIF RegWrite = '1' AND write_register_address_var /= 0 THEN
-		      register_array( CONV_INTEGER( write_register_address_var)) <= write_data;
+  		ELSIF RegWrite = '1' AND write_register_address /= 0 THEN
+		      register_array( CONV_INTEGER( write_register_address)) <= write_data;
+		END IF;
 		END IF;
 	END PROCESS;
 END behavior;

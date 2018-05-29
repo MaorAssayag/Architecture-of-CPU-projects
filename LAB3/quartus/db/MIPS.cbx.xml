@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MIPS">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS|Execute:EXE|FPU_Unit:FPU|MUL_FPU:mul_component|MUL:stage_0|lpm_mult:Mult0" CBX_FILE_NAME="mult_h1t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS|Ifetch:IFE|altsyncram:inst_memory" CBX_FILE_NAME="altsyncram_6jn3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS|dmemory:MEM|altsyncram:data_memory" CBX_FILE_NAME="altsyncram_pmp3.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

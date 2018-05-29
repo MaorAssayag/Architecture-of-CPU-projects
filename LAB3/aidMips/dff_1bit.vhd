@@ -28,13 +28,12 @@ architecture behavioral of dff_1bit is
 signal clock_tmp : std_logic;
 begin
 ----------------------------------------
-clock_tmp <= clk AND en;
-process(clock_tmp)
+process(clk)
 begin
-  if rising_edge(clock_tmp) then
+  if rising_edge(clk) then
     if (rst = '1') then
         q <= '0';
-	 else
+	 elsif (en = '1') then
         q <= d;
     end if;
   end if;

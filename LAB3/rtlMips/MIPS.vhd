@@ -119,6 +119,9 @@ ARCHITECTURE structure OF MIPS IS
 					 	MEM_read_EXE  : IN 	STD_LOGIC;
 					 	MEM_read_mem  : IN 	STD_LOGIC;
 						MEM_read_ID  : IN 	STD_LOGIC;
+						RegWrite_EXE  : IN 	STD_LOGIC;
+						RegWrite_mem  : IN 	STD_LOGIC;
+						RegWrite_ID  : IN 	STD_LOGIC;
 					 	data_hazard_en 		 : OUT 	STD_LOGIC;
 					 	Branch_en 		       : OUT 	STD_LOGIC;
 					 	Branch_beq_hazard  : IN 	STD_LOGIC;
@@ -154,6 +157,7 @@ ARCHITECTURE structure OF MIPS IS
 
 
 	SIGNAL read_data_2 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
+	SIGNAL read_data_fromMem 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL read_data_4 		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 
 	SIGNAL ALUSrc_control 			: STD_LOGIC;
@@ -195,6 +199,7 @@ ARCHITECTURE structure OF MIPS IS
 
 
 	SIGNAL ALUop_control 			: STD_LOGIC_VECTOR(  1 DOWNTO 0 );
+	SIGNAL ALUop_2  			: STD_LOGIC_VECTOR(  1 DOWNTO 0 );
 	SIGNAL ALUop_3 			      : STD_LOGIC_VECTOR(  1 DOWNTO 0 );
 
 	SIGNAL Instruction_1		: STD_LOGIC_VECTOR( 31 DOWNTO 0 );
@@ -234,6 +239,9 @@ BEGIN
 						MEM_read_EXE   =>   MemRead_3,
 					   MEM_read_mem    =>   MemRead_4,
 					  	MEM_read_ID => MemRead_control,
+						RegWrite_EXE => Regwrite_3,
+						RegWrite_mem => Regwrite_4,
+						RegWrite_ID => Regwrite_control,
 						data_hazard_en => data_hazard_en,
 						Branch_en => Branch_en,
 						Branch_beq_hazard => Branch_control_Beq,
@@ -317,6 +325,7 @@ BEGIN
 	 read_data_2_B: N_dff generic map(32) port map (clock, '1', reset, read_data_2_2, read_data_2_3);
 	 Sign_Extend_2_B: N_dff generic map(32) port map (clock, '1', reset, Sign_Extend_2, Sign_Extend_3);
 	 ALUop_control_B: N_dff generic map(2) port map (clock, '1', reset, ALUop_control, ALUop_3);
+	 --ALUop_control_B_3: N_dff generic map(2) port map (clock, '1', reset, ALUop_2, ALUop_3);
 	 Regwrite_control_B: dff_1bit port map (clock, '1', reset, Regwrite_control, Regwrite_3);
 	 MemtoReg_control_B: dff_1bit port map (clock, '1', reset, MemtoReg_control, MemtoReg_3);
 	 RegDst_control_B: dff_1bit port map (clock, '1', reset, RegDst_control, RegDst_3);
@@ -329,7 +338,6 @@ BEGIN
 
 
 ----------------------------------- 3
-
    EXE:  Execute
    	PORT MAP (	Read_data_1 	=> read_data_1_3,
              		Read_data_2 	=> read_data_2_3,
@@ -364,7 +372,11 @@ BEGIN
 
 
 		Instruction_D: N_dff generic map(32) port map (clock, '1', reset, Instruction_4, Instruction_old);
-  	read_data_D: N_dff generic map(32) port map (clock, '1', reset, read_data_4, read_data_2);
+		-- maor - i created here 1 cycle stalling of read_data_2
+		--read_data_D: N_dff generic map(32) port map (clock, '1', reset, read_data_4, read_data_fromMem);
+		--read_data_D_2: N_dff generic map(32) port map (clock, '1', reset, read_data_fromMem, read_data_2);
+		--
+		read_data_D: N_dff generic map(32) port map (clock, '1', reset, read_data_4, read_data_2);
 		ALU_result_D: N_dff generic map(32) port map (clock, '1', reset, ALU_result_4, ALU_result_2);
 		Regwrite_control_D: dff_1bit port map (clock, '1', reset, Regwrite_4, Regwrite_2);
 		MemtoReg_control_D: dff_1bit port map (clock, '1', reset, MemtoReg_4, MemtoReg_2);
