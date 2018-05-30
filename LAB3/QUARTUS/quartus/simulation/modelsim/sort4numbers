@@ -1,0 +1,40 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /mips_tb/U_0/ID/read_data_1
+add wave -noupdate /mips_tb/U_0/ID/read_data_2
+add wave -noupdate /mips_tb/U_0/ID/old_Instruction
+add wave -noupdate /mips_tb/U_0/ID/Instruction
+add wave -noupdate /mips_tb/U_0/ID/read_data
+add wave -noupdate /mips_tb/U_0/ID/ALU_result
+add wave -noupdate /mips_tb/U_0/ID/RegWrite
+add wave -noupdate /mips_tb/U_0/ID/MemtoReg
+add wave -noupdate /mips_tb/U_0/ID/RegDst
+add wave -noupdate /mips_tb/U_0/ID/Sign_extend
+add wave -noupdate /mips_tb/U_0/ID/clock
+add wave -noupdate /mips_tb/U_0/ID/reset
+add wave -noupdate -childformat {{/mips_tb/U_0/ID/register_array(0) -radix unsigned} {/mips_tb/U_0/ID/register_array(1) -radix unsigned} {/mips_tb/U_0/ID/register_array(2) -radix unsigned} {/mips_tb/U_0/ID/register_array(3) -radix unsigned} {/mips_tb/U_0/ID/register_array(4) -radix unsigned} {/mips_tb/U_0/ID/register_array(5) -radix unsigned} {/mips_tb/U_0/ID/register_array(6) -radix unsigned} {/mips_tb/U_0/ID/register_array(7) -radix unsigned} {/mips_tb/U_0/ID/register_array(8) -radix unsigned} {/mips_tb/U_0/ID/register_array(9) -radix unsigned} {/mips_tb/U_0/ID/register_array(10) -radix unsigned} {/mips_tb/U_0/ID/register_array(11) -radix unsigned} {/mips_tb/U_0/ID/register_array(12) -radix unsigned} {/mips_tb/U_0/ID/register_array(13) -radix unsigned} {/mips_tb/U_0/ID/register_array(14) -radix unsigned} {/mips_tb/U_0/ID/register_array(15) -radix unsigned} {/mips_tb/U_0/ID/register_array(16) -radix unsigned} {/mips_tb/U_0/ID/register_array(17) -radix unsigned} {/mips_tb/U_0/ID/register_array(18) -radix unsigned} {/mips_tb/U_0/ID/register_array(19) -radix unsigned} {/mips_tb/U_0/ID/register_array(20) -radix unsigned} {/mips_tb/U_0/ID/register_array(21) -radix unsigned} {/mips_tb/U_0/ID/register_array(22) -radix unsigned} {/mips_tb/U_0/ID/register_array(23) -radix unsigned} {/mips_tb/U_0/ID/register_array(24) -radix unsigned} {/mips_tb/U_0/ID/register_array(25) -radix unsigned} {/mips_tb/U_0/ID/register_array(26) -radix unsigned} {/mips_tb/U_0/ID/register_array(27) -radix unsigned} {/mips_tb/U_0/ID/register_array(28) -radix unsigned} {/mips_tb/U_0/ID/register_array(29) -radix unsigned} {/mips_tb/U_0/ID/register_array(30) -radix unsigned} {/mips_tb/U_0/ID/register_array(31) -radix unsigned}} -expand -subitemconfig {/mips_tb/U_0/ID/register_array(0) {-radix unsigned} /mips_tb/U_0/ID/register_array(1) {-radix unsigned} /mips_tb/U_0/ID/register_array(2) {-radix unsigned} /mips_tb/U_0/ID/register_array(3) {-radix unsigned} /mips_tb/U_0/ID/register_array(4) {-radix unsigned} /mips_tb/U_0/ID/register_array(5) {-radix unsigned} /mips_tb/U_0/ID/register_array(6) {-radix unsigned} /mips_tb/U_0/ID/register_array(7) {-radix unsigned} /mips_tb/U_0/ID/register_array(8) {-radix unsigned} /mips_tb/U_0/ID/register_array(9) {-radix unsigned} /mips_tb/U_0/ID/register_array(10) {-radix unsigned} /mips_tb/U_0/ID/register_array(11) {-radix unsigned} /mips_tb/U_0/ID/register_array(12) {-radix unsigned} /mips_tb/U_0/ID/register_array(13) {-radix unsigned} /mips_tb/U_0/ID/register_array(14) {-radix unsigned} /mips_tb/U_0/ID/register_array(15) {-radix unsigned} /mips_tb/U_0/ID/register_array(16) {-radix unsigned} /mips_tb/U_0/ID/register_array(17) {-radix unsigned} /mips_tb/U_0/ID/register_array(18) {-radix unsigned} /mips_tb/U_0/ID/register_array(19) {-radix unsigned} /mips_tb/U_0/ID/register_array(20) {-radix unsigned} /mips_tb/U_0/ID/register_array(21) {-radix unsigned} /mips_tb/U_0/ID/register_array(22) {-radix unsigned} /mips_tb/U_0/ID/register_array(23) {-radix unsigned} /mips_tb/U_0/ID/register_array(24) {-radix unsigned} /mips_tb/U_0/ID/register_array(25) {-radix unsigned} /mips_tb/U_0/ID/register_array(26) {-radix unsigned} /mips_tb/U_0/ID/register_array(27) {-radix unsigned} /mips_tb/U_0/ID/register_array(28) {-radix unsigned} /mips_tb/U_0/ID/register_array(29) {-radix unsigned} /mips_tb/U_0/ID/register_array(30) {-radix unsigned} /mips_tb/U_0/ID/register_array(31) {-radix unsigned}} /mips_tb/U_0/ID/register_array
+add wave -noupdate /mips_tb/U_0/ID/write_register_address
+add wave -noupdate /mips_tb/U_0/ID/write_data
+add wave -noupdate /mips_tb/U_0/ID/read_register_1_address
+add wave -noupdate /mips_tb/U_0/ID/read_register_2_address
+add wave -noupdate /mips_tb/U_0/ID/write_register_address_1
+add wave -noupdate /mips_tb/U_0/ID/write_register_address_0
+add wave -noupdate /mips_tb/U_0/ID/Instruction_immediate_value
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {59999703 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 250
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ns
+update
+WaveRestoreZoom {59108728 ps} {60890488 ps}
