@@ -81,16 +81,10 @@ BEGIN
 clock_mips <= en_mips and clock;
 
 
-LO_1 <= "0000000";
-LO_2 <= "0000000";
-HI_1 <= "0000000";
-HI_2 <= "0000000";
-
 counter_en:process (button_GPIO)
 						begin
 								if (rising_edge(button_GPIO)) then
 										en_7_seg <= not (en_7_seg);
-										next_PC <=  "00000000";
 							 end if;
 						end process;
 

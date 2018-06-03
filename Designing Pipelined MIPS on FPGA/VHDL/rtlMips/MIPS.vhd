@@ -16,13 +16,17 @@ USE IEEE.STD_LOGIC_ARITH.ALL;
 
  -- entity Definition
 ENTITY MIPS IS
-		PORT( reset, clock					: IN 	STD_LOGIC;
+		PORT( reset, clock,button_GPIO					: IN 	STD_LOGIC;
 					-- Output important signals to pins for easy display in Simulator
 					PC								: OUT  STD_LOGIC_VECTOR( 9 DOWNTO 0 );
 					ALU_result_out, read_data_1_out, read_data_2_out, write_data_out,
 						Instruction_out					: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 					Branch_out, Zero_out, Memwrite_out,
-					Regwrite_out					: OUT 	STD_LOGIC );
+					Regwrite_out					: OUT 	STD_LOGIC ;
+				  LO_1    			    :     out  std_logic_vector (6 downto 0);
+			     LO_2    				 :     out  std_logic_vector (6 downto 0);
+			     HI_1    				 :     out  std_logic_vector (6 downto 0);
+			     HI_2   				 :     out  std_logic_vector (6 downto 0));
 		END 	MIPS;
 
  -- Architecture Definition
@@ -72,7 +76,11 @@ ARCHITECTURE structure OF MIPS IS
         		RegWrite, MemtoReg 	: IN 	STD_LOGIC;
         		RegDst 				: IN 	STD_LOGIC;
         		Sign_extend 		: OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-        		clock, reset		: IN 	STD_LOGIC );
+        		clock, reset,button_GPIO		: IN 	STD_LOGIC ;
+				LO_1    			    :     out  std_logic_vector (6 downto 0);
+			   LO_2    				 :     out  std_logic_vector (6 downto 0);
+			   HI_1    				 :     out  std_logic_vector (6 downto 0);
+			   HI_2   				 :     out  std_logic_vector (6 downto 0));
 	END COMPONENT;
 
 	COMPONENT control
@@ -286,7 +294,12 @@ BEGIN
 						RegDst 			=> RegDst_2,
 						Sign_extend 	=> Sign_Extend_2,
         		clock 			=> clock,
-						reset 			=> reset );
+						reset 			=> reset,
+					button_GPIO => button_GPIO,
+				   LO_1 => LO_1,
+				   LO_2 => LO_2,
+				   HI_1 => HI_1,
+				   HI_2 => HI_2	);
 
    CTL:   control
 	PORT MAP ( 	Opcode 			=> Instruction_2( 31 DOWNTO 26 ),

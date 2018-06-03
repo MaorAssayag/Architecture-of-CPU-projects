@@ -27,11 +27,26 @@ ENTITY Idecode IS
 			MemtoReg 	: IN 	STD_LOGIC;
 			RegDst 		: IN 	STD_LOGIC;
 			Sign_extend : OUT 	STD_LOGIC_VECTOR( 31 DOWNTO 0 );
-			clock,reset	: IN 	STD_LOGIC );
+			clock,reset,button_GPIO	: IN 	STD_LOGIC ;
+			LO_1    			    :     out  std_logic_vector (6 downto 0);
+			LO_2    				 :     out  std_logic_vector (6 downto 0);
+			HI_1    				 :     out  std_logic_vector (6 downto 0);
+			HI_2   				 :     out  std_logic_vector (6 downto 0));
 END Idecode;
 
  -- Architecture Definition
 ARCHITECTURE behavior OF Idecode IS
+COMPONENT display_7_segment
+    port (
+    	q        : in std_logic_vector (7 downto 0);
+    	segment1 : out std_logic_vector (6 downto 0);
+      segment2 : out std_logic_vector (6 downto 0));
+end COMPONENT;
+
+COMPONENT Counter  port (
+	clk,enable : in std_logic;
+	q          : out std_logic_vector (7 downto 0));
+end COMPONENT;
 TYPE register_file IS ARRAY ( 0 TO 31 ) OF STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 
 	SIGNAL register_array				: register_file;
@@ -42,6 +57,12 @@ TYPE register_file IS ARRAY ( 0 TO 31 ) OF STD_LOGIC_VECTOR( 31 DOWNTO 0 );
 	SIGNAL write_register_address_1		: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
 	SIGNAL write_register_address_0		: STD_LOGIC_VECTOR( 4 DOWNTO 0 );
 	SIGNAL Instruction_immediate_value	: STD_LOGIC_VECTOR( 15 DOWNTO 0 );
+	SIGNAL en_7_seg          :     STD_LOGIC:= '0';
+	SIGNAL i          :     integer := 0;
+   SIGNAL q                 :     STD_LOGIC_VECTOR ( 7 DOWNTO 0 );
+   SIGNAL memread                 :     STD_LOGIC_VECTOR ( 31 DOWNTO 0 );
+
+
 
 BEGIN
 ----------------------------------------
@@ -89,6 +110,48 @@ PROCESS (clock, write_register_address, RegWrite, write_data)
 		END IF;
 	END PROCESS;
 ----------------------------------------
+
+
+
+
+
+
+
+counter_en:process (button_GPIO)
+						begin
+								if (rising_edge(button_GPIO)) then
+										en_7_seg <= '1';
+							 end if;
+						end process;
+
+
+-------------------------------        display
+Counter_unit : Counter
+			PORT MAP (
+					clk => clock,
+					enable => en_7_seg,
+					q => q
+			);
+
+
+
+display7 : process
+begin
+wait until q(1)'event and q(1) = '1';
+		if i < 8 then
+			i <= i+1;
+		end if;
+end process;
+
+memread <=   register_array(i+ 14) when i < 8 else (31 downto 0 =>'0') ;
+convert_7_segment_1: display_7_segment port map (memread( 7 downto 0),LO_1, LO_2);
+convert_7_segment_2: display_7_segment port map (memread(15 downto 8),HI_1,HI_2);
+
+
+
+
+
+
 END behavior;
 
 --EndOfFile

@@ -27,6 +27,9 @@ ENTITY dmemory IS
             clock,reset			: IN 	STD_LOGIC );
 END dmemory;
 
+
+
+
  -- Architecture Definition
 ARCHITECTURE behavior OF dmemory IS
 SIGNAL write_clock : STD_LOGIC;
