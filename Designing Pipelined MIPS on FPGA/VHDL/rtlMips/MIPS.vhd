@@ -16,7 +16,7 @@ USE IEEE.STD_LOGIC_ARITH.ALL;
 
  -- entity Definition
 ENTITY MIPS IS
-		PORT( reset, clock,button_GPIO					: IN 	STD_LOGIC;
+		PORT( reset, clock_in,button_GPIO					: IN 	STD_LOGIC;
 					-- Output important signals to pins for easy display in Simulator
 					PC								: OUT  STD_LOGIC_VECTOR( 9 DOWNTO 0 );
 					ALU_result_out, read_data_1_out, read_data_2_out, write_data_out,
@@ -31,6 +31,15 @@ ENTITY MIPS IS
 
  -- Architecture Definition
 ARCHITECTURE structure OF MIPS IS
+---------------------------------PLL
+	 component PLL port(
+	      areset		: IN STD_LOGIC  := '0';
+		   inclk0		: IN STD_LOGIC  := '0';
+		       c0		: OUT STD_LOGIC ;
+		    locked		: OUT STD_LOGIC );
+    end component;
+
+
 		-- regs
 		component N_dff
 		generic(N: integer := 8); --defualt value for N is 8
@@ -227,6 +236,9 @@ ARCHITECTURE structure OF MIPS IS
 	SIGNAL data_hazard_en 		: STD_LOGIC;
 	SIGNAL Branch_en 		: STD_LOGIC;
 
+	
+	SIGNAL clock 		: STD_LOGIC;
+	
 BEGIN
 ----------------------------------------
 					-- copy important signals to output pins for easy
@@ -241,6 +253,16 @@ BEGIN
    RegWrite_out 	<= Regwrite_2;
    MemWrite_out 	<= MemWrite_4;
 
+-------------------- pll
+	  m1: PLL port map(
+	     inclk0 => clock_in,
+		  c0 => clock
+	   );
+		
+	
+	
+	
+	
 ----------------------- HAZARD
 	HAZ :  HAZARD
 		port map (
