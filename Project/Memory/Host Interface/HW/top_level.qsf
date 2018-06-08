@@ -1,0 +1,117 @@
+# Copyright (C) 1991-2006 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		CII_Starter_USB_API_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C20F484C7
+set_global_assignment -name TOP_LEVEL_ENTITY top_level
+
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:25:28  APRIL 24, 2006"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP1"
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
+
+
+set_location_assignment PIN_J2 -to hex0[0]
+set_location_assignment PIN_J1 -to hex0[1]
+set_location_assignment PIN_H2 -to hex0[2]
+set_location_assignment PIN_H1 -to hex0[3]
+set_location_assignment PIN_F2 -to hex0[4]
+set_location_assignment PIN_F1 -to hex0[5]
+set_location_assignment PIN_E2 -to hex0[6]
+set_location_assignment PIN_E1 -to hex1[0]
+set_location_assignment PIN_H6 -to hex1[1]
+set_location_assignment PIN_H5 -to hex1[2]
+set_location_assignment PIN_H4 -to hex1[3]
+set_location_assignment PIN_G3 -to hex1[4]
+set_location_assignment PIN_D2 -to hex1[5]
+set_location_assignment PIN_D1 -to hex1[6]
+set_location_assignment PIN_G5 -to hex2[0]
+set_location_assignment PIN_G6 -to hex2[1]
+set_location_assignment PIN_C2 -to hex2[2]
+set_location_assignment PIN_C1 -to hex2[3]
+set_location_assignment PIN_E3 -to hex2[4]
+set_location_assignment PIN_E4 -to hex2[5]
+set_location_assignment PIN_D3 -to hex2[6]
+set_location_assignment PIN_F4 -to hex3[0]
+set_location_assignment PIN_D5 -to hex3[1]
+set_location_assignment PIN_D6 -to hex3[2]
+set_location_assignment PIN_J4 -to hex3[3]
+set_location_assignment PIN_L8 -to hex3[4]
+set_location_assignment PIN_F3 -to hex3[5]
+set_location_assignment PIN_D4 -to hex3[6]
+
+set_location_assignment PIN_R20 -to ledr[0]
+set_location_assignment PIN_R19 -to ledr[1]
+set_location_assignment PIN_U19 -to ledr[2]
+set_location_assignment PIN_Y19 -to ledr[3]
+set_location_assignment PIN_T18 -to ledr[4]
+set_location_assignment PIN_V19 -to ledr[5]
+set_location_assignment PIN_Y18 -to ledr[6]
+set_location_assignment PIN_U18 -to ledr[7]
+set_location_assignment PIN_R18 -to ledr[8]
+set_location_assignment PIN_R17 -to ledr[9]
+set_location_assignment PIN_U22 -to ledg[0]
+set_location_assignment PIN_U21 -to ledg[1]
+set_location_assignment PIN_V22 -to ledg[2]
+set_location_assignment PIN_V21 -to ledg[3]
+set_location_assignment PIN_W22 -to ledg[4]
+set_location_assignment PIN_W21 -to ledg[5]
+set_location_assignment PIN_Y22 -to ledg[6]
+set_location_assignment PIN_Y21 -to ledg[7]
+
+set_location_assignment PIN_L1 -to clock50m
+
+set_location_assignment PIN_E8 -to tdi
+set_location_assignment PIN_D8 -to tcs
+set_location_assignment PIN_C7 -to tck
+set_location_assignment PIN_D7 -to tdo
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to tck
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to tdi
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to tcs
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tdo
+set_instance_assignment -name CLOCK_SETTINGS tck -to tck
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to tck
+set_instance_assignment -name GLOBAL_SIGNAL ON -to tdi
+set_instance_assignment -name GLOBAL_SIGNAL ON -to tcs
+set_instance_assignment -name GLOBAL_SIGNAL ON -to tdo
+set_parameter -name CYCLONEII_SAFE_WRITE VERIFIED_SAFE
+
+
+set_global_assignment -name FMAX_REQUIREMENT "40 MHz" -section_id TCK
+set_global_assignment -name STRATIX_CONFIGURATION_DEVICE EPCS4
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+
+
+set_global_assignment -name VHDL_FILE top_level.vhd
+set_global_assignment -name VERILOG_FILE debug_memory_interface.v
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name MISC_FILE "E:/Document/University/3.Third Year/Semester B/Central Processing Unit Architecture/Host Interface/HW/top_level.dpf"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,205 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'GPIO_1[0]'
+Slack : -6.836
+TNS   : -1814.419
+
+Type  : Slow Model Setup 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
+Slack : -4.715
+TNS   : -272.759
+
+Type  : Slow Model Setup 'rClk[0]'
+Slack : -4.518
+TNS   : -357.035
+
+Type  : Slow Model Setup 'u6|altpll_component|pll|clk[0]'
+Slack : -3.064
+TNS   : -191.167
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : 2.955
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -2.703
+TNS   : -5.406
+
+Type  : Slow Model Hold 'GPIO_1[0]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Hold 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Hold 'rClk[0]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Hold 'u6|altpll_component|pll|clk[0]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
+Slack : -4.573
+TNS   : -106.787
+
+Type  : Slow Model Recovery 'rClk[0]'
+Slack : -3.910
+TNS   : -353.492
+
+Type  : Slow Model Recovery 'u6|altpll_component|pll|clk[0]'
+Slack : -2.554
+TNS   : -551.702
+
+Type  : Slow Model Recovery 'GPIO_1[0]'
+Slack : -2.027
+TNS   : -165.566
+
+Type  : Slow Model Recovery 'CLOCK_50'
+Slack : 13.594
+TNS   : 0.000
+
+Type  : Slow Model Removal 'GPIO_1[0]'
+Slack : 0.141
+TNS   : 0.000
+
+Type  : Slow Model Removal 'rClk[0]'
+Slack : 1.675
+TNS   : 0.000
+
+Type  : Slow Model Removal 'CLOCK_50'
+Slack : 2.436
+TNS   : 0.000
+
+Type  : Slow Model Removal 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
+Slack : 3.673
+TNS   : 0.000
+
+Type  : Slow Model Removal 'u6|altpll_component|pll|clk[0]'
+Slack : 5.179
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'GPIO_1[0]'
+Slack : -2.333
+TNS   : -2025.171
+
+Type  : Slow Model Minimum Pulse Width 'rClk[0]'
+Slack : -2.064
+TNS   : -269.258
+
+Type  : Slow Model Minimum Pulse Width 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
+Slack : -0.611
+TNS   : -87.984
+
+Type  : Slow Model Minimum Pulse Width 'u6|altpll_component|pll|clk[0]'
+Slack : 1.436
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.889
+TNS   : 0.000
+
+Type  : Fast Model Setup 'GPIO_1[0]'
+Slack : -2.113
+TNS   : -473.404
+
+Type  : Fast Model Setup 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
+Slack : -1.373
+TNS   : -69.792
+
+Type  : Fast Model Setup 'rClk[0]'
+Slack : -1.012
+TNS   : -72.114
+
+Type  : Fast Model Setup 'u6|altpll_component|pll|clk[0]'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : 2.110
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.730
+TNS   : -3.460
+
+Type  : Fast Model Hold 'GPIO_1[0]'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast Model Hold 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'rClk[0]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'u6|altpll_component|pll|clk[0]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'rClk[0]'
+Slack : -2.064
+TNS   : -156.086
+
+Type  : Fast Model Recovery 'GPIO_1[0]'
+Slack : -1.483
+TNS   : -124.332
+
+Type  : Fast Model Recovery 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
+Slack : -1.364
+TNS   : -31.509
+
+Type  : Fast Model Recovery 'u6|altpll_component|pll|clk[0]'
+Slack : -0.275
+TNS   : -8.800
+
+Type  : Fast Model Recovery 'CLOCK_50'
+Slack : 17.444
+TNS   : 0.000
+
+Type  : Fast Model Removal 'GPIO_1[0]'
+Slack : 0.596
+TNS   : 0.000
+
+Type  : Fast Model Removal 'CLOCK_50'
+Slack : 1.078
+TNS   : 0.000
+
+Type  : Fast Model Removal 'rClk[0]'
+Slack : 1.083
+TNS   : 0.000
+
+Type  : Fast Model Removal 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
+Slack : 1.599
+TNS   : 0.000
+
+Type  : Fast Model Removal 'u6|altpll_component|pll|clk[0]'
+Slack : 3.872
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'GPIO_1[0]'
+Slack : -1.880
+TNS   : -1655.161
+
+Type  : Fast Model Minimum Pulse Width 'rClk[0]'
+Slack : -1.880
+TNS   : -231.800
+
+Type  : Fast Model Minimum Pulse Width 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
+Slack : -0.500
+TNS   : -72.000
+
+Type  : Fast Model Minimum Pulse Width 'u6|altpll_component|pll|clk[0]'
+Slack : 1.873
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : 9.000
+TNS   : 0.000
+
+------------------------------------------------------------
