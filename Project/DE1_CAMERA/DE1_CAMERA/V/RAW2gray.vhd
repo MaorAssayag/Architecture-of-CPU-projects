@@ -1,8 +1,8 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-
+use IEEE.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
 
 entity RAW2gray is
 port(
@@ -10,19 +10,11 @@ port(
 	gray: out std_logic_vector(11 downto 0);
   iCLK, iRST: in std_logic);
 end RAW2gray;
-
-
 architecture behv of RAW2gray is
-
-
-
 begin
-process(iCLK, iRST)
-
-
+process(iCLK)
 begin
-
-	gray <=	std_logic_vector((shift_right(unsigned(oRed),2))+(shift_right(unsigned(oRed),5))+(shift_right(unsigned(oGreen),1))+(shift_right(unsigned(oGreen),4))+(shift_right(unsigned(oBlue),4))+(shift_right(unsigned(oBlue),5)));
+	gray <=	conv_std_logic_vector(((CONV_INTEGER(oRed))*299/1000) +((CONV_INTEGER(oGreen))*587/1000) + ((CONV_INTEGER(oBlue))*114/1000),12);
 end process;
 
 end behv;

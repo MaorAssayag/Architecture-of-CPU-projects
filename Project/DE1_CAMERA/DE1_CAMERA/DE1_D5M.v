@@ -247,7 +247,13 @@ reg		[1:0]	rClk;
 wire			sdram_ctrl_clk;
 
 
-wire	[29:0]	GrayScale;
+wire	[11:0]	Gray;
+wire	[11:0]	out_R;
+wire	[11:0]	out_G;
+wire	[11:0]	out_B;
+
+
+
 
 
 //=============================================================================
@@ -366,7 +372,7 @@ Sdram_Control_4Port	u7	(	//	HOST Side
 							.CLK(sdram_ctrl_clk),
 
 							//	FIFO Write Side 1
-							.WR1_DATA({1'b0,GrayScale[29:15]}),
+							.WR1_DATA({1'b0,out_G[11:7],out_B[11:2]}),
 							.WR1(sCCD_DVAL),
 							.WR1_ADDR(0),
 							.WR1_MAX_ADDR(640*480),
@@ -375,7 +381,7 @@ Sdram_Control_4Port	u7	(	//	HOST Side
 							.WR1_CLK(~CCD_PIXCLK),
 
 							//	FIFO Write Side 2
-							.WR2_DATA(	{1'b0,GrayScale[14:0]}),
+							.WR2_DATA(	{1'b0,out_G[6:2],out_R[11:2]}),
 							.WR2(sCCD_DVAL),
 							.WR2_ADDR(22'h100000),
 							.WR2_MAX_ADDR(22'h100000+640*480),
@@ -433,12 +439,26 @@ RAW2gray  u9(
 								.oRed(sCCD_R),
 								.oGreen(sCCD_G),
 								.oBlue(sCCD_B),
-								.oDVAL(sCCD_DVAL),
-								.gray(GrayScale)
+								.gray(Gray),
+
 	);
 
 
+	mux  u10(
+									.iCLK(CCD_PIXCLK),
+									.iRST(DLY_RST_1),
+									.oRed(sCCD_R),
+									.oGreen(sCCD_G),
+									.oBlue(sCCD_B),
+									.gray(Gray),
+									.out_R(out_R),
+									.out_G(out_G),
+									.out_B(out_B),
+									.switch1(SW[0]),
+									.switch2(SW[1]),
+									.switch3(SW[2])
 
+		);
 
 
 endmodule
