@@ -1,12 +1,12 @@
 // --------------------------------------------------------------------
-// Copyright (c) 2007 by Terasic Technologies Inc. 
+// Copyright (c) 2007 by Terasic Technologies Inc.
 // --------------------------------------------------------------------
 //
 // Permission:
 //
 //   Terasic grants permission to use and modify this code for use
-//   in synthesis for all Terasic Development Boards and Altera Development 
-//   Kits made by Terasic.  Other use of this code, including the selling 
+//   in synthesis for all Terasic Development Boards and Altera Development
+//   Kits made by Terasic.  Other use of this code, including the selling
 //   ,duplication, or modification of any portion is strictly prohibited.
 //
 // Disclaimer:
@@ -15,11 +15,11 @@
 //   which illustrates how these types of functions can be implemented.
 //   It is the user's responsibility to verify their design for
 //   consistency and functionality through the use of formal
-//   verification methods.  Terasic provides no warranty regarding the use 
+//   verification methods.  Terasic provides no warranty regarding the use
 //   or functionality of this code.
 //
 // --------------------------------------------------------------------
-//           
+//
 //                     Terasic Technologies Inc
 //                     356 Fu-Shin E. Rd Sec. 1. JhuBei City,
 //                     HsinChu County, Taiwan
@@ -42,7 +42,7 @@
 
 module DE1_D5M
 	(
-		////////////////////	Clock Input	 	////////////////////	 
+		////////////////////	Clock Input	 	////////////////////
 		CLOCK_24,						//	24 MHz
 		CLOCK_27,						//	27 MHz
 		CLOCK_50,						//	50 MHz
@@ -65,7 +65,7 @@ module DE1_D5M
 		/////////////////////	SDRAM Interface		////////////////
 		DRAM_DQ,						//	SDRAM Data bus 16 Bits
 		DRAM_ADDR,						//	SDRAM Address bus 12 Bits
-		DRAM_LDQM,						//	SDRAM Low-byte Data Mask 
+		DRAM_LDQM,						//	SDRAM Low-byte Data Mask
 		DRAM_UDQM,						//	SDRAM High-byte Data Mask
 		DRAM_WE_N,						//	SDRAM Write Enable
 		DRAM_CAS_N,						//	SDRAM Column Address Strobe
@@ -85,8 +85,8 @@ module DE1_D5M
 		////////////////////	SRAM Interface		////////////////
 		SRAM_DQ,						//	SRAM Data bus 16 Bits
 		SRAM_ADDR,						//	SRAM Address bus 18 Bits
-		SRAM_UB_N,						//	SRAM High-byte Data Mask 
-		SRAM_LB_N,						//	SRAM Low-byte Data Mask 
+		SRAM_UB_N,						//	SRAM High-byte Data Mask
+		SRAM_LB_N,						//	SRAM Low-byte Data Mask
 		SRAM_WE_N,						//	SRAM Write Enable
 		SRAM_CE_N,						//	SRAM Chip Enable
 		SRAM_OE_N,						//	SRAM Output Enable
@@ -147,7 +147,7 @@ input			UART_RXD;				//	UART Receiver
 ///////////////////////		SDRAM Interface	////////////////////////
 inout	[15:0]	DRAM_DQ;				//	SDRAM Data bus 16 Bits
 output	[11:0]	DRAM_ADDR;				//	SDRAM Address bus 12 Bits
-output			DRAM_LDQM;				//	SDRAM Low-byte Data Mask 
+output			DRAM_LDQM;				//	SDRAM Low-byte Data Mask
 output			DRAM_UDQM;				//	SDRAM High-byte Data Mask
 output			DRAM_WE_N;				//	SDRAM Write Enable
 output			DRAM_CAS_N;				//	SDRAM Column Address Strobe
@@ -167,8 +167,8 @@ output			FL_CE_N;				//	FLASH Chip Enable
 ////////////////////////	SRAM Interface	////////////////////////
 inout	[15:0]	SRAM_DQ;				//	SRAM Data bus 16 Bits
 output	[17:0]	SRAM_ADDR;				//	SRAM Address bus 18 Bits
-output			SRAM_UB_N;				//	SRAM High-byte Data Mask 
-output			SRAM_LB_N;				//	SRAM Low-byte Data Mask 
+output			SRAM_UB_N;				//	SRAM High-byte Data Mask
+output			SRAM_LB_N;				//	SRAM Low-byte Data Mask
 output			SRAM_WE_N;				//	SRAM Write Enable
 output			SRAM_CE_N;				//	SRAM Chip Enable
 output			SRAM_OE_N;				//	SRAM Output Enable
@@ -245,6 +245,10 @@ wire	[9:0]	VGA_G;	 				//	VGA Green[9:0]
 wire	[9:0]	VGA_B;   				//	VGA Blue[9:0]
 reg		[1:0]	rClk;
 wire			sdram_ctrl_clk;
+
+
+wire	[29:0]	GrayScale;
+
 
 //=============================================================================
 // Structural coding
@@ -356,13 +360,13 @@ sdram_pll 			u6	(
 
 assign CCD_MCLK = rClk[0];
 
-Sdram_Control_4Port	u7	(	//	HOST Side						
+Sdram_Control_4Port	u7	(	//	HOST Side
 						    .REF_CLK(CLOCK_50),
 						    .RESET_N(1'b1),
 							.CLK(sdram_ctrl_clk),
 
 							//	FIFO Write Side 1
-							.WR1_DATA({1'b0,sCCD_G[11:7],sCCD_B[11:2]}),
+							.WR1_DATA({1'b0,GrayScale[29:15]}),
 							.WR1(sCCD_DVAL),
 							.WR1_ADDR(0),
 							.WR1_MAX_ADDR(640*480),
@@ -371,7 +375,7 @@ Sdram_Control_4Port	u7	(	//	HOST Side
 							.WR1_CLK(~CCD_PIXCLK),
 
 							//	FIFO Write Side 2
-							.WR2_DATA(	{1'b0,sCCD_G[6:2],sCCD_R[11:2]}),
+							.WR2_DATA(	{1'b0,GrayScale[14:0]}),
 							.WR2(sCCD_DVAL),
 							.WR2_ADDR(22'h100000),
 							.WR2_MAX_ADDR(22'h100000+640*480),
@@ -388,7 +392,7 @@ Sdram_Control_4Port	u7	(	//	HOST Side
 							.RD1_LENGTH(9'h100),
 							.RD1_LOAD(!DLY_RST_0),
 							.RD1_CLK(~VGA_CTRL_CLK),
-							
+
 							//	FIFO Read Side 2
 						    .RD2_DATA(Read_DATA2),
 							.RD2(Read),
@@ -397,7 +401,7 @@ Sdram_Control_4Port	u7	(	//	HOST Side
 							.RD2_LENGTH(9'h100),
 				        	.RD2_LOAD(!DLY_RST_0),
 							.RD2_CLK(~VGA_CTRL_CLK),
-							
+
 							//	SDRAM Side
 						    .SA(DRAM_ADDR),
 						    .BA({DRAM_BA_1,DRAM_BA_0}),
@@ -423,5 +427,18 @@ I2C_CCD_Config 		u8	(	//	Host Side
 							.I2C_SCLK(GPIO_1[24]),
 							.I2C_SDAT(GPIO_1[23])
 						);
+RAW2gray  u9(
+								.iCLK(CCD_PIXCLK),
+								.iRST(DLY_RST_1),
+								.oRed(sCCD_R),
+								.oGreen(sCCD_G),
+								.oBlue(sCCD_B),
+								.oDVAL(sCCD_DVAL),
+								.gray(GrayScale)
+	);
+
+
+
+
 
 endmodule
