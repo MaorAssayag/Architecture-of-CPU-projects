@@ -251,6 +251,7 @@ wire			sdram_ctrl_clk;
 
 
 wire	[11:0]	Gray; /////////////  GrayScale
+//////////////histogram
 wire	[11:0]	out_R;
 wire	[11:0]	out_G;
 wire	[11:0]	out_B;
@@ -258,6 +259,11 @@ wire	[11:0]	his_R;
 wire	[11:0]	his_B;
 wire	[11:0]	his_G;
 
+
+
+// --- SobelOperator ---
+wire  [11:0]   oSob;
+// -----------------
 
 //=============================================================================
 // Structural coding
@@ -463,7 +469,9 @@ RAW2gray  u9(
 									.his_B(his_G),
 									.switch1(SW[0]),
 									.switch2(SW[1]),
-									.switch3(SW[2])
+									.switch3(SW[2]),
+									.switch4(SW[3]),
+									.iSobel(oSob)
 		);
 	Histogram			u11 (
 								 .iRST(DLY_RST_1),
@@ -476,7 +484,15 @@ RAW2gray  u9(
 							 	 .y_in(Y_Cont),
 								 .iCLK(CCD_PIXCLK)
 								);
-
+		Sobel 				u12(	.oSobel(oSob),			// oSobel => oSOB,
+										.gray_in(Gray),
+										.oDVAL(oSobDVAL),
+										.iX_Cont(X_Cont),
+										.iY_Cont(Y_Cont),
+										.iDVAL(sCCD_DVAL),
+										.iCLK(CCD_PIXCLK),
+										.iRST(DLY_RST_1)
+									);
 
 
 endmodule

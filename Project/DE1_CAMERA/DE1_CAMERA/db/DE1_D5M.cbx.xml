@@ -12,6 +12,8 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_5ch.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_m2o1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_m2o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|Sobel:u12|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_g1h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|Sobel:u12|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:booth_adder_right" CBX_FILE_NAME="add_sub_njf.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_8ch.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_2ch.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_m2o1.tdf"/>

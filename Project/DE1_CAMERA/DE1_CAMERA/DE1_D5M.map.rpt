@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_D5M
-Sun Jun 10 19:49:01 2018
+Sun Jun 10 22:20:12 2018
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -107,25 +107,27 @@ Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
  99. Parameter Settings for Inferred Entity Instance: RAW2gray:u9|lpm_divide:Div1
 100. Parameter Settings for Inferred Entity Instance: RAW2gray:u9|lpm_mult:Mult0
 101. Parameter Settings for Inferred Entity Instance: RAW2gray:u9|lpm_divide:Div0
-102. altshift_taps Parameter Settings by Entity Instance
-103. altpll Parameter Settings by Entity Instance
-104. dcfifo Parameter Settings by Entity Instance
-105. lpm_mult Parameter Settings by Entity Instance
-106. Port Connectivity Checks: "mux:u10"
-107. Port Connectivity Checks: "I2C_CCD_Config:u8"
-108. Port Connectivity Checks: "Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2"
-109. Port Connectivity Checks: "Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1"
-110. Port Connectivity Checks: "Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2"
-111. Port Connectivity Checks: "Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1"
-112. Port Connectivity Checks: "Sdram_Control_4Port:u7|sdr_data_path:data_path1"
-113. Port Connectivity Checks: "Sdram_Control_4Port:u7|control_interface:control1"
-114. Port Connectivity Checks: "Sdram_Control_4Port:u7"
-115. Port Connectivity Checks: "SEG7_LUT_8:u5"
-116. Port Connectivity Checks: "RAW2RGB:u4|Line_Buffer:u0"
-117. Port Connectivity Checks: "RAW2RGB:u4"
-118. Port Connectivity Checks: "VGA_Controller:u1"
-119. Elapsed Time Per Partition
-120. Analysis & Synthesis Messages
+102. Parameter Settings for Inferred Entity Instance: Sobel:u12|lpm_mult:Mult9
+103. altshift_taps Parameter Settings by Entity Instance
+104. altpll Parameter Settings by Entity Instance
+105. dcfifo Parameter Settings by Entity Instance
+106. lpm_mult Parameter Settings by Entity Instance
+107. Port Connectivity Checks: "Sobel:u12"
+108. Port Connectivity Checks: "mux:u10"
+109. Port Connectivity Checks: "I2C_CCD_Config:u8"
+110. Port Connectivity Checks: "Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2"
+111. Port Connectivity Checks: "Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1"
+112. Port Connectivity Checks: "Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2"
+113. Port Connectivity Checks: "Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1"
+114. Port Connectivity Checks: "Sdram_Control_4Port:u7|sdr_data_path:data_path1"
+115. Port Connectivity Checks: "Sdram_Control_4Port:u7|control_interface:control1"
+116. Port Connectivity Checks: "Sdram_Control_4Port:u7"
+117. Port Connectivity Checks: "SEG7_LUT_8:u5"
+118. Port Connectivity Checks: "RAW2RGB:u4|Line_Buffer:u0"
+119. Port Connectivity Checks: "RAW2RGB:u4"
+120. Port Connectivity Checks: "VGA_Controller:u1"
+121. Elapsed Time Per Partition
+122. Analysis & Synthesis Messages
 
 
 
@@ -151,15 +153,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 10 19:49:01 2018    ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 10 22:20:12 2018    ;
 ; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; DE1_D5M                                  ;
 ; Top-level Entity Name              ; DE1_D5M                                  ;
 ; Family                             ; Cyclone II                               ;
-; Total logic elements               ; 3,463                                    ;
-;     Total combinational functions  ; 3,138                                    ;
-;     Dedicated logic registers      ; 1,350                                    ;
-; Total registers                    ; 1350                                     ;
+; Total logic elements               ; 3,550                                    ;
+;     Total combinational functions  ; 3,224                                    ;
+;     Dedicated logic registers      ; 1,371                                    ;
+; Total registers                    ; 1371                                     ;
 ; Total pins                         ; 301                                      ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 53,200                                   ;
@@ -270,6 +272,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path          ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
 +-------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; V/Sobel.vhd                               ; yes             ; User VHDL File               ; D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/V/Sobel.vhd                               ;         ;
 ; V/Histogram.vhd                           ; yes             ; User VHDL File               ; D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/V/Histogram.vhd                           ;         ;
 ; V/mux.vhd                                 ; yes             ; User VHDL File               ; D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/V/mux.vhd                                 ;         ;
 ; V/RAW2gray.vhd                            ; yes             ; User VHDL File               ; D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/V/RAW2gray.vhd                            ;         ;
@@ -366,6 +369,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; db/lpm_divide_pfm.tdf                     ; yes             ; Auto-Generated Megafunction  ; D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/db/lpm_divide_pfm.tdf                     ;         ;
 ; db/sign_div_unsign_3nh.tdf                ; yes             ; Auto-Generated Megafunction  ; D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/db/sign_div_unsign_3nh.tdf                ;         ;
 ; db/alt_u_div_85f.tdf                      ; yes             ; Auto-Generated Megafunction  ; D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/db/alt_u_div_85f.tdf                      ;         ;
+; mul_lfrg.tdf                              ; yes             ; Megafunction                 ; d:/altera/12.1/quartus/libraries/megafunctions/mul_lfrg.tdf                            ;         ;
+; db/add_sub_njf.tdf                        ; yes             ; Auto-Generated Megafunction  ; D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/db/add_sub_njf.tdf                        ;         ;
+; db/add_sub_g1h.tdf                        ; yes             ; Auto-Generated Megafunction  ; D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/db/add_sub_g1h.tdf                        ;         ;
 +-------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
@@ -374,20 +380,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 3,463 ;
+; Estimated Total logic elements              ; 3,550 ;
 ;                                             ;       ;
-; Total combinational functions               ; 3138  ;
+; Total combinational functions               ; 3224  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 1034  ;
-;     -- 3 input functions                    ; 738   ;
-;     -- <=2 input functions                  ; 1366  ;
+;     -- 4 input functions                    ; 1045  ;
+;     -- 3 input functions                    ; 754   ;
+;     -- <=2 input functions                  ; 1425  ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 2111  ;
-;     -- arithmetic mode                      ; 1027  ;
+;     -- normal mode                          ; 2147  ;
+;     -- arithmetic mode                      ; 1077  ;
 ;                                             ;       ;
-; Total registers                             ; 1350  ;
-;     -- Dedicated logic registers            ; 1350  ;
+; Total registers                             ; 1371  ;
+;     -- Dedicated logic registers            ; 1371  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 301   ;
@@ -396,9 +402,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Total PLLs                                  ; 1     ;
 ;     -- PLLs                                 ; 1     ;
 ;                                             ;       ;
-; Maximum fan-out                             ; 634   ;
-; Total fan-out                               ; 15089 ;
-; Average fan-out                             ; 3.11  ;
+; Maximum fan-out                             ; 655   ;
+; Total fan-out                               ; 15349 ;
+; Average fan-out                             ; 3.09  ;
 +---------------------------------------------+-------+
 
 
@@ -407,7 +413,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                             ; Library Name ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |DE1_D5M                                          ; 3138 (3)          ; 1350 (15)    ; 53200       ; 0            ; 0       ; 0         ; 301  ; 0            ; |DE1_D5M                                                                                                                                                        ;              ;
+; |DE1_D5M                                          ; 3224 (3)          ; 1371 (15)    ; 53200       ; 0            ; 0       ; 0         ; 301  ; 0            ; |DE1_D5M                                                                                                                                                        ;              ;
 ;    |CCD_Capture:u3|                               ; 72 (72)           ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|CCD_Capture:u3                                                                                                                                         ;              ;
 ;    |Histogram:u11|                                ; 695 (695)         ; 401 (401)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|Histogram:u11                                                                                                                                          ;              ;
 ;    |I2C_CCD_Config:u8|                            ; 242 (172)         ; 132 (94)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|I2C_CCD_Config:u8                                                                                                                                      ;              ;
@@ -537,8 +543,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |dffpipe_ngh:rdaclr|               ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|dffpipe_ngh:rdaclr                                    ;              ;
 ;       |command:command1|                          ; 60 (60)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|Sdram_Control_4Port:u7|command:command1                                                                                                                ;              ;
 ;       |control_interface:control1|                ; 64 (64)           ; 55 (55)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|Sdram_Control_4Port:u7|control_interface:control1                                                                                                      ;              ;
+;    |Sobel:u12|                                    ; 77 (77)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|Sobel:u12                                                                                                                                              ;              ;
 ;    |VGA_Controller:u1|                            ; 61 (61)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|VGA_Controller:u1                                                                                                                                      ;              ;
-;    |mux:u10|                                      ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|mux:u10                                                                                                                                                ;              ;
+;    |mux:u10|                                      ; 50 (50)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|mux:u10                                                                                                                                                ;              ;
 ;    |sdram_pll:u6|                                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|sdram_pll:u6                                                                                                                                           ;              ;
 ;       |altpll:altpll_component|                   ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE1_D5M|sdram_pll:u6|altpll:altpll_component                                                                                                                   ;              ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -642,93 +649,114 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                      ;
-+--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-; Register name                                                                                                                  ; Reason for Removal                                                     ;
-+--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-; Sdram_Control_4Port:u7|mDATAOUT[0..5,10,15]                                                                                    ; Lost fanout                                                            ;
-; Sdram_Control_4Port:u7|rWR1_LENGTH[8]                                                                                          ; Stuck at VCC due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|rWR1_LENGTH[0..7]                                                                                       ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|rWR2_LENGTH[8]                                                                                          ; Stuck at VCC due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|rWR2_LENGTH[0..7]                                                                                       ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|rRD1_LENGTH[8]                                                                                          ; Stuck at VCC due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|rRD1_LENGTH[0..7]                                                                                       ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|rRD2_LENGTH[8]                                                                                          ; Stuck at VCC due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|rRD2_LENGTH[0..7]                                                                                       ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|command:command1|CKE                                                                                    ; Stuck at VCC due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|CKE                                                                                                     ; Stuck at VCC due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|mI2C_DATA[31]                                                                                                ; Stuck at VCC due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|mI2C_DATA[30]                                                                                                ; Stuck at GND due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|mI2C_DATA[27..29]                                                                                            ; Stuck at VCC due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|mI2C_DATA[26]                                                                                                ; Stuck at GND due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|mI2C_DATA[25]                                                                                                ; Stuck at VCC due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|mI2C_DATA[24]                                                                                                ; Stuck at GND due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|I2C_Controller:u0|SD[31]                                                                                     ; Stuck at VCC due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|I2C_Controller:u0|SD[30]                                                                                     ; Stuck at GND due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|I2C_Controller:u0|SD[27..29]                                                                                 ; Stuck at VCC due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|I2C_Controller:u0|SD[26]                                                                                     ; Stuck at GND due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|I2C_Controller:u0|SD[25]                                                                                     ; Stuck at VCC due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|I2C_Controller:u0|SD[24]                                                                                     ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|dffpipe_oe9:ws_bwp|dffe21a[9]  ; Lost fanout                                                            ;
-; Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|dffpipe_oe9:ws_brp|dffe21a[9]  ; Lost fanout                                                            ;
-; Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|dffpipe_oe9:ws_bwp|dffe21a[9]  ; Lost fanout                                                            ;
-; Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|dffpipe_oe9:ws_brp|dffe21a[9]  ; Lost fanout                                                            ;
-; Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|dffpipe_kec:rs_bwp|dffe17a[9] ; Lost fanout                                                            ;
-; Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|dffpipe_kec:rs_brp|dffe17a[9] ; Lost fanout                                                            ;
-; Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|dffpipe_kec:rs_bwp|dffe17a[9] ; Lost fanout                                                            ;
-; Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|dffpipe_kec:rs_brp|dffe17a[9] ; Lost fanout                                                            ;
-; Histogram:u11|Red_out[4]                                                                                                       ; Merged with Histogram:u11|Red_out[3]                                   ;
-; Histogram:u11|Blue_out[3]                                                                                                      ; Merged with Histogram:u11|Red_out[3]                                   ;
-; Histogram:u11|Red_out[11]                                                                                                      ; Merged with Histogram:u11|Red_out[3]                                   ;
-; Histogram:u11|Green_out[8,11]                                                                                                  ; Merged with Histogram:u11|Red_out[2]                                   ;
-; Histogram:u11|Red_out[8,9]                                                                                                     ; Merged with Histogram:u11|Red_out[2]                                   ;
-; Histogram:u11|Green_out[10]                                                                                                    ; Merged with Histogram:u11|Red_out[2]                                   ;
-; Histogram:u11|Blue_out[5]                                                                                                      ; Merged with Histogram:u11|Red_out[2]                                   ;
-; Histogram:u11|Green_out[5]                                                                                                     ; Merged with Histogram:u11|Red_out[2]                                   ;
-; Histogram:u11|Blue_out[6,10]                                                                                                   ; Merged with Histogram:u11|Red_out[2]                                   ;
-; Histogram:u11|Green_out[4,7]                                                                                                   ; Merged with Histogram:u11|Red_out[2]                                   ;
-; Histogram:u11|Blue_out[4]                                                                                                      ; Merged with Histogram:u11|Red_out[2]                                   ;
-; Histogram:u11|Green_out[3,9]                                                                                                   ; Merged with Histogram:u11|Blue_out[11]                                 ;
-; Histogram:u11|Blue_out[9]                                                                                                      ; Merged with Histogram:u11|Blue_out[11]                                 ;
-; Histogram:u11|Red_out[6,7]                                                                                                     ; Merged with Histogram:u11|Blue_out[11]                                 ;
-; Histogram:u11|Blue_out[8]                                                                                                      ; Merged with Histogram:u11|Blue_out[11]                                 ;
-; Histogram:u11|Green_out[6]                                                                                                     ; Merged with Histogram:u11|Blue_out[11]                                 ;
-; Histogram:u11|Red_out[10]                                                                                                      ; Merged with Histogram:u11|Blue_out[11]                                 ;
-; Histogram:u11|Green_out[2]                                                                                                     ; Merged with Histogram:u11|Blue_out[7]                                  ;
-; Histogram:u11|Red_out[5]                                                                                                       ; Merged with Histogram:u11|Blue_out[7]                                  ;
-; Histogram:u11|Blue_out[2]                                                                                                      ; Merged with Histogram:u11|Blue_out[7]                                  ;
-; I2C_CCD_Config:u8|senosr_exposure[0,1]                                                                                         ; Merged with I2C_CCD_Config:u8|senosr_exposure[2]                       ;
-; Sdram_Control_4Port:u7|rWR1_ADDR[0..6]                                                                                         ; Merged with Sdram_Control_4Port:u7|rWR1_ADDR[7]                        ;
-; Sdram_Control_4Port:u7|rWR2_ADDR[0..6]                                                                                         ; Merged with Sdram_Control_4Port:u7|rWR2_ADDR[7]                        ;
-; Sdram_Control_4Port:u7|rRD1_ADDR[0..4]                                                                                         ; Merged with Sdram_Control_4Port:u7|rRD1_ADDR[7]                        ;
-; Sdram_Control_4Port:u7|rRD1_ADDR[5]                                                                                            ; Merged with Sdram_Control_4Port:u7|rRD1_ADDR[6]                        ;
-; Sdram_Control_4Port:u7|rRD2_ADDR[0..6]                                                                                         ; Merged with Sdram_Control_4Port:u7|rRD2_ADDR[7]                        ;
-; Sdram_Control_4Port:u7|mLENGTH[0..6]                                                                                           ; Merged with Sdram_Control_4Port:u7|mLENGTH[7]                          ;
-; Histogram:u11|Blue_out[7]                                                                                                      ; Merged with Histogram:u11|Red_out[3]                                   ;
-; Sdram_Control_4Port:u7|rRD1_ADDR[6]                                                                                            ; Merged with Sdram_Control_4Port:u7|rRD1_ADDR[7]                        ;
-; Sdram_Control_4Port:u7|mADDR[0..4]                                                                                             ; Merged with Sdram_Control_4Port:u7|mADDR[7]                            ;
-; Sdram_Control_4Port:u7|mADDR[5]                                                                                                ; Merged with Sdram_Control_4Port:u7|mADDR[6]                            ;
-; Sdram_Control_4Port:u7|control_interface:control1|SADDR[0..4]                                                                  ; Merged with Sdram_Control_4Port:u7|control_interface:control1|SADDR[7] ;
-; Sdram_Control_4Port:u7|control_interface:control1|SADDR[5]                                                                     ; Merged with Sdram_Control_4Port:u7|control_interface:control1|SADDR[6] ;
-; Sdram_Control_4Port:u7|mADDR[6]                                                                                                ; Merged with Sdram_Control_4Port:u7|mADDR[7]                            ;
-; Sdram_Control_4Port:u7|control_interface:control1|SADDR[6]                                                                     ; Merged with Sdram_Control_4Port:u7|control_interface:control1|SADDR[7] ;
-; Histogram:u11|Red_out[2]                                                                                                       ; Merged with Histogram:u11|Red_out[3]                                   ;
-; Histogram:u11|Blue_out[11]                                                                                                     ; Merged with Histogram:u11|Red_out[3]                                   ;
-; Sdram_Control_4Port:u7|rWR1_ADDR[7]                                                                                            ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|rWR2_ADDR[7]                                                                                            ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|rRD1_ADDR[7]                                                                                            ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|rRD2_ADDR[7]                                                                                            ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|mLENGTH[7]                                                                                              ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|mADDR[7]                                                                                                ; Stuck at GND due to stuck port data_in                                 ;
-; Sdram_Control_4Port:u7|control_interface:control1|SADDR[7]                                                                     ; Stuck at GND due to stuck port data_in                                 ;
-; rClk[1]                                                                                                                        ; Lost fanout                                                            ;
-; Sdram_Control_4Port:u7|mLENGTH[8]                                                                                              ; Stuck at VCC due to stuck port data_in                                 ;
-; I2C_CCD_Config:u8|mSetup_ST~9                                                                                                  ; Lost fanout                                                            ;
-; I2C_CCD_Config:u8|mSetup_ST~10                                                                                                 ; Lost fanout                                                            ;
-; CCD_Capture:u3|Frame_Cont[16..31]                                                                                              ; Lost fanout                                                            ;
-; Total Number of Removed Registers = 177                                                                                        ;                                                                        ;
-+--------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++---------------------------------------------+----------------------------------------+
+; Register name                               ; Reason for Removal                     ;
++---------------------------------------------+----------------------------------------+
+; Sdram_Control_4Port:u7|mDATAOUT[0..5,10,15] ; Lost fanout                            ;
+; Sdram_Control_4Port:u7|rWR1_LENGTH[8]       ; Stuck at VCC due to stuck port data_in ;
+; Sdram_Control_4Port:u7|rWR1_LENGTH[0..7]    ; Stuck at GND due to stuck port data_in ;
+; Sdram_Control_4Port:u7|rWR2_LENGTH[8]       ; Stuck at VCC due to stuck port data_in ;
+; Sdram_Control_4Port:u7|rWR2_LENGTH[0..7]    ; Stuck at GND due to stuck port data_in ;
+; Sdram_Control_4Port:u7|rRD1_LENGTH[8]       ; Stuck at VCC due to stuck port data_in ;
+; Sdram_Control_4Port:u7|rRD1_LENGTH[0..7]    ; Stuck at GND due to stuck port data_in ;
+; Sdram_Control_4Port:u7|rRD2_LENGTH[8]       ; Stuck at VCC due to stuck port data_in ;
+; Sdram_Control_4Port:u7|rRD2_LENGTH[0..7]    ; Stuck at GND due to stuck port data_in ;
+; Sdram_Control_4Port:u7|command:command1|CKE ; Stuck at VCC due to stuck port data_in ;
+; Sdram_Control_4Port:u7|CKE                  ; Stuck at VCC due to stuck port data_in ;
+; Sobel:u12|counter[0][30]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][29]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][28]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][27]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][26]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][25]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][24]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][23]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][22]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][21]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][20]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][19]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][18]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][17]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][16]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][15]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][14]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][13]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][12]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][11]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][10]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][9]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][8]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][7]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][6]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][5]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][4]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][3]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][2]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[0][1]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][30]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][29]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][28]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][27]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][26]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][25]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][24]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][23]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][22]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][21]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][20]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][19]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][18]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][17]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][16]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][15]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][14]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][13]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][12]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][11]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][10]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][9]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][8]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][7]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][6]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][5]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][4]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][3]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][2]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[1][1]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][30]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][29]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][28]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][27]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][26]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][25]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][24]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][23]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][22]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][21]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][20]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][19]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][18]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][17]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][16]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][15]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][14]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][13]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][12]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][11]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][10]                    ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][9]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][8]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][7]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][6]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][5]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][4]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][3]                     ; Stuck at GND due to stuck port data_in ;
+; Sobel:u12|counter[2][2]                     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 518     ;                                        ;
++---------------------------------------------+----------------------------------------+
+* Table truncated at 100 items. To change the number of removed registers reported, set the "Number of Removed Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -765,12 +793,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1350  ;
+; Total registers                              ; 1371  ;
 ; Number of registers using Synchronous Clear  ; 335   ;
 ; Number of registers using Synchronous Load   ; 72    ;
 ; Number of registers using Asynchronous Clear ; 642   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 755   ;
+; Number of registers using Clock Enable       ; 776   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -797,12 +825,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|a_graycounter_o96:rdptr_g1p|sub_parity6a0  ; 1       ;
 ; I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[0]                                                                                          ; 20      ;
 ; I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[1]                                                                                          ; 17      ;
+; Sobel:u12|counter[0][0]                                                                                                                    ; 18      ;
 ; I2C_CCD_Config:u8|I2C_Controller:u0|END                                                                                                    ; 5       ;
 ; Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|a_graycounter_egc:wrptr_gp|sub_parity12a0 ; 1       ;
 ; Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|a_graycounter_o96:rdptr_g1p|sub_parity6a0 ; 1       ;
 ; Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|a_graycounter_egc:wrptr_gp|sub_parity12a0 ; 1       ;
 ; Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|a_graycounter_o96:rdptr_g1p|sub_parity6a0 ; 1       ;
-; Total number of inverted registers = 22                                                                                                    ;         ;
+; Total number of inverted registers = 23                                                                                                    ;         ;
 +--------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -812,39 +841,41 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 ; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|command:command1|SA[0]              ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|control_interface:control1|timer[0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|command:command1|command_delay[0]   ;
-; 4:1                ; 200 bits  ; 400 LEs       ; 200 LEs              ; 200 LEs                ; Yes        ; |DE1_D5M|Histogram:u11|his_out[9][2]                                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|control_interface:control1|timer[5] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|command:command1|command_done       ;
+; 4:1                ; 200 bits  ; 400 LEs       ; 200 LEs              ; 200 LEs                ; Yes        ; |DE1_D5M|Histogram:u11|his_out[9][8]                                ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |DE1_D5M|I2C_CCD_Config:u8|senosr_exposure[12]                      ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DE1_D5M|CCD_Capture:u3|X_Cont[3]                                   ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DE1_D5M|CCD_Capture:u3|Y_Cont[1]                                   ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DE1_D5M|CCD_Capture:u3|X_Cont[15]                                  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |DE1_D5M|CCD_Capture:u3|Y_Cont[6]                                   ;
 ; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|rRD2_ADDR[21]                       ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|rRD1_ADDR[9]                        ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|rRD1_ADDR[15]                       ;
 ; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|rWR2_ADDR[22]                       ;
-; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|rWR1_ADDR[15]                       ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|command:command1|rp_shift[2]        ;
-; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[0][6]                                 ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|mADDR[10]                           ;
-; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[1][2]                                 ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|rWR1_ADDR[22]                       ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DE1_D5M|Sobel:u12|oSobel[2]                                        ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|command:command1|rp_shift[0]        ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[0][9]                                 ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|mADDR[16]                           ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[1][18]                                ;
 ; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[2][3]                                 ;
 ; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[3][14]                                ;
 ; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[5][3]                                 ;
-; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[6][10]                                ;
-; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[7][9]                                 ;
-; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[8][2]                                 ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[6][8]                                 ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[7][10]                                ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[8][3]                                 ;
 ; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[9][3]                                 ;
-; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[4][11]                                ;
-; 64:1               ; 5 bits    ; 210 LEs       ; 60 LEs               ; 150 LEs                ; Yes        ; |DE1_D5M|I2C_CCD_Config:u8|mI2C_DATA[3]                             ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|CMD[1]                              ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|RD_MASK[1]                          ;
+; 5:1                ; 20 bits   ; 60 LEs        ; 20 LEs               ; 40 LEs                 ; Yes        ; |DE1_D5M|Histogram:u11|his_in[4][0]                                 ;
+; 64:1               ; 5 bits    ; 210 LEs       ; 60 LEs               ; 150 LEs                ; Yes        ; |DE1_D5M|I2C_CCD_Config:u8|mI2C_DATA[15]                            ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|CMD[0]                              ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|mRD                                 ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|mWR                                 ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|ST[8]                               ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE1_D5M|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[2]          ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |DE1_D5M|I2C_CCD_Config:u8|senosr_exposure[7]                       ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |DE1_D5M|mux:u10|out_G[11]                                          ;
+; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |DE1_D5M|Sdram_Control_4Port:u7|ST[5]                               ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE1_D5M|I2C_CCD_Config:u8|I2C_Controller:u0|SD_COUNTER[5]          ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |DE1_D5M|I2C_CCD_Config:u8|senosr_exposure[9]                       ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |DE1_D5M|mux:u10|out_R[4]                                           ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |DE1_D5M|I2C_CCD_Config:u8|Mux12                                    ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |DE1_D5M|RAW2RGB:u4|mCCD_G[3]                                       ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |DE1_D5M|RAW2RGB:u4|mCCD_R[3]                                       ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |DE1_D5M|RAW2RGB:u4|mCCD_G[7]                                       ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |DE1_D5M|RAW2RGB:u4|mCCD_R[10]                                      ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |DE1_D5M|mux:u10|out_R                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 
 
@@ -2273,6 +2304,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Sobel:u12|lpm_mult:Mult9         ;
++------------------------------------------------+------------+---------------------+
+; Parameter Name                                 ; Value      ; Type                ;
++------------------------------------------------+------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON         ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF        ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 3          ; Untyped             ;
+; LPM_WIDTHB                                     ; 12         ; Untyped             ;
+; LPM_WIDTHP                                     ; 15         ; Untyped             ;
+; LPM_WIDTHR                                     ; 15         ; Untyped             ;
+; LPM_WIDTHS                                     ; 1          ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0          ; Untyped             ;
+; LATENCY                                        ; 0          ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO         ; Untyped             ;
+; USE_EAB                                        ; OFF        ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
++------------------------------------------------+------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------+
 ; altshift_taps Parameter Settings by Entity Instance                                          ;
 +----------------------------+-----------------------------------------------------------------+
@@ -2341,7 +2407,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+----------------------------+
 ; Name                                  ; Value                      ;
 +---------------------------------------+----------------------------+
-; Number of entity instances            ; 3                          ;
+; Number of entity instances            ; 4                          ;
 ; Entity Instance                       ; RAW2gray:u9|lpm_mult:Mult2 ;
 ;     -- LPM_WIDTHA                     ; 12                         ;
 ;     -- LPM_WIDTHB                     ; 7                          ;
@@ -2375,7 +2441,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
+; Entity Instance                       ; Sobel:u12|lpm_mult:Mult9   ;
+;     -- LPM_WIDTHA                     ; 3                          ;
+;     -- LPM_WIDTHB                     ; 12                         ;
+;     -- LPM_WIDTHP                     ; 15                         ;
+;     -- LPM_REPRESENTATION             ; SIGNED                     ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                         ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
 +---------------------------------------+----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Sobel:u12"                                                                           ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; odval ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -2582,7 +2668,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:10     ;
+; Top            ; 00:00:13     ;
 +----------------+--------------+
 
 
@@ -2592,9 +2678,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Sun Jun 10 19:48:43 2018
+    Info: Processing started: Sun Jun 10 22:19:49 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_D5M -c DE1_D5M
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file v/sobel.vhd
+    Info (12022): Found design unit 1: Sobel-rtl
+    Info (12023): Found entity 1: Sobel
 Info (12021): Found 2 design units, including 1 entities, in source file v/histogram.vhd
     Info (12022): Found design unit 1: Histogram-rtl
     Info (12023): Found entity 1: Histogram
@@ -2640,20 +2729,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file v/seg7_
 Warning (12019): Can't analyze file -- file V/uart_crtl.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file v/vga_controller.v
     Info (12023): Found entity 1: VGA_Controller
-Warning (10275): Verilog HDL Module Instantiation warning at DE1_D5M.v(447): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at DE1_D5M.v(453): ignored dangling comma in List of Port Connections
 Info (12021): Found 1 design units, including 1 entities, in source file de1_d5m.v
     Info (12023): Found entity 1: DE1_D5M
-Warning (10236): Verilog HDL Implicit Net warning at DE1_D5M.v(288): created implicit net for "VGA_CLK"
+Warning (10236): Verilog HDL Implicit Net warning at DE1_D5M.v(294): created implicit net for "VGA_CLK"
+Warning (10236): Verilog HDL Implicit Net warning at DE1_D5M.v(489): created implicit net for "oSobDVAL"
 Info (12127): Elaborating entity "DE1_D5M" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at DE1_D5M.v(288): object "VGA_CLK" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at DE1_D5M.v(294): object "VGA_CLK" assigned a value but never read
 Critical Warning (10169): Verilog HDL warning at DE1_D5M.v(194): the port and data declarations for array port "VGA_R" do not specify the same range for each dimension
 Warning (10359): HDL warning at DE1_D5M.v(243): see declaration for object "VGA_R"
 Critical Warning (10169): Verilog HDL warning at DE1_D5M.v(195): the port and data declarations for array port "VGA_G" do not specify the same range for each dimension
 Warning (10359): HDL warning at DE1_D5M.v(244): see declaration for object "VGA_G"
 Critical Warning (10169): Verilog HDL warning at DE1_D5M.v(196): the port and data declarations for array port "VGA_B" do not specify the same range for each dimension
 Warning (10359): HDL warning at DE1_D5M.v(245): see declaration for object "VGA_B"
-Warning (10230): Verilog HDL assignment warning at DE1_D5M.v(285): truncated value with size 16 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at DE1_D5M.v(290): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at DE1_D5M.v(291): truncated value with size 16 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at DE1_D5M.v(296): truncated value with size 32 to match size of target (2)
 Warning (10034): Output port "FL_ADDR" at DE1_D5M.v(162) has no driver
 Warning (10034): Output port "SRAM_ADDR" at DE1_D5M.v(169) has no driver
 Warning (10034): Output port "FL_WE_N" at DE1_D5M.v(163) has no driver
@@ -3018,19 +3108,29 @@ Warning (10492): VHDL Process Statement warning at RAW2gray.vhd(17): signal "oRe
 Warning (10492): VHDL Process Statement warning at RAW2gray.vhd(17): signal "oGreen" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at RAW2gray.vhd(17): signal "oBlue" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "mux" for hierarchy "mux:u10"
-Warning (10492): VHDL Process Statement warning at mux.vhd(38): signal "switch1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(39): signal "oRed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(40): signal "oGreen" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(41): signal "oBlue" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(42): signal "switch2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(43): signal "gray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(39): signal "switch1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(40): signal "oRed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(41): signal "oGreen" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(42): signal "oBlue" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(43): signal "switch2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mux.vhd(44): signal "gray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at mux.vhd(45): signal "gray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(46): signal "switch3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(47): signal "his_R" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(48): signal "his_G" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at mux.vhd(49): signal "his_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(46): signal "gray" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(47): signal "switch3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(48): signal "his_R" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(49): signal "his_G" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(50): signal "his_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(51): signal "switch4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(52): signal "iSobel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(53): signal "iSobel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at mux.vhd(54): signal "iSobel" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "Histogram" for hierarchy "Histogram:u11"
+Info (12128): Elaborating entity "Sobel" for hierarchy "Sobel:u12"
+Warning (10541): VHDL Signal Declaration warning at Sobel.vhd(13): used implicit default value for signal "oDVAL" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10540): VHDL Signal Declaration warning at Sobel.vhd(25): used explicit default value for signal "look" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at Sobel.vhd(69): object "m56" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Sobel.vhd(72): object "yInt" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Sobel.vhd(73): object "xInt" assigned a value but never read
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|altsyncram_1l81:fifo_ram|altsyncram_drg1:altsyncram14|q_a[0]"
@@ -3053,13 +3153,14 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|altsyncram_1l81:fifo_ram|altsyncram_drg1:altsyncram14|q_a[5]"
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|altsyncram_1l81:fifo_ram|altsyncram_drg1:altsyncram14|q_a[10]"
         Warning (14320): Synthesized away node "Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component|dcfifo_m2o1:auto_generated|altsyncram_1l81:fifo_ram|altsyncram_drg1:altsyncram14|q_a[15]"
-Info (278001): Inferred 6 megafunctions from design logic
+Info (278001): Inferred 7 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "RAW2gray:u9|Mult2"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "RAW2gray:u9|Div2"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "RAW2gray:u9|Mult1"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "RAW2gray:u9|Div1"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "RAW2gray:u9|Mult0"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "RAW2gray:u9|Div0"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Sobel:u12|Mult9"
 Info (12130): Elaborated megafunction instantiation "RAW2gray:u9|lpm_mult:Mult2"
 Info (12133): Instantiated megafunction "RAW2gray:u9|lpm_mult:Mult2" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "12"
@@ -3163,6 +3264,32 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_3nh
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_85f.tdf
     Info (12023): Found entity 1: alt_u_div_85f
+Info (12130): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
+Info (12133): Instantiated megafunction "Sobel:u12|lpm_mult:Mult9" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHA" = "3"
+    Info (12134): Parameter "LPM_WIDTHB" = "12"
+    Info (12134): Parameter "LPM_WIDTHP" = "15"
+    Info (12134): Parameter "LPM_WIDTHR" = "15"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12131): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9|multcore:mult_core", which is child of megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
+Info (12131): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9|multcore:mult_core|mul_lfrg:mul_lfrg_first_mod", which is child of megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
+Info (12131): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9|multcore:mult_core|mul_lfrg:mul_lfrg_last_mod", which is child of megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
+Info (12131): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
+Info (12131): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:booth_adder_right", which is child of megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_njf.tdf
+    Info (12023): Found entity 1: add_sub_njf
+Info (12131): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_g1h.tdf
+    Info (12023): Found entity 1: add_sub_g1h
+Info (12131): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9|multcore:mult_core|mul_lfrg:$00031", which is child of megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
+Info (12131): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9|multcore:mult_core|mul_lfrg:$00033", which is child of megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
+Info (12131): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9|multcore:mult_core|mul_lfrg:$00035", which is child of megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
+Info (12131): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9|multcore:mult_core|mul_lfrg:$00037", which is child of megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
+Info (12131): Elaborated megafunction instantiation "Sobel:u12|lpm_mult:Mult9|altshift:external_latency_ffs", which is child of megafunction instantiation "Sobel:u12|lpm_mult:Mult9"
 Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "GPIO_1[16]" and its non-tri-state driver.
@@ -3350,7 +3477,12 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_B[9]" is stuck at GND
     Warning (13410): Pin "AUD_DACDAT" is stuck at GND
     Warning (13410): Pin "AUD_XCK" is stuck at GND
-Info (17049): 35 registers lost all their fanouts during netlist optimizations.
+Info (17049): 56 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "Sobel:u12|Add2~0"
+    Info (17048): Logic cell "Sobel:u12|Add4~0"
+    Info (17048): Logic cell "Sobel:u12|Add6~0"
+    Info (17048): Logic cell "Sobel:u12|Add8~0"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 11 input pin(s) that do not drive logic
@@ -3365,17 +3497,17 @@ Warning (21074): Design contains 11 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "PS2_DAT"
     Warning (15610): No output dependent on input pin "PS2_CLK"
     Warning (15610): No output dependent on input pin "AUD_ADCDAT"
-Info (21057): Implemented 3862 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3963 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 27 input pins
     Info (21059): Implemented 155 output pins
     Info (21060): Implemented 119 bidirectional pins
-    Info (21061): Implemented 3492 logic cells
+    Info (21061): Implemented 3593 logic cells
     Info (21064): Implemented 68 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 331 warnings
-    Info: Peak virtual memory: 432 megabytes
-    Info: Processing ended: Sun Jun 10 19:49:01 2018
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:17
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 341 warnings
+    Info: Peak virtual memory: 465 megabytes
+    Info: Processing ended: Sun Jun 10 22:20:12 2018
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:21
 
 

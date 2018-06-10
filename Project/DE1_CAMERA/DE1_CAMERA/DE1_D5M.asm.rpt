@@ -1,5 +1,5 @@
 Assembler report for DE1_D5M
-Sun Jun 10 19:49:44 2018
+Sun Jun 10 22:21:03 2018
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Jun 10 19:49:44 2018 ;
+; Assembler Status      ; Successful - Sun Jun 10 22:21:03 2018 ;
 ; Revision Name         ; DE1_D5M                               ;
 ; Top-level Entity Name ; DE1_D5M                               ;
 ; Family                ; Cyclone II                            ;
@@ -95,7 +95,7 @@ applicable agreement for further details.
 +----------------+-------------------------------------------------------------------+
 ; Device         ; EP2C20F484C7                                                      ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                        ;
-; Checksum       ; 0x003F62A6                                                        ;
+; Checksum       ; 0x003F9C90                                                        ;
 +----------------+-------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+---------------------------------------------------------------+
 ; Device             ; EPCS16                                                        ;
 ; JTAG usercode      ; 0x00000000                                                    ;
-; Checksum           ; 0x1D9B6409                                                    ;
+; Checksum           ; 0x1D9E013A                                                    ;
 ; Compression Ratio  ; 2                                                             ;
 +--------------------+---------------------------------------------------------------+
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Sun Jun 10 19:49:42 2018
+    Info: Processing started: Sun Jun 10 22:21:00 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE1_D5M -c DE1_D5M
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 372 megabytes
-    Info: Processing ended: Sun Jun 10 19:49:44 2018
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Sun Jun 10 22:21:03 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

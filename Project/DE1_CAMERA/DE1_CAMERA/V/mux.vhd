@@ -18,7 +18,8 @@ port(
 	his_R: in std_logic_vector(11 downto 0);
 	his_G: in std_logic_vector(11 downto 0);
 	his_B: in std_logic_vector(11 downto 0);
-	switch1,switch2,switch3,iDVAL, iCLK, iRST: in std_logic);
+	iSobel: in std_logic_vector(11 downto 0);
+	switch1,switch2,switch3,switch4,iDVAL, iCLK, iRST: in std_logic);
 end mux;
 
 
@@ -47,6 +48,10 @@ begin
 			out_R <= his_R;
 			out_G <= his_G;
 			out_B <= his_B;
+		elsif (switch4 ='1' ) then
+			out_R <= iSobel;
+			out_G <= iSobel;
+			out_B <= iSobel;
 		else
 			out_R <= (others => '1');
 			out_G <= (others => '1');

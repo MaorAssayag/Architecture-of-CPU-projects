@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sun Jun 10 19:49:39 2018
+Fitter Status : Successful - Sun Jun 10 22:20:57 2018
 Quartus II 32-bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
 Revision Name : DE1_D5M
 Top-level Entity Name : DE1_D5M
 Family : Cyclone II
 Device : EP2C20F484C7
 Timing Models : Final
-Total logic elements : 3,423 / 18,752 ( 18 % )
-    Total combinational functions : 3,146 / 18,752 ( 17 % )
-    Dedicated logic registers : 1,336 / 18,752 ( 7 % )
-Total registers : 1350
+Total logic elements : 3,514 / 18,752 ( 19 % )
+    Total combinational functions : 3,233 / 18,752 ( 17 % )
+    Dedicated logic registers : 1,357 / 18,752 ( 7 % )
+Total registers : 1371
 Total pins : 301 / 315 ( 96 % )
 Total virtual pins : 0
 Total memory bits : 53,200 / 239,616 ( 22 % )
