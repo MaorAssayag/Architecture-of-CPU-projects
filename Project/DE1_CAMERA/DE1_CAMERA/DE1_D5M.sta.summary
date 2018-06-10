@@ -3,31 +3,31 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'GPIO_1[0]'
-Slack : -6.836
-TNS   : -1814.419
+Slack : -63.857
+TNS   : -18337.770
 
 Type  : Slow Model Setup 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -4.715
-TNS   : -272.759
+Slack : -4.736
+TNS   : -270.270
 
 Type  : Slow Model Setup 'rClk[0]'
-Slack : -4.518
-TNS   : -357.035
+Slack : -4.687
+TNS   : -359.813
 
 Type  : Slow Model Setup 'u6|altpll_component|pll|clk[0]'
-Slack : -3.064
-TNS   : -191.167
+Slack : -3.878
+TNS   : -249.102
 
 Type  : Slow Model Setup 'CLOCK_50'
-Slack : 2.955
+Slack : 2.947
 TNS   : 0.000
 
 Type  : Slow Model Hold 'CLOCK_50'
 Slack : -2.703
-TNS   : -5.406
+TNS   : -5.398
 
 Type  : Slow Model Hold 'GPIO_1[0]'
-Slack : 0.445
+Slack : 0.439
 TNS   : 0.000
 
 Type  : Slow Model Hold 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
@@ -43,48 +43,48 @@ Slack : 0.445
 TNS   : 0.000
 
 Type  : Slow Model Recovery 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -4.573
-TNS   : -106.787
+Slack : -4.829
+TNS   : -110.999
 
 Type  : Slow Model Recovery 'rClk[0]'
-Slack : -3.910
-TNS   : -353.492
+Slack : -4.036
+TNS   : -374.894
 
 Type  : Slow Model Recovery 'u6|altpll_component|pll|clk[0]'
-Slack : -2.554
-TNS   : -551.702
+Slack : -2.872
+TNS   : -632.474
 
 Type  : Slow Model Recovery 'GPIO_1[0]'
-Slack : -2.027
-TNS   : -165.566
+Slack : -2.211
+TNS   : -237.268
 
 Type  : Slow Model Recovery 'CLOCK_50'
-Slack : 13.594
+Slack : 13.483
 TNS   : 0.000
 
 Type  : Slow Model Removal 'GPIO_1[0]'
-Slack : 0.141
+Slack : 1.569
 TNS   : 0.000
 
 Type  : Slow Model Removal 'rClk[0]'
-Slack : 1.675
+Slack : 1.670
 TNS   : 0.000
 
 Type  : Slow Model Removal 'CLOCK_50'
-Slack : 2.436
+Slack : 2.925
 TNS   : 0.000
 
 Type  : Slow Model Removal 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : 3.673
+Slack : 3.616
 TNS   : 0.000
 
 Type  : Slow Model Removal 'u6|altpll_component|pll|clk[0]'
-Slack : 5.179
+Slack : 5.180
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'GPIO_1[0]'
 Slack : -2.333
-TNS   : -2025.171
+TNS   : -2524.969
 
 Type  : Slow Model Minimum Pulse Width 'rClk[0]'
 Slack : -2.064
@@ -103,31 +103,31 @@ Slack : 8.889
 TNS   : 0.000
 
 Type  : Fast Model Setup 'GPIO_1[0]'
-Slack : -2.113
-TNS   : -473.404
+Slack : -23.540
+TNS   : -6510.101
 
 Type  : Fast Model Setup 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -1.373
-TNS   : -69.792
+Slack : -1.394
+TNS   : -69.409
 
 Type  : Fast Model Setup 'rClk[0]'
-Slack : -1.012
-TNS   : -72.114
+Slack : -1.110
+TNS   : -74.170
 
 Type  : Fast Model Setup 'u6|altpll_component|pll|clk[0]'
-Slack : 0.229
-TNS   : 0.000
+Slack : -0.131
+TNS   : -0.789
 
 Type  : Fast Model Setup 'CLOCK_50'
-Slack : 2.110
+Slack : 2.105
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLOCK_50'
 Slack : -1.730
-TNS   : -3.460
+TNS   : -3.455
 
 Type  : Fast Model Hold 'GPIO_1[0]'
-Slack : 0.208
+Slack : 0.107
 TNS   : 0.000
 
 Type  : Fast Model Hold 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
@@ -143,48 +143,48 @@ Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Recovery 'rClk[0]'
-Slack : -2.064
-TNS   : -156.086
+Slack : -2.121
+TNS   : -178.652
 
 Type  : Fast Model Recovery 'GPIO_1[0]'
-Slack : -1.483
-TNS   : -124.332
+Slack : -1.461
+TNS   : -179.194
 
 Type  : Fast Model Recovery 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : -1.364
-TNS   : -31.509
+Slack : -1.461
+TNS   : -33.273
 
 Type  : Fast Model Recovery 'u6|altpll_component|pll|clk[0]'
-Slack : -0.275
-TNS   : -8.800
+Slack : -0.394
+TNS   : -37.250
 
 Type  : Fast Model Recovery 'CLOCK_50'
-Slack : 17.444
-TNS   : 0.000
-
-Type  : Fast Model Removal 'GPIO_1[0]'
-Slack : 0.596
-TNS   : 0.000
-
-Type  : Fast Model Removal 'CLOCK_50'
-Slack : 1.078
+Slack : 17.356
 TNS   : 0.000
 
 Type  : Fast Model Removal 'rClk[0]'
-Slack : 1.083
+Slack : 1.080
+TNS   : 0.000
+
+Type  : Fast Model Removal 'GPIO_1[0]'
+Slack : 1.573
 TNS   : 0.000
 
 Type  : Fast Model Removal 'I2C_CCD_Config:u8|mI2C_CTRL_CLK'
-Slack : 1.599
+Slack : 1.584
+TNS   : 0.000
+
+Type  : Fast Model Removal 'CLOCK_50'
+Slack : 1.617
 TNS   : 0.000
 
 Type  : Fast Model Removal 'u6|altpll_component|pll|clk[0]'
-Slack : 3.872
+Slack : 3.991
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'GPIO_1[0]'
 Slack : -1.880
-TNS   : -1655.161
+TNS   : -2064.161
 
 Type  : Fast Model Minimum Pulse Width 'rClk[0]'
 Slack : -1.880

@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C20F484) Path("D:/Dropbox/CPU CE MARCH 2013/DE1_CAMERA/") File("DE1_D5M.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C20F484) Path("D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/") File("DE1_D5M.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

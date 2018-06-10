@@ -247,13 +247,16 @@ reg		[1:0]	rClk;
 wire			sdram_ctrl_clk;
 
 
-wire	[11:0]	Gray;
+
+
+
+wire	[11:0]	Gray; /////////////  GrayScale
 wire	[11:0]	out_R;
 wire	[11:0]	out_G;
 wire	[11:0]	out_B;
-
-
-
+wire	[11:0]	his_R;
+wire	[11:0]	his_B;
+wire	[11:0]	his_G;
 
 
 //=============================================================================
@@ -451,14 +454,29 @@ RAW2gray  u9(
 									.oGreen(sCCD_G),
 									.oBlue(sCCD_B),
 									.gray(Gray),
+									.iDVAL(sCCD_DVAL),
 									.out_R(out_R),
 									.out_G(out_G),
 									.out_B(out_B),
+									.his_R(his_R),
+									.his_G(his_B),
+									.his_B(his_G),
 									.switch1(SW[0]),
 									.switch2(SW[1]),
 									.switch3(SW[2])
-
 		);
+	Histogram			u11 (
+								 .iRST(DLY_RST_1),
+								 .gray_in(Gray),
+								 .Red_out(his_R),
+								 .Blue_out(his_B),
+								 .Green_out(his_G),
+								 .iDVAL(sCCD_DVAL),
+								 .x_in(X_Cont),
+							 	 .y_in(Y_Cont),
+								 .iCLK(CCD_PIXCLK)
+								);
+
 
 
 endmodule

@@ -1,5 +1,5 @@
 Flow report for DE1_D5M
-Mon Jun 04 08:12:13 2018
+Sun Jun 10 19:49:52 2018
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +------------------------------------+------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun 04 08:12:08 2018    ;
+; Flow Status                        ; Successful - Sun Jun 10 19:49:44 2018    ;
 ; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; DE1_D5M                                  ;
 ; Top-level Entity Name              ; DE1_D5M                                  ;
 ; Family                             ; Cyclone II                               ;
 ; Device                             ; EP2C20F484C7                             ;
 ; Timing Models                      ; Final                                    ;
-; Total logic elements               ; 1,476 / 18,752 ( 8 % )                   ;
-;     Total combinational functions  ; 1,216 / 18,752 ( 6 % )                   ;
-;     Dedicated logic registers      ; 927 / 18,752 ( 5 % )                     ;
-; Total registers                    ; 941                                      ;
+; Total logic elements               ; 3,423 / 18,752 ( 18 % )                  ;
+;     Total combinational functions  ; 3,146 / 18,752 ( 17 % )                  ;
+;     Dedicated logic registers      ; 1,336 / 18,752 ( 7 % )                   ;
+; Total registers                    ; 1350                                     ;
 ; Total pins                         ; 301 / 315 ( 96 % )                       ;
 ; Total virtual pins                 ; 0                                        ;
 ; Total memory bits                  ; 53,200 / 239,616 ( 22 % )                ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/04/2018 08:11:35 ;
+; Start date & time ; 06/10/2018 19:48:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; DE1_D5M             ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 121368125539.152808909407144          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 216075653666082.152864932433320       ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 2147039                               ; --            ; --          ; Top        ;
@@ -82,6 +82,8 @@ applicable agreement for further details.
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --         ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                                   ; --            ; --          ; eda_palace ;
+; VHDL_INPUT_VERSION                  ; VHDL_2008                             ; VHDL_1993     ; --          ; --         ;
+; VHDL_SHOW_LMF_MAPPING_MESSAGES      ; Off                                   ; --            ; --          ; --         ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 
 
@@ -90,11 +92,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 464 MB              ; 00:00:08                           ;
-; Fitter                    ; 00:00:18     ; 2.9                     ; 568 MB              ; 00:00:24                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 426 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 430 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:35     ; --                      ; --                  ; 00:00:37                           ;
+; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 432 MB              ; 00:00:16                           ;
+; Fitter                    ; 00:00:37     ; 1.0                     ; 475 MB              ; 00:00:37                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 372 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 392 MB              ; 00:00:06                           ;
+; Total                     ; 00:01:01     ; --                      ; --                  ; 00:01:01                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -103,10 +105,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; BORISBRAGIN840B  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; BORISBRAGIN840B  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; BORISBRAGIN840B  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; BORISBRAGIN840B  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; ASUS             ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; ASUS             ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; ASUS             ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; ASUS             ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

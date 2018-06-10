@@ -1,5 +1,5 @@
 Assembler report for DE1_D5M
-Mon Jun 04 08:12:08 2018
+Sun Jun 10 19:49:44 2018
 Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: W:/CPU CE MARCH 2013/DE1_CAMERA/DE1_D5M.sof
-  6. Assembler Device Options: W:/CPU CE MARCH 2013/DE1_CAMERA/DE1_D5M.pof
+  5. Assembler Device Options: D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/DE1_D5M.sof
+  6. Assembler Device Options: D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/DE1_D5M.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Jun 04 08:12:08 2018 ;
+; Assembler Status      ; Successful - Sun Jun 10 19:49:44 2018 ;
 ; Revision Name         ; DE1_D5M                               ;
 ; Top-level Entity Name ; DE1_D5M                               ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+---------------------------------------------+
-; Assembler Generated Files                   ;
-+---------------------------------------------+
-; File Name                                   ;
-+---------------------------------------------+
-; W:/CPU CE MARCH 2013/DE1_CAMERA/DE1_D5M.sof ;
-; W:/CPU CE MARCH 2013/DE1_CAMERA/DE1_D5M.pof ;
-+---------------------------------------------+
++----------------------------------------------------------+
+; Assembler Generated Files                                ;
++----------------------------------------------------------+
+; File Name                                                ;
++----------------------------------------------------------+
+; D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/DE1_D5M.sof ;
+; D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/DE1_D5M.pof ;
++----------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Assembler Device Options: W:/CPU CE MARCH 2013/DE1_CAMERA/DE1_D5M.sof ;
-+----------------+------------------------------------------------------+
-; Option         ; Setting                                              ;
-+----------------+------------------------------------------------------+
-; Device         ; EP2C20F484C7                                         ;
-; JTAG usercode  ; 0xFFFFFFFF                                           ;
-; Checksum       ; 0x002AED7F                                           ;
-+----------------+------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/DE1_D5M.sof ;
++----------------+-------------------------------------------------------------------+
+; Option         ; Setting                                                           ;
++----------------+-------------------------------------------------------------------+
+; Device         ; EP2C20F484C7                                                      ;
+; JTAG usercode  ; 0xFFFFFFFF                                                        ;
+; Checksum       ; 0x003F62A6                                                        ;
++----------------+-------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Assembler Device Options: W:/CPU CE MARCH 2013/DE1_CAMERA/DE1_D5M.pof ;
-+--------------------+--------------------------------------------------+
-; Option             ; Setting                                          ;
-+--------------------+--------------------------------------------------+
-; Device             ; EPCS16                                           ;
-; JTAG usercode      ; 0x00000000                                       ;
-; Checksum           ; 0x1DBC80B4                                       ;
-; Compression Ratio  ; 2                                                ;
-+--------------------+--------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Assembler Device Options: D:/altera/12.1/Project/DE1_CAMERA/DE1_CAMERA/DE1_D5M.pof ;
++--------------------+---------------------------------------------------------------+
+; Option             ; Setting                                                       ;
++--------------------+---------------------------------------------------------------+
+; Device             ; EPCS16                                                        ;
+; JTAG usercode      ; 0x00000000                                                    ;
+; Checksum           ; 0x1D9B6409                                                    ;
+; Compression Ratio  ; 2                                                             ;
++--------------------+---------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Mon Jun 04 08:12:06 2018
+    Info: Processing started: Sun Jun 10 19:49:42 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off DE1_D5M -c DE1_D5M
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 427 megabytes
-    Info: Processing ended: Mon Jun 04 08:12:08 2018
+    Info: Peak virtual memory: 372 megabytes
+    Info: Processing ended: Sun Jun 10 19:49:44 2018
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

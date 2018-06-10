@@ -1,0 +1,27 @@
+--25.5.14
+--Boris Braginsky
+--==========Library===========
+library ieee;
+use ieee.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use IEEE.std_logic_signed.all;
+use ieee.std_logic_arith.all;
+
+
+entity RAW2gray is
+port(
+	oRed, oGreen, oBlue: in std_logic_vector(11 downto 0);
+	gray: out std_logic_vector(29 downto 0);
+	 iCLK, iRST: in std_logic);
+end RAW2gray;
+
+
+architecture behv of RAW2gray is
+
+begin
+process(iCLK, iRST)
+begin
+	gray <= 0.299*oRed + 0.587*oGreen + 0.114*oBlue;
+end process;
+
+end behv;
