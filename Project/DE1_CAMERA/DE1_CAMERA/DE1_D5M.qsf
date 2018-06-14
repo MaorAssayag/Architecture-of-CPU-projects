@@ -508,6 +508,8 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
 set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name VERILOG_FILE V/Line_Buffer_f.v
+set_global_assignment -name VERILOG_FILE V/Line_Buffer.v
 set_global_assignment -name VHDL_FILE V/Sobel.vhd
 set_global_assignment -name VHDL_FILE V/Histogram.vhd
 set_global_assignment -name VHDL_FILE V/mux.vhd
@@ -524,7 +526,6 @@ set_global_assignment -name VERILOG_FILE V/async_receiver.v
 set_global_assignment -name VERILOG_FILE V/CCD_Capture.v
 set_global_assignment -name VERILOG_FILE V/I2C_CCD_Config.v
 set_global_assignment -name VERILOG_FILE V/I2C_Controller.v
-set_global_assignment -name VERILOG_FILE V/Line_Buffer.v
 set_global_assignment -name VERILOG_FILE V/Reset_Delay.v
 set_global_assignment -name VERILOG_FILE V/sdram_pll.v
 set_global_assignment -name VERILOG_FILE V/SEG7_LUT.v

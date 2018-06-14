@@ -19,7 +19,8 @@ port(
 	his_G: in std_logic_vector(11 downto 0);
 	his_B: in std_logic_vector(11 downto 0);
 	iSobel: in std_logic_vector(11 downto 0);
-	switch1,switch2,switch3,switch4,iDVAL, iCLK, iRST: in std_logic);
+	switch : in std_logic_vector(1 downto 0);
+	iDVAL, iCLK, iRST: in std_logic);
 end mux;
 
 
@@ -36,26 +37,27 @@ begin
 		out_G	<=	"000000000000";
 		out_B	<=	"000000000000";
 	else
-		if (switch1 = '1' ) then ------ color
+		if (switch = "01" ) then ------ color
 			out_R <= oRed;
 			out_G <= oGreen;
 			out_B <= oBlue;
-		elsif (switch2 ='1' ) then  -------- gray
-			out_R <= gray;
-			out_G <= gray;
-			out_B <= gray;
-		elsif (switch3 ='1' ) then   ------Histogram
-			out_R <= his_R;
-			out_G <= his_G;
-			out_B <= his_B;
-		elsif (switch4 ='1' ) then
+		elsif (switch ="11" ) then  -------- gray
+
 			out_R <= iSobel;
 			out_G <= iSobel;
 			out_B <= iSobel;
+		-- elsif (switch ="10" ) then   ------Histogram
+		-- 	out_R <= his_R;
+		-- 	out_G <= his_G;
+		-- 	out_B <= his_B;
+		elsif (switch ="10" ) then
+			out_R <= gray;
+			out_G <= gray;
+			out_B <= gray;
 		else
-			out_R <= (others => '1');
-			out_G <= (others => '1');
-			out_B <= (others => '1');
+			out_R <= (others => '0');
+			out_G <= (others => '0');
+			out_B <= (others => '0');
 		end if;
 	end if;
 end process;

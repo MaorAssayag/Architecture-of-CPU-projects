@@ -437,7 +437,7 @@ I2C_CCD_Config 		u8	(	//	Host Side
 							.iRST_N(DLY_RST_2),
 							.iZOOM_MODE_SW(SW[8]),
 							.iEXPOSURE_ADJ(KEY[1]),
-							.iEXPOSURE_DEC_p(SW[0]),
+							.iEXPOSURE_DEC_p(SW[9]),
 							//	I2C Side
 							.I2C_SCLK(GPIO_1[24]),
 							.I2C_SDAT(GPIO_1[23])
@@ -467,10 +467,7 @@ RAW2gray  u9(
 									.his_R(his_R),
 									.his_G(his_B),
 									.his_B(his_G),
-									.switch1(SW[0]),
-									.switch2(SW[1]),
-									.switch3(SW[2]),
-									.switch4(SW[3]),
+									.switch(SW[1:0]),
 									.iSobel(oSob)
 		);
 	Histogram			u11 (
@@ -485,7 +482,7 @@ RAW2gray  u9(
 								 .iCLK(CCD_PIXCLK)
 								);
 		Sobel 				u12(	.oSobel(oSob),			// oSobel => oSOB,
-										.gray_in(Gray),
+										.iGray(Gray),
 										.oDVAL(oSobDVAL),
 										.iX_Cont(X_Cont),
 										.iY_Cont(Y_Cont),
