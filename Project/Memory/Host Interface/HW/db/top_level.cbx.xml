@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="top_level">
-		<CBX_INST_ENTRY INSTANCE_NAME="|top_level|dual_port_ram_8k:data_memory|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_6n62.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|top_level|dual_port_ram_8k:program_memory|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_6n62.tdf"/>
-	</PROJECT>
-</LOG_ROOT>
