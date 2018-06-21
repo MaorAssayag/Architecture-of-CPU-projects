@@ -1,0 +1,13 @@
+INTENDED_DEVICE_FAMILY="Cyclone II"
+LPM_HINT=RAM_BLOCK_TYPE=M512
+LPM_TYPE=altshift_taps
+NUMBER_OF_TAPS=2
+TAP_DISTANCE=1280
+WIDTH=12
+DEVICE_FAMILY="Cyclone II"
+clken
+clock
+shiftin
+shiftout
+taps
+taps

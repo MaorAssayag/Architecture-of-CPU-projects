@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="DE1_D5M">
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_pfm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_9ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2RGB:u4|Line_Buffer:u0|altshift_taps:altshift_taps_component" CBX_FILE_NAME="shift_taps_ikn.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_qfm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_4ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_6ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo1|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_m2o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_0gm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_5ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo1|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_m2o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|Sdram_Control_4Port:u7|Sdram_FIFO:write_fifo2|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_m2o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_8ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|RAW2gray:u9|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_2ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|Sdram_Control_4Port:u7|Sdram_FIFO:read_fifo2|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_m2o1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|DE1_D5M|Entropy:u12|Line_Buffer_f:u0|altshift_taps:altshift_taps_component" CBX_FILE_NAME="shift_taps_kkn.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
