@@ -249,6 +249,7 @@ wire			sdram_ctrl_clk;
 
 
 
+wire			mips_int;
 
 wire	[11:0]	Gray; /////////////  GrayScale
 //////////////histogram
@@ -262,7 +263,7 @@ wire	[11:0]	his_G;
 
 
 // --- SobelOperator ---
-wire  [11:0]   oSob;
+wire  [11:0]   ofilter;
 // -----------------
 
 //=============================================================================
@@ -357,11 +358,11 @@ RAW2RGB				u4	(	.iCLK(CCD_PIXCLK),
 							.oBlue(sCCD_B),
 							.oDVAL(sCCD_DVAL),
 							.iX_Cont(X_Cont),
-							.iY_Cont(Y_Cont)
+							.iY_Cont(Y_Cont),
 						);
 
-SEG7_LUT_8 			u5	(	.oSEG0(HEX0),.oSEG1(HEX1),
-							.oSEG2(HEX2),.oSEG3(HEX3),
+SEG7_LUT_8 			u5	(	.oSEG0(),.oSEG1(),
+							.oSEG2(),.oSEG3(),
 							.oSEG4(),.oSEG5(),
 							.oSEG6(),.oSEG7(),
 							.iDIG(Frame_Cont[31:0])
@@ -448,8 +449,7 @@ RAW2gray  u9(
 								.oRed(sCCD_R),
 								.oGreen(sCCD_G),
 								.oBlue(sCCD_B),
-								.gray(Gray),
-
+								.gray(Gray)
 	);
 
 
@@ -468,7 +468,8 @@ RAW2gray  u9(
 									.his_G(his_B),
 									.his_B(his_G),
 									.switch(SW[1:0]),
-									.iSobel(oSob)
+									.ifilter(ofilter),
+									.mips_int(mips_int)
 		);
 	Histogram			u11 (
 								 .iRST(DLY_RST_1),
@@ -481,9 +482,8 @@ RAW2gray  u9(
 							 	 .y_in(Y_Cont),
 								 .iCLK(CCD_PIXCLK)
 								);
-		Sobel 				u12(	.oSobel(oSob),			// oSobel => oSOB,
+ entropy_filter 	u12(	.ofilter(ofilter),
 										.iGray(Gray),
-										.oDVAL(oSobDVAL),
 										.iX_Cont(X_Cont),
 										.iY_Cont(Y_Cont),
 										.iDVAL(sCCD_DVAL),
@@ -491,5 +491,14 @@ RAW2gray  u9(
 										.iRST(DLY_RST_1)
 									);
 
+mips   	u13(
+				 .reset(0),
+				 .clock_in(CLOCK_24),
+				 .mips_int (mips_int),
+		   	 .LO_1(HEX0),
+				 .LO_2(HEX1),
+				 .HI_1(HEX2),
+				 .HI_2(HEX3)
 
+	);
 endmodule

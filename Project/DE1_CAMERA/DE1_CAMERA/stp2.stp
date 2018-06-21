@@ -1,0 +1,1557 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP2C(15|20) (0x020B30DD)" sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <global_info>
+    <multi attribute="column width" size="23" value="34,34,248,74,284,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
+    <single attribute="active instance" value="0"/>
+    <multi attribute="frame size" size="2" value="1920,986"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <multi attribute="jtag widget size" size="2" value="424,161"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+  </global_info>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="2"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2018/06/21 16:05:07  #0">
+      <clock name="auto_stp_external_clock_0" polarity="posedge" tap_mode="probeonly"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="64" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|enable" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|enable" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|D[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|D[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|Q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|Q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|enable" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|d" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|en" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|q" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|q~reg0" tap_mode="classic" type="register"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PLL:m1|altpll:altpll_component|_clk0" tap_mode="probeonly" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|enable" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|enable" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|D[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|D[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|Q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|Q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|enable" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|d" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|en" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|q" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|q~reg0" tap_mode="classic" type="register"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PLL:m1|altpll:altpll_component|_clk0" tap_mode="probeonly" type="combinatorial"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_ID[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_IF[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|D[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|Q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|enable" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_C|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|D[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[10]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[11]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[12]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[13]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[14]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[15]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[16]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[17]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[18]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[19]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[20]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[21]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[22]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[23]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[24]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[25]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[26]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[27]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[28]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[29]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[30]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[31]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|Q[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|enable" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALU_result_D|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|D[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|D[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|Q[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|Q[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|enable" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|N_dff:ALUop_control_B|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[4]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[5]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[6]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[7]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[8]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PC[9]" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|clk" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|d" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|en" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|q" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|q~reg0" tap_mode="classic" type="register"/>
+          <wire name="MIPS:u13|dff_1bit:ALUSrc_control_B|rst" tap_mode="classic" type="combinatorial"/>
+          <wire name="MIPS:u13|PLL:m1|altpll:altpll_component|_clk0" tap_mode="probeonly" type="combinatorial"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <net is_signal_inverted="no" name="MIPS:u13|PLL:m1|altpll:altpll_component|_clk0"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|PC" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|PC[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|clk"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALU_result_C|D" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|enable"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALU_result_C|Q" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|rst"/>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|clk"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALU_result_D|D" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|enable"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALU_result_D|Q" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|rst"/>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|clk"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALUop_control_B|D" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|D[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|D[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|enable"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALUop_control_B|Q" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|Q[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|Q[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|rst"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|clk"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|d"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|en"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|q"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|q~reg0"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|rst"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|HAZARD:HAZ|Instruction_ID" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|HAZARD:HAZ|Instruction_IF" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[0]"/>
+          </bus>
+        </data_view>
+        <setup_view>
+          <net is_signal_inverted="no" name="MIPS:u13|PLL:m1|altpll:altpll_component|_clk0"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|PC" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|PC[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|PC[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|clk"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALU_result_C|D" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|D[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|enable"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALU_result_C|Q" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|Q[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_C|rst"/>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|clk"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALU_result_D|D" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|D[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|enable"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALU_result_D|Q" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|Q[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALU_result_D|rst"/>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|clk"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALUop_control_B|D" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|D[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|D[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|enable"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|N_dff:ALUop_control_B|Q" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|Q[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|Q[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="MIPS:u13|N_dff:ALUop_control_B|rst"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|clk"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|d"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|en"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|q"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|q~reg0"/>
+          <net is_signal_inverted="no" name="MIPS:u13|dff_1bit:ALUSrc_control_B|rst"/>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_EXE[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|HAZARD:HAZ|Instruction_ID" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_ID[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|HAZARD:HAZ|Instruction_IF" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_IF[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[31]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[30]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[29]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[28]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[27]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[26]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[25]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[24]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[23]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[22]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[21]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[20]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[19]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[18]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[17]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[16]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[15]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[14]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[13]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[12]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[11]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[10]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[9]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[8]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[7]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[6]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[5]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[4]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[3]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[2]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[1]"/>
+            <net is_signal_inverted="no" name="MIPS:u13|HAZARD:HAZ|Instruction_MEM[0]"/>
+          </bus>
+        </setup_view>
+      </presentation>
+      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2018/06/21 16:05:07  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="port" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
+        <events use_custom_flow_control="yes">
+          <level enabled="yes" name="condition1" type="basic">
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+          <custom_flow_control>
+            <runtime_configurable comparison_operator="yes" counter_action="no" flag_action="no" logical_operator="yes" numerical_value="yes" state_transition="yes"/>
+            <flow_expression><![CDATA[state ST1:
+trigger;]]>
+            </flow_expression>
+            <power_up_flow_expression><![CDATA[state ST1:
+trigger;]]>
+            </power_up_flow_expression>
+          </custom_flow_control>
+        </events>
+        <storage_qualifier_events>
+          <transitional>0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+            <pwr_up_transitional>0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+      </trigger>
+    </signal_set>
+  </instance>
+  <mnemonics/>
+</session>
