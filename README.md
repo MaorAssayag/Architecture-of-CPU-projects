@@ -20,7 +20,13 @@
 
 #### Full Description in English - <a href="https://github.com/MaorAssayag/Architecture-of-CPU-projects/blob/master/Designing%20ALU%20with%20FPU%20to%20FPGA/readme.pdf">link</a>
 
+#
 
+# Final Project - Image Processing on FPGA
+![alt text](https://github.com/MaorAssayag/Architecture-of-CPU-projects/blob/master/Image%20Processing%20on%20FPGA/DOC/diagram.PNG)
+#### •	Design a Real Time entropy detection filter for an image received from a camera. The histogram of the image must be calculated.
+
+#### Full Description in English - <a href="https://github.com/MaorAssayag/Architecture-of-CPU-projects/blob/master/Image%20Processing%20on%20FPGA/readme.pdf">link</a>
 
 #
 
