@@ -1,4 +1,4 @@
-# Architecture of CPU projects
+# Architecture of CPU course projects
 #
 
 ## LAB 1 - Designing a basic ALU
